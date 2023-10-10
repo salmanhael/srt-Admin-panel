@@ -2,6 +2,8 @@ var mainSidebar = document.getElementById("mainSidebar");
 var setting = document.getElementById("setting");
 var banner = document.getElementById("banner")
 var overlay = document.getElementById("overlay")
+var searchOrder = document.getElementById("orders-search")
+var searchBAr = document.getElementById("searchBar")
 
 
 
@@ -115,3 +117,8 @@ function checkWindowSize() {
 }
 checkWindowSize();
 window.addEventListener("resize", checkWindowSize);
+
+function searchorder(){
+    searchOrder.classList.toggle('hidden')
+    searchBAr.classList.remove('hidden')
+}
