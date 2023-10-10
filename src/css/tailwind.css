@@ -1,0 +1,241 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #e7e9ed; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #cfd1d5; 
+    border-radius: 10px;
+  }
+
+.active{
+    color: #6d28d9;
+    background: white;
+    border-left: 3px solid #6d28d9;
+
+}
+
+.dropdown-toggle::after {
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: -4px;
+  vertical-align: 2px;
+  content: "";
+  border-top: 0.3em solid;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0;
+  border-left: 0.3em solid transparent;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  z-index: 1;
+  top: 75px;
+}
+.dropdown-content a {
+  color: black;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+.show {display: block;}
+/* open sidebar */
+.openSidbar{
+  width: 250px;
+  transition: all .5s ease;
+}
+
+.openSidbar nav{
+  width: 250px;
+  transition: all .5s ease;
+}
+
+.openSettings{
+  width: 250px;
+  display: flex;
+  transition: all .5s ease;
+
+}
+.menu-collapse{
+  width: calc(100% - 250px);
+  transition: all .5s ease;
+}
+
+/* close sidebar */
+.closeSidebar{
+  width: 55px;
+  transition: all .5s ease;
+}
+.closeSidebar nav{
+  width: 55px;
+  transition: all .5s ease;
+
+}
+.closeSidebar span{
+  display: none;
+  transition: width .5s ease;
+}
+
+.settings{
+  width: 55px;
+  display: none;
+  transition: width .5s ease;
+
+}
+.close-nav{
+  display: none;
+}
+.open-nav{
+  display: inline;
+}
+
+@media screen and (max-width: 1024px){
+  .responsive{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.menu{
+  width: calc(100% - 55px);
+  transition: all .5s ease;
+}
+/* hide sidebar in responsive mode  */
+.hideSidebar{
+  z-index: 10;
+  width: 0 !important;
+  transition: width .5s ease;
+}
+.hideSidebar nav{
+  width: 0px;
+  transition: all .5s ease;
+
+}
+.hideSidebar span{
+  display: none;
+  transition: width .5s ease;
+}
+.respnsive-settings{
+  width: 0px;
+  display: none;
+  transition: width .5s ease;
+
+}
+.logo{
+ padding: 0px;
+}
+/* show sidebar in responsive mode  */
+.showSidebar{
+  display: block !important;
+  z-index: 10;
+  width: 250px;
+  transition: width .5s ease;
+
+}
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+  cursor: pointer;
+}
+
+@font-face {
+    font-family: iranyekan;
+    font-style: normal;
+    font-weight: bold;
+    src: url('../fonts/eot/iranyekanwebbold.eot');
+    src: url('../fonts/eot/iranyekanwebbold.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/woff/iranyekanwebbold.woff') format('woff'),
+      url('../fonts/ttf/iranyekanwebbold.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: iranyekan;
+    font-style: normal;
+    font-weight: 100;
+    src: url('../fonts/eot/iranyekanwebthin.eot');
+    src: url('../fonts/eot/iranyekanwebthin.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/woff/iranyekanwebthin.woff') format('woff'),
+      url('../fonts/ttf/iranyekanwebthin.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: iranyekan;
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/eot/iranyekanweblight.eot');
+    src: url('../fonts/eot/iranyekanweblight.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/woff/iranyekanweblight.woff') format('woff'),
+      url('../fonts/ttf/iranyekanweblight.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: iranyekan;
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/eot/iranyekanwebregular.eot');
+    src: url('../fonts/eot/iranyekanwebregular.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/woff/iranyekanwebregular.woff') format('woff'),
+      url('../fonts/ttf/iranyekanwebregular.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: iranyekan;
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/eot/iranyekanwebmedium.eot');
+    src: url('../fonts/eot/iranyekanwebmedium.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/woff/iranyekanwebmedium.woff') format('woff'),
+      url('../fonts/ttf/iranyekanwebmedium.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: iranyekan;
+    font-style: normal;
+    font-weight: 800;
+    src: url('../fonts/eot/iranyekanwebextrabold.eot');
+    src: url('../fonts/eot/iranyekanwebextrabold.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/woff/iranyekanwebextrabold.woff') format('woff'),
+      url('../fonts/ttf/iranyekanwebextrabold.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: iranyekan;
+    font-style: normal;
+    font-weight: 900;
+    src: url('../fonts/eot/iranyekanwebblack.eot');
+    src: url('../fonts/eot/iranyekanwebblack.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/woff/iranyekanwebblack.woff') format('woff'),
+      url('../fonts/ttf/iranyekanwebblack.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: iranyekan;
+    font-style: normal;
+    font-weight: 950;
+    src: url('../fonts/eot/iranyekanwebextrablack.eot');
+    src: url('../fonts/eot/iranyekanwebextrablack.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/woff/iranyekanwebextrablack.woff') format('woff'),
+      url('../fonts/ttf/iranyekanwebextrablack.ttf') format('truetype');
+  }
