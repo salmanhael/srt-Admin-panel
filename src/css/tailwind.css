@@ -165,8 +165,10 @@
 
 .show-items {display: block;}
 
-
-
+.table-active{
+  color: #6d28d9;
+  border-bottom: 2px solid #6d28d9;
+}
 
 
 

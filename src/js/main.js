@@ -122,3 +122,21 @@ function searchorder(){
     searchOrder.classList.toggle('hidden')
     searchBAr.classList.remove('hidden')
 }
+
+function switchStatus(status) {
+    const rows = document.querySelectorAll('#statusTable tbody tr');
+    rows.forEach(row => {
+        if (row.classList.contains(`status-${status}`)) {
+            row.classList.remove('hidden');
+        } else {
+            row.classList.add('hidden');
+        }
+    });
+    const buttons = document.querySelectorAll('button');
+    buttons.forEach(button => {
+        button.classList.remove('table-active');
+    });
+
+
+    document.getElementById(`${status}-button`).classList.add('table-active');
+}
