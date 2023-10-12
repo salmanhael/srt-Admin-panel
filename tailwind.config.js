@@ -31,7 +31,10 @@ module.exports = {
       },
       fontFamily: {
         'iranyekan':['iranyekan']
-      }
+      },
+      backgroundColor: {
+        'table': '#FCF8E8',
+      },
     },
   },
   plugins: [],

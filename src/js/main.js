@@ -127,9 +127,19 @@ function switchStatus(status) {
     const rows = document.querySelectorAll('#statusTable tbody tr');
     rows.forEach(row => {
         if (row.classList.contains(`status-${status}`)) {
-            row.classList.remove('hidden');
+            if (row.classList.contains('hidden')) {
+                row.classList.remove('hidden');
+                row.classList.add('fade-in');
+            }
         } else {
-            row.classList.add('hidden');
+            if (!row.classList.contains('hidden')) {
+                row.classList.remove('fade-in');
+                row.classList.add('fade-out');
+                setTimeout(() => {
+                    row.classList.add('hidden');
+                    row.classList.remove('fade-out');
+                }, 500); 
+            }
         }
     });
     const buttons = document.querySelectorAll('button');
@@ -140,3 +150,24 @@ function switchStatus(status) {
 
     document.getElementById(`${status}-button`).classList.add('table-active');
 }
+  
+document.addEventListener('DOMContentLoaded', function () {
+    const openModalButton = document.getElementById('openModal');
+    const closeModalButton = document.getElementById('closeModal');
+    const modal = document.getElementById('modal');
+
+    openModalButton.addEventListener('click', function () {
+        modal.classList.remove('hidden');
+    });
+
+    closeModalButton.addEventListener('click', function () {
+        modal.classList.add('hidden');
+    });
+
+    // Close the modal if the overlay (outside the modal) is clicked
+    modal.addEventListener('click', function (event) {
+        if (event.target === modal) {
+            modal.classList.add('hidden');
+        }
+    });
+});

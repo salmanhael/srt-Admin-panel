@@ -5,6 +5,7 @@
 
 /* width */
 ::-webkit-scrollbar {
+    height: 6px;
     width: 6px;
   }
   
@@ -169,7 +170,30 @@
   color: #6d28d9;
   border-bottom: 2px solid #6d28d9;
 }
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+.fade-out {
+  animation: fadeOut 0.5s ease-out;
+}
 
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+      opacity: 1;
+  }
+  to {
+      opacity: 0;
+  }
+}
 
 
 
