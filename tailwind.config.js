@@ -35,6 +35,9 @@ module.exports = {
       backgroundColor: {
         'table': '#FCF8E8',
       },
+      fontSize: {
+        normal:"15px"
+      }
     },
   },
   plugins: [],

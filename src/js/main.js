@@ -8,20 +8,7 @@ var searchBAr = document.getElementById("searchBar")
 
 
 function Dropdown() {
-    document.getElementById("myDropdown").classList.toggle("show");
-}
-
-window.onclick = function (event) {
-    if (!event.target.matches('.dropbtn')) {
-        var dropdowns = document.getElementsByClassName("dropdown-content");
-        var i;
-        for (i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
-            if (openDropdown.classList.contains('show')) {
-                openDropdown.classList.remove('show');
-            }
-        }
-    }
+    document.getElementById("headerDropdown").classList.toggle("show");
 }
 
 function closeNav() {
@@ -155,19 +142,40 @@ document.addEventListener('DOMContentLoaded', function () {
     const openModalButton = document.getElementById('openModal');
     const closeModalButton = document.getElementById('closeModal');
     const modal = document.getElementById('modal');
+    const outside = document.getElementById('modal-out');
 
     openModalButton.addEventListener('click', function () {
-        modal.classList.remove('hidden');
+        modal.classList.add('show');
     });
 
-    closeModalButton.addEventListener('click', function () {
-        modal.classList.add('hidden');
-    });
-
-    // Close the modal if the overlay (outside the modal) is clicked
-    modal.addEventListener('click', function (event) {
-        if (event.target === modal) {
-            modal.classList.add('hidden');
+    closeModalButton.addEventListener('click', () => {
+        modal.classList.add('hide');
+        setTimeout(() => {
+            modal.classList.remove('show');
+            modal.classList.remove('hide');
+        }, 900); 
+    }); 
+    window.onclick = function(event) {
+    if (event.target == outside) {
+        outside.querySelector(".modal-content").classList.add("zoomin");
+        outside.querySelector(".modal-content").classList.remove("zoonout");
+        setTimeout(function() {
+            outside.querySelector(".modal-content").classList.add("zoonout");
+            outside.querySelector(".modal-content").classList.remove("zoomin");
+        }, 500);
+    }
+    // close header dropdown
+    if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
         }
-    });
+    }
+};
 });
+
+
