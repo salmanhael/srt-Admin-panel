@@ -194,39 +194,6 @@
   }
 }
 
-
-.modal {
-  display: none;
-}
-
-.modal.show {
-  display: block;
-  animation: madalfadeIn 0.5s ease-in-out forwards;
-}
-
-.modal.hide {
-  animation: madalfadeOut 0.5s ease-in-out forwards;
-}
-
-@keyframes madalfadeIn {
-  from {
-    opacity: 0;
-}
-to {
-    opacity: 1;
-}
-}
-
-@keyframes madalfadeOut {
-  from {
-    opacity: 1;
-}
-to {
-    opacity: 0;
-}
-}
-
-
 .zoomin {
   animation-name: zoomin;
   animation-duration: 0.5s;
@@ -254,8 +221,76 @@ to {
     transform: scale(1);
 }
 }
+.modal {
+  display: none;
+}
 
+.modal.show {
+  display: block;
+  animation: madalfadeIn 0.5s ease-in-out forwards;
+}
 
+.modal.hide {
+  animation: madalfadeOut 0.5s ease-in-out forwards;
+}
+/* send order numeber */
+.nested-modal {
+  display: none;
+}
+
+.nested-modal.show {
+  display: block;
+  animation: madalfadeIn 0.5s ease-in-out forwards;
+}
+
+.nested-modal.hide {
+  animation: madalfadeOut 0.5s ease-in-out forwards;
+}
+
+/* cancel order */
+.nested-modal-2 {
+  display: none;
+}
+
+.nested-modal-2.show {
+  display: block;
+  animation: madalfadeIn 0.5s ease-in-out forwards;
+}
+
+.nested-modal-2.hide {
+  animation: madalfadeOut 0.5s ease-in-out forwards;
+}
+
+@keyframes madalfadeIn {
+  from {
+    opacity: 0;
+}
+to {
+    opacity: 1;
+}
+}
+
+@keyframes madalfadeOut {
+  from {
+    opacity: 1;
+}
+to {
+    opacity: 0;
+}
+}
+
+.form-check-input:checked {
+  border: 4px solid #6d28d9;
+
+}
+.form-check-input:after {
+	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
 
 
 @font-face {

@@ -140,21 +140,71 @@ function switchStatus(status) {
   
 document.addEventListener('DOMContentLoaded', function () {
     const openModalButton = document.getElementById('openModal');
+    const openNestedModalBtn = document.getElementById("openNestedModalBtn");
+    const openNestedModal2Btn = document.getElementById("openNestedModal2Btn");
+    // main modal
     const closeModalButton = document.getElementById('closeModal');
+    const closemodalBtn = document.getElementById('closemodalBtn');
+    // nested modal
+    const closeNestedModalBtn = document.getElementById("closeNestedModalBtn");
+    const closeNestedmodal = document.getElementById("closeNestedmodal");
+    // nedted modal 2
+    const closenestedModal2 = document.getElementById("closenestedModal2");
+    const closeNestedModal2Btn = document.getElementById("closeNestedModal2Btn");
+    // change user status modal
+    const closeusermodal = document.getElementById("closeusermodal");
+    const closeusermodalBtn = document.getElementById("closeusermodalBtn");
+
     const modal = document.getElementById('modal');
     const outside = document.getElementById('modal-out');
+    const nestedout = document.getElementById('nested-out');
+    const nestedModal = document.getElementById("nestedModal");
+    const nestedModal2 = document.getElementById("nestedmodal2");
+    const nestedout2 = document.getElementById('nested-out2');
 
     openModalButton.addEventListener('click', function () {
         modal.classList.add('show');
     });
-
-    closeModalButton.addEventListener('click', () => {
+    openNestedModalBtn.addEventListener('click', function () {
+        nestedModal.classList.add('show');
+    });
+    openNestedModal2Btn.addEventListener('click', function () {
+        nestedModal2.classList.add('show');
+    });
+// close main modal
+    function closeModal() {
         modal.classList.add('hide');
         setTimeout(() => {
             modal.classList.remove('show');
             modal.classList.remove('hide');
-        }, 900); 
-    }); 
+        }, 900);
+    }
+    closeModalButton.addEventListener('click', closeModal);
+    closemodalBtn.addEventListener('click', closeModal);
+
+// close order code modal
+    function closeNestedModal() {
+        nestedModal.classList.add('hide');
+        setTimeout(() => {
+            nestedModal.classList.remove('show');
+            nestedModal.classList.remove('hide');
+        }, 900);
+    }
+    closeNestedModalBtn.addEventListener('click', closeNestedModal);
+    closeNestedmodal.addEventListener('click', closeNestedModal);
+
+// close cancel order modal
+    function closeNestedModal2() {
+        nestedModal2.classList.add('hide');
+        setTimeout(() => {
+            nestedModal2.classList.remove('show');
+            nestedModal2.classList.remove('hide');
+        }, 900);
+    }
+    closenestedModal2.addEventListener('click', closeNestedModal2);
+    closeNestedModal2Btn.addEventListener('click', closeNestedModal2);
+
+
     window.onclick = function(event) {
     if (event.target == outside) {
         outside.querySelector(".modal-content").classList.add("zoomin");
@@ -164,6 +214,22 @@ document.addEventListener('DOMContentLoaded', function () {
             outside.querySelector(".modal-content").classList.remove("zoomin");
         }, 500);
     }
+    if (event.target == nestedout) {
+        nestedout.querySelector(".nested-content").classList.add("zoomin");
+        nestedout.querySelector(".nested-content").classList.remove("zoonout");
+        setTimeout(function() {
+            nestedout.querySelector(".nested-content").classList.add("zoonout");
+            nestedout.querySelector(".nested-content").classList.remove("zoomin");
+        }, 500);
+    }
+    if (event.target == nestedout2) {
+        nestedModal2.classList.add('hide');
+        setTimeout(() => {
+            nestedModal2.classList.remove('show');
+            nestedModal2.classList.remove('hide');
+        }, 900);
+    }
+    
     // close header dropdown
     if (!event.target.matches('.dropbtn')) {
         var dropdowns = document.getElementsByClassName("dropdown-content");
