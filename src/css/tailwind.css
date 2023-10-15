@@ -199,8 +199,8 @@
   animation-duration: 0.5s;
   animation-timing-function: ease-out;
 }
-.zoonout {
-  animation-name: zoonout;
+.zoomout {
+  animation-name: zoomout;
   animation-duration: 0.5s;
   animation-timing-function: ease-out;
 }
@@ -213,7 +213,7 @@
     transform: scale(1.03);
 }
 }
-@keyframes zoonout {
+@keyframes zoomout {
   0% {
     transform: scale(1.03);
 }
@@ -260,7 +260,71 @@
 .nested-modal-2.hide {
   animation: madalfadeOut 0.5s ease-in-out forwards;
 }
+/* user status */
+.user-status {
+  display: none;
+}
 
+.user-status.show {
+  display: block;
+  animation: madalfadeIn 0.5s ease-in-out forwards;
+}
+
+.user-status.hide {
+  animation: madalfadeOut 0.5s ease-in-out forwards;
+}
+/* edit user profile */
+.edit-profile {
+  display: none;
+}
+
+.edit-profile.show {
+  display: block;
+  animation: madalfadeIn 0.5s ease-in-out forwards;
+}
+
+.edit-profile.hide {
+  animation: madalfadeOut 0.5s ease-in-out forwards;
+}
+/* order history */
+.order-history {
+  display: none;
+}
+
+.order-history.show {
+  display: block;
+  animation: madalfadeIn 0.5s ease-in-out forwards;
+}
+
+.order-history.hide {
+  animation: madalfadeOut 0.5s ease-in-out forwards;
+}
+/* user info */
+.user-info {
+  display: none;
+}
+
+.user-info.show {
+  display: block;
+  animation: madalfadeIn 0.5s ease-in-out forwards;
+}
+
+.user-info.hide {
+  animation: madalfadeOut 0.5s ease-in-out forwards;
+}
+/* add address */
+.add-address {
+  display: none;
+}
+
+.add-address.show {
+  display: block;
+  animation: madalfadeIn 0.5s ease-in-out forwards;
+}
+
+.add-address.hide {
+  animation: madalfadeOut 0.5s ease-in-out forwards;
+}
 @keyframes madalfadeIn {
   from {
     opacity: 0;
