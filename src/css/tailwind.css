@@ -170,6 +170,10 @@
   color: #6d28d9;
   border-bottom: 2px solid #6d28d9;
 }
+.button-active{
+  background-color: #6d28d9;
+  color: white;
+}
 .fade-in {
   animation: fadeIn 0.5s ease-in;
 }
@@ -221,6 +225,7 @@
     transform: scale(1);
 }
 }
+/* Shared styles for all modals */
 .modal {
   display: none;
 }
@@ -233,114 +238,23 @@
 .modal.hide {
   animation: madalfadeOut 0.5s ease-in-out forwards;
 }
-/* send order numeber */
-.nested-modal {
-  display: none;
-}
 
-.nested-modal.show {
-  display: block;
-  animation: madalfadeIn 0.5s ease-in-out forwards;
-}
-
-.nested-modal.hide {
-  animation: madalfadeOut 0.5s ease-in-out forwards;
-}
-
-/* cancel order */
-.nested-modal-2 {
-  display: none;
-}
-
-.nested-modal-2.show {
-  display: block;
-  animation: madalfadeIn 0.5s ease-in-out forwards;
-}
-
-.nested-modal-2.hide {
-  animation: madalfadeOut 0.5s ease-in-out forwards;
-}
-/* user status */
-.user-status {
-  display: none;
-}
-
-.user-status.show {
-  display: block;
-  animation: madalfadeIn 0.5s ease-in-out forwards;
-}
-
-.user-status.hide {
-  animation: madalfadeOut 0.5s ease-in-out forwards;
-}
-/* edit user profile */
-.edit-profile {
-  display: none;
-}
-
-.edit-profile.show {
-  display: block;
-  animation: madalfadeIn 0.5s ease-in-out forwards;
-}
-
-.edit-profile.hide {
-  animation: madalfadeOut 0.5s ease-in-out forwards;
-}
-/* order history */
-.order-history {
-  display: none;
-}
-
-.order-history.show {
-  display: block;
-  animation: madalfadeIn 0.5s ease-in-out forwards;
-}
-
-.order-history.hide {
-  animation: madalfadeOut 0.5s ease-in-out forwards;
-}
-/* user info */
-.user-info {
-  display: none;
-}
-
-.user-info.show {
-  display: block;
-  animation: madalfadeIn 0.5s ease-in-out forwards;
-}
-
-.user-info.hide {
-  animation: madalfadeOut 0.5s ease-in-out forwards;
-}
-/* add address */
-.add-address {
-  display: none;
-}
-
-.add-address.show {
-  display: block;
-  animation: madalfadeIn 0.5s ease-in-out forwards;
-}
-
-.add-address.hide {
-  animation: madalfadeOut 0.5s ease-in-out forwards;
-}
 @keyframes madalfadeIn {
   from {
     opacity: 0;
-}
-to {
+  }
+  to {
     opacity: 1;
-}
+  }
 }
 
 @keyframes madalfadeOut {
   from {
     opacity: 1;
-}
-to {
+  }
+  to {
     opacity: 0;
-}
+  }
 }
 
 .form-check-input:checked {

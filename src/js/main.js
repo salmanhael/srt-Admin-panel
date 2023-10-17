@@ -15,11 +15,11 @@ function closeNav() {
     mainSidebar.classList.toggle("closeSidebar");
     setting.classList.toggle("settings");
 
-    var close = document.getElementById("close-navbar");
+    var close = document.getElementById("close-navbar-btn");
     close.classList.toggle("close-nav");
     close.classList.toggle("activate");
 
-    var open = document.getElementById("open-navbar");
+    var open = document.getElementById("open-navbar-btn");
     open.classList.toggle("open-nav");   
   
     var expand = document.getElementById("expand-menu");
@@ -62,7 +62,7 @@ window.addEventListener('resize', function () {
   });
   window.addEventListener('resize', function () {
     if (window.innerWidth >= 1280) {
-        var element = document.getElementById('close-navbar');
+        var element = document.getElementById('close-navbar-btn');
         var sidebar = document.getElementById('mainSidebar');
         var setting = document.getElementById('setting');
     
@@ -137,97 +137,74 @@ function switchStatus(status) {
 
     document.getElementById(`${status}-button`).classList.add('table-active');
 }
+
+// change table content button product page
+function sellType(status) {
+    const rows = document.querySelectorAll('#statusTable tbody tr');
+    rows.forEach(row => {
+        if (row.classList.contains(`status-${status}`)) {
+            if (row.classList.contains('hidden')) {
+                row.classList.remove('hidden');
+                row.classList.add('fade-in');
+            }
+        } else {
+            if (!row.classList.contains('hidden')) {
+                row.classList.remove('fade-in');
+                row.classList.add('fade-out');
+                setTimeout(() => {
+                    row.classList.add('hidden');
+                    row.classList.remove('fade-out');
+                }, 500);
+            }
+        }
+    });
+    const buttons = document.querySelectorAll('button');
+    buttons.forEach(button => {
+        button.classList.remove('table-active');
+    });
+
+
+    document.getElementById(`${status}-button`).classList.add('table-active');
+}
+
+function productStatus(status) {
+    const rows = document.querySelectorAll('#statusTable tbody tr');
+    rows.forEach(row => {
+        if (row.classList.contains(`status-${status}`)) {
+            if (row.classList.contains('hidden')) {
+                row.classList.remove('hidden');
+                row.classList.add('fade-in');
+            }
+        } else {
+            if (!row.classList.contains('hidden')) {
+                row.classList.remove('fade-in');
+                row.classList.add('fade-out');
+                setTimeout(() => {
+                    row.classList.add('hidden');
+                    row.classList.remove('fade-out');
+                }, 500);
+            }
+        }
+    });
+    const buttons = document.querySelectorAll('button');
+    buttons.forEach(button => {
+        button.classList.remove('button-active');
+    });
+
+
+    document.getElementById(`${status}-button`).classList.add('button-active');
+}
+
   
 
-    document.addEventListener('DOMContentLoaded', function () {    
-    // modal section
-
-    // main modal
-    const openModalButton = document.getElementById('openModal');
-    const modal = document.getElementById('modal');
-    const outside = document.getElementById('modal-out');
-    const closeModalButton = document.getElementById('closeModal');
-    const closemodalBtn = document.getElementById('closemodalBtn');
-    // nested modal
-    const openNestedModalBtn = document.getElementById("openNestedModalBtn");
-    const nestedout = document.getElementById('nested-out');
-    const nestedModal = document.getElementById("nestedModal");
-    const closeNestedModalBtn = document.getElementById("closeNestedModalBtn");
-    const closeNestedmodal = document.getElementById("closeNestedmodal");
-    // nedted modal 2
-    const openNestedModal2Btn = document.getElementById("openNestedModal2Btn");
-    const nestedModal2 = document.getElementById("nestedmodal2");
-    const nestedout2 = document.getElementById('nested-out2');
-    const closenestedModal2 = document.getElementById("closenestedModal2");
-    const closeNestedModal2Btn = document.getElementById("closeNestedModal2Btn");
-
-
-    // open modal
-
-    openModalButton.addEventListener('click', function () {
-        modal.classList.add('show');
-    });
-    openNestedModalBtn.addEventListener('click', function () {
-        nestedModal.classList.add('show');
-    });
-    openNestedModal2Btn.addEventListener('click', function () {
-        nestedModal2.classList.add('show');
-    });
-  
-    // close modal
-
-    // close main modal
-    function closeModal() {
-        modal.classList.add('hide');
-        setTimeout(() => {
-            modal.classList.remove('show');
-            modal.classList.remove('hide');
-        }, 900);
-    }
-    closeModalButton.addEventListener('click', closeModal);
-    closemodalBtn.addEventListener('click', closeModal);
-
-    // close order code modal
-    function closeNestedModal() {
-        nestedModal.classList.add('hide');
-        setTimeout(() => {
-            nestedModal.classList.remove('show');
-            nestedModal.classList.remove('hide');
-        }, 900);
-    }
-    closeNestedModalBtn.addEventListener('click', closeNestedModal);
-    closeNestedmodal.addEventListener('click', closeNestedModal);
-
-    // close cancel order modal
-    function closeNestedModal2() {
-        nestedModal2.classList.add('hide');
-        setTimeout(() => {
-            nestedModal2.classList.remove('show');
-            nestedModal2.classList.remove('hide');
-        }, 900);
-    }
-    closenestedModal2.addEventListener('click', closeNestedModal2);
-    closeNestedModal2Btn.addEventListener('click', closeNestedModal2);
-
-    // zoomin & out when click outside of modal
 
     window.onclick = function(event) {
-    if (event.target == outside) {
-        outside.querySelector(".modal-content").classList.add("zoomin");
-        outside.querySelector(".modal-content").classList.remove("zoomout");
-        setTimeout(function() {
-            outside.querySelector(".modal-content").classList.add("zoomout");
-            outside.querySelector(".modal-content").classList.remove("zoomin");
-        }, 500);
-    }
-    if (event.target == nestedout) {
-        nestedout.querySelector(".nested-content").classList.add("zoomin");
-        nestedout.querySelector(".nested-content").classList.remove("zoomout");
-        setTimeout(function() {
-            nestedout.querySelector(".nested-content").classList.add("zoomout");
-            nestedout.querySelector(".nested-content").classList.remove("zoomin");
-        }, 500);
-    }
+    // nedted modal 2
+    const nestedModal2 = document.getElementById("nestedmodal2");
+    const nestedout2 = document.getElementById('nested-out2');
+    // user status
+    const userstatus = document.getElementById('userstatus-modal');
+    const userstatusout = document.getElementById('userstatus-out');
     // close modal when click outside
     if (event.target == nestedout2) {
         nestedModal2.classList.add('hide');
@@ -236,7 +213,14 @@ function switchStatus(status) {
             nestedModal2.classList.remove('hide');
         }, 900);
     }
-    // close header dropdown
+    if (event.target == userstatusout) {
+        userstatus.classList.add('hide');
+        setTimeout(() => {
+            userstatus.classList.remove('show');
+            userstatus.classList.remove('hide');
+        }, 900);
+    }
+     // close header dropdown
     if (!event.target.matches('.dropbtn')) {
         var dropdowns = document.getElementsByClassName("dropdown-content");
         var i;
@@ -248,6 +232,26 @@ function switchStatus(status) {
         }
     }
 };
-});
 
+
+
+// toggle off-on 
+function deactivate() {
+    var close = document.getElementById("off");
+    close.classList.toggle("hidden");
+
+    var open = document.getElementById("on");
+    open.classList.toggle("open-nav");   
+  
+}
+
+function deactivate1() {
+    var close = document.getElementById("off1");
+    close.classList.toggle("hidden");
+
+    var open = document.getElementById("on1");
+    open.classList.toggle("open-nav");   
+  
+}
+// -----------------------------------------------------------------------------
 
