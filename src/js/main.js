@@ -4,7 +4,8 @@ var banner = document.getElementById("banner")
 var overlay = document.getElementById("overlay")
 var searchOrder = document.getElementById("orders-search")
 var searchBAr = document.getElementById("searchBar")
-
+var dropdown = document.getElementById('DropdownMenu');
+var product = document.getElementById('product');
 
 
 function Dropdown() {
@@ -14,13 +15,16 @@ function Dropdown() {
 function closeNav() {
     mainSidebar.classList.toggle("closeSidebar");
     setting.classList.toggle("settings");
+    product.classList.toggle("pointer-events-none");
+    dropdown.classList.add("hidden");
 
     var close = document.getElementById("close-navbar-btn");
     close.classList.toggle("close-nav");
     close.classList.toggle("activate");
-
+    
     var open = document.getElementById("open-navbar-btn");
-    open.classList.toggle("open-nav");   
+    open.classList.toggle("open-nav"); 
+
   
     var expand = document.getElementById("expand-menu");
     expand.classList.toggle("menu");  
@@ -28,6 +32,7 @@ function closeNav() {
 // open sidebar in responsive mode
 function openSidebar() {
     mainSidebar.classList.toggle("showSidebar");
+    product.classList.remove("pointer-events-none");
     setting.classList.remove("respnsive-settings");
     banner.classList.remove("logo");
     mainSidebar.classList.remove("hideSidebar");
@@ -35,6 +40,7 @@ function openSidebar() {
 }
 function closeSidebar() {
     mainSidebar.classList.remove("showSidebar");
+    product.classList.add("pointer-events-none");
     setting.classList.toggle("respnsive-settings");
     banner.classList.toggle("logo");
     mainSidebar.classList.toggle("hideSidebar");
@@ -43,6 +49,8 @@ function closeSidebar() {
 
 function handleResize() {
     mainSidebar.classList.remove("showSidebar");
+    product.classList.add("pointer-events-none");
+    dropdown.classList.add("hidden")
     setting.classList.toggle("respnsive-settings");
     banner.classList.toggle("logo");
     mainSidebar.classList.toggle("hideSidebar");
@@ -69,10 +77,12 @@ window.addEventListener('resize', function () {
         if (!element.classList.contains('activate')) {
             sidebar.classList.remove('closeSidebar');
             setting.classList.remove('settings');
+            product.classList.remove("pointer-events-none");
         } 
         else {
             setting.classList.add('settings');
             sidebar.classList.add('closeSidebar');
+            product.classList.add("pointer-events-none");
         }
     }
   });
@@ -254,4 +264,12 @@ function deactivate1() {
   
 }
 // -----------------------------------------------------------------------------
+document.addEventListener("DOMContentLoaded", function () {
+    const button = document.getElementById('SideDropdown');
+    button.addEventListener('click', () => {
+        dropdown.classList.toggle('hidden');
+    });
+
+});
+
 
