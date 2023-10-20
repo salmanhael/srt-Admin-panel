@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ویرایش سریع قیمت</title>
+    <title>فروشنده جدید محصول</title>
     <link href="../css/main.css" rel="stylesheet">
 
 </head>
@@ -235,55 +235,76 @@
     <div id="overlay" onclick="closeSidebar()"></div>
     <div class="w-[calc(100%-250px)] float-left p-12 overflow-y-auto h-screen menu-collapse max-xl:w-full max-lg:p-6 max-md:p-0"
         id="expand-menu">
-        <div class="desktop:max-w-8xl mr-auto ml-auto px-3 mb-32">
-            <div class="max-md:pt-2">
-                <h1 class="text-2xl font-semibold">محصولات</h1>
+        <div class="max-md:pt-2">
+            <h1 class="text-2xl font-semibold">فروشنده جدید محصول</h1>
+        </div>
+        <hr class="my-4">
+        <div class="flex flex-row">
+            <div class="basis-2/6 mt-3 px-3">
+                <h1 class="text-lg font-semibold">انتخاب محصول</h1>
+                <span class="text-sm">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
+                    گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است <a href="#"
+                        class="text-violet-700">بیشتر بخوانید</a></span>
             </div>
-
-
-            <div class="flex flex-col mb-12 mt-5 max-md:mt-20 max-sm:flex-col max-sm:mt-10">
-                <div class="mb-4 w-full h-10">
-                    <span class=" text-gray-500">جست و جو بر اساس عنوان : </span>
-                    <input type="text" class="h-full w-1/4 mr-4 rounded" placeholder=" عنوان محصول را وارد کنید">
-                </div>
-                <div class="mb-4 w-full h-10">
-                    <span class=" text-gray-500">جست و جو بر اساس گروه:</span>
-                        <select
-                            class="w-1/4 mr-8 px-2 h-full rounded outline-0 focus:ring-4">
-                            <option>گروه مورد نظر را انتخاب کنید</option>
-                            <option>شناسه محصول</option>
-                            <option>PartNumber</option>
-                        </select>
-
+            <div class="basis-4/6 mt-3 px-3 ">
+                <div class="flex flex-col bg-white rounded p-6 shadow-md">
+                    <div class="flex flex-col mb-4 w-full">
+                        <label class="mb-2 font-bold text-gray-600">یافتن محصول</label>
+                        <div class="flex justify-between items-center">
+                            <input type="text" class="border w-64 outline-1 outline-blue-500 h-10 py-2 px-3 text-center rounded" placeholder="براساس شناسه محصول">
+                            <span class="text-violet-700 ">یا</span>
+                            <input type="text" class="border w-64 outline-1 outline-blue-500 h-10 py-2 px-3 text-center rounded" placeholder="براساس Part Number">
+                        </div>
+                        <button class="w-full my-6 py-2 border border-black rounded text-sm hover:bg-slate-600 hover:text-white hover:border-gray-600 transition duration-150 ease-in-out">پیدا کن</button>
+                    </div>
+                    <label class="mb-2 font-bold text-gray-600">انتخاب محصول</label>
+                    <div class=" mb-4 w-full">
+                        <div class="flex h-32 rounded px-3 py-2.5" style="box-shadow: 1px 0px 8px 4px #6D28D9;">
+                            <img src="../img/part1.jpg" class="h-full" alt="product-image">
+                            <div class="flex justify-between w-full">
+                                <div class="px-4 flex flex-col justify-between">
+                                    <h3 class="font-semibold">دسته دنده گریدر HG180</h3>
+                                    <span class="text-gray-500">Hepco / گریدر</span>
+                                </div>
+                                <div class="flex flex-col justify-between">
+                                    <a href="" target="_blank" class="flex justify-end text-violet-700">
+                                        <span class="px-2" dir="ltr">#HE1J05</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                                            <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"></path>
+                                            <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"></path></svg></a>
+                                    <span class="text-gray-500">HG180 / لوازم موتوری</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-
-            <div>
-                <div class="max-w-full overflow-x-auto">
-                    <table class="min-w-full bg-white shadow-md rounded table-auto " id="statusTable">
+        </div>
+        <hr class="my-6">
+        <div class="flex flex-row">
+            <div class="basis-2/6 mt-3 px-3">
+                <h1 class="text-lg font-semibold">سایر قیمت ها</h1>
+                <span class="text-sm">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
+                         و مجله در ستون و  که لازم است <a href="#"
+                        class="text-violet-700">بیشتر بخوانید</a></span>
+            </div>
+            <div class="basis-4/6 mt-3 px-3 ">
+                <div class="max-w-full overflow-x-auto bg-white p-6">
+                    <table class="min-w-full table-auto">
                         <thead class="border-b-2 border-black">
                             <tr class="h-12.5">
-                                <th class="p-2 text-right text-gray-600 text-sm">تصویر</th>
-                                <th class="p-2 text-right text-gray-600 text-sm">شناسه</th>
-                                <th class="p-2 text-right text-gray-600 text-sm">عنوان</th>
-                                <th class="p-2 text-right text-gray-600 text-sm">مشخصات</th>
-                                <th class="p-2 text-center text-gray-600 text-sm">قیمت فعلی</th>
-                                <th class="p-2 text-center text-gray-600 text-sm w-60">قیمت جدید</th>
-                                <th class="p-2 text-center text-gray-600 text-sm">موجودی</th>
+                                <th class="p-2 text-right text-gray-600 text-sm">فروشنده</th>
+                                <th class="p-2 text-right text-gray-600 text-sm">کشور سازنده</th>
+                                <th class="p-2 text-right text-gray-600 text-sm">قیمت</th>
+                                <th class="p-2 text-right text-gray-600 text-sm">وضعیت</th>
                                 <th class="p-2 text-right text-gray-600 text-sm"></th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="border-b hover:bg-gray-100">
-                                <td class="p-2 text-sm text-gray-500"></td>
-                                <td class="p-2 text-sm text-gray-500">#F1H28</td>
-                                <td class="p-2 text-sm text-gray-500">گیربکس گریدر HG180</td>
-                                <td class="p-2 text-right text-sm">
-                                    <span class="text-gray-600">srt</span>
-                                    <span class="block text-xs text-gray-400">ایران</span>
-                                </td>
-                                <td class="p-2 text-center text-sm text-gray-500">
+                            <tr class="border-b hover:bg-gray-100 h-12.5">
+                                <td class="p-2 text-sm text-gray-600">سنگین راه تامین</td>
+                                <td class="p-2 text-sm text-gray-600">چین ( بالکن )</td>
+                                <td class="p-2 text-sm text-gray-600">
                                     <span class="text-gray-600">1.119.000</span>
                                     <svg class="inline " width="18" viewBox="0 0 25 27" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -292,46 +313,112 @@
                                             fill="currentColor"></path>
                                     </svg>
                                 </td>
-                                <td class="p-2 whitespace-nowrap align-middle text-center">
-                                    <input type="number" dir="ltr" class="bg-violet-100 rounded p-2.5 pt-1.5 pb-px outline-none">
+                                <td class="p-2 whitespace-nowrap"><span
+                                        class="text-xs bg-green-600 w-12 block text-center  text-white rounded-md">فعال</span>
                                 </td>
-                                <td class="p-2 align-middle text-center whitespace-nowrap">
-                                    <input type="number" dir="ltr" class="bg-violet-100 rounded w-14 p-2.5 pt-1.5 pb-px outline-none text-center">
+                                <td>
+                                    <button class="border rounded text-sm text-gray-500 p-2 hover:border-violet-700 hover:text-violet-700">مشاهده</button>
                                 </td>
-                                <td class="p-2 pt-7">
-                                     <div class="relative w-5 flex text-gray-500">
-                                            <button class="hover:text-violet-700" onclick="deactivate()">
-                                                <svg id="off" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                                    fill="currentColor" class="bi bi-toggle-off absolute  bottom-px"
-                                                    viewBox="0 0 16 16">
-                                                    <path
-                                                        d="M11 4a4 4 0 0 1 0 8H8a4.992 4.992 0 0 0 2-4 4.992 4.992 0 0 0-2-4h3zm-6 8a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM0 8a5 5 0 0 0 5 5h6a5 5 0 0 0 0-10H5a5 5 0 0 0-5 5z" />
-                                                </svg>
-                                            </button>
-
-                                            <button class="hover:text-violet-700" onclick="deactivate()">
-                                                <svg id="on" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                                    fill="currentColor"
-                                                    class="bi bi-toggle-on hidden absolute bottom-px"
-                                                    viewBox="0 0 16 16">
-                                                    <path
-                                                        d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z" />
-                                                </svg>
-                                            </button>
-                                     </div>
-                                </td>
+                              
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
+        <hr class="my-6">
+        <div class="flex flex-row">
+            <div class="basis-2/6 mt-3 px-3">
+                <h1 class="text-lg font-semibold">تعیین قیمت</h1>
+                <span class="text-sm"> از طراحان
+                     است  و متون بلکه و در و سطرآنچنان که لازم است <a href="#"
+                        class="text-violet-700">بیشتر بخوانید</a></span>
+            </div>
+            <div class="basis-4/6 mt-3 px-3 ">
+                <div class="flex flex-col bg-white rounded p-6 shadow-md">
+                    <div class="flex flex-col mb-4 w-full">
+                        <label class="mb-2 font-bold text-gray-600">قیمت</label>
+                        <div class="flex justify-between items-center">
+                            <input type="text" class="border w-64 outline-1 outline-blue-500 h-10 py-2 px-3 text-center rounded" placeholder="براساس واحد دلار">
+                            <input type="text" class="border w-64 bg-gray-200 text-gray-500 h-10 py-2 px-3 text-center rounded" value="معادل 550.000 تومان" disabled>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="my-6">
+        <div class="flex flex-row">
+            <div class="basis-2/6 mt-3 px-3">
+                <h1 class="text-lg font-semibold">تعیین موجودی</h1>
+                <span class="text-sm">  با  از طراحان
+                     و سطرآنچنان که لازم است <a href="#"
+                        class="text-violet-700">بیشتر بخوانید</a></span>
+            </div>
+            <div class="basis-4/6 mt-3 px-3 ">
+                <div class="flex flex-col bg-white rounded p-6 shadow-md">
+                    <div class="flex flex-col mb-4 w-full">
+                        <div class="flex justify-between mb-2 h-10">
+                            <label class="font-bold text-gray-600 self-center">موجودی</label>
+                       
+                        </div>
+                        <input  type="number" class="border outline-1 text-center outline-blue-500 h-10 py-2 px-3" placeholder="تعداد محصول اماده فروش">
+                    </div>           
+                </div>
+            </div>
+        </div>
+
+    
+
+        <hr class="my-6">
+        <div class="flex flex-row">
+            <div class="basis-2/6 mt-3 px-3">
+                <h1 class="text-lg font-semibold">تعیین مشخصات</h1>
+                <span class="text-sm">
+                    گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است <a href="#"
+                        class="text-violet-700">بیشتر بخوانید</a></span>
+            </div>
+            <div class="basis-4/6 mt-3 px-3 ">
+                <div class="flex flex-col bg-white rounded p-6 shadow-md">
+                    <div  class="flex flex-col mb-4 w-full">
+                        <label class="mb-2 font-bold text-gray-600">مشخصات</label>
+                        <div class="flex flex-row-reverse justify-between items-center mb-4">
+                            <input type="text" class="border w-64 outline-1 outline-blue-500 h-10 py-2 px-3 text-center rounded">
+                            <input type="text" class="border w-64 bg-gray-200 text-gray-500 h-10 py-2 px-3 text-center rounded" value="کشور سازنده" disabled>
+                        </div>
+                        <div   class="flex flex-row-reverse justify-between items-center mb-4">
+                            <input type="text" class="border w-64 outline-1 outline-blue-500 h-10 py-2 px-3 text-center rounded">
+                            <input type="text" class="border w-64 bg-gray-200 text-gray-500 h-10 py-2 px-3 text-center rounded" value="جنس" disabled>
+                        </div>
+                        <div id="details-container" class="flex flex-col"></div>
+
+                        <div class="flex justify-center mt-3 mb-3">
+                            <button id="addDetail" class="flex py-1.5 px-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-plus-circle-dotted" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 0c-.176 0-.35.006-.523.017l.064.998a7.117 7.117 0 0 1 .918 0l.064-.998A8.113 8.113 0 0 0 8 0zM6.44.152c-.346.069-.684.16-1.012.27l.321.948c.287-.098.582-.177.884-.237L6.44.153zm4.132.271a7.946 7.946 0 0 0-1.011-.27l-.194.98c.302.06.597.14.884.237l.321-.947zm1.873.925a8 8 0 0 0-.906-.524l-.443.896c.275.136.54.29.793.459l.556-.831zM4.46.824c-.314.155-.616.33-.905.524l.556.83a7.07 7.07 0 0 1 .793-.458L4.46.824zM2.725 1.985c-.262.23-.51.478-.74.74l.752.66c.202-.23.418-.446.648-.648l-.66-.752zm11.29.74a8.058 8.058 0 0 0-.74-.74l-.66.752c.23.202.447.418.648.648l.752-.66zm1.161 1.735a7.98 7.98 0 0 0-.524-.905l-.83.556c.169.253.322.518.458.793l.896-.443zM1.348 3.555c-.194.289-.37.591-.524.906l.896.443c.136-.275.29-.54.459-.793l-.831-.556zM.423 5.428a7.945 7.945 0 0 0-.27 1.011l.98.194c.06-.302.14-.597.237-.884l-.947-.321zM15.848 6.44a7.943 7.943 0 0 0-.27-1.012l-.948.321c.098.287.177.582.237.884l.98-.194zM.017 7.477a8.113 8.113 0 0 0 0 1.046l.998-.064a7.117 7.117 0 0 1 0-.918l-.998-.064zM16 8a8.1 8.1 0 0 0-.017-.523l-.998.064a7.11 7.11 0 0 1 0 .918l.998.064A8.1 8.1 0 0 0 16 8zM.152 9.56c.069.346.16.684.27 1.012l.948-.321a6.944 6.944 0 0 1-.237-.884l-.98.194zm15.425 1.012c.112-.328.202-.666.27-1.011l-.98-.194c-.06.302-.14.597-.237.884l.947.321zM.824 11.54a8 8 0 0 0 .524.905l.83-.556a6.999 6.999 0 0 1-.458-.793l-.896.443zm13.828.905c.194-.289.37-.591.524-.906l-.896-.443c-.136.275-.29.54-.459.793l.831.556zm-12.667.83c.23.262.478.51.74.74l.66-.752a7.047 7.047 0 0 1-.648-.648l-.752.66zm11.29.74c.262-.23.51-.478.74-.74l-.752-.66c-.201.23-.418.447-.648.648l.66.752zm-1.735 1.161c.314-.155.616-.33.905-.524l-.556-.83a7.07 7.07 0 0 1-.793.458l.443.896zm-7.985-.524c.289.194.591.37.906.524l.443-.896a6.998 6.998 0 0 1-.793-.459l-.556.831zm1.873.925c.328.112.666.202 1.011.27l.194-.98a6.953 6.953 0 0 1-.884-.237l-.321.947zm4.132.271a7.944 7.944 0 0 0 1.012-.27l-.321-.948a6.954 6.954 0 0 1-.884.237l.194.98zm-2.083.135a8.1 8.1 0 0 0 1.046 0l-.064-.998a7.11 7.11 0 0 1-.918 0l-.064.998zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z">
+                                    </path>
+                                </svg>
+                                <small class="mr-1"> افزودن مشخصات </small>
+                            </button>
+                        </div>
+                    </div>
+                  
+                       
+                </div>
+                <button class="mt-6 mb-24 w-full bg-violet-700 text-white py-2 rounded font-semibold text-sm">ثبت فروشنده جدید برای این محصول</button>
+            </div>
+        </div>
+
+        
+
+    </div>
 
 
 
-
-        <script src="../js/main.js"></script>
-        <script src="../js/modal.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/modal.js"></script>
 
 </body>
 
