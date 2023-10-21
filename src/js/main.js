@@ -15,8 +15,8 @@ function Dropdown() {
 function closeNav() {
     mainSidebar.classList.toggle("closeSidebar");
     setting.classList.toggle("settings");
-    product.classList.toggle("pointer-events-none");
-    dropdown.classList.add("hidden");
+    product?.classList.toggle("pointer-events-none");
+    dropdown?.classList.add("hidden");
 
     var close = document.getElementById("close-navbar-btn");
     close.classList.toggle("close-nav");
@@ -32,7 +32,7 @@ function closeNav() {
 // open sidebar in responsive mode
 function openSidebar() {
     mainSidebar.classList.toggle("showSidebar");
-    product.classList.remove("pointer-events-none");
+    product?.classList.remove("pointer-events-none");
     setting.classList.remove("respnsive-settings");
     banner.classList.remove("logo");
     mainSidebar.classList.remove("hideSidebar");
@@ -40,7 +40,7 @@ function openSidebar() {
 }
 function closeSidebar() {
     mainSidebar.classList.remove("showSidebar");
-    product.classList.add("pointer-events-none");
+    product?.classList.add("pointer-events-none");
     setting.classList.toggle("respnsive-settings");
     banner.classList.toggle("logo");
     mainSidebar.classList.toggle("hideSidebar");
@@ -49,8 +49,8 @@ function closeSidebar() {
 
 function handleResize() {
     mainSidebar.classList.remove("showSidebar");
-    product.classList.add("pointer-events-none");
-    dropdown.classList.add("hidden")
+    product?.classList.add("pointer-events-none");
+    dropdown?.classList.add("hidden")
     setting.classList.toggle("respnsive-settings");
     banner.classList.toggle("logo");
     mainSidebar.classList.toggle("hideSidebar");
@@ -77,12 +77,12 @@ window.addEventListener('resize', function () {
         if (!element.classList.contains('activate')) {
             sidebar.classList.remove('closeSidebar');
             setting.classList.remove('settings');
-            product.classList.remove("pointer-events-none");
+            product?.classList.remove("pointer-events-none");
         }
         else {
             setting.classList.add('settings');
             sidebar.classList.add('closeSidebar');
-            product.classList.add("pointer-events-none");
+            product?.classList.add("pointer-events-none");
         }
     }
 });
@@ -121,20 +121,20 @@ function searchorder() {
 }
 
 function switchStatus(status) {
-    const rows = document.querySelectorAll('#statusTable tbody tr');
-    rows.forEach(row => {
-        if (row.classList.contains(`status-${status}`)) {
-            if (row.classList.contains('hidden')) {
-                row.classList.remove('hidden');
-                row.classList.add('fade-in');
+    const divs = document.querySelectorAll('.status-all');
+    divs.forEach(div => {
+        if (div.classList.contains(`status-${status}`)) {
+            if (div.classList.contains('hidden')) {
+                div.classList.remove('hidden');
+                div.classList.add('fade-in');
             }
         } else {
-            if (!row.classList.contains('hidden')) {
-                row.classList.remove('fade-in');
-                row.classList.add('fade-out');
+            if (!div.classList.contains('hidden')) {
+                div.classList.remove('fade-in');
+                div.classList.add('fade-out');
                 setTimeout(() => {
-                    row.classList.add('hidden');
-                    row.classList.remove('fade-out');
+                    div.classList.add('hidden');
+                    div.classList.remove('fade-out');
                 }, 500);
             }
         }
@@ -143,7 +143,6 @@ function switchStatus(status) {
     buttons.forEach(button => {
         button.classList.remove('table-active');
     });
-
 
     document.getElementById(`${status}-button`).classList.add('table-active');
 }
@@ -406,30 +405,30 @@ function deactivate1() {
 
 
 
-document.addEventListener("DOMContentLoaded", function () {
-    const addDetail = document.getElementById("addDetail");
-    const container = document.getElementById("details-container");
-    let detailCount = 1;
+// document.addEventListener("DOMContentLoaded", function () {
+//     const addDetail = document.getElementById("addDetail");
+//     const container = document.getElementById("details-container");
+//     let detailCount = 1;
     
-    addDetail.addEventListener("click", function () {
-        if (detailCount < 4) { 
-            const newDiv = document.createElement("div");
-            newDiv.className = "flex flex-row-reverse justify-between items-center mb-4";
-            const newInput1 = document.createElement("input");
-            newInput1.type = "text";
-            newInput1.className = "border w-64 outline-1 outline-blue-500 h-10 py-2 px-3 text-center rounded";
-            const newInput2 = document.createElement("input");
-            newInput2.type = "text";
-            newInput2.className = "border w-64 bg-gray-200 text-gray-500 h-10 py-2 px-3 text-center rounded focus:bg-white focus:outline-blue-500";
-            newInput2.placeholder = "عنوان";
-            newDiv.appendChild(newInput1);
-            newDiv.appendChild(newInput2);
-            container.appendChild(newDiv);
-            detailCount++;
+//     addDetail.addEventListener("click", function () {
+//         if (detailCount < 4) { 
+//             const newDiv = document.createElement("div");
+//             newDiv.className = "flex flex-row-reverse justify-between items-center mb-4";
+//             const newInput1 = document.createElement("input");
+//             newInput1.type = "text";
+//             newInput1.className = "border w-64 outline-1 outline-blue-500 h-10 py-2 px-3 text-center rounded";
+//             const newInput2 = document.createElement("input");
+//             newInput2.type = "text";
+//             newInput2.className = "border w-64 bg-gray-200 text-gray-500 h-10 py-2 px-3 text-center rounded focus:bg-white focus:outline-blue-500";
+//             newInput2.placeholder = "عنوان";
+//             newDiv.appendChild(newInput1);
+//             newDiv.appendChild(newInput2);
+//             container.appendChild(newDiv);
+//             detailCount++;
             
-            if (detailCount === 4) {
-                addDetail.style.display = "none";
-            }
-        }
-    });
-});
+//             if (detailCount === 4) {
+//                 addDetail.style.display = "none";
+//             }
+//         }
+//     });
+// });

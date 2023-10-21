@@ -333,105 +333,118 @@
 
 
             <div>
-                <div class="max-w-full overflow-x-auto">
-                    <table class="min-w-full bg-white shadow-md rounded table-auto " id="statusTable">
-                        <thead class="border-b-2 border-black">
-                            <tr class="h-12.5">
-                                <th class="p-2 text-right text-gray-600 text-sm">شناسه</th>
-                                <th class="p-2 text-right text-gray-600 text-sm">عنوان</th>
-                                <th class="p-2 text-right text-gray-600 text-sm">برند / دسته</th>
-                                <th class="p-2 text-right text-gray-600 text-sm">دستگاه / دسته</th>
-                                <th class="p-2 text-center text-gray-600 text-sm">فروش آنلاین</th>
-                                <th class="p-2 text-right text-gray-600 text-sm w-64"></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="border-b hover:bg-gray-100">
-                                <td class="p-2 text-sm text-gray-500">#F1H28</td>
-                                <td class="p-2 text-sm text-gray-500">گیربکس گریدر HG180</td>
-                                <td class="p-2 text-sm">
+                <div class="max-w-full">
+                    <div class="flex flex-row flex-wrap bg-white p-2.5 mb-3 shadow-lg rounded">
+                        <div class="flex w-2/4 mb-2.5 max-sm:w-full">
+                            <div class="flex justify-between items-center px-2 bg-gray-200 py-2.5 mx-1 rounded w-full text-center text-sm ">
+                                <span>شناسه</span>
+                                <span>F1H28</span>
+                            </div>
+                           
+                        </div>
+                        <div class="flex w-2/4 mb-2.5 max-sm:w-full">
+                            <div class="flex justify-between items-center px-2 bg-gray-200 py-2.5 mx-1 rounded w-full text-center text-sm ">
+                                <span>عنوان</span>
+                               <span>گیربکس گریدر HG180</span>
+                            </div>
+                        </div>
+                        <div class="flex w-2/4 mb-2.5 max-sm:w-full">
+                            <div class="flex justify-between items-center px-2 bg-gray-200 py-2.5 mx-1 rounded w-full text-center text-sm ">
+                                <span>برند / دسته</span>
+                                <div>
                                     <span class="text-gray-600">Hepco</span>
                                     <span class="block text-xs text-gray-400">گریدر</span>
-                                </td>
-                                <td class="p-2 text-sm">
+                                </div>
+                            </div>
+                        </div>  
+                        <div class="flex w-2/4 mb-2.5 max-sm:w-full">
+                            <div class="flex justify-between items-center px-2 bg-gray-200 py-2.5 mx-1 rounded w-full text-center text-sm ">
+                                <span>دستگاه / دسته</span>
+                                <div>
                                     <span class="text-gray-600">HG180</span>
                                     <span class="block text-xs text-gray-400">لوازم موتوری</span>
-                                </td>
-                                <td class=" p-2 whitespace-nowrap"><span
-                                        class="text-xs  text-green-500  rounded-md flex justify-center">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex w-2/4 mb-2.5 max-sm:w-full">
+                            <div class="flex justify-between items-center px-2 bg-gray-200 py-2.5 mx-1 rounded w-full text-center text-sm ">
+                                <span>فروش آنلاین</span>
+                                <span
+                                class="text-xs  text-green-500  rounded-md flex justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px"
+                                    fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z">
+                                    </path>
+                                </svg>
+                            </span>
+                            </div>
+                        </div>
+                        <div class="flex w-2/4 mb-2.5 max-sm:w-full">
+                            <div class="flex justify-center items-center px-2 bg-gray-200 py-2.5 mx-1 rounded w-full text-center text-sm ">
+                                <div class="flex justify-center gap-5 text-gray-500">
+                                    <button id="open-productinfo" class="hover:text-violet-700">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px"
-                                            fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                                            fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16">
                                             <path
-                                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z">
+                                                d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z">
                                             </path>
                                         </svg>
-                                    </span></td>
+                                    </button>
 
-                                <td class="text-center p-2">
-                                    <div class="flex justify-center gap-5 text-gray-500">
-                                        <button id="open-productinfo" class="hover:text-violet-700">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px"
-                                                fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16">
+                                    <button  class="hover:text-violet-700">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px"
+                                            fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z">
+                                            </path>
+                                        </svg>
+                                    </button>
+
+
+                                    <button id="open-sellers" class="hover:text-violet-700">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px"
+                                            fill="currentColor" class="bi bi-shop-window" viewBox="0 0 16 16">
+                                            <path
+                                                d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.371 2.371 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976l2.61-3.045zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0zM1.5 8.5A.5.5 0 0 1 2 9v6h12V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5zm2 .5a.5.5 0 0 1 .5.5V13h8V9.5a.5.5 0 0 1 1 0V13a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5a.5.5 0 0 1 .5-.5z">
+                                            </path>
+                                        </svg>
+                                    </button>
+
+                                    <button id="open-partnumber" class="hover:text-violet-700">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px"
+                                            fill="currentColor" class="bi bi-123" viewBox="0 0 16 16">
+                                            <path
+                                                d="M2.873 11.297V4.142H1.699L0 5.379v1.137l1.64-1.18h.06v5.961h1.174Zm3.213-5.09v-.063c0-.618.44-1.169 1.196-1.169.676 0 1.174.44 1.174 1.106 0 .624-.42 1.101-.807 1.526L4.99 10.553v.744h4.78v-.99H6.643v-.069L8.41 8.252c.65-.724 1.237-1.332 1.237-2.27C9.646 4.849 8.723 4 7.308 4c-1.573 0-2.36 1.064-2.36 2.15v.057h1.138Zm6.559 1.883h.786c.823 0 1.374.481 1.379 1.179.01.707-.55 1.216-1.421 1.21-.77-.005-1.326-.419-1.379-.953h-1.095c.042 1.053.938 1.918 2.464 1.918 1.478 0 2.642-.839 2.62-2.144-.02-1.143-.922-1.651-1.551-1.714v-.063c.535-.09 1.347-.66 1.326-1.678-.026-1.053-.933-1.855-2.359-1.845-1.5.005-2.317.88-2.348 1.898h1.116c.032-.498.498-.944 1.206-.944.703 0 1.206.435 1.206 1.07.005.64-.504 1.106-1.2 1.106h-.75v.96Z">
+                                            </path>
+                                        </svg>
+                                    </button>
+
+                                    <div class="relative w-5 flex">
+                                        <button class="hover:text-violet-700" onclick="deactivate()">
+                                            <svg id="off" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                fill="currentColor" class="bi bi-toggle-off absolute  bottom-px"
+                                                viewBox="0 0 16 16">
                                                 <path
-                                                    d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z">
-                                                </path>
+                                                    d="M11 4a4 4 0 0 1 0 8H8a4.992 4.992 0 0 0 2-4 4.992 4.992 0 0 0-2-4h3zm-6 8a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM0 8a5 5 0 0 0 5 5h6a5 5 0 0 0 0-10H5a5 5 0 0 0-5 5z" />
                                             </svg>
                                         </button>
 
-                                        <button  class="hover:text-violet-700">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px"
-                                                fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
+                                        <button class="hover:text-violet-700" onclick="deactivate()">
+                                            <svg id="on" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                fill="currentColor"
+                                                class="bi bi-toggle-on hidden absolute bottom-px"
+                                                viewBox="0 0 16 16">
                                                 <path
-                                                    d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z">
-                                                </path>
+                                                    d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z" />
                                             </svg>
                                         </button>
-
-
-                                        <button id="open-sellers" class="hover:text-violet-700">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px"
-                                                fill="currentColor" class="bi bi-shop-window" viewBox="0 0 16 16">
-                                                <path
-                                                    d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.371 2.371 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976l2.61-3.045zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0zM1.5 8.5A.5.5 0 0 1 2 9v6h12V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5zm2 .5a.5.5 0 0 1 .5.5V13h8V9.5a.5.5 0 0 1 1 0V13a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5a.5.5 0 0 1 .5-.5z">
-                                                </path>
-                                            </svg>
-                                        </button>
-
-                                        <button id="open-partnumber" class="hover:text-violet-700">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px"
-                                                fill="currentColor" class="bi bi-123" viewBox="0 0 16 16">
-                                                <path
-                                                    d="M2.873 11.297V4.142H1.699L0 5.379v1.137l1.64-1.18h.06v5.961h1.174Zm3.213-5.09v-.063c0-.618.44-1.169 1.196-1.169.676 0 1.174.44 1.174 1.106 0 .624-.42 1.101-.807 1.526L4.99 10.553v.744h4.78v-.99H6.643v-.069L8.41 8.252c.65-.724 1.237-1.332 1.237-2.27C9.646 4.849 8.723 4 7.308 4c-1.573 0-2.36 1.064-2.36 2.15v.057h1.138Zm6.559 1.883h.786c.823 0 1.374.481 1.379 1.179.01.707-.55 1.216-1.421 1.21-.77-.005-1.326-.419-1.379-.953h-1.095c.042 1.053.938 1.918 2.464 1.918 1.478 0 2.642-.839 2.62-2.144-.02-1.143-.922-1.651-1.551-1.714v-.063c.535-.09 1.347-.66 1.326-1.678-.026-1.053-.933-1.855-2.359-1.845-1.5.005-2.317.88-2.348 1.898h1.116c.032-.498.498-.944 1.206-.944.703 0 1.206.435 1.206 1.07.005.64-.504 1.106-1.2 1.106h-.75v.96Z">
-                                                </path>
-                                            </svg>
-                                        </button>
-
-                                        <div class="relative w-5 flex">
-                                            <button class="hover:text-violet-700" onclick="deactivate()">
-                                                <svg id="off" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                                    fill="currentColor" class="bi bi-toggle-off absolute  bottom-px"
-                                                    viewBox="0 0 16 16">
-                                                    <path
-                                                        d="M11 4a4 4 0 0 1 0 8H8a4.992 4.992 0 0 0 2-4 4.992 4.992 0 0 0-2-4h3zm-6 8a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM0 8a5 5 0 0 0 5 5h6a5 5 0 0 0 0-10H5a5 5 0 0 0-5 5z" />
-                                                </svg>
-                                            </button>
-
-                                            <button class="hover:text-violet-700" onclick="deactivate()">
-                                                <svg id="on" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                                    fill="currentColor"
-                                                    class="bi bi-toggle-on hidden absolute bottom-px"
-                                                    viewBox="0 0 16 16">
-                                                    <path
-                                                        d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z" />
-                                                </svg>
-                                            </button>
-                                        </div>
-
                                     </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <nav class="flex justify-center mt-4">
