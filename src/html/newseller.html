@@ -123,11 +123,10 @@
                         </li>
 
                         <ul id="DropdownMenu" class="hidden mr-8 leading-8 text-sm">
-                            <li class="pr-3 hover:text-violet-700 border-r-2 active-drop"><a href="#">لیست محصولات</a>
-                            </li>
-                            <li class="pr-3 hover:text-violet-700 border-r-2"><a href="#">افزودن محصول</a></li>
-                            <li class="pr-3 hover:text-violet-700 border-r-2"><a href="#">افزودن قیمت</a></li>
-                            <li class="pr-3 hover:text-violet-700 border-r-2"><a href="#">ویرایش سریع قیمت</a></li>
+                            <li class="pr-3 hover:text-violet-700 border-r-2"><a href="../html/product.html">لیست محصولات</a></li>
+                            <li class="pr-3 hover:text-violet-700 border-r-2"><a href="../html/addproduct.html">افزودن محصول</a></li>
+                            <li class="pr-3 hover:text-violet-700 border-r-2 active-drop"><a href="../html/newseller.html">فروشنده جدید محصول</a></li>
+                            <li class="pr-3 hover:text-violet-700 border-r-2"><a href="../html/quickeditprice.html">ویرایش سریع قیمت</a></li>
                         </ul>
 
                         <li class="h-12 flex items-center whitespace-nowrap">
@@ -236,11 +235,11 @@
     <div class="w-[calc(100%-250px)] float-left p-12 overflow-y-auto h-screen menu-collapse max-xl:w-full max-lg:p-6 max-md:p-0"
         id="expand-menu">
         <div class="max-md:pt-2">
-            <h1 class="text-2xl font-semibold">فروشنده جدید محصول</h1>
+            <h1 class="text-2xl font-semibold max-md:px-3">فروشنده جدید محصول</h1>
         </div>
         <hr class="my-4">
-        <div class="flex flex-row">
-            <div class="basis-2/6 mt-3 px-3">
+        <div class="flex flex-row max-lg:flex-col">
+            <div class="basis-2/6 mt-3 px-3 max-lg:mb-2.5">
                 <h1 class="text-lg font-semibold">انتخاب محصول</h1>
                 <span class="text-sm">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
                     گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است <a href="#"
@@ -250,24 +249,24 @@
                 <div class="flex flex-col bg-white rounded p-6 shadow-md">
                     <div class="flex flex-col mb-4 w-full">
                         <label class="mb-2 font-bold text-gray-600">یافتن محصول</label>
-                        <div class="flex justify-between items-center">
-                            <input type="text" class="border w-64 outline-1 outline-blue-500 h-10 py-2 px-3 text-center rounded" placeholder="براساس شناسه محصول">
-                            <span class="text-violet-700 ">یا</span>
-                            <input type="text" class="border w-64 outline-1 outline-blue-500 h-10 py-2 px-3 text-center rounded" placeholder="براساس Part Number">
+                        <div class="flex flex-row max-sm:flex-col items-center">
+                            <div class="flex flex-row w-full"><input type="text" class="border w-full outline-1 outline-blue-500 h-10 py-2 px-3 text-center rounded" placeholder="براساس شناسه محصول"></div>
+                                <span class="text-violet-700 mx-4 max-sm:my-2">یا</span>
+                            <div class="flex flex-row w-full"><input type="text" class="border w-full outline-1 outline-blue-500 h-10 py-2 px-3 text-center rounded" placeholder="براساس Part Number"></div>
                         </div>
                         <button class="w-full my-6 py-2 border border-black rounded text-sm hover:bg-slate-600 hover:text-white hover:border-gray-600 transition duration-150 ease-in-out">پیدا کن</button>
                     </div>
                     <label class="mb-2 font-bold text-gray-600">انتخاب محصول</label>
                     <div class=" mb-4 w-full">
-                        <div class="flex h-32 rounded px-3 py-2.5" style="box-shadow: 1px 0px 8px 4px #6D28D9;">
-                            <img src="../img/part1.jpg" class="h-full" alt="product-image">
-                            <div class="flex justify-between w-full">
-                                <div class="px-4 flex flex-col justify-between">
+                        <div class="flex h-32 max-mobile:h-fit rounded px-3 py-2.5" style="box-shadow: 1px 0px 8px 4px #6D28D9;">
+                            <img src="../img/part1.jpg" class="h-full max-mobile:hidden" alt="product-image">
+                            <div class="flex justify-between max-mobile:flex-col  w-full">
+                                <div class="px-4 flex flex-col justify-between text-center">
                                     <h3 class="font-semibold">دسته دنده گریدر HG180</h3>
                                     <span class="text-gray-500">Hepco / گریدر</span>
                                 </div>
-                                <div class="flex flex-col justify-between">
-                                    <a href="" target="_blank" class="flex justify-end text-violet-700">
+                                <div class="flex flex-col justify-between text-center">
+                                    <a href="" target="_blank" class="flex justify-end max-mobile:justify-center text-violet-700">
                                         <span class="px-2" dir="ltr">#HE1J05</span>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
                                             <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"></path>
@@ -281,8 +280,8 @@
             </div>
         </div>
         <hr class="my-6">
-        <div class="flex flex-row">
-            <div class="basis-2/6 mt-3 px-3">
+        <div class="flex flex-row max-md:flex-col">
+            <div class="basis-2/6 mt-3 px-3 max-md:mb-2.5">
                 <h1 class="text-lg font-semibold">سایر قیمت ها</h1>
                 <span class="text-sm">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
                          و مجله در ستون و  که لازم است <a href="#"
@@ -334,8 +333,8 @@
             </div>
         </div>
         <hr class="my-6">
-        <div class="flex flex-row">
-            <div class="basis-2/6 mt-3 px-3">
+        <div class="flex flex-row max-md:flex-col">
+            <div class="basis-2/6 mt-3 px-3 max-md:mb-2.5">
                 <h1 class="text-lg font-semibold">تعیین قیمت</h1>
                 <span class="text-sm"> از طراحان
                      است  و متون بلکه و در و سطرآنچنان که لازم است <a href="#"
@@ -345,9 +344,10 @@
                 <div class="flex flex-col bg-white rounded p-6 shadow-md">
                     <div class="flex flex-col mb-4 w-full">
                         <label class="mb-2 font-bold text-gray-600">قیمت</label>
-                        <div class="flex justify-between items-center">
-                            <input type="text" class="border w-64 outline-1 outline-blue-500 h-10 py-2 px-3 text-center rounded" placeholder="براساس واحد دلار">
-                            <input type="text" class="border w-64 bg-gray-200 text-gray-500 h-10 py-2 px-3 text-center rounded" value="معادل 550.000 تومان" disabled>
+                        <div class="flex flex-row max-sm:flex-col items-center">
+                            <input type="text" class="border w-full outline-1 outline-blue-500 h-10 py-2 px-3 text-center rounded" placeholder="براساس واحد دلار">
+                            <div class="mx-3 max-sm:my-4"></div>
+                            <input type="text" class="border w-full bg-gray-200 text-gray-500 h-10 py-2 px-3 text-center rounded" value="معادل 550.000 تومان" disabled>
                         </div>
                     </div>
                 </div>
@@ -355,8 +355,8 @@
         </div>
 
         <hr class="my-6">
-        <div class="flex flex-row">
-            <div class="basis-2/6 mt-3 px-3">
+        <div class="flex flex-row max-md:flex-col">
+            <div class="basis-2/6 mt-3 px-3 max-md:mb-2.5">
                 <h1 class="text-lg font-semibold">تعیین موجودی</h1>
                 <span class="text-sm">  با  از طراحان
                      و سطرآنچنان که لازم است <a href="#"
@@ -378,8 +378,8 @@
     
 
         <hr class="my-6">
-        <div class="flex flex-row">
-            <div class="basis-2/6 mt-3 px-3">
+        <div class="flex flex-row max-lg:flex-col">
+            <div class="basis-2/6 mt-3 px-3 max-lg:mb-2.5">
                 <h1 class="text-lg font-semibold">تعیین مشخصات</h1>
                 <span class="text-sm">
                     گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است <a href="#"
@@ -389,13 +389,16 @@
                 <div class="flex flex-col bg-white rounded p-6 shadow-md">
                     <div  class="flex flex-col mb-4 w-full">
                         <label class="mb-2 font-bold text-gray-600">مشخصات</label>
-                        <div class="flex flex-row-reverse justify-between items-center mb-4">
-                            <input type="text" class="border w-64 outline-1 outline-blue-500 h-10 py-2 px-3 text-center rounded">
-                            <input type="text" class="border w-64 bg-gray-200 text-gray-500 h-10 py-2 px-3 text-center rounded" value="کشور سازنده" disabled>
+                        <div class="flex flex-row max-sm:flex-col items-center mb-4">
+                            <input type="text" class="border w-full bg-gray-200 text-gray-500 h-10 py-2 px-3 text-center rounded" value="کشور سازنده" disabled>
+                                <div class="mx-3 max-sm:my-2"></div>
+                            <input type="text" class="border w-full outline-1 outline-blue-500 h-10 py-2 px-3 text-center rounded">
                         </div>
-                        <div   class="flex flex-row-reverse justify-between items-center mb-4">
-                            <input type="text" class="border w-64 outline-1 outline-blue-500 h-10 py-2 px-3 text-center rounded">
-                            <input type="text" class="border w-64 bg-gray-200 text-gray-500 h-10 py-2 px-3 text-center rounded" value="جنس" disabled>
+
+                        <div class="flex flex-row max-sm:flex-col items-center mb-4">
+                            <input type="text" class="border w-full bg-gray-200 text-gray-500 h-10 py-2 px-3 text-center rounded" value="جنس" disabled>
+                                <div class="mx-3 max-sm:my-2"></div>
+                            <input type="text" class="border w-full outline-1 outline-blue-500 h-10 py-2 px-3 text-center rounded">
                         </div>
                         <div id="details-container" class="flex flex-col"></div>
 

@@ -92,8 +92,8 @@ document.addEventListener('DOMContentLoaded', function () {
     closeProductmodalButton.forEach((button) => button?.addEventListener('click', () => closeModal(productinfomodal)));
 });
 
+// function for zoom in and out modal
 document.addEventListener('DOMContentLoaded', function () {
-    // Function to apply zoom effect
     function applyZoomEffect(target, contentClass) {
         const modalContent = target.querySelector(`.${contentClass}`);
         modalContent.classList.add("zoomin");
@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 500);
     }
 
-    // Modal elements and their corresponding content classes
+
     const modalElements = [
         { triggerId: 'modal-out', contentClass: 'modal-content' },
         { triggerId: 'nested-out', contentClass: 'nested-content' },
@@ -117,12 +117,11 @@ document.addEventListener('DOMContentLoaded', function () {
         { triggerId: 'product-info-out', contentClass: 'product-info-content' },
     ];
 
-    // Event listener for zooming effect
     modalElements.forEach(element => {
         const trigger = document.getElementById(element.triggerId);
         if (trigger) {
             trigger.addEventListener('click', event => {
-                if (event.target === trigger) { // Check if the event target is the modal's outer container
+                if (event.target === trigger) { 
                     applyZoomEffect(trigger, element.contentClass);
                 }
             });

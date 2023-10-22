@@ -123,11 +123,10 @@
                         </li>
 
                         <ul id="DropdownMenu" class="hidden mr-8 leading-8 text-sm">
-                            <li class="pr-3 hover:text-violet-700 border-r-2 active-drop"><a href="#">لیست محصولات</a>
-                            </li>
-                            <li class="pr-3 hover:text-violet-700 border-r-2"><a href="#">افزودن محصول</a></li>
-                            <li class="pr-3 hover:text-violet-700 border-r-2"><a href="#">افزودن قیمت</a></li>
-                            <li class="pr-3 hover:text-violet-700 border-r-2"><a href="#">ویرایش سریع قیمت</a></li>
+                            <li class="pr-3 hover:text-violet-700 border-r-2 "><a href="../html/product.html">لیست محصولات</a></li>
+                            <li class="pr-3 hover:text-violet-700 border-r-2 active-drop"><a href="../html/addproduct.html">افزودن محصول</a></li>
+                            <li class="pr-3 hover:text-violet-700 border-r-2"><a href="../html/newseller.html">فروشنده جدید محصول</a></li>
+                            <li class="pr-3 hover:text-violet-700 border-r-2 "><a href="../html/quickeditprice.html">ویرایش سریع قیمت</a></li>
                         </ul>
 
                         <li class="h-12 flex items-center whitespace-nowrap">
@@ -236,11 +235,11 @@
     <div class="w-[calc(100%-250px)] float-left p-12 overflow-y-auto h-screen menu-collapse max-xl:w-full max-lg:p-6 max-md:p-0"
         id="expand-menu">
         <div class="max-md:pt-2">
-            <h1 class="text-2xl font-semibold">افزودن محصول</h1>
+            <h1 class="text-2xl font-semibold max-md:px-3">افزودن محصول</h1>
         </div>
         <hr class="my-4">
-        <div class="flex flex-row">
-            <div class="basis-2/6 mt-3 px-3">
+        <div class="flex flex-row max-md:flex-col">
+            <div class="basis-2/6 mt-3 px-3 max-md:mb-2.5">
                 <h1 class="text-lg font-semibold">مقادیر اختصاصی</h1>
                 <span class="text-sm">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
                     گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است <a href="#"
@@ -273,8 +272,8 @@
             </div>
         </div>
         <hr class="my-6">
-        <div class="flex flex-row">
-            <div class="basis-2/6 mt-3 px-3">
+        <div class="flex flex-row max-md:flex-col">
+            <div class="basis-2/6 mt-3 px-3 max-md:mb-2.5">
                 <h1 class="text-lg font-semibold">دسته بندی</h1>
                 <span class="text-sm">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
                     گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است <a href="#"
@@ -322,8 +321,8 @@
             </div>
         </div>
         <hr class="my-6">
-        <div class="flex flex-row">
-            <div class="basis-2/6 mt-3 px-3">
+        <div class="flex flex-row max-md:flex-col">
+            <div class="basis-2/6 mt-3 px-3 max-md:mb-2.5">
                 <h1 class="text-lg font-semibold">توضیحات</h1>
                 <span class="text-sm">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
                     گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است <a href="#"
@@ -345,8 +344,8 @@
         </div>
 
         <hr class="my-6">
-        <div class="flex flex-row">
-            <div class="basis-2/6 mt-3 px-3">
+        <div class="flex flex-row max-md:flex-col">
+            <div class="basis-2/6 mt-3 px-3 max-md:mb-2.5">
                 <h1 class="text-lg font-semibold">SEO Keywords</h1>
                 <span class="text-sm">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
                     گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است <a href="#"
@@ -355,10 +354,10 @@
             <div class="basis-4/6 mt-3 px-3 ">
                 <div class="flex flex-col bg-white rounded p-6 shadow-md mb-6">
                     <div class="flex flex-col mb-4 w-full">
-                        <div class="flex justify-between mb-2 h-10">
+                        <div class="flex justify-between mb-2 h-10 max-sm:flex-col max-sm:items-center">
                             <label class="font-bold text-gray-600 self-center">برچسب ها</label>
                             <button onclick="addTagFromInput()"
-                                class="cursor-pointer bg-green-500 text-white text-sm font-semibold w-40 rounded">
+                                class="cursor-pointer bg-green-500 text-white text-sm font-semibold w-40 rounded max-sm:p-1 mt-2.5 max-sm:w-fit">
                                 <span> ایجاد برچسب جدید</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" fill="currentColor"
                                     class="bi bi-plus inline" viewBox="0 0 16 16">
@@ -368,7 +367,7 @@
                                 </svg>
                             </button>
                         </div>
-                        <input id="tagInput" type="text" class="border outline-1 outline-blue-500 h-10 py-2 px-3">
+                        <input id="tagInput" type="text" class="border outline-1 outline-blue-500 h-10 py-2 px-3 max-sm:mt-14">
                     </div>
 
                     <div id="tagContainer" class="flex flex-row flex-wrap mb-4 w-full "></div>
@@ -393,8 +392,8 @@
         </div>
 
         <hr class="my-6">
-        <div class="flex flex-row">
-            <div class="basis-2/6 mt-3 px-3">
+        <div class="flex flex-row max-md:flex-col">
+            <div class="basis-2/6 mt-3 px-3 max-md:mb-2.5">
                 <h1 class="text-lg font-semibold">وزن محصول</h1>
                 <span class="text-sm">لورم ایپسوماز طراحان
                     گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است <a href="#"
@@ -411,8 +410,8 @@
         </div>
 
         <hr class="my-6">
-        <div class="flex flex-row">
-            <div class="basis-2/6 mt-3 px-3">
+        <div class="flex flex-row max-md:flex-col">
+            <div class="basis-2/6 mt-3 px-3 max-md:mb-2.5">
                 <h1 class="text-lg font-semibold">اپلود تصاویر</h1>
                 <span class="text-sm">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
                     گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است <a href="#"
@@ -463,6 +462,7 @@
 
     <script src="../js/main.js"></script>
     <script src="../js/modal.js"></script>
+    <script src="../js/addproduct.js"></script>
 
 </body>
 

@@ -122,12 +122,13 @@
                             </button>     
                             </li>
 
-                        <ul id="DropdownMenu" class="hidden mr-8 leading-8 text-sm">
-                            <li class="pr-3 hover:text-violet-700 border-r-2 active-drop"><a href="#">لیست محصولات</a></li>
-                            <li class="pr-3 hover:text-violet-700 border-r-2"><a href="#">افزودن محصول</a></li>
-                            <li class="pr-3 hover:text-violet-700 border-r-2"><a href="#">افزودن قیمت</a></li>
-                            <li class="pr-3 hover:text-violet-700 border-r-2"><a href="#">ویرایش سریع قیمت</a></li>
-                        </ul>
+                        
+                            <ul id="DropdownMenu" class="hidden mr-8 leading-8 text-sm">
+                                <li class="pr-3 hover:text-violet-700 border-r-2 active-drop"><a href="../html/product.html">لیست محصولات</a></li>
+                                <li class="pr-3 hover:text-violet-700 border-r-2"><a href="../html/addproduct.html">افزودن محصول</a></li>
+                                <li class="pr-3 hover:text-violet-700 border-r-2 "><a href="../html/newseller.html">فروشنده جدید محصول</a></li>
+                                <li class="pr-3 hover:text-violet-700 border-r-2"><a href="../html/quickeditprice.html">ویرایش سریع قیمت</a></li>
+                            </ul>
 
                         <li class="h-12 flex items-center whitespace-nowrap">
                             <a href="#" class="p-3.5 w-full hover:text-violet-700 flex">
@@ -239,8 +240,8 @@
                 <h1 class="text-2xl font-semibold">محصولات</h1>
             </div>
 
-            <div class="flex flex-row justify-end">
-                <form class=" relative hidden mb-4 ml-2 mt-5 w-full" id="searchBar">
+            <div class="flex flex-row justify-end max-sm:flex-col max-sm:text-center">
+                <form class=" relative hidden mb-4 ml-2 mt-5 w-full max-md:hidden" id="searchBar">
                     <select
                         class="absolute left-0 w-2/6 h-full text-sm rounded rounded-r-none outline-0 focus:ring-4 border border-r-0"
                         aria-label="">
@@ -276,7 +277,7 @@
 
                 <div>
                     <button
-                        class="cursor-pointer mt-5 mb-4 mx-2 bg-violet-700 text-white w-40 text-sm font-semibold h-10 rounded mr-auto">
+                        class="cursor-pointer mt-5 mb-4 mx-2 bg-violet-700 text-white w-40 max-sm:w-full text-sm font-semibold h-10 rounded mr-auto">
                         <span>فروش محصول</span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="bi bi-bag-plus-fill mb-1 mx-1 inline" viewBox="0 0 16 16">
@@ -289,20 +290,22 @@
 
                 <div>
                     <button
-                        class="cursor-pointer mt-5 mb-4 bg-green-500 text-white  w-40 text-sm font-semibold h-10 rounded">
-                        <span>افزودن محصول</span>
+                        class="cursor-pointer mt-5 mb-4 bg-green-500 text-white w-40 max-sm:w-full max-sm:mt-2 text-sm font-semibold h-10 rounded">
+                        <a href="../html/addproduct.html">
+                            <span>افزودن محصول</span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" fill="currentColor"
                             class="bi bi-plus inline mb-1" viewBox="0 0 16 16">
                             <path
                                 d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z">
                             </path>
                         </svg>
+                        </a>
                     </button>
                 </div>
 
             </div>
 
-            <div class="flex flex-row bg-white mb-6 shadow-lg max-md:mt-20 max-sm:flex-col max-sm:mt-10">
+            <div class="flex flex-row bg-white mb-6 shadow-lg max-md:mt-4 max-sm:flex-col max-sm:mt-6">
                 <button id="all-button"
                     class="basis-1/4 p-2.5 text-sm font-bold text-gray-600 hover:text-violet-700 table-active"
                     onclick="sellType('all')">همه محصولات</button>
@@ -316,7 +319,7 @@
                     onclick="sellType('deleted')">محصولات حذف شده</button>
             </div>
 
-            <div class="flex flex-row bg-white mb-6 shadow-lg max-md:mt-20 max-sm:flex-col max-sm:mt-10">
+            <div class="flex flex-row bg-white mb-6 shadow-lg max-md:mt-1 max-sm:flex-col max-sm:mt-10">
                 <button id="allproduct-button"
                     class="basis-1/4 p-2.5 text-sm font-bold text-gray-600 hover:bg-violet-700 hover:text-white button-active"
                     onclick="productStatus('allproduct')">همه</button>
@@ -393,12 +396,14 @@
                                     </button>
 
                                     <button  class="hover:text-violet-700">
+                                       <a href="../html/quickeditprice.html">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px"
-                                            fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
-                                            <path
-                                                d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z">
-                                            </path>
-                                        </svg>
+                                        fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z">
+                                        </path>
+                                    </svg>
+                                       </a>
                                     </button>
 
 
