@@ -27,11 +27,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const openNestedModal2Btn = document.getElementById('openNestedModal2Btn');
     const closeNestedModal2Buttons = [document.getElementById('closenestedModal2'), document.getElementById('closeNestedModal2Btn')];
 
-    // change user status modal
-    const userstatus = document.getElementById('userstatus-modal');
-    const openstatus = document.getElementById("openstatus");
-    const closeusermodalButtons = [document.getElementById('closeusermodal'), document.getElementById('closeusermodalBtn')];
-
     // edit user profile modal
     const editprofilemodal = document.getElementById('editprofile-modal');
     const openeditprofile = document.getElementById("open-editprofile");
@@ -70,7 +65,6 @@ document.addEventListener('DOMContentLoaded', function () {
     openModalButton?.addEventListener('click', () => openModal(modal));
     openNestedModalBtn?.addEventListener('click', () => openModal(nestedModal));
     openNestedModal2Btn?.addEventListener('click', () => openModal(nestedModal2));
-    openstatus?.addEventListener('click', () => openModal(userstatus));
     openeditprofile?.addEventListener('click', () => openModal(editprofilemodal));
     openorderhistory?.addEventListener('click', () => openModal(orderhistorymodal));
     openuserinfo?.addEventListener('click', () => openModal(userinfomodal));
@@ -82,7 +76,6 @@ document.addEventListener('DOMContentLoaded', function () {
     closeModalButtons.forEach((button) => button?.addEventListener('click', () => closeModal(modal)));
     closeNestedModalButtons.forEach((button) => button?.addEventListener('click', () => closeModal(nestedModal)));
     closeNestedModal2Buttons.forEach((button) => button?.addEventListener('click', () => closeModal(nestedModal2)));
-    closeusermodalButtons.forEach((button) => button?.addEventListener('click', () => closeModal(userstatus)));
     closeEditmodalButtons.forEach((button) => button?.addEventListener('click', () => closeModal(editprofilemodal)));
     closeHistoryButtons.forEach((button) => button?.addEventListener('click', () => closeModal(orderhistorymodal)));
     closeinfomodalButtons.forEach((button) => button?.addEventListener('click', () => closeModal(userinfomodal)));
@@ -91,6 +84,8 @@ document.addEventListener('DOMContentLoaded', function () {
     closeSellermodalButton.forEach((button) => button?.addEventListener('click', () => closeModal(sellersmodal)));
     closeProductmodalButton.forEach((button) => button?.addEventListener('click', () => closeModal(productinfomodal)));
 });
+
+
 
 // function for zoom in and out modal
 document.addEventListener('DOMContentLoaded', function () {

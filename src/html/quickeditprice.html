@@ -235,13 +235,19 @@
     <div class="w-[calc(100%-250px)] float-left p-12 overflow-y-auto h-screen menu-collapse max-xl:w-full max-lg:p-6 max-md:p-0"
         id="expand-menu">
         <div class="desktop:max-w-8xl mr-auto ml-auto px-3 mb-32">
-            <div class="max-md:pt-2">
+            <div class="flex justify-between max-md:pt-2">
                 <h1 class="text-2xl font-semibold">ویرایش سریع قیمت</h1>
-            </div>
+                <select class="py-2 px-2 text-sm rounded focus:ring-4 border-2 outline-0 border-violet-700">
+                  <option selected="" value="option-1">همه فروشندگان</option>
+                  <option value="option-2">سنگین راه تامین</option>
+                  <option value="option-3">yellow part</option>
+                  <option value="option-4">آتا تجارت</option>
+              </select>
+              </div>
 
 
             <div class="flex flex-col text-center mb-12 mt-5 max-md:mt-20 max-sm:flex-col max-sm:mt-10">
-                <div class="mb-4 w-full h-10 max-sm:mb-12">
+                <div class="mb-4 w-full h-10 max-sm:mb-6">
                     <span class=" text-gray-500">جست و جو بر اساس عنوان : </span>
                     <input type="text" class="h-full w-60 mr-4 rounded max-sm:mr-0" placeholder=" عنوان محصول را وارد کنید">
                 </div>
@@ -260,38 +266,48 @@
 
             <div>
                 <div class="max-w-full">
-                    <div class="flex flex-row flex-wrap bg-white p-2.5 mb-3 shadow-lg rounded">
-                        <div class="flex w-2/4 mb-2.5 max-sm:w-full">
-                            <div class="flex justify-between items-center px-2 bg-gray-200 py-2.5 mx-1 rounded w-full text-center text-sm ">
-                                <span>تصویر</span>
-                                <img src="../img/part1.jpg" class="w-10 h-10" alt="product-picture">
+                    <div class="flex flex-row text-right bg-gray-300 mb-2 py-2.5 rounded max-md:hidden">
+                        <div class="basis-1/12 w-full px-3">تصویر</div>
+                        <div class="basis-1/12 w-full">شناسه</div>
+                        <div class="basis-2/12 w-full">عنوان</div>
+                        <div class="basis-2/12 w-full text-center">مشخصات</div>
+                        <div class="basis-2/12 w-full">قیمت فعلی</div>
+                        <div class="basis-2/12 w-full">قیمت جدید</div>
+                        <div class="basis-1/12 w-full">موجودی</div>
+                        <div class="basis-1/12 w-full"></div>
+                    </div>
+                    <div id="deactivate" class="flex flex-row flex-wrap  bg-white p-2.5 mb-1 shadow rounded hover:bg-gray-100">
+                        <div class="flex w-1/12 mb-2.5 md:mb-0 max-md:w-full">
+                            <div class="flex justify-between items-center pl-2 max-md:bg-zinc-100 max-md:py-2.5 mx-1 rounded w-full text-center text-sm ">
+                                <span class="md:hidden">تصویر</span>
+                                <span> <img src="../img/part1.jpg" class="h-10" alt="product-picture"></span>
                             </div>
                            
                         </div>
-                        <div class="flex w-2/4 mb-2.5 max-sm:w-full">
-                            <div class="flex justify-between items-center px-2 bg-gray-200 py-2.5 mx-1 rounded w-full text-center text-sm ">
-                                <span>شناسه</span>
-                               <span>F1H28</span>
+                        <div class="flex w-1/12 mb-2.5 md:mb-0 max-md:w-full">
+                            <div class="flex justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
+                                <span class="md:hidden">شناسه</span>
+                                <span>F1H28</span>
                             </div>
                         </div>
-                        <div class="flex w-2/4 mb-2.5 max-sm:w-full">
-                            <div class="flex justify-between items-center px-2 bg-gray-200 py-2.5 mx-1 rounded w-full text-center text-sm ">
-                                <span>عنوان</span>
-                                <span class="">گیربکس گریدر HG180</span>
+                        <div class="flex w-2/12 mb-2.5 md:mb-0 max-md:w-full">
+                            <div class="flex justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
+                                <span class="md:hidden">عنوان</span>
+                                <span>گیربکس گریدر HG180</span>
                             </div>
-                        </div>  
-                        <div class="flex w-2/4 mb-2.5 max-sm:w-full">
-                            <div class="flex justify-between items-center px-2 bg-gray-200 py-2.5 mx-1 rounded w-full text-center text-sm ">
-                                <span>مشخصات</span>
-                                <div>
+                        </div>
+                        <div class="flex w-2/12 mb-2.5 md:mb-0 max-md:w-full">
+                            <div class="flex md:justify-center justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
+                                <span class="md:hidden">مشخصات</span>
+                                <div class="">
                                     <span class="text-gray-600">srt</span>
                                     <span class="block text-xs text-gray-400">ایران</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="flex w-2/4 mb-2.5 max-sm:w-full">
-                            <div class="flex justify-between items-center px-2 bg-gray-200 py-2.5 mx-1 rounded w-full text-center text-sm ">
-                                <span>قیمت فعلی	</span>
+                        <div class="flex w-2/12 mb-2.5 md:mb-0 max-md:w-full">
+                            <div class="flex justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
+                                <span class="md:hidden">قیمت فعلی</span>
                                 <div>  
                                     <span class="text-gray-600">1.119.000</span>
                                     <svg class="inline " width="18" viewBox="0 0 25 27" fill="none"
@@ -303,51 +319,46 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="flex w-2/4 mb-2.5 max-sm:w-full">
-                            <div class="flex justify-between items-center px-2 bg-gray-200 py-2.5 mx-1 rounded w-full text-center text-sm ">
-                                <span>قیمت جدید</span>
-                                <input type="number" dir="ltr" class="bg-violet-300 rounded w-36 p-2.5 pt-1.5 pb-px outline-none">
+                        <div class="flex w-2/12 mb-2.5 md:mb-0 max-md:w-full">
+                            <div class="flex justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
+                                <span class="md:hidden">قیمت جدید</span>
+                                <input type="text" onkeyup="fitPrice(this)" dir="ltr" class="bg-violet-300 rounded w-36 max-lg:w-24 max-md:w-36 p-2.5 pt-1.5 pb-px outline-none">
                             </div>
                         </div>
-                        <div class="flex w-2/4 mb-2.5 max-sm:w-full">
-                            <div class="flex justify-between items-center px-2 bg-gray-200 py-2.5 mx-1 rounded w-full text-center text-sm ">
-                                <span>موجودی</span>
-                                <input type="number" dir="ltr" class="bg-violet-300 rounded w-14 p-2.5 pt-1.5 pb-px outline-none text-center">
+                        <div class="flex w-1/12 mb-2.5 md:mb-0 max-md:w-full">
+                            <div class="flex justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
+                                <span class="md:hidden">موجودی</span>
+                                <input type="text" onkeyup="fitPrice(this)" dir="ltr" class="bg-violet-300 rounded w-14 p-2.5 pt-1.5 pb-px outline-none text-center">
                             </div>
                         </div>
-                        <div class="flex w-2/4 mb-2.5 max-sm:w-full">
-                            <div class="flex justify-between items-center px-2 bg-gray-200 py-2.5 mx-1 rounded w-full text-center text-sm ">
-                                <span>تغییر وضعیت</span>
-                                <div class="flex justify-center gap-5 text-gray-500">
-                                    <div class="relative w-5 flex">
-                                        <button class="hover:text-violet-700 pt-5" onclick="deactivate()">
-                                            <svg id="off" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                                fill="currentColor" class="bi bi-toggle-off absolute  bottom-px"
-                                                viewBox="0 0 16 16">
-                                                <path
-                                                    d="M11 4a4 4 0 0 1 0 8H8a4.992 4.992 0 0 0 2-4 4.992 4.992 0 0 0-2-4h3zm-6 8a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM0 8a5 5 0 0 0 5 5h6a5 5 0 0 0 0-10H5a5 5 0 0 0-5 5z" />
-                                            </svg>
-                                        </button>
-
-                                        <button class="hover:text-violet-700" onclick="deactivate()">
-                                            <svg id="on" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                                fill="currentColor"
-                                                class="bi bi-toggle-on hidden absolute bottom-px"
-                                                viewBox="0 0 16 16">
-                                                <path
-                                                    d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z" />
-                                            </svg>
-                                        </button>
-                                    </div>
-
-                                </div>
+                        <div class="flex w-1/12 mb-2.5 md:mb-0 max-md:w-full">
+                            <div class="flex justify-center items-center max-md:px-2 max-md:bg-zinc-300 max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
+                                    <button id="deactivateBtn" class="flex justify-center hover:text-violet-700 text-gray-500 w-full" onclick="toggleRow()">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="20"
+                                            height="20"
+                                            fill="currentColor"
+                                            class="bi bi-toggle-on"
+                                            viewBox="0 0 16 16"
+                                        >
+                                            <path
+                                                d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"
+                                            ></path>
+                                        </svg></button
+                                    ><input type="hidden" name="newBlockedStatus" value="false" />
+                                    <input type="hidden" name="oldBlockedStatus" value="true" />
                             </div>
                         </div>
+                        
+                       
                     </div>
-                </div>
+
+                    <button class="w-full bg-violet-700 text-white rounded h-8 mt-10">ثبت تغییرات</button>
             </div>
         </div>
-
+    </div>
+</div>
 
 
 

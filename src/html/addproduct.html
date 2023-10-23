@@ -234,9 +234,15 @@
     <div id="overlay" onclick="closeSidebar()"></div>
     <div class="w-[calc(100%-250px)] float-left p-12 overflow-y-auto h-screen menu-collapse max-xl:w-full max-lg:p-6 max-md:p-0"
         id="expand-menu">
-        <div class="max-md:pt-2">
-            <h1 class="text-2xl font-semibold max-md:px-3">افزودن محصول</h1>
-        </div>
+      <div class="flex justify-between max-md:pt-2">
+        <h1 class="text-2xl font-semibold">افزودن محصول</h1>
+        <select class="py-2 px-2 text-sm rounded focus:ring-4 border-2 outline-0 border-violet-700">
+          <option selected="" value="option-1">همه فروشندگان</option>
+          <option value="option-2">سنگین راه تامین</option>
+          <option value="option-3">yellow part</option>
+          <option value="option-4">آتا تجارت</option>
+      </select>
+      </div>
         <hr class="my-4">
         <div class="flex flex-row max-md:flex-col">
             <div class="basis-2/6 mt-3 px-3 max-md:mb-2.5">

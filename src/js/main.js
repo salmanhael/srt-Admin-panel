@@ -212,8 +212,8 @@ window.onclick = function (event) {
     const nestedModal2 = document.getElementById("nestedmodal2");
     const nestedout2 = document.getElementById('nested-out2');
     // user status
-    const userstatus = document.getElementById('userstatus-modal');
-    const userstatusout = document.getElementById('userstatus-out');
+    const deactivate = document.getElementById('deactivate-modal');
+    const deactivateout = document.getElementById('deactivate-out');
     // close modal when click outside
     if (event.target == nestedout2) {
         nestedModal2.classList.add('hide');
@@ -222,11 +222,11 @@ window.onclick = function (event) {
             nestedModal2.classList.remove('hide');
         }, 900);
     }
-    if (event.target == userstatusout) {
-        userstatus.classList.add('hide');
+    if (event.target == deactivateout) {
+        deactivate.classList.add('hide');
         setTimeout(() => {
-            userstatus.classList.remove('show');
-            userstatus.classList.remove('hide');
+            deactivate.classList.remove('show');
+            deactivate.classList.remove('hide');
         }, 900);
     }
     // close header dropdown
@@ -244,25 +244,76 @@ window.onclick = function (event) {
 
 
 
-// toggle off-on 
-function deactivate() {
-    var close = document.getElementById("off");
-    close.classList.toggle("hidden");
-
-    var open = document.getElementById("on");
-    open.classList.toggle("open-nav");
-
+// toggle off-on for main pages
+function openModal() {
+    var modal = document.getElementById("deactivate-modal");
+    modal.classList.add('show');
 }
 
-function deactivate1() {
-    var close = document.getElementById("off1");
-    close.classList.toggle("hidden");
-
-    var open = document.getElementById("on1");
-    open.classList.toggle("open-nav");
-
+function closeModal() {
+    var modal = document.getElementById("deactivate-modal");
+    modal.classList.add('hide');
+    setTimeout(() => {
+        modal.classList.remove('show', 'hide');
+    }, 900);
 }
-// -----------------------------------------------------------------------------
+
+function confirmChanges() {
+    closeModal();
+    // یافتن المان‌های مورد نظر در ردیف فعلی
+    var row = document.getElementById("deactivate");
+    var newBlockedStatusInput = row.querySelector('input[name="newBlockedStatus"]');
+    var btn = document.getElementById("deactivateBtn");
+
+    let status = newBlockedStatusInput.value === "true";
+    // تغییر مقدار newBlockedStatus و کلاس disableRow
+    if (!status) {
+        newBlockedStatusInput.value = "true";
+        row.classList.add("opacity-50");
+        btn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-toggle-off" viewBox="0 0 16 16"> <path d="M11 4a4 4 0 0 1 0 8H8a4.992 4.992 0 0 0 2-4 4.992 4.992 0 0 0-2-4h3zm-6 8a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM0 8a5 5 0 0 0 5 5h6a5 5 0 0 0 0-10H5a5 5 0 0 0-5 5z"/> </svg>`;
+    } else {
+        newBlockedStatusInput.value = "false";
+        row.classList.remove("opacity-50");
+        btn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-toggle-on" viewBox="0 0 16 16"> <path d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/> </svg>`;
+    }
+}
+
+// toggle button for quickedit page
+function toggleRow() {
+   // یافتن المان‌های مورد نظر در ردیف فعلی
+   var row = document.getElementById("deactivate");
+   var newBlockedStatusInput = row.querySelector('input[name="newBlockedStatus"]');
+   var btn = document.getElementById("deactivateBtn");
+
+   let status = newBlockedStatusInput.value === "true";
+   // تغییر مقدار newBlockedStatus و کلاس disableRow
+   if (!status) {
+       newBlockedStatusInput.value = "true";
+       row.classList.add("opacity-50");
+       btn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-toggle-off" viewBox="0 0 16 16"> <path d="M11 4a4 4 0 0 1 0 8H8a4.992 4.992 0 0 0 2-4 4.992 4.992 0 0 0-2-4h3zm-6 8a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM0 8a5 5 0 0 0 5 5h6a5 5 0 0 0 0-10H5a5 5 0 0 0-5 5z"/> </svg>`;
+   } else {
+       newBlockedStatusInput.value = "false";
+       row.classList.remove("opacity-50");
+       btn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-toggle-on" viewBox="0 0 16 16"> <path d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/> </svg>`;
+   }
+}
+// separate 3 numbers with .
+function fitPrice(element) {
+    var lastChar = element.value.slice(-1);
+    if (isNaN(lastChar) || lastChar == " ") {
+        element.value = element.value.slice(0, -1);
+    }
+
+    var numString = String(element.value.replaceAll(".", ""));
+    var separatedArray = [];
+    while (numString.length > 3) {
+        separatedArray.unshift(numString.slice(-3));
+        numString = numString.slice(0, -3);
+    }
+    separatedArray.unshift(numString);
+    var result = separatedArray.join(".");
+    element.value = result;
+}
 
 // product dorpdown
 document.addEventListener("DOMContentLoaded", function () {

@@ -234,9 +234,15 @@
     <div id="overlay" onclick="closeSidebar()"></div>
     <div class="w-[calc(100%-250px)] float-left p-12 overflow-y-auto h-screen menu-collapse max-xl:w-full max-lg:p-6 max-md:p-0"
         id="expand-menu">
-        <div class="max-md:pt-2">
-            <h1 class="text-2xl font-semibold max-md:px-3">فروشنده جدید محصول</h1>
-        </div>
+        <div class="flex justify-between max-md:pt-2">
+            <h1 class="text-2xl font-semibold">فروشنده جدید محصول</h1>
+            <select class="py-2 px-2 text-sm rounded focus:ring-4 border-2 outline-0 border-violet-700">
+              <option selected="" value="option-1">همه فروشندگان</option>
+              <option value="option-2">سنگین راه تامین</option>
+              <option value="option-3">yellow part</option>
+              <option value="option-4">آتا تجارت</option>
+          </select>
+          </div>
         <hr class="my-4">
         <div class="flex flex-row max-lg:flex-col">
             <div class="basis-2/6 mt-3 px-3 max-lg:mb-2.5">
@@ -275,6 +281,7 @@
                                 </div>
                             </div>
                         </div>
+                        
                     </div>
                 </div>
             </div>
@@ -289,23 +296,33 @@
             </div>
             <div class="basis-4/6 mt-3 px-3 ">
                 <div class="max-w-full overflow-x-auto bg-white p-6">
-                    <div class="flex flex-row flex-wrap bg-white p-2.5 mb-3 shadow-lg rounded">
-                        <div class="flex w-2/4 mb-2.5 max-sm:w-full">
-                            <div class="flex justify-between items-center px-2 bg-gray-200 py-2.5 mx-1 rounded w-full text-center text-sm ">
-                                <span>فروشنده</span>
+                    <div class="flex flex-row text-right bg-gray-300 mb-2 py-2.5 rounded max-md:hidden">
+                        <div class="basis-1/5 w-full px-2">فروشنده</div>
+                        <div class="basis-1/5 w-full">کشور سازنده</div>
+                        <div class="basis-1/5 w-full">قیمت</div>
+                        <div class="basis-1/5 w-full">وضعیت</div>
+                        <div class="basis-1/5 w-full"></div>
+                    </div>
+                    <div class="flex flex-row flex-wrap  bg-white p-2.5 mb-1 shadow rounded hover:bg-gray-100">
+                        <div class="flex w-1/5 mb-2.5 md:mb-0 max-md:w-full">
+                            <div class="flex justify-between items-center max-md:bg-zinc-100 max-md:py-2.5 mx-1 rounded w-full text-center text-sm ">
+                                <span class="md:hidden">فروشنده</span>
                                 <span>سنگین راه تامین</span>
                             </div>
                            
                         </div>
-                        <div class="flex w-2/4 mb-2.5 max-sm:w-full">
-                            <div class="flex justify-between items-center px-2 bg-gray-200 py-2.5 mx-1 rounded w-full text-center text-sm ">
-                                <span>کشور سازنده</span>
-                               <span>چین ( بالکن )</span>
+                        <div class="flex w-1/5 mb-2.5 md:mb-0 max-md:w-full">
+                            <div class="flex md:justify-center justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
+                                <span class="md:hidden">کشور سازنده</span>
+                                    <div class="flex flex-col">
+                                        <span>چین</span>
+                                        <span>( بالکن )</span>
+                                    </div>
                             </div>
                         </div>
-                        <div class="flex w-2/4 mb-2.5 max-sm:w-full">
-                            <div class="flex justify-between items-center px-2 bg-gray-200 py-2.5 mx-1 rounded w-full text-center text-sm ">
-                                <span>قیمت</span>
+                        <div class="flex w-1/5 mb-2.5 md:mb-0 max-md:w-full">
+                            <div class="flex justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
+                                <span class="md:hidden">قیمت</span>
                                 <div>  
                                     <span class="text-gray-600">1.119.000</span>
                                     <svg class="inline " width="18" viewBox="0 0 25 27" fill="none"
@@ -316,20 +333,21 @@
                                     </svg>
                                 </div>
                             </div>
-                        </div>  
-                        <div class="flex w-2/4 mb-2.5 max-sm:w-full">
-                            <div class="flex justify-between items-center px-2 bg-gray-200 py-2.5 mx-1 rounded w-full text-center text-sm ">
-                                <span>وضعیت</span>
-                                <span class="text-xs bg-green-600 w-12 block text-center  text-white rounded-md">فعال</span>
+                        </div>
+                        <div class="flex w-1/5 mb-2.5 md:mb-0 max-md:w-full">
+                            <div class="flex justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
+                                <span class="md:hidden">قیمت</span>
+                                <span class="text-xs bg-green-600 w-12 block text-center py-1 px-2.5 text-white rounded-md">فعال</span>
                             </div>
                         </div>
-                        <div class="flex w-full mb-2.5 max-sm:w-full">
-                            <div class="flex justify-center items-center px-2 bg-gray-200 py-2.5 mx-1 rounded w-full text-center text-sm ">
-                                <button class="border rounded text-sm text-gray-500 p-2 hover:border-violet-700 hover:text-violet-700">مشاهده</button>
+                        <div class="flex w-1/5 mb-2.5 md:mb-0 max-md:w-full">
+                            <div class="flex items-center max-md:px-2 max-md:bg-zinc-300  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
+                                <a  href="#" id="openModal" class="flex justify-center w-full text-xs text-gray-600 hover:text-violet-600">مشاهده</a>
                             </div>
                         </div>
                     </div>
                 </div>
+               
             </div>
         </div>
         <hr class="my-6">
