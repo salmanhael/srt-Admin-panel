@@ -10,7 +10,7 @@
 </head>
 
 <body class="bg-[#f5f6fe] fixed w-full h-full font-iranyekan">
-    <div class="2xl:max-w-screen-desktop mx-auto">
+    <div class="tv:max-w-2k  mx-auto">
     <header class="bg-white drop-shadow lg:px-12 py-4 max-xl:py-3 px-4  w-full float-left sticky top-0 md:px-6">
         <div class="flex flex-row-reverse justify-between">
             <div class="flex flex-row-reverse">
@@ -265,7 +265,7 @@
 
             <div class="text-left">
                 <button onclick="searchorder()"
-                    class="cursor-pointer mt-5 mb-4 bg-white hover:text-violet-700 w-40 text-sm font-semibold p-2.5 text-gray-600 rounded border border-gray-400 hover:border-violet-700 mr-auto max-md:hidden"
+                    class="cursor-pointer mt-5 mb-4 bg-white hover:text-violet-700 text-sm font-semibold p-2.5 text-gray-600 rounded border border-gray-400 hover:border-violet-700 mr-auto max-md:hidden"
                     id="orders-search">
                     <span>جست و جو کاربر</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
@@ -280,14 +280,14 @@
 
             <div>
                 <div class="max-w-full">
-                    <div class="flex flex-row text-right bg-gray-300 mb-2 py-2.5 rounded max-md:hidden">
-                        <div class="basis-2/6 w-full px-2">نام و نام خانوادگی</div>
+                    <div class="flex flex-row text-right bg-gray-300 mb-2 p-2.5 rounded max-md:hidden">
+                        <div class="basis-2/6 w-full">نام و نام خانوادگی</div>
                         <div class="basis-1/6 w-full">شماره موبایل</div>
                         <div class="basis-1/6 w-full text-center">تاریخ عضویت</div>
                         <div class="basis-1/6 w-full text-center">وضعیت</div>
                         <div class="basis-1/6 w-full"></div>
                     </div>
-                    <div id="deactivate" class="flex flex-row flex-wrap  bg-white p-2.5 mb-1 shadow rounded hover:bg-gray-100">
+                    <div class="deactivate flex flex-row flex-wrap  bg-white p-2.5 mb-1 shadow rounded hover:bg-gray-100">
                         <div class="flex w-2/6 mb-2.5 md:mb-0 max-md:w-full">
                             <div class="flex justify-between items-center max-md:px-2 max-md:bg-zinc-100 max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
                                 <span class="md:hidden">نام و نام خانوادگی</span>
@@ -314,7 +314,7 @@
                             </div>
                         </div>
                         <div class="flex w-1/6 mb-2.5 md:mb-0 max-md:w-full">
-                            <div class="flex justify-center items-center rounded w-full text-center max-md:mx-1 text-sm gap-3 text-gray-500 max-md:gap-1">
+                            <div class="flex justify-end max-md:justify-center items-center rounded w-full text-center max-md:mx-1 text-sm gap-3 text-gray-500 max-md:gap-1">
                                     <button id="open-userInfo" class="flex justify-center max-md:basis-1/4 max-md:bg-zinc-300 max-md:rounded-r hover:text-violet-700 4 max-md:py-2.5">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                             fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16">
@@ -339,7 +339,7 @@
                                             </path>
                                         </svg>
                                     </button>
-                                    <button  id="deactivateBtn" onclick="openModal()" class="flex justify-center  max-md:basis-1/4 max-md:bg-zinc-300 max-md:rounded-l hover:text-violet-700 max-md:py-2.5" onclick="toggleRow()">
+                                    <button onclick="openModal(this)" class="deactivateBtn flex justify-center  max-md:basis-1/4 max-md:bg-zinc-300 max-md:rounded-l hover:text-violet-700 max-md:py-2.5" >
                                             <svg
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 width="20"
@@ -358,7 +358,7 @@
                         </div>
                        
                     </div>
-                    <div class="flex flex-row flex-wrap  bg-white p-2.5 mb-1 shadow rounded hover:bg-gray-100">
+                    <div class="deactivate flex flex-row flex-wrap  bg-white p-2.5 mb-1 shadow rounded hover:bg-gray-100">
                         <div class="flex w-2/6 mb-2.5 md:mb-0 max-md:w-full">
                             <div class="flex justify-between items-center max-md:px-2 max-md:bg-zinc-100 max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
                                 <span class="md:hidden">نام و نام خانوادگی</span>
@@ -385,7 +385,7 @@
                             </div>
                         </div>
                         <div class="flex w-1/6 mb-2.5 md:mb-0 max-md:w-full">
-                            <div class="flex justify-center items-center rounded w-full text-center max-md:mx-1 text-sm gap-3 text-gray-500 max-md:gap-1">
+                            <div class="flex justify-end max-md:justify-center items-center rounded w-full text-center max-md:mx-1 text-sm gap-3 text-gray-500 max-md:gap-1">
                                     <button id="open-userInfo" class="flex justify-center max-md:basis-1/4 max-md:bg-zinc-300 max-md:rounded-r hover:text-violet-700 4 max-md:py-2.5">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                             fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16">
@@ -410,7 +410,7 @@
                                             </path>
                                         </svg>
                                     </button>
-                                    <button  id="deactivateBtn" onclick="openModal()" class="flex justify-center  max-md:basis-1/4 max-md:bg-zinc-300 max-md:rounded-l hover:text-violet-700 max-md:py-2.5" onclick="toggleRow()">
+                                    <button onclick="openModal(this)" class="deactivateBtn flex justify-center  max-md:basis-1/4 max-md:bg-zinc-300 max-md:rounded-l hover:text-violet-700 max-md:py-2.5" >
                                             <svg
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 width="20"
@@ -429,7 +429,7 @@
                         </div>
                        
                     </div>
-                    <div class="flex flex-row flex-wrap  bg-white p-2.5 mb-1 shadow rounded hover:bg-gray-100">
+                    <div class="deactivate flex flex-row flex-wrap  bg-white p-2.5 mb-1 shadow rounded hover:bg-gray-100">
                         <div class="flex w-2/6 mb-2.5 md:mb-0 max-md:w-full">
                             <div class="flex justify-between items-center max-md:px-2 max-md:bg-zinc-100 max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
                                 <span class="md:hidden">نام و نام خانوادگی</span>
@@ -456,7 +456,7 @@
                             </div>
                         </div>
                         <div class="flex w-1/6 mb-2.5 md:mb-0 max-md:w-full">
-                            <div class="flex justify-center items-center rounded w-full text-center max-md:mx-1 text-sm gap-3 text-gray-500 max-md:gap-1">
+                            <div class="flex justify-end max-md:justify-center items-center rounded w-full text-center max-md:mx-1 text-sm gap-3 text-gray-500 max-md:gap-1">
                                     <button id="open-userInfo" class="flex justify-center max-md:basis-1/4 max-md:bg-zinc-300 max-md:rounded-r hover:text-violet-700 4 max-md:py-2.5">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                             fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16">
@@ -481,7 +481,7 @@
                                             </path>
                                         </svg>
                                     </button>
-                                    <button  id="deactivateBtn" onclick="openModal()" class="flex justify-center  max-md:basis-1/4 max-md:bg-zinc-300 max-md:rounded-l hover:text-violet-700 max-md:py-2.5" onclick="toggleRow()">
+                                    <button onclick="openModal(this)" class="deactivateBtn flex justify-center  max-md:basis-1/4 max-md:bg-zinc-300 max-md:rounded-l hover:text-violet-700 max-md:py-2.5" >
                                             <svg
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 width="20"
@@ -500,7 +500,7 @@
                         </div>
                        
                     </div>
-                    <div class="flex flex-row flex-wrap  bg-white p-2.5 mb-1 shadow rounded hover:bg-gray-100">
+                    <div class="deactivate flex flex-row flex-wrap  bg-white p-2.5 mb-1 shadow rounded hover:bg-gray-100">
                         <div class="flex w-2/6 mb-2.5 md:mb-0 max-md:w-full">
                             <div class="flex justify-between items-center max-md:px-2 max-md:bg-zinc-100 max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
                                 <span class="md:hidden">نام و نام خانوادگی</span>
@@ -527,7 +527,7 @@
                             </div>
                         </div>
                         <div class="flex w-1/6 mb-2.5 md:mb-0 max-md:w-full">
-                            <div class="flex justify-center items-center rounded w-full text-center max-md:mx-1 text-sm gap-3 text-gray-500 max-md:gap-1">
+                            <div class="flex justify-end max-md:justify-center items-center rounded w-full text-center max-md:mx-1 text-sm gap-3 text-gray-500 max-md:gap-1">
                                     <button id="open-userInfo" class="flex justify-center max-md:basis-1/4 max-md:bg-zinc-300 max-md:rounded-r hover:text-violet-700 4 max-md:py-2.5">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                             fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16">
@@ -552,7 +552,7 @@
                                             </path>
                                         </svg>
                                     </button>
-                                    <button  id="deactivateBtn" onclick="openModal()" class="flex justify-center  max-md:basis-1/4 max-md:bg-zinc-300 max-md:rounded-l hover:text-violet-700 max-md:py-2.5" onclick="toggleRow()">
+                                    <button onclick="openModal(this)" class="deactivateBtn flex justify-center  max-md:basis-1/4 max-md:bg-zinc-300 max-md:rounded-l hover:text-violet-700 max-md:py-2.5" >
                                             <svg
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 width="20"
@@ -571,7 +571,7 @@
                         </div>
                        
                     </div>
-                    <div class="flex flex-row flex-wrap  bg-white p-2.5 mb-1 shadow rounded hover:bg-gray-100">
+                    <div class="deactivate flex flex-row flex-wrap  bg-white p-2.5 mb-1 shadow rounded hover:bg-gray-100">
                         <div class="flex w-2/6 mb-2.5 md:mb-0 max-md:w-full">
                             <div class="flex justify-between items-center max-md:px-2 max-md:bg-zinc-100 max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
                                 <span class="md:hidden">نام و نام خانوادگی</span>
@@ -598,7 +598,7 @@
                             </div>
                         </div>
                         <div class="flex w-1/6 mb-2.5 md:mb-0 max-md:w-full">
-                            <div class="flex justify-center items-center rounded w-full text-center max-md:mx-1 text-sm gap-3 text-gray-500 max-md:gap-1">
+                            <div class="flex justify-end max-md:justify-center items-center rounded w-full text-center max-md:mx-1 text-sm gap-3 text-gray-500 max-md:gap-1">
                                     <button id="open-userInfo" class="flex justify-center max-md:basis-1/4 max-md:bg-zinc-300 max-md:rounded-r hover:text-violet-700 4 max-md:py-2.5">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                             fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16">
@@ -623,7 +623,7 @@
                                             </path>
                                         </svg>
                                     </button>
-                                    <button  id="deactivateBtn" onclick="openModal()" class="flex justify-center  max-md:basis-1/4 max-md:bg-zinc-300 max-md:rounded-l hover:text-violet-700 max-md:py-2.5" onclick="toggleRow()">
+                                    <button onclick="openModal(this)" class="deactivateBtn flex justify-center  max-md:basis-1/4 max-md:bg-zinc-300 max-md:rounded-l hover:text-violet-700 max-md:py-2.5" >
                                             <svg
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 width="20"
@@ -642,7 +642,7 @@
                         </div>
                        
                     </div>
-                    <div class="flex flex-row flex-wrap  bg-white p-2.5 mb-1 shadow rounded hover:bg-gray-100">
+                    <div class="deactivate flex flex-row flex-wrap  bg-white p-2.5 mb-1 shadow rounded hover:bg-gray-100">
                         <div class="flex w-2/6 mb-2.5 md:mb-0 max-md:w-full">
                             <div class="flex justify-between items-center max-md:px-2 max-md:bg-zinc-100 max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
                                 <span class="md:hidden">نام و نام خانوادگی</span>
@@ -669,7 +669,7 @@
                             </div>
                         </div>
                         <div class="flex w-1/6 mb-2.5 md:mb-0 max-md:w-full">
-                            <div class="flex justify-center items-center rounded w-full text-center max-md:mx-1 text-sm gap-3 text-gray-500 max-md:gap-1">
+                            <div class="flex justify-end max-md:justify-center items-center rounded w-full text-center max-md:mx-1 text-sm gap-3 text-gray-500 max-md:gap-1">
                                     <button id="open-userInfo" class="flex justify-center max-md:basis-1/4 max-md:bg-zinc-300 max-md:rounded-r hover:text-violet-700 4 max-md:py-2.5">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                             fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16">
@@ -694,7 +694,78 @@
                                             </path>
                                         </svg>
                                     </button>
-                                    <button  id="deactivateBtn" onclick="openModal()" class="flex justify-center  max-md:basis-1/4 max-md:bg-zinc-300 max-md:rounded-l hover:text-violet-700 max-md:py-2.5" onclick="toggleRow()">
+                                    <button onclick="openModal(this)" class="deactivateBtn flex justify-center  max-md:basis-1/4 max-md:bg-zinc-300 max-md:rounded-l hover:text-violet-700 max-md:py-2.5" >
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="20"
+                                                height="20"
+                                                fill="currentColor"
+                                                class="bi bi-toggle-on"
+                                                viewBox="0 0 16 16"
+                                            >
+                                                <path
+                                                    d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"
+                                                ></path>
+                                            </svg></button
+                                    ><input type="hidden" name="newBlockedStatus" value="false" />
+                                    <input type="hidden" name="oldBlockedStatus" value="true" />
+                            </div>
+                        </div>
+                       
+                    </div>
+                    <div class="deactivate flex flex-row flex-wrap  bg-white p-2.5 mb-1 shadow rounded hover:bg-gray-100">
+                        <div class="flex w-2/6 mb-2.5 md:mb-0 max-md:w-full">
+                            <div class="flex justify-between items-center max-md:px-2 max-md:bg-zinc-100 max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
+                                <span class="md:hidden">نام و نام خانوادگی</span>
+                                <span class="md:truncate">روح الله مقیسه</span>
+                            </div>
+                           
+                        </div>
+                        <div class="flex w-1/6 mb-2.5 md:mb-0 max-md:w-full">
+                            <div class="flex justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
+                                <span class="md:hidden">شماره موبایل</span>
+                                <span>09124506455</span>
+                            </div>
+                        </div>
+                        <div class="flex w-1/6 mb-2.5 md:mb-0 max-md:w-full">
+                            <div class="flex justify-center max-md:justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
+                                <span class="md:hidden">تاریخ عضویت</span>
+                                <span>1401/01/07</span>
+                            </div>
+                        </div>
+                        <div class="flex w-1/6 mb-2.5 md:mb-0 max-md:w-full">
+                            <div class="flex justify-center max-md:justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
+                                <span class="md:hidden">وضعیت</span>
+                                <span class="text-xs bg-green-600 block text-center py-1 px-2.5 text-white rounded-md">فعال</span>
+                            </div>
+                        </div>
+                        <div class="flex w-1/6 mb-2.5 md:mb-0 max-md:w-full">
+                            <div class="flex justify-end max-md:justify-center items-center rounded w-full text-center max-md:mx-1 text-sm gap-3 text-gray-500 max-md:gap-1">
+                                    <button id="open-userInfo" class="flex justify-center max-md:basis-1/4 max-md:bg-zinc-300 max-md:rounded-r hover:text-violet-700 4 max-md:py-2.5">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z">
+                                            </path>
+                                        </svg>
+                                    </button>
+                                    <button id="open-orderHistory" class="flex justify-center max-md:basis-1/4 max-md:bg-zinc-300 hover:text-violet-700 max-md:py-2.5">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            fill="currentColor" class="bi bi-list-ul" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2z">
+                                            </path>
+                                        </svg>
+                                    </button>
+                                    <button id="open-editprofile" class="flex justify-center max-md:basis-1/4 max-md:bg-zinc-300 hover:text-violet-700 max-md:py-2.5">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z">
+                                            </path>
+                                        </svg>
+                                    </button>
+                                    <button onclick="openModal(this)" class="deactivateBtn flex justify-center  max-md:basis-1/4 max-md:bg-zinc-300 max-md:rounded-l hover:text-violet-700 max-md:py-2.5" >
                                             <svg
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 width="20"
@@ -858,10 +929,10 @@
                                 </div>
 
                                 <div class="max-w-full">
-                                    <div class="flex flex-row text-right bg-gray-300 mb-2 py-2.5 rounded max-md:hidden">
-                                        <div class="basis-1/4 w-full px-2">تاریخ</div>
+                                    <div class="flex flex-row text-right bg-gray-300 mb-2 p-2.5 rounded max-md:hidden">
+                                        <div class="basis-1/4 w-full">تاریخ</div>
                                         <div class="basis-1/4 w-full">مبلغ پرداختی</div>
-                                        <div class="basis-1/4 w-full">شماره سفارش</div>
+                                        <div class="basis-1/4 w-full text-center">شماره سفارش</div>
                                         <div class="basis-1/4 w-full"></div>
                                     </div>
                                     <div class="flex flex-row flex-wrap md:bg-zinc-100   bg-white p-2.5 mb-1 shadow rounded md:hover:bg-gray-200">
@@ -889,18 +960,18 @@
                                             </div>
                                         </div>
                                         <div class="flex w-1/4 mb-2.5 md:mb-0 max-md:w-full">
-                                            <div class="flex justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
+                                            <div class="flex justify-end max-md:justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
                                                 <span class="md:hidden">تاریخ عضویت</span>
                                                 <span>#38675125</span>
                                             </div>
                                         </div>
                                         <div class="flex w-1/4 mb-2.5 md:mb-0 max-md:w-full">
                                             <div class="flex items-center max-md:px-2 max-md:bg-zinc-300  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
-                                                <a  href="#" id="openModal" class="flex justify-center w-full text-xs text-gray-600 hover:text-violet-600">مشاهده</a>
+                                                <a  href="#" id="openModal" class="flex justify-end max-md:justify-center w-full text-xs text-gray-600 hover:text-violet-600">مشاهده</a>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="flex flex-row flex-wrap md:bg-zinc-100  bg-white p-2.5 mb-1 shadow rounded md:hover:bg-gray-200">
+                                    <div class="flex flex-row flex-wrap md:bg-zinc-100   bg-white p-2.5 mb-1 shadow rounded md:hover:bg-gray-200">
                                         <div class="flex w-1/4 mb-2.5 md:mb-0 max-md:w-full">
                                             <div class="flex justify-between items-center max-md:px-2 max-md:bg-zinc-100 max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
                                                 <span class="md:hidden">تاریخ</span>
@@ -925,18 +996,18 @@
                                             </div>
                                         </div>
                                         <div class="flex w-1/4 mb-2.5 md:mb-0 max-md:w-full">
-                                            <div class="flex justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
+                                            <div class="flex justify-end max-md:justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
                                                 <span class="md:hidden">تاریخ عضویت</span>
                                                 <span>#38675125</span>
                                             </div>
                                         </div>
                                         <div class="flex w-1/4 mb-2.5 md:mb-0 max-md:w-full">
                                             <div class="flex items-center max-md:px-2 max-md:bg-zinc-300  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
-                                                <a  href="#" id="openModal" class="flex justify-center w-full text-xs text-gray-600 hover:text-violet-600">مشاهده</a>
+                                                <a  href="#" id="openModal" class="flex justify-end max-md:justify-center w-full text-xs text-gray-600 hover:text-violet-600">مشاهده</a>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="flex flex-row flex-wrap md:bg-zinc-100  bg-white p-2.5 mb-1 shadow rounded md:hover:bg-gray-200">
+                                    <div class="flex flex-row flex-wrap md:bg-zinc-100   bg-white p-2.5 mb-1 shadow rounded md:hover:bg-gray-200">
                                         <div class="flex w-1/4 mb-2.5 md:mb-0 max-md:w-full">
                                             <div class="flex justify-between items-center max-md:px-2 max-md:bg-zinc-100 max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
                                                 <span class="md:hidden">تاریخ</span>
@@ -961,18 +1032,18 @@
                                             </div>
                                         </div>
                                         <div class="flex w-1/4 mb-2.5 md:mb-0 max-md:w-full">
-                                            <div class="flex justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
+                                            <div class="flex justify-end max-md:justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
                                                 <span class="md:hidden">تاریخ عضویت</span>
                                                 <span>#38675125</span>
                                             </div>
                                         </div>
                                         <div class="flex w-1/4 mb-2.5 md:mb-0 max-md:w-full">
                                             <div class="flex items-center max-md:px-2 max-md:bg-zinc-300  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
-                                                <a  href="#" id="openModal" class="flex justify-center w-full text-xs text-gray-600 hover:text-violet-600">مشاهده</a>
+                                                <a  href="#" id="openModal" class="flex justify-end max-md:justify-center w-full text-xs text-gray-600 hover:text-violet-600">مشاهده</a>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="flex flex-row flex-wrap md:bg-zinc-100  bg-white p-2.5 mb-1 shadow rounded md:hover:bg-gray-200">
+                                    <div class="flex flex-row flex-wrap md:bg-zinc-100   bg-white p-2.5 mb-1 shadow rounded md:hover:bg-gray-200">
                                         <div class="flex w-1/4 mb-2.5 md:mb-0 max-md:w-full">
                                             <div class="flex justify-between items-center max-md:px-2 max-md:bg-zinc-100 max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
                                                 <span class="md:hidden">تاریخ</span>
@@ -997,14 +1068,14 @@
                                             </div>
                                         </div>
                                         <div class="flex w-1/4 mb-2.5 md:mb-0 max-md:w-full">
-                                            <div class="flex justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
+                                            <div class="flex justify-end max-md:justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
                                                 <span class="md:hidden">تاریخ عضویت</span>
                                                 <span>#38675125</span>
                                             </div>
                                         </div>
                                         <div class="flex w-1/4 mb-2.5 md:mb-0 max-md:w-full">
                                             <div class="flex items-center max-md:px-2 max-md:bg-zinc-300  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
-                                                <a  href="#" id="openModal" class="flex justify-center w-full text-xs text-gray-600 hover:text-violet-600">مشاهده</a>
+                                                <a  href="#" id="openModal" class="flex justify-end max-md:justify-center w-full text-xs text-gray-600 hover:text-violet-600">مشاهده</a>
                                             </div>
                                         </div>
                                     </div>
@@ -1332,8 +1403,8 @@
                             </button>
                         </div>
                         <div class="mb-5 max-w-full">
-                            <div class="flex flex-row text-right bg-gray-300 mb-2 py-2.5 rounded max-md:hidden">
-                                <div class="basis-2/6 w-full px-2">عنوان محصول</div>
+                            <div class="flex flex-row text-right bg-gray-300 mb-2 p-2.5 rounded max-md:hidden">
+                                <div class="basis-2/6 w-full">عنوان محصول</div>
                                 <div class="basis-2/6 w-full text-center">فروشنده</div>
                                 <div class="basis-1/6 w-full">فی (زمان سفارش)</div>
                                 <div class="basis-1/6 w-full text-center">تعداد</div>

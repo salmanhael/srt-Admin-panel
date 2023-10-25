@@ -19,65 +19,73 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 // add new input for picture
 document.addEventListener("DOMContentLoaded", function () {
-    const mainImageInput = document.getElementById("mainImageInput");
-    const mainImagePreview = document.getElementById("mainImagePreview");
-    const mainImagePreviewCombined = document.getElementById("mainImagePreviewCombined");
-    const addInputPicture = document.getElementById("addInputPicture");
-    const PictureContainer = document.getElementById("PictureContainer");
-    const ImagePreviews = document.getElementById("ImagePreviews");
-    let inputCount = 1;
+  const mainImageInput = document.getElementById("mainImageInput");
+  const mainImagePreview = document.getElementById("mainImagePreview");
+  const mainImagePreviewCombined = document.getElementById("mainImagePreviewCombined");
+  const addInputPicture = document.getElementById("addInputPicture");
+  const PictureContainer = document.getElementById("PictureContainer");
+  const ImagePreviews = document.getElementById("ImagePreviews");
+  let inputCount = 0; // Change the initial count to 0
 
-    mainImageInput.addEventListener("change", function () {
-        const file = mainImageInput.files[0];
-        if (file) {
-            const reader = new FileReader();
-            reader.onload = function (e) {
-                mainImagePreview.src = e.target.result;
-                mainImagePreviewCombined.src = e.target.result; 
-            };
-            reader.readAsDataURL(file);
-        } else {
+  function createNewInput() {
+      const newInput = document.createElement("input");
+      newInput.type = "file";
+      newInput.className = "w-full border outline-1 outline-blue-500 mt-4";
+      PictureContainer.appendChild(newInput);
 
-        }
-    });
+      const newImagePreview = document.createElement("img");
+      newImagePreview.src = ""; 
+      newImagePreview.className = "w-52 rounded-lg m-2.5";
+      ImagePreviews.appendChild(newImagePreview);
 
-    addInputPicture.addEventListener("click", function () {
-        if (inputCount < 5) {
-            const newInput = document.createElement("input");
-            newInput.type = "file";
-            newInput.className = "w-full border outline-1 outline-blue-500 mt-4";
-            PictureContainer.appendChild(newInput);
+      newInput.addEventListener("change", function () {
+          const file = newInput.files[0];
+          if (file) {
+              const reader = new FileReader();
+              reader.onload = function (e) {
+                  newImagePreview.src = e.target.result;
+              };
+              reader.readAsDataURL(file);
+          } else {
+              newImagePreview.src = ''; 
+          }
+      });
 
-            const newImagePreview = document.createElement("img");
-            newImagePreview.src = "#"; 
-            newImagePreview.className = "w-52 rounded-lg m-2.5";
-            ImagePreviews.appendChild(newImagePreview);
+      inputCount++;
+      if (inputCount === 4) {
+          addInputPicture.style.display = "none";
+      }
+  }
 
-            newInput.addEventListener("change", function () {
-                const file = newInput.files[0];
-                if (file) {
-                    const reader = new FileReader();
-                    reader.onload = function (e) {
-                        newImagePreview.src = e.target.result;
-                    };
-                    reader.readAsDataURL(file);
-                } else {
-                    newImagePreview.src = '#'; 
-                }
-            });
+  // Add a default input with a preview
+  createNewInput();
 
-            inputCount++;
-            if (inputCount === 5) {
-                addInputPicture.style.display = "none";
-            }
-        }
-    });
+  mainImageInput.addEventListener("change", function () {
+      const file = mainImageInput.files[0];
+      if (file) {
+          const reader = new FileReader();
+          reader.onload = function (e) {
+              mainImagePreview.src = e.target.result;
+              mainImagePreviewCombined.src = e.target.result; 
+          };
+          reader.readAsDataURL(file);
+      } else {
+        mainImagePreview.src = '';
+        mainImagePreviewCombined.src = '';
+      }
+  });
+
+  addInputPicture.addEventListener("click", function () {
+      if (inputCount < 4) {
+          createNewInput();
+      }
+  });
 });
 
 
 
 
-   // Function to add a tag button to the container
+   // Function to add a tag button to the container(seo keywords)
     function addTag(elementId, tagName) {
       const element = document.getElementById(elementId);
       if (element) {

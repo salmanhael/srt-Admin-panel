@@ -26,9 +26,11 @@ module.exports = {
         mobilesm:'321px',
         mobile:'576px',
         desktop:'1400px',
+        tv:'2040px',
       },
       maxWidth: {
        '8xl' : '1320px',
+       '2k' : '2040px',
       },
       fontFamily: {
         'iranyekan':['iranyekan']
@@ -38,6 +40,9 @@ module.exports = {
       },
       fontSize: {
         normal:"15px"
+      },
+      boxShadow: {
+        '3xl': '1px 0px 8px 4px #6D28D9',
       }
     },
   },

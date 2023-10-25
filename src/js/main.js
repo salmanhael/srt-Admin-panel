@@ -245,8 +245,13 @@ window.onclick = function (event) {
 
 
 // toggle off-on for main pages
-function openModal() {
-    var modal = document.getElementById("deactivate-modal");
+var row, newBlockedStatusInput, btn;
+
+function openModal(button) {
+    row = button.closest(".deactivate");
+    newBlockedStatusInput = row.querySelector('input[name="newBlockedStatus"]');
+    btn = button.closest(".deactivateBtn");
+    modal = document.getElementById("deactivate-modal");
     modal.classList.add('show');
 }
 
@@ -261,9 +266,7 @@ function closeModal() {
 function confirmChanges() {
     closeModal();
     // یافتن المان‌های مورد نظر در ردیف فعلی
-    var row = document.getElementById("deactivate");
-    var newBlockedStatusInput = row.querySelector('input[name="newBlockedStatus"]');
-    var btn = document.getElementById("deactivateBtn");
+    
 
     let status = newBlockedStatusInput.value === "true";
     // تغییر مقدار newBlockedStatus و کلاس disableRow
@@ -279,11 +282,11 @@ function confirmChanges() {
 }
 
 // toggle button for quickedit page
-function toggleRow() {
+function toggleRow(button) {
    // یافتن المان‌های مورد نظر در ردیف فعلی
-   var row = document.getElementById("deactivate");
+   var row = button.closest(".deactivate");
    var newBlockedStatusInput = row.querySelector('input[name="newBlockedStatus"]');
-   var btn = document.getElementById("deactivateBtn");
+   var btn = button.closest(".deactivateBtn");
 
    let status = newBlockedStatusInput.value === "true";
    // تغییر مقدار newBlockedStatus و کلاس disableRow
