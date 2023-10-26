@@ -358,3 +358,24 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+// add image for articles thumbnail
+document.addEventListener("DOMContentLoaded", function () {
+    const mainImageInput = document.getElementById("mainImageInput");
+    const mainImagePreview = document.getElementById("mainImagePreview");
+    const mainImagePreviewCombined = document.getElementById("mainImagePreviewCombined");
+  
+    mainImageInput?.addEventListener("change", function () {
+      const file = mainImageInput.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          mainImagePreview.src = e.target.result;
+          mainImagePreviewCombined.src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+      } else {
+        mainImagePreview.src = '';
+        mainImagePreviewCombined.src = '';
+      }
+    });
+  });

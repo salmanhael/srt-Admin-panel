@@ -61,6 +61,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const openproductinfo = document.getElementById("open-productinfo");
     const productinfomodal = document.getElementById("product-info-modal");
     const closeProductmodalButton = [document.getElementById('closeProductmodal')];
+
+    // product info
+    const openaddExistingproduct = document.getElementById("open-addexistingproduct");
+    const Addexistingmodal = document.getElementById("add-existing-modal");
+    const closeAddExistingButtons = [document.getElementById('closeAddExistingproduct'), document.getElementById('closeAddExistingproductBtn')];
     // Event listeners
     openModalButton?.addEventListener('click', () => openModal(modal));
     openNestedModalBtn?.addEventListener('click', () => openModal(nestedModal));
@@ -72,6 +77,7 @@ document.addEventListener('DOMContentLoaded', function () {
     openpartnumber?.addEventListener('click', () => openModal(partnumbermodal));
     opensellers?.addEventListener('click', () => openModal(sellersmodal));
     openproductinfo?.addEventListener('click', () => openModal(productinfomodal));
+    openaddExistingproduct?.addEventListener('click', () => openModal(Addexistingmodal));
 
     closeModalButtons.forEach((button) => button?.addEventListener('click', () => closeModal(modal)));
     closeNestedModalButtons.forEach((button) => button?.addEventListener('click', () => closeModal(nestedModal)));
@@ -83,6 +89,7 @@ document.addEventListener('DOMContentLoaded', function () {
     closepartmodalButton.forEach((button) => button?.addEventListener('click', () => closeModal(partnumbermodal)));
     closeSellermodalButton.forEach((button) => button?.addEventListener('click', () => closeModal(sellersmodal)));
     closeProductmodalButton.forEach((button) => button?.addEventListener('click', () => closeModal(productinfomodal)));
+    closeAddExistingButtons.forEach((button) => button?.addEventListener('click', () => closeModal(Addexistingmodal)));
 });
 
 
@@ -110,6 +117,7 @@ document.addEventListener('DOMContentLoaded', function () {
         { triggerId: 'part-number-out', contentClass: 'part-number-content' },
         { triggerId: 'sellers-out', contentClass: 'sellers-content' },
         { triggerId: 'product-info-out', contentClass: 'product-info-content' },
+        { triggerId: 'add-existing-out', contentClass: 'add-existing-content' },
     ];
 
     modalElements.forEach(element => {
