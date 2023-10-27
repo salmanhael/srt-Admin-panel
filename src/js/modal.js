@@ -66,6 +66,37 @@ document.addEventListener('DOMContentLoaded', function () {
     const openaddExistingproduct = document.getElementById("open-addexistingproduct");
     const Addexistingmodal = document.getElementById("add-existing-modal");
     const closeAddExistingButtons = [document.getElementById('closeAddExistingproduct'), document.getElementById('closeAddExistingproductBtn')];
+
+    // product info
+    const openCustomizeProduct = document.getElementById("open-customizeproduct");
+    const AddCustomizeproductmodal = document.getElementById("add-customizeproduct-modal");
+    const CloseCustomizeProductButtons = [document.getElementById('closecustomizeproduct'), document.getElementById('customizeproductBtn')];
+
+    // edit item modal
+    const openedititem = document.getElementById("open-edit-item");
+    const editItemModal = document.getElementById("edit-item-modal");
+    const closeEdititemButtons = [document.getElementById('close-Edititem'), document.getElementById('close-EdititemBtn')];
+
+    // Category text modal
+    const OpenCategorytext = document.getElementById("Open-Category-text");
+    const Categorytextmodal = document.getElementById("Categorytext-modal");
+    const closeCategorytextButtons = [document.getElementById('closeCategorytextmodal'), document.getElementById('closeCategorytextmodalBtn')];
+    
+    // Category text modal
+    const OpenCommonQuestions = document.getElementById("Open-Common-Questions");
+    const Commonquestionsmodal = document.getElementById("Commonquestions-modal");
+    const closeQuestionsmodal = [document.getElementById('closeQuestionsmodal')];
+
+    // Category text modal
+    const openaddquestion = document.getElementById("open-add-question");
+    const addquestionmodal = document.getElementById("addquestion-modal");
+    const closeAddquestionButtons = [document.getElementById('closeAddquestion'), document.getElementById('closecloseAddquestionBtn')];
+
+    // delete common question modal
+    const openDeletequstion = document.getElementById("open-deletequstion");
+    const deletequstionmodal = document.getElementById("deletequstion-modal");
+    const closeDeleteQButtons = [document.getElementById('closeDeleteQ'), document.getElementById('closeDeleteQBtn')];
+
     // Event listeners
     openModalButton?.addEventListener('click', () => openModal(modal));
     openNestedModalBtn?.addEventListener('click', () => openModal(nestedModal));
@@ -78,6 +109,12 @@ document.addEventListener('DOMContentLoaded', function () {
     opensellers?.addEventListener('click', () => openModal(sellersmodal));
     openproductinfo?.addEventListener('click', () => openModal(productinfomodal));
     openaddExistingproduct?.addEventListener('click', () => openModal(Addexistingmodal));
+    openCustomizeProduct?.addEventListener('click', () => openModal(AddCustomizeproductmodal));
+    openedititem?.addEventListener('click', () => openModal(editItemModal));
+    OpenCategorytext?.addEventListener('click', () => openModal(Categorytextmodal));
+    OpenCommonQuestions?.addEventListener('click', () => openModal(Commonquestionsmodal));
+    openaddquestion?.addEventListener('click', () => openModal(addquestionmodal));
+    openDeletequstion?.addEventListener('click', () => openModal(deletequstionmodal));
 
     closeModalButtons.forEach((button) => button?.addEventListener('click', () => closeModal(modal)));
     closeNestedModalButtons.forEach((button) => button?.addEventListener('click', () => closeModal(nestedModal)));
@@ -90,6 +127,12 @@ document.addEventListener('DOMContentLoaded', function () {
     closeSellermodalButton.forEach((button) => button?.addEventListener('click', () => closeModal(sellersmodal)));
     closeProductmodalButton.forEach((button) => button?.addEventListener('click', () => closeModal(productinfomodal)));
     closeAddExistingButtons.forEach((button) => button?.addEventListener('click', () => closeModal(Addexistingmodal)));
+    CloseCustomizeProductButtons.forEach((button) => button?.addEventListener('click', () => closeModal(AddCustomizeproductmodal)));
+    closeEdititemButtons.forEach((button) => button?.addEventListener('click', () => closeModal(editItemModal)));
+    closeCategorytextButtons.forEach((button) => button?.addEventListener('click', () => closeModal(Categorytextmodal)));
+    closeQuestionsmodal.forEach((button) => button?.addEventListener('click', () => closeModal(Commonquestionsmodal)));
+    closeAddquestionButtons.forEach((button) => button?.addEventListener('click', () => closeModal(addquestionmodal)));
+    closeDeleteQButtons.forEach((button) => button?.addEventListener('click', () => closeModal(deletequstionmodal)));
 });
 
 
@@ -118,6 +161,12 @@ document.addEventListener('DOMContentLoaded', function () {
         { triggerId: 'sellers-out', contentClass: 'sellers-content' },
         { triggerId: 'product-info-out', contentClass: 'product-info-content' },
         { triggerId: 'add-existing-out', contentClass: 'add-existing-content' },
+        { triggerId: 'add-customizeproduct-out', contentClass: 'add-customizeproduct-content' },
+        { triggerId: 'edit-item-out', contentClass: 'edit-item-content' },
+        { triggerId: 'Categorytext-out', contentClass: 'Categorytext-content' },
+        { triggerId: 'Commonquestions-out', contentClass: 'Commonquestions-content' },
+        { triggerId: 'addquestion-out', contentClass: 'addquestion-content' },
+        { triggerId: 'deletequstion-out', contentClass: 'deletequstion-content' },
     ];
 
     modalElements.forEach(element => {

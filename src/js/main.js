@@ -379,3 +379,64 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+
+  // Get all buttons with the class "my-button"
+  const brandbuttons = document.querySelectorAll(".brand-button");
+
+  // Add a click event listener to each "my-button"
+  brandbuttons.forEach((button) => {
+    button.addEventListener("click", function() {
+      // Remove the "active" class from all "my-button" elements
+      brandbuttons.forEach((btn) => {
+        btn.classList.remove("activebutton");
+      });
+
+      // Add the "active" class to the clicked "my-button"
+      this.classList.add("activebutton");
+    });
+  });
+    // Get all buttons with the class "my-button"
+    const categorybuttons = document.querySelectorAll(".category-button");
+
+    // Add a click event listener to each "my-button"
+    categorybuttons.forEach((button) => {
+      button.addEventListener("click", function() {
+        // Remove the "active" class from all "my-button" elements
+        categorybuttons.forEach((btn) => {
+          btn.classList.remove("activebutton");
+        });
+  
+        // Add the "active" class to the clicked "my-button"
+        this.classList.add("activebutton");
+      });
+    });
+
+    // Get all buttons with the class "my-button"
+    const machinebuttons = document.querySelectorAll(".machine-button") 
+    // Add a click event listener to each "my-button"
+    machinebuttons.forEach((button) => {
+      button.addEventListener("click", function() {
+        // Remove the "active" class from all "my-button" elements
+        machinebuttons.forEach((btn) => {
+          btn.classList.remove("activebutton");
+        });
+
+        // Add the "active" class to the clicked "my-button"
+        this.classList.add("activebutton");
+      });
+    });
+
+    // Get all buttons with the class "my-button"
+    const machinecategorybutton = document.querySelectorAll(".machine-category-button") 
+    // Add a click event listener to each "my-button"
+    machinecategorybutton.forEach((button) => {
+      button.addEventListener("click", function() {
+        // Remove the "active" class from all "my-button" elements
+        machinecategorybutton.forEach((btn) => {
+          btn.classList.remove("activebutton");
+        });
+    
+        // Add the "active" class to the clicked "my-button"
+        this.classList.add("activebutton");
+      });
+    });
