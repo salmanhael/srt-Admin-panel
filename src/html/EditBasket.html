@@ -215,9 +215,9 @@
             <div class="relative bottom-6">
                 <nav>
                     <ul>
-                        <li class="bg-white border-t whitespace-nowrap ">
+                        <li class="bg-white border-t whitespace-nowrap h-14">
                             <a href="../html/settings.html"
-                                class="flex items-center p-3.5 w-full hover:text-violet-700 h-14 openSettings respnsive-settings"
+                                class="flex items-center p-3.5 w-full hover:text-violet-700 h-full openSettings respnsive-settings "
                                 id="setting">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                                     class="bi bi-gear inline" viewBox="0 0 16 16">
@@ -266,8 +266,67 @@
                 </form>
 
                 <!-- 404 nothing found -->
-                <div class="hidden">
-                    <p>بر اساس اطلاعات وارد شده داده ای پیدا نشد</p>
+                <div class="hidden text-center bg-white">
+                    <div class="container mx-auto">
+                        <div class="flex flex-col md:flex-row bg-red-100 rounded p-4 mb-10 text-sm text-red-700 shadow" role="alert">
+                            <svg
+                                height="16"
+                                width="16"
+                                version="1.1"
+                                id="Capa_1"
+                                xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                x="0px"
+                                y="0px"
+                                viewBox="0 0 511.999 511.999"
+                                style="enable-background: new 0 0 511.999 511.999"
+                                fill="#b91c1c"
+                                xml:space="preserve"
+                            >
+                                <g>
+                                    <g>
+                                        <g>
+                                            <path
+                                                d="M506.175,365.576c-4.095-10.258-15.729-15.255-25.987-11.16c-10.258,4.095-15.255,15.729-11.16,25.987
+                              c5.206,13.043,3.499,27.935-4.567,39.839c-8.07,11.91-20.991,18.741-35.449,18.741H83.068c-15.771,0-29.776-8.229-37.465-22.015
+                              c-7.701-13.809-7.339-30.082,0.968-43.533L219.543,93.382c7.876-12.752,21.519-20.365,36.497-20.365
+                              c14.978,0,28.62,7.613,36.497,20.365l127.927,207.124c5.804,9.397,18.128,12.312,27.523,6.505
+                              c9.396-5.803,12.31-18.126,6.505-27.523L326.564,72.364c-15.216-24.636-41.58-39.344-70.525-39.344s-55.309,14.709-70.525,39.344
+                              L12.542,352.418c-16.036,25.966-16.734,57.38-1.869,84.033c14.853,26.63,41.916,42.528,72.395,42.528h345.944
+                              c27.938,0,52.927-13.233,68.56-36.303C513.088,419.778,516.303,390.955,506.175,365.576z"
+                                            ></path>
+                                            <path
+                                                d="M256.049,399.987c11.045,0,19.998-8.953,19.998-19.998c0-11.045-8.953-19.998-19.998-19.998h-0.01
+                              c-11.045,0-19.993,8.953-19.993,19.998C236.046,391.034,245.004,399.987,256.049,399.987z"
+                                            ></path>
+                                            <path
+                                                d="M276.038,309.995V163.008c0-11.045-8.953-19.998-19.998-19.998c-11.045,0-19.998,8.953-19.998,19.998v146.987
+                              c0,11.045,8.953,19.998,19.998,19.998C267.085,329.993,276.038,321.04,276.038,309.995z"
+                                            ></path>
+                                        </g>
+                                    </g>
+                                </g>
+                                <g></g>
+                                <g></g>
+                                <g></g>
+                                <g></g>
+                                <g></g>
+                                <g></g>
+                                <g></g>
+                                <g></g>
+                                <g></g>
+                                <g></g>
+                                <g></g>
+                                <g></g>
+                                <g></g>
+                                <g></g>
+                                <g></g>
+                            </svg>
+                            <div class="leading-7 md:leading-5 text-justify mr-2">
+                               بر اساس اطلاعات وارد شده داده ای پیدا نشد 
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- use this div to hide table when nothing search  -->
@@ -292,16 +351,17 @@
                     <div class="max-w-full">
 
                         <div class="flex flex-row text-right bg-gray-300 mb-2 p-2.5 rounded max-md:hidden">
-                            <div class="basis-1/12 w-full"></div>
-                            <div class="basis-1/12 w-full">#</div>
-                            <div class="basis-3/12 w-full">عنوان محصول</div>
+                            <div class="flex justify-end basis-1/12 w-full">
+                                <div class="ml-3">#</div>
+                            </div>
+                            <div class="basis-4/12 w-full">عنوان محصول</div>
                             <div class="basis-3/12 w-full">فروشنده</div>
                             <div class="basis-2/12 w-full">فی (زمان سفارش)</div>
                             <div class="basis-2/12 w-full text-end">تعداد</div>
                         </div>
 
-                        <div class="flex flex-row flex-wrap  bg-white p-2.5 mb-1 shadow rounded hover:bg-gray-100">
-                            <div class="flex w-1/12 mb-2.5 md:mb-0 max-md:w-full">
+                        <div class="flex flex-row flex-wrap  bg-white p-2.5 mb-1 shadow rounded md:hover:bg-gray-100">
+                            <div class="flex w-1/12 mb-2.5 md:mb-0 max-md:w-full max-md:hidden">
                                 <div
                                     class="flex justify-between items-center max-md:px-2 max-md:bg-zinc-100 max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
                                     <span class="md:hidden"></span>
@@ -314,17 +374,11 @@
                                             </path>
                                         </svg>
                                     </button>
+                                    <span class="md:truncate ml-3">1</span>
                                 </div>
 
                             </div>
-                            <div class="flex w-1/12 mb-2.5 md:mb-0 max-md:w-full">
-                                <div
-                                    class="flex justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
-                                    <span class="md:hidden"></span>
-                                    <span class="md:truncate">1</span>
-                                </div>
-                            </div>
-                            <div class="flex w-3/12 mb-2.5 md:mb-0 max-md:w-full">
+                            <div class="flex w-4/12 mb-2.5 md:mb-0 max-md:w-full">
                                 <div
                                     class="flex justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
                                     <span class="md:hidden">عنوان محصول</span>
@@ -336,7 +390,10 @@
                                 <div
                                     class="flex justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
                                     <span class="md:hidden">فروشنده</span>
-                                    <span class="md:truncate">سنگین راه تامین</span>
+                                    <div class="md:truncate">
+                                        <span>سنگین راه تامین</span>
+                                        <span class=" block text-xs text-gray-400">ایتالیایی - کولبن</span>
+                                    </div>
                                 </div>
                             </div>
                             <div class="flex w-2/12 mb-2.5 md:mb-0 max-md:w-full">
@@ -357,10 +414,9 @@
                                 </div>
                             </div>
                             <div class="flex w-2/12 mb-2.5 md:mb-0 max-md:w-full">
-                                <div
-                                    class="flex justify-end max-md:justify-center items-center rounded w-full text-center max-md:mx-1 text-sm gap-4 text-gray-500 max-md:gap-1">
-                                    <select onchange=""
-                                        class=" left-0 w-2/6 h-full text-sm rounded outline-0 focus:ring-4 border ">
+                                <div class="flex justify-end max-md:justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
+                                    <span class="md:hidden">تعداد</span>
+                                    <select onchange="" class=" left-0 w-2/6 h-full text-sm rounded outline-0 focus:ring-4 border ">
                                         <option value="1" selected="">1</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
@@ -373,8 +429,12 @@
                                     </select>
                                 </div>
                             </div>
+
+                            <div class="md:hidden w-full mx-1">
+                                <button class="text-white bg-red-500 w-full rounded  py-2">حذف</button>
+                            </div>
                         </div>
-                        <div class="flex flex-row flex-wrap  bg-white p-2.5 mb-1 shadow rounded hover:bg-gray-100">
+                        <div class="flex flex-row flex-wrap  bg-white p-2.5 mb-1 shadow rounded md:hover:bg-gray-100">
                             <div class="flex w-1/12 mb-2.5 md:mb-0 max-md:w-full">
                                 <div
                                     class="flex justify-between items-center max-md:px-2 max-md:bg-zinc-100 max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
@@ -388,17 +448,11 @@
                                             </path>
                                         </svg>
                                     </button>
+                                    <span class="md:truncate ml-3">1</span>
                                 </div>
 
                             </div>
-                            <div class="flex w-1/12 mb-2.5 md:mb-0 max-md:w-full">
-                                <div
-                                    class="flex justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
-                                    <span class="md:hidden"></span>
-                                    <span class="md:truncate">1</span>
-                                </div>
-                            </div>
-                            <div class="flex w-3/12 mb-2.5 md:mb-0 max-md:w-full">
+                            <div class="flex w-4/12 mb-2.5 md:mb-0 max-md:w-full">
                                 <div
                                     class="flex justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
                                     <span class="md:hidden">عنوان محصول</span>
@@ -410,7 +464,10 @@
                                 <div
                                     class="flex justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
                                     <span class="md:hidden">فروشنده</span>
-                                    <span class="md:truncate">سنگین راه تامین</span>
+                                    <div class="md:truncate">
+                                        <span>سنگین راه تامین</span>
+                                        <span class=" block text-xs text-gray-400">ایتالیایی - کولبن</span>
+                                    </div>
                                 </div>
                             </div>
                             <div class="flex w-2/12 mb-2.5 md:mb-0 max-md:w-full">
@@ -431,10 +488,9 @@
                                 </div>
                             </div>
                             <div class="flex w-2/12 mb-2.5 md:mb-0 max-md:w-full">
-                                <div
-                                    class="flex justify-end max-md:justify-center items-center rounded w-full text-center max-md:mx-1 text-sm gap-4 text-gray-500 max-md:gap-1">
-                                    <select onchange=""
-                                        class=" left-0 w-2/6 h-full text-sm rounded outline-0 focus:ring-4 border ">
+                                <div class="flex justify-end max-md:justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
+                                    <span class="md:hidden">تعداد</span>
+                                    <select onchange="" class=" left-0 w-2/6 h-full text-sm rounded outline-0 focus:ring-4 border ">
                                         <option value="1" selected="">1</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
@@ -447,8 +503,12 @@
                                     </select>
                                 </div>
                             </div>
+
+                            <div class="md:hidden w-full mx-1">
+                                <button class="text-white bg-red-500 w-full rounded  py-2">حذف</button>
+                            </div>
                         </div>
-                        <div class="flex flex-row flex-wrap  bg-[#efead8] p-2.5 mb-1 shadow rounded hover:bg-gray-100">
+                        <div class="flex flex-row flex-wrap  bg-[#efead8] p-2.5 mb-1 shadow rounded md:hover:bg-gray-100">
                             <div class="flex w-1/12 mb-2.5 md:mb-0 max-md:w-full">
                                 <div
                                     class="flex justify-between items-center max-md:px-2 max-md:bg-zinc-100 max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
@@ -462,24 +522,19 @@
                                             </path>
                                         </svg>
                                     </button>
-                                </div>
-
-                            </div>
-                            <div class="flex w-1/12 mb-2.5 md:mb-0 max-md:w-full">
-                                <div
-                                    class="flex justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
-                                    <span class="md:hidden"></span>
                                     <span>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                            fill="currentColor" class="bi bi-plus-circle-dotted" viewBox="0 0 16 16">
+                                            fill="currentColor" class="bi bi-plus-circle-dotted ml-2" viewBox="0 0 16 16">
                                             <path
                                                 d="M8 0c-.176 0-.35.006-.523.017l.064.998a7.117 7.117 0 0 1 .918 0l.064-.998A8.113 8.113 0 0 0 8 0zM6.44.152c-.346.069-.684.16-1.012.27l.321.948c.287-.098.582-.177.884-.237L6.44.153zm4.132.271a7.946 7.946 0 0 0-1.011-.27l-.194.98c.302.06.597.14.884.237l.321-.947zm1.873.925a8 8 0 0 0-.906-.524l-.443.896c.275.136.54.29.793.459l.556-.831zM4.46.824c-.314.155-.616.33-.905.524l.556.83a7.07 7.07 0 0 1 .793-.458L4.46.824zM2.725 1.985c-.262.23-.51.478-.74.74l.752.66c.202-.23.418-.446.648-.648l-.66-.752zm11.29.74a8.058 8.058 0 0 0-.74-.74l-.66.752c.23.202.447.418.648.648l.752-.66zm1.161 1.735a7.98 7.98 0 0 0-.524-.905l-.83.556c.169.253.322.518.458.793l.896-.443zM1.348 3.555c-.194.289-.37.591-.524.906l.896.443c.136-.275.29-.54.459-.793l-.831-.556zM.423 5.428a7.945 7.945 0 0 0-.27 1.011l.98.194c.06-.302.14-.597.237-.884l-.947-.321zM15.848 6.44a7.943 7.943 0 0 0-.27-1.012l-.948.321c.098.287.177.582.237.884l.98-.194zM.017 7.477a8.113 8.113 0 0 0 0 1.046l.998-.064a7.117 7.117 0 0 1 0-.918l-.998-.064zM16 8a8.1 8.1 0 0 0-.017-.523l-.998.064a7.11 7.11 0 0 1 0 .918l.998.064A8.1 8.1 0 0 0 16 8zM.152 9.56c.069.346.16.684.27 1.012l.948-.321a6.944 6.944 0 0 1-.237-.884l-.98.194zm15.425 1.012c.112-.328.202-.666.27-1.011l-.98-.194c-.06.302-.14.597-.237.884l.947.321zM.824 11.54a8 8 0 0 0 .524.905l.83-.556a6.999 6.999 0 0 1-.458-.793l-.896.443zm13.828.905c.194-.289.37-.591.524-.906l-.896-.443c-.136.275-.29.54-.459.793l.831.556zm-12.667.83c.23.262.478.51.74.74l.66-.752a7.047 7.047 0 0 1-.648-.648l-.752.66zm11.29.74c.262-.23.51-.478.74-.74l-.752-.66c-.201.23-.418.447-.648.648l.66.752zm-1.735 1.161c.314-.155.616-.33.905-.524l-.556-.83a7.07 7.07 0 0 1-.793.458l.443.896zm-7.985-.524c.289.194.591.37.906.524l.443-.896a6.998 6.998 0 0 1-.793-.459l-.556.831zm1.873.925c.328.112.666.202 1.011.27l.194-.98a6.953 6.953 0 0 1-.884-.237l-.321.947zm4.132.271a7.944 7.944 0 0 0 1.012-.27l-.321-.948a6.954 6.954 0 0 1-.884.237l.194.98zm-2.083.135a8.1 8.1 0 0 0 1.046 0l-.064-.998a7.11 7.11 0 0 1-.918 0l-.064.998zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z">
                                             </path>
                                         </svg>
                                     </span>
                                 </div>
+
                             </div>
-                            <div class="flex w-3/12 mb-2.5 md:mb-0 max-md:w-full">
+
+                            <div class="flex w-4/12 mb-2.5 md:mb-0 max-md:w-full">
                                 <div
                                     class="flex justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
                                     <span class="md:hidden">عنوان محصول</span>
@@ -491,7 +546,10 @@
                                 <div
                                     class="flex justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
                                     <span class="md:hidden">فروشنده</span>
-                                    <span class="md:truncate">سنگین راه تامین</span>
+                                    <div class="md:truncate">
+                                        <span>سنگین راه تامین</span>
+                                        <span class=" block text-xs text-gray-400">ایتالیایی - کولبن</span>
+                                    </div>
                                 </div>
                             </div>
                             <div class="flex w-2/12 mb-2.5 md:mb-0 max-md:w-full">
@@ -512,10 +570,9 @@
                                 </div>
                             </div>
                             <div class="flex w-2/12 mb-2.5 md:mb-0 max-md:w-full">
-                                <div
-                                    class="flex justify-end max-md:justify-center items-center rounded w-full text-center max-md:mx-1 text-sm gap-4 text-gray-500 max-md:gap-1">
-                                    <select onchange=""
-                                        class=" left-0 w-2/6 h-full text-sm rounded bg-[#efead8] outline-0 focus:ring-4 border ">
+                                <div class="flex justify-end max-md:justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
+                                    <span class="md:hidden">تعداد</span>
+                                    <select onchange="" class=" left-0 w-2/6 h-full text-sm rounded outline-0 focus:ring-4 border ">
                                         <option value="1" selected="">1</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
@@ -528,17 +585,20 @@
                                     </select>
                                 </div>
                             </div>
+                            <div class="md:hidden w-full mx-1">
+                                <button class="text-white bg-red-500 w-full rounded  py-2">حذف</button>
+                            </div>
                         </div>
                     </div>
 
                     <div class="flex justify-center max-md:flex-col mt-7">
-                        <button id="open-customizeproduct"  class="flex p-2.5 items-center bg-white shadow-lg rounded text-violet-700 ml-4 max-md:ml-0 max-md:mb-4">
+                        <button id="open-customizeproduct"  class="flex p-2.5 max-md:justify-center items-center bg-white shadow-lg rounded text-violet-700 ml-4 max-md:ml-0 max-md:mb-4">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="ml-2" viewBox="0 0 16 16">
                                 <path d="M8 0c-.176 0-.35.006-.523.017l.064.998a7.117 7.117 0 0 1 .918 0l.064-.998A8.113 8.113 0 0 0 8 0zM6.44.152c-.346.069-.684.16-1.012.27l.321.948c.287-.098.582-.177.884-.237L6.44.153zm4.132.271a7.946 7.946 0 0 0-1.011-.27l-.194.98c.302.06.597.14.884.237l.321-.947zm1.873.925a8 8 0 0 0-.906-.524l-.443.896c.275.136.54.29.793.459l.556-.831zM4.46.824c-.314.155-.616.33-.905.524l.556.83a7.07 7.07 0 0 1 .793-.458L4.46.824zM2.725 1.985c-.262.23-.51.478-.74.74l.752.66c.202-.23.418-.446.648-.648l-.66-.752zm11.29.74a8.058 8.058 0 0 0-.74-.74l-.66.752c.23.202.447.418.648.648l.752-.66zm1.161 1.735a7.98 7.98 0 0 0-.524-.905l-.83.556c.169.253.322.518.458.793l.896-.443zM1.348 3.555c-.194.289-.37.591-.524.906l.896.443c.136-.275.29-.54.459-.793l-.831-.556zM.423 5.428a7.945 7.945 0 0 0-.27 1.011l.98.194c.06-.302.14-.597.237-.884l-.947-.321zM15.848 6.44a7.943 7.943 0 0 0-.27-1.012l-.948.321c.098.287.177.582.237.884l.98-.194zM.017 7.477a8.113 8.113 0 0 0 0 1.046l.998-.064a7.117 7.117 0 0 1 0-.918l-.998-.064zM16 8a8.1 8.1 0 0 0-.017-.523l-.998.064a7.11 7.11 0 0 1 0 .918l.998.064A8.1 8.1 0 0 0 16 8zM.152 9.56c.069.346.16.684.27 1.012l.948-.321a6.944 6.944 0 0 1-.237-.884l-.98.194zm15.425 1.012c.112-.328.202-.666.27-1.011l-.98-.194c-.06.302-.14.597-.237.884l.947.321zM.824 11.54a8 8 0 0 0 .524.905l.83-.556a6.999 6.999 0 0 1-.458-.793l-.896.443zm13.828.905c.194-.289.37-.591.524-.906l-.896-.443c-.136.275-.29.54-.459.793l.831.556zm-12.667.83c.23.262.478.51.74.74l.66-.752a7.047 7.047 0 0 1-.648-.648l-.752.66zm11.29.74c.262-.23.51-.478.74-.74l-.752-.66c-.201.23-.418.447-.648.648l.66.752zm-1.735 1.161c.314-.155.616-.33.905-.524l-.556-.83a7.07 7.07 0 0 1-.793.458l.443.896zm-7.985-.524c.289.194.591.37.906.524l.443-.896a6.998 6.998 0 0 1-.793-.459l-.556.831zm1.873.925c.328.112.666.202 1.011.27l.194-.98a6.953 6.953 0 0 1-.884-.237l-.321.947zm4.132.271a7.944 7.944 0 0 0 1.012-.27l-.321-.948a6.954 6.954 0 0 1-.884.237l.194.98zm-2.083.135a8.1 8.1 0 0 0 1.046 0l-.064-.998a7.11 7.11 0 0 1-.918 0l-.064.998zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"></path>
                             </svg>
                             <span>افزودن محصول سفارشی</span>
                         </button>
-                        <button id="open-addexistingproduct" class="flex p-2.5 items-center bg-white shadow-lg rounded text-violet-700">
+                        <button id="open-addexistingproduct" class="flex p-2.5 max-md:justify-center items-center bg-white shadow-lg rounded text-violet-700">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="ml-2" viewBox="0 0 16 16">
                                 <path d="M8 0c-.176 0-.35.006-.523.017l.064.998a7.117 7.117 0 0 1 .918 0l.064-.998A8.113 8.113 0 0 0 8 0zM6.44.152c-.346.069-.684.16-1.012.27l.321.948c.287-.098.582-.177.884-.237L6.44.153zm4.132.271a7.946 7.946 0 0 0-1.011-.27l-.194.98c.302.06.597.14.884.237l.321-.947zm1.873.925a8 8 0 0 0-.906-.524l-.443.896c.275.136.54.29.793.459l.556-.831zM4.46.824c-.314.155-.616.33-.905.524l.556.83a7.07 7.07 0 0 1 .793-.458L4.46.824zM2.725 1.985c-.262.23-.51.478-.74.74l.752.66c.202-.23.418-.446.648-.648l-.66-.752zm11.29.74a8.058 8.058 0 0 0-.74-.74l-.66.752c.23.202.447.418.648.648l.752-.66zm1.161 1.735a7.98 7.98 0 0 0-.524-.905l-.83.556c.169.253.322.518.458.793l.896-.443zM1.348 3.555c-.194.289-.37.591-.524.906l.896.443c.136-.275.29-.54.459-.793l-.831-.556zM.423 5.428a7.945 7.945 0 0 0-.27 1.011l.98.194c.06-.302.14-.597.237-.884l-.947-.321zM15.848 6.44a7.943 7.943 0 0 0-.27-1.012l-.948.321c.098.287.177.582.237.884l.98-.194zM.017 7.477a8.113 8.113 0 0 0 0 1.046l.998-.064a7.117 7.117 0 0 1 0-.918l-.998-.064zM16 8a8.1 8.1 0 0 0-.017-.523l-.998.064a7.11 7.11 0 0 1 0 .918l.998.064A8.1 8.1 0 0 0 16 8zM.152 9.56c.069.346.16.684.27 1.012l.948-.321a6.944 6.944 0 0 1-.237-.884l-.98.194zm15.425 1.012c.112-.328.202-.666.27-1.011l-.98-.194c-.06.302-.14.597-.237.884l.947.321zM.824 11.54a8 8 0 0 0 .524.905l.83-.556a6.999 6.999 0 0 1-.458-.793l-.896.443zm13.828.905c.194-.289.37-.591.524-.906l-.896-.443c-.136.275-.29.54-.459.793l.831.556zm-12.667.83c.23.262.478.51.74.74l.66-.752a7.047 7.047 0 0 1-.648-.648l-.752.66zm11.29.74c.262-.23.51-.478.74-.74l-.752-.66c-.201.23-.418.447-.648.648l.66.752zm-1.735 1.161c.314-.155.616-.33.905-.524l-.556-.83a7.07 7.07 0 0 1-.793.458l.443.896zm-7.985-.524c.289.194.591.37.906.524l.443-.896a6.998 6.998 0 0 1-.793-.459l-.556.831zm1.873.925c.328.112.666.202 1.011.27l.194-.98a6.953 6.953 0 0 1-.884-.237l-.321.947zm4.132.271a7.944 7.944 0 0 0 1.012-.27l-.321-.948a6.954 6.954 0 0 1-.884.237l.194.98zm-2.083.135a8.1 8.1 0 0 0 1.046 0l-.064-.998a7.11 7.11 0 0 1-.918 0l-.064.998zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"></path>
                             </svg>
@@ -584,7 +644,7 @@
                                                 </div>
                                                 <div class="basis-2/3">
                                                     <input
-                                                        class="w-full py-2 px-3 border rounded text-gray-500 outline-1 outline-blue-500"
+                                                        class="w-full py-2 px-3 border rounded text-gray-500 outline-1 outline-blue-500 bg-gray-200"
                                                         type="number">
                                                 </div>
                                             </div>
@@ -701,10 +761,9 @@
                                     <form>
                                         <div class="flex flex-col">
                                             <div class="flex mb-2">
-                                                <div class="flex w-full mb-2.5 max-sm:w-full">
-                                                    <span
-                                                        class="bg-gray-200 py-2.5 mx-1 rounded w-2/4 text-center text-sm text-gray-500">عنوان محصول:</span>
-                                                    <input type="text" class="bg-gray-200 py-2.5 mx-1 rounded w-2/4 text-center text-sm font-bold text-black">
+                                                <div class="flex flex-col w-full mb-2.5">
+                                                    <span class="bg-gray-200 py-2.5 mx-1 rounded text-center text-sm text-gray-500 mb-2">عنوان محصول:</span>
+                                                    <input type="text" class="bg-gray-200 py-2.5 mx-1 rounded text-center text-sm font-bold text-black">
                                                 </div>
                                             </div>
                                             <div class="flex mb-2">
@@ -721,7 +780,7 @@
                                                 <div class="flex w-full max-sm:flex-col mb-2.5 max-sm:w-full max-sm:mx-1">
                                                     <span class="flex justify-center items-center bg-gray-200 py-2.5 sm:mx-1 rounded w-2/4 max-sm:w-full max-sm:mb-2.5 text-center text-sm "> قیمت:</span>
                                                     <div class="sm:mx-1 rounded w-2/4 max-sm:w-full text-center text-sm font-bold text-black">
-                                                        <input type="text" class="bg-gray-200 py-2.5 rounded w-full text-center text-sm font-bold text-black mb-2.5">
+                                                        <input type="text" onkeyup="fitPrice(this)" class="bg-gray-200 py-2.5 rounded w-full text-center text-sm font-bold text-black mb-2.5">
                                                         <div class="flex justify-center bg-gray-200 py-2.5 rounded text-center text-sm font-bold text-black">
                                                             <span
                                                                 class="text-gray-600 text-end">واحد دلار = 55.000</span>

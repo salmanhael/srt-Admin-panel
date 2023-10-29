@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>محصولات</title>
+    <title>ویرایش لیست ویژه</title>
     <link href="../css/main.css" rel="stylesheet">
 
 </head>
@@ -239,7 +239,7 @@
         id="expand-menu">
         <div class="desktop:max-w-8xl mr-auto ml-auto px-3 mb-32">
             <div class="flex justify-between max-md:pt-2">
-                <h1 class="text-2xl font-semibold">محصولات</h1>
+                <h1 class="text-2xl font-semibold">ویرایش لیست های ویژه</h1>
                 <select class="py-2 px-2 text-sm rounded focus:ring-4 border-2 outline-0 border-violet-700">
                   <option selected="" value="option-1">همه فروشندگان</option>
                   <option value="option-2">سنگین راه تامین</option>
@@ -248,59 +248,11 @@
               </select>
               </div>
 
-            <div class="flex flex-row justify-end max-sm:flex-col max-sm:text-center">
-                <form class=" relative hidden mb-4 ml-2 mt-5 w-full max-md:hidden" id="searchBar">
-                    <select
-                        class="absolute left-0 w-2/6 h-full text-sm rounded rounded-r-none outline-0 focus:ring-4 border border-r-0"
-                        aria-label="">
-                        <option value="1">عنوان محصول</option>
-                        <option value="2">شناسه محصول</option>
-                        <option value="3">PartNumber</option>
-                    </select>
-                    <input type="text" placeholder="جست و جو ..." name="search"
-                        class="w-full p-2.5 pr-12 rounded text-sm text-black outline-0 border">
-                    <button type="submit" class="absolute right-0 p-3 hover:text-violet-700 rounded" value="Search">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor"
-                            class="bi bi-search" viewBox="0 0 16 16">
-                            <path
-                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                        </svg>
-                    </button>
-                </form>
-
-
-                <div class="text-left">
-                    <button onclick="searchorder()"
-                        class="cursor-pointer mt-5 mb-4 mx-2 bg-white hover:text-violet-700 p-2.5 text-sm font-semibold h-10 text-gray-600 rounded border border-gray-400 hover:border-violet-700 mr-auto max-md:hidden"
-                        id="orders-search">
-                        <span>جست و جو سفارش</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
-                            class="bi bi-search me-1 inline" viewBox="0 0 16 16">
-                            <path
-                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z">
-                            </path>
-                        </svg>
-                    </button>
-                </div>
-
-                <div>
-                    <button
-                        class="cursor-pointer mt-5 mb-4 mx-2 bg-violet-700 text-white w-40 max-sm:w-full text-sm font-semibold h-10 rounded mr-auto">
-                        <span>فروش محصول</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-bag-plus-fill mb-1 mx-1 inline" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z">
-                            </path>
-                        </svg>
-                    </button>
-                </div>
-
-                <div>
-                    <button
-                        class="cursor-pointer mt-5 mb-4 bg-green-500 text-white w-40 max-sm:w-full max-sm:mt-2 text-sm font-semibold h-10 rounded">
-                        <a href="../html/addproduct.html">
-                            <span>افزودن محصول</span>
+            <div class="flex items-center max-md:flex-col justify-center my-3">
+                <div class="max-md:w-full">
+                    <button class="cursor-pointer bg-green-500 text-white w-40 max-md:w-full max-sm:mb-2 text-sm font-semibold h-10 rounded-r max-md:rounded">
+                        <a>
+                            <span>افزودن به لیست</span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" fill="currentColor"
                             class="bi bi-plus inline mb-1" viewBox="0 0 16 16">
                             <path
@@ -310,107 +262,50 @@
                         </a>
                     </button>
                 </div>
-
+                <input type="text" class="h-10 w-1/2 max-md:w-full text-center rounded-l outline-1 outline-blue-500" placeholder="شناسه محصول را وارد کنید">
             </div>
-
-            <div class="flex flex-row bg-white mb-6 shadow-lg max-md:mt-4 max-sm:flex-col max-sm:mt-6">
-                <button id="all-button"
-                    class="basis-1/4 p-2.5 text-sm font-bold text-gray-600 hover:text-violet-700 table-active"
-                    onclick="sellType('all')">همه محصولات</button>
-                <button id="online-button" class="basis-1/4 p-2.5 text-sm font-bold text-gray-600 hover:text-violet-700"
-                    onclick="sellType('online')">محصولات فروش آنلاین</button>
-                <button id="telephone-button" id="allBtn"
-                    class="basis-1/4 p-2.5 text-sm font-bold text-gray-600 hover:text-violet-700"
-                    onclick="sellType('telephone')">محصولات فروش تلفنی</button>
-                <button id="deleted-button"
-                    class="basis-1/4 p-2.5 text-sm font-bold text-gray-600 hover:text-violet-700"
-                    onclick="sellType('deleted')">محصولات حذف شده</button>
-            </div>
-
-            <div class="flex flex-row bg-white mb-6 shadow-lg max-md:mt-1 max-sm:flex-col max-sm:mt-10">
-                <button id="allproduct-button"
-                    class="basis-1/4 p-2.5 text-sm font-bold text-gray-600 hover:bg-violet-700 hover:text-white button-active"
-                    onclick="productStatus('allproduct')">همه</button>
-                <button id="available-button"
-                    class="basis-1/4 p-2.5 text-sm font-bold text-gray-600 hover:bg-violet-700 hover:text-white"
-                    onclick="productStatus('available')">محصولات موجود</button>
-                <button id="nearempty-button" id="allBtn"
-                    class="basis-1/4 p-2.5 text-sm font-bold text-gray-600 hover:bg-violet-700 hover:text-white"
-                    onclick="productStatus('nearempty')">محصولات در آستانه اتمام</button>
-                <button id="finish-button"
-                    class="basis-1/4 p-2.5 text-sm font-bold text-gray-600 hover:bg-violet-700 hover:text-white"
-                    onclick="productStatus('finish')">محصولات ناموجود</button>
-            </div>
-
 
             <div>
                 <div class="max-w-full">
                    
                     <div class="flex flex-row text-right bg-gray-300 mb-2 p-2.5 rounded max-md:hidden">
-                        <div class="flex items-center basis-1/12 w-full">شناسه</div>
-                        <div class="flex items-center basis-3/12 w-full">عنوان</div>
-                        <div class="basis-2/12 w-full text-center">
-                            <div>
-                                <span class="">برند</span>
-                                <span class="block text-xs text-gray-700">دسته</span>
-                            </div>
-                        </div>
-                        <div class="basis-2/12 w-full text-center">
-                            <div>
-                                <span class="">دستگاه </span>
-                                <span class="block text-xs text-gray-700">دسته</span>
-                            </div>
-                        </div>
+                        <div class="basis-1/12 w-full"></div>
+                        <div class="flex items-center basis-2/12 w-full">شناسه</div>
+                        <div class="flex items-center basis-4/12 w-full">عنوان</div>
                         <div class="flex items-center basis-1/12 w-full text-sm text-center">فروش آنلاین</div>
+                        <div class="basis-1/12 w-full text-center">موجودی</div>
                         <div class="basis-3/12 w-full"></div>
                     </div>
 
                     <div class="deactivate flex flex-row flex-wrap  bg-white p-2.5 mb-1 shadow rounded hover:bg-gray-100">
                         <div class="flex w-1/12 mb-2.5 md:mb-0 max-md:w-full">
+                            <div class="flex max-md:justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
+                                <button class="text-red-500">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        fill="currentColor" class="bi bi-x-circle-fill text-danger"
+                                        viewBox="0 0 16 16">
+                                        <path
+                                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="flex w-2/12 mb-2.5 md:mb-0 max-md:w-full">
                             <div class="flex justify-between items-center max-md:px-2 max-md:bg-zinc-100 max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
                                 <span class="md:hidden">شناسه</span>
-                                <span>F1H28</span>
+                                <span>#32564465</span>
                             </div>
                            
                         </div>
-                        <div class="flex w-3/12 mb-2.5 md:mb-0 max-md:w-full">
+                        <div class="flex w-4/12 mb-2.5 md:mb-0 max-md:w-full">
                             <div class="flex justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
                                 <span class="md:hidden">عنوان</span>
-                                <span class="md:truncate">گیربکس گریدر HG180</span>
+                                <span class="md:truncate">دنده رینگ گیر چرخ عقب هپکو HG180D/C</span>
                             </div>
                         </div>
-                        <div class="flex w-2/12 mb-2.5 md:mb-0 max-md:w-full">
-                            <div class="flex justify-center max-md:justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
-                                <span class="md:hidden">
-                                    <div>
-                                        <span class="text-gray-600">برند</span>
-                                        <span class="block text-xs text-gray-400">دسته</span>
-                                    </div>
-                                </span>
-                                <span>
-                                    <div>
-                                        <span class="text-gray-600">Hepco</span>
-                                        <span class="block text-xs text-gray-400">گریدر</span>
-                                    </div>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="flex w-2/12 mb-2.5 md:mb-0 max-md:w-full">
-                            <div class="flex justify-center max-md:justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
-                                <span class="md:hidden">
-                                    <div>
-                                        <span class="text-gray-600">دستگاه</span>
-                                        <span class="block text-xs text-gray-400">دسته</span>
-                                    </div>
-                                </span>
-                                <span>
-                                    <div>
-                                        <span class="text-gray-600">HG180</span>
-                                        <span class="block text-xs text-gray-400">لوازم موتوری</span>
-                                    </div>
-                                </span>
-                            </div>
-                        </div>
+
                         <div class="flex w-1/12 mb-2.5 md:mb-0 max-md:w-full">
                             <div class="flex justify-center max-md:justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
                                 <span class="md:hidden">وضعیت</span>
@@ -425,17 +320,16 @@
                             </span>
                             </div>
                         </div>
+                        
+                        <div class="flex w-1/12 mb-2.5 md:mb-0 max-md:w-full">
+                            <div class="flex justify-center max-md:justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
+                                <span class="md:hidden">موجودی</span>
+                                <span>20</span>
+                            </div>
+                        </div>
+                      
                         <div class="flex w-3/12 mb-2.5 md:mb-0 max-md:w-full">
                             <div class="flex justify-end max-md:justify-center items-center rounded w-full text-center max-md:mx-1 text-sm gap-4 text-gray-500 max-md:gap-1">
-                                <button id="open-productinfo" class="flex justify-center max-md:basis-1/5 max-md:bg-zinc-300 max-md:rounded-r hover:text-violet-700 4 max-md:py-2.5">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px"
-                                        fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z">
-                                        </path>
-                                    </svg>
-                                </button>
-
                                 <button  class="flex justify-center max-md:basis-1/5 max-md:bg-zinc-300 hover:text-violet-700 max-md:py-2.5">
                                    <a href="../html/quickeditprice.html">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
@@ -466,72 +360,61 @@
                                     </svg>
                                 </button>
 
-                   
-                                    <button onclick="openModal(this)" class="deactivateBtn flex justify-center  max-md:basis-1/5 max-md:bg-zinc-300 max-md:rounded-l hover:text-violet-700 max-md:py-2.5">
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            width="20"
-                                            height="20"
-                                            fill="currentColor"
-                                            class="bi bi-toggle-on"
-                                            viewBox="0 0 16 16"
-                                        >
-                                            <path
-                                                d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"
-                                            ></path>
-                                        </svg></button
-                                    ><input type="hidden" name="newBlockedStatus" value="false" />
-                                    <input type="hidden" name="oldBlockedStatus" value="true" />
+                                <button class="flex justify-center max-md:basis-1/5 max-md:bg-zinc-300 max-md:rounded-r hover:text-violet-700 4 max-md:py-2.5">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+                                        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9c-.086 0-.17.01-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+                                        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4.02 4.02 0 0 1-.82 1H12a3 3 0 1 0 0-6H9z"/>
+                                      </svg>
+                                </button>
+
+                                <button onclick="openModal(this)" class="deactivateBtn flex justify-center  max-md:basis-1/5 max-md:bg-zinc-300 max-md:rounded-l hover:text-violet-700 max-md:py-2.5">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="20"
+                                        height="20"
+                                        fill="currentColor"
+                                        class="bi bi-toggle-on"
+                                        viewBox="0 0 16 16"
+                                    >
+                                        <path
+                                            d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"
+                                        ></path>
+                                    </svg></button
+                                ><input type="hidden" name="newBlockedStatus" value="false" />
+                                <input type="hidden" name="oldBlockedStatus" value="true" />
                          
                             </div>
                         </div>
                     </div>
                     <div class="deactivate flex flex-row flex-wrap  bg-white p-2.5 mb-1 shadow rounded hover:bg-gray-100">
                         <div class="flex w-1/12 mb-2.5 md:mb-0 max-md:w-full">
+                            <div class="flex max-md:justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
+                                <button class="text-red-500">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        fill="currentColor" class="bi bi-x-circle-fill text-danger"
+                                        viewBox="0 0 16 16">
+                                        <path
+                                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="flex w-2/12 mb-2.5 md:mb-0 max-md:w-full">
                             <div class="flex justify-between items-center max-md:px-2 max-md:bg-zinc-100 max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
                                 <span class="md:hidden">شناسه</span>
-                                <span>F1H28</span>
+                                <span>#32564465</span>
                             </div>
                            
                         </div>
-                        <div class="flex w-3/12 mb-2.5 md:mb-0 max-md:w-full">
+                        <div class="flex w-4/12 mb-2.5 md:mb-0 max-md:w-full">
                             <div class="flex justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
                                 <span class="md:hidden">عنوان</span>
-                                <span class="md:truncate">گیربکس گریدر HG180</span>
+                                <span class="md:truncate">دنده رینگ گیر چرخ عقب هپکو HG180D/C</span>
                             </div>
                         </div>
-                        <div class="flex w-2/12 mb-2.5 md:mb-0 max-md:w-full">
-                            <div class="flex justify-center max-md:justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
-                                <span class="md:hidden">
-                                    <div>
-                                        <span class="text-gray-600">برند</span>
-                                        <span class="block text-xs text-gray-400">دسته</span>
-                                    </div>
-                                </span>
-                                <span>
-                                    <div>
-                                        <span class="text-gray-600">Hepco</span>
-                                        <span class="block text-xs text-gray-400">گریدر</span>
-                                    </div>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="flex w-2/12 mb-2.5 md:mb-0 max-md:w-full">
-                            <div class="flex justify-center max-md:justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
-                                <span class="md:hidden">
-                                    <div>
-                                        <span class="text-gray-600">دستگاه</span>
-                                        <span class="block text-xs text-gray-400">دسته</span>
-                                    </div>
-                                </span>
-                                <span>
-                                    <div>
-                                        <span class="text-gray-600">HG180</span>
-                                        <span class="block text-xs text-gray-400">لوازم موتوری</span>
-                                    </div>
-                                </span>
-                            </div>
-                        </div>
+
                         <div class="flex w-1/12 mb-2.5 md:mb-0 max-md:w-full">
                             <div class="flex justify-center max-md:justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
                                 <span class="md:hidden">وضعیت</span>
@@ -546,17 +429,16 @@
                             </span>
                             </div>
                         </div>
+                        
+                        <div class="flex w-1/12 mb-2.5 md:mb-0 max-md:w-full">
+                            <div class="flex justify-center max-md:justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
+                                <span class="md:hidden">موجودی</span>
+                                <span>20</span>
+                            </div>
+                        </div>
+                      
                         <div class="flex w-3/12 mb-2.5 md:mb-0 max-md:w-full">
                             <div class="flex justify-end max-md:justify-center items-center rounded w-full text-center max-md:mx-1 text-sm gap-4 text-gray-500 max-md:gap-1">
-                                <button id="open-productinfo" class="flex justify-center max-md:basis-1/5 max-md:bg-zinc-300 max-md:rounded-r hover:text-violet-700 4 max-md:py-2.5">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px"
-                                        fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z">
-                                        </path>
-                                    </svg>
-                                </button>
-
                                 <button  class="flex justify-center max-md:basis-1/5 max-md:bg-zinc-300 hover:text-violet-700 max-md:py-2.5">
                                    <a href="../html/quickeditprice.html">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
@@ -587,72 +469,61 @@
                                     </svg>
                                 </button>
 
-                   
-                                    <button onclick="openModal(this)" class="deactivateBtn flex justify-center  max-md:basis-1/5 max-md:bg-zinc-300 max-md:rounded-l hover:text-violet-700 max-md:py-2.5">
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            width="20"
-                                            height="20"
-                                            fill="currentColor"
-                                            class="bi bi-toggle-on"
-                                            viewBox="0 0 16 16"
-                                        >
-                                            <path
-                                                d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"
-                                            ></path>
-                                        </svg></button
-                                    ><input type="hidden" name="newBlockedStatus" value="false" />
-                                    <input type="hidden" name="oldBlockedStatus" value="true" />
+                                <button class="flex justify-center max-md:basis-1/5 max-md:bg-zinc-300 max-md:rounded-r hover:text-violet-700 4 max-md:py-2.5">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+                                        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9c-.086 0-.17.01-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+                                        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4.02 4.02 0 0 1-.82 1H12a3 3 0 1 0 0-6H9z"/>
+                                      </svg>
+                                </button>
+
+                                <button onclick="openModal(this)" class="deactivateBtn flex justify-center  max-md:basis-1/5 max-md:bg-zinc-300 max-md:rounded-l hover:text-violet-700 max-md:py-2.5">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="20"
+                                        height="20"
+                                        fill="currentColor"
+                                        class="bi bi-toggle-on"
+                                        viewBox="0 0 16 16"
+                                    >
+                                        <path
+                                            d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"
+                                        ></path>
+                                    </svg></button
+                                ><input type="hidden" name="newBlockedStatus" value="false" />
+                                <input type="hidden" name="oldBlockedStatus" value="true" />
                          
                             </div>
                         </div>
                     </div>
                     <div class="deactivate flex flex-row flex-wrap  bg-white p-2.5 mb-1 shadow rounded hover:bg-gray-100">
                         <div class="flex w-1/12 mb-2.5 md:mb-0 max-md:w-full">
+                            <div class="flex max-md:justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
+                                <button class="text-red-500">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        fill="currentColor" class="bi bi-x-circle-fill text-danger"
+                                        viewBox="0 0 16 16">
+                                        <path
+                                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="flex w-2/12 mb-2.5 md:mb-0 max-md:w-full">
                             <div class="flex justify-between items-center max-md:px-2 max-md:bg-zinc-100 max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
                                 <span class="md:hidden">شناسه</span>
-                                <span>F1H28</span>
+                                <span>#32564465</span>
                             </div>
                            
                         </div>
-                        <div class="flex w-3/12 mb-2.5 md:mb-0 max-md:w-full">
+                        <div class="flex w-4/12 mb-2.5 md:mb-0 max-md:w-full">
                             <div class="flex justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
                                 <span class="md:hidden">عنوان</span>
-                                <span class="md:truncate">گیربکس گریدر HG180</span>
+                                <span class="md:truncate">دنده رینگ گیر چرخ عقب هپکو HG180D/C</span>
                             </div>
                         </div>
-                        <div class="flex w-2/12 mb-2.5 md:mb-0 max-md:w-full">
-                            <div class="flex justify-center max-md:justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
-                                <span class="md:hidden">
-                                    <div>
-                                        <span class="text-gray-600">برند</span>
-                                        <span class="block text-xs text-gray-400">دسته</span>
-                                    </div>
-                                </span>
-                                <span>
-                                    <div>
-                                        <span class="text-gray-600">Hepco</span>
-                                        <span class="block text-xs text-gray-400">گریدر</span>
-                                    </div>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="flex w-2/12 mb-2.5 md:mb-0 max-md:w-full">
-                            <div class="flex justify-center max-md:justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
-                                <span class="md:hidden">
-                                    <div>
-                                        <span class="text-gray-600">دستگاه</span>
-                                        <span class="block text-xs text-gray-400">دسته</span>
-                                    </div>
-                                </span>
-                                <span>
-                                    <div>
-                                        <span class="text-gray-600">HG180</span>
-                                        <span class="block text-xs text-gray-400">لوازم موتوری</span>
-                                    </div>
-                                </span>
-                            </div>
-                        </div>
+
                         <div class="flex w-1/12 mb-2.5 md:mb-0 max-md:w-full">
                             <div class="flex justify-center max-md:justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
                                 <span class="md:hidden">وضعیت</span>
@@ -667,17 +538,16 @@
                             </span>
                             </div>
                         </div>
+                        
+                        <div class="flex w-1/12 mb-2.5 md:mb-0 max-md:w-full">
+                            <div class="flex justify-center max-md:justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
+                                <span class="md:hidden">موجودی</span>
+                                <span>20</span>
+                            </div>
+                        </div>
+                      
                         <div class="flex w-3/12 mb-2.5 md:mb-0 max-md:w-full">
                             <div class="flex justify-end max-md:justify-center items-center rounded w-full text-center max-md:mx-1 text-sm gap-4 text-gray-500 max-md:gap-1">
-                                <button id="open-productinfo" class="flex justify-center max-md:basis-1/5 max-md:bg-zinc-300 max-md:rounded-r hover:text-violet-700 4 max-md:py-2.5">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px"
-                                        fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z">
-                                        </path>
-                                    </svg>
-                                </button>
-
                                 <button  class="flex justify-center max-md:basis-1/5 max-md:bg-zinc-300 hover:text-violet-700 max-md:py-2.5">
                                    <a href="../html/quickeditprice.html">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
@@ -708,72 +578,61 @@
                                     </svg>
                                 </button>
 
-                   
-                                    <button onclick="openModal(this)" class="deactivateBtn flex justify-center  max-md:basis-1/5 max-md:bg-zinc-300 max-md:rounded-l hover:text-violet-700 max-md:py-2.5">
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            width="20"
-                                            height="20"
-                                            fill="currentColor"
-                                            class="bi bi-toggle-on"
-                                            viewBox="0 0 16 16"
-                                        >
-                                            <path
-                                                d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"
-                                            ></path>
-                                        </svg></button
-                                    ><input type="hidden" name="newBlockedStatus" value="false" />
-                                    <input type="hidden" name="oldBlockedStatus" value="true" />
+                                <button class="flex justify-center max-md:basis-1/5 max-md:bg-zinc-300 max-md:rounded-r hover:text-violet-700 4 max-md:py-2.5">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+                                        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9c-.086 0-.17.01-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+                                        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4.02 4.02 0 0 1-.82 1H12a3 3 0 1 0 0-6H9z"/>
+                                      </svg>
+                                </button>
+
+                                <button onclick="openModal(this)" class="deactivateBtn flex justify-center  max-md:basis-1/5 max-md:bg-zinc-300 max-md:rounded-l hover:text-violet-700 max-md:py-2.5">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="20"
+                                        height="20"
+                                        fill="currentColor"
+                                        class="bi bi-toggle-on"
+                                        viewBox="0 0 16 16"
+                                    >
+                                        <path
+                                            d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"
+                                        ></path>
+                                    </svg></button
+                                ><input type="hidden" name="newBlockedStatus" value="false" />
+                                <input type="hidden" name="oldBlockedStatus" value="true" />
                          
                             </div>
                         </div>
                     </div>
                     <div class="deactivate flex flex-row flex-wrap  bg-white p-2.5 mb-1 shadow rounded hover:bg-gray-100">
                         <div class="flex w-1/12 mb-2.5 md:mb-0 max-md:w-full">
+                            <div class="flex max-md:justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
+                                <button class="text-red-500">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        fill="currentColor" class="bi bi-x-circle-fill text-danger"
+                                        viewBox="0 0 16 16">
+                                        <path
+                                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="flex w-2/12 mb-2.5 md:mb-0 max-md:w-full">
                             <div class="flex justify-between items-center max-md:px-2 max-md:bg-zinc-100 max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
                                 <span class="md:hidden">شناسه</span>
-                                <span>F1H28</span>
+                                <span>#32564465</span>
                             </div>
                            
                         </div>
-                        <div class="flex w-3/12 mb-2.5 md:mb-0 max-md:w-full">
+                        <div class="flex w-4/12 mb-2.5 md:mb-0 max-md:w-full">
                             <div class="flex justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
                                 <span class="md:hidden">عنوان</span>
-                                <span class="md:truncate">گیربکس گریدر HG180</span>
+                                <span class="md:truncate">دنده رینگ گیر چرخ عقب هپکو HG180D/C</span>
                             </div>
                         </div>
-                        <div class="flex w-2/12 mb-2.5 md:mb-0 max-md:w-full">
-                            <div class="flex justify-center max-md:justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
-                                <span class="md:hidden">
-                                    <div>
-                                        <span class="text-gray-600">برند</span>
-                                        <span class="block text-xs text-gray-400">دسته</span>
-                                    </div>
-                                </span>
-                                <span>
-                                    <div>
-                                        <span class="text-gray-600">Hepco</span>
-                                        <span class="block text-xs text-gray-400">گریدر</span>
-                                    </div>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="flex w-2/12 mb-2.5 md:mb-0 max-md:w-full">
-                            <div class="flex justify-center max-md:justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
-                                <span class="md:hidden">
-                                    <div>
-                                        <span class="text-gray-600">دستگاه</span>
-                                        <span class="block text-xs text-gray-400">دسته</span>
-                                    </div>
-                                </span>
-                                <span>
-                                    <div>
-                                        <span class="text-gray-600">HG180</span>
-                                        <span class="block text-xs text-gray-400">لوازم موتوری</span>
-                                    </div>
-                                </span>
-                            </div>
-                        </div>
+
                         <div class="flex w-1/12 mb-2.5 md:mb-0 max-md:w-full">
                             <div class="flex justify-center max-md:justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
                                 <span class="md:hidden">وضعیت</span>
@@ -788,17 +647,16 @@
                             </span>
                             </div>
                         </div>
+                        
+                        <div class="flex w-1/12 mb-2.5 md:mb-0 max-md:w-full">
+                            <div class="flex justify-center max-md:justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
+                                <span class="md:hidden">موجودی</span>
+                                <span>20</span>
+                            </div>
+                        </div>
+                      
                         <div class="flex w-3/12 mb-2.5 md:mb-0 max-md:w-full">
                             <div class="flex justify-end max-md:justify-center items-center rounded w-full text-center max-md:mx-1 text-sm gap-4 text-gray-500 max-md:gap-1">
-                                <button id="open-productinfo" class="flex justify-center max-md:basis-1/5 max-md:bg-zinc-300 max-md:rounded-r hover:text-violet-700 4 max-md:py-2.5">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px"
-                                        fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z">
-                                        </path>
-                                    </svg>
-                                </button>
-
                                 <button  class="flex justify-center max-md:basis-1/5 max-md:bg-zinc-300 hover:text-violet-700 max-md:py-2.5">
                                    <a href="../html/quickeditprice.html">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
@@ -829,26 +687,33 @@
                                     </svg>
                                 </button>
 
-                   
-                                    <button onclick="openModal(this)" class="deactivateBtn flex justify-center  max-md:basis-1/5 max-md:bg-zinc-300 max-md:rounded-l hover:text-violet-700 max-md:py-2.5">
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            width="20"
-                                            height="20"
-                                            fill="currentColor"
-                                            class="bi bi-toggle-on"
-                                            viewBox="0 0 16 16"
-                                        >
-                                            <path
-                                                d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"
-                                            ></path>
-                                        </svg></button
-                                    ><input type="hidden" name="newBlockedStatus" value="false" />
-                                    <input type="hidden" name="oldBlockedStatus" value="true" />
+                                <button class="flex justify-center max-md:basis-1/5 max-md:bg-zinc-300 max-md:rounded-r hover:text-violet-700 4 max-md:py-2.5">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+                                        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9c-.086 0-.17.01-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+                                        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4.02 4.02 0 0 1-.82 1H12a3 3 0 1 0 0-6H9z"/>
+                                      </svg>
+                                </button>
+
+                                <button onclick="openModal(this)" class="deactivateBtn flex justify-center  max-md:basis-1/5 max-md:bg-zinc-300 max-md:rounded-l hover:text-violet-700 max-md:py-2.5">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="20"
+                                        height="20"
+                                        fill="currentColor"
+                                        class="bi bi-toggle-on"
+                                        viewBox="0 0 16 16"
+                                    >
+                                        <path
+                                            d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"
+                                        ></path>
+                                    </svg></button
+                                ><input type="hidden" name="newBlockedStatus" value="false" />
+                                <input type="hidden" name="oldBlockedStatus" value="true" />
                          
                             </div>
                         </div>
                     </div>
+                    
                 </div>
 
                 <nav class="flex justify-center mt-4">
@@ -868,7 +733,7 @@
 
         <!-- part-number info -->
         <div id="part-number-modal" class="fixed modal inset-0 bg-gray-800 bg-opacity-50 overflow-y-auto">
-            <div id="part-number-out" class="h-full flex items-baseline justify-center mt-7 mb-10 max-sm:m-2 ">
+            <div id="part-number-out" class="flex items-baseline justify-center mt-7 mb-10 max-sm:m-2 ">
                 <div class="bg-white rounded shadow-lg  sm:max-w-lg part-number-content  w-full">
                     <div class="relative flex flex-col w-full bg-white rounded-md">
                         <div class="flex flex-row-reverse justify-between border-b p-4.5">
@@ -1167,95 +1032,6 @@
                                 <button id="cancelBtn" onclick="closeModal()"
                                     class="p-1.5 px-3.5 rounded border text-sm font-semibold transition duration-300 ease-in-out bg-gray-500 hover:bg-slate-600 text-white">خیر
                                 </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- product info -->
-        <div id="product-info-modal" class="fixed modal inset-0 bg-gray-800 bg-opacity-50 ">
-            <div id="product-info-out" class="h-full flex items-baseline justify-center mt-7 mb-10 max-sm:m-2 overflow-y-auto">
-                <div class="bg-white rounded shadow-lg  sm:max-w-lg product-info-content  w-full">
-                    <div class="relative flex flex-col w-full bg-white rounded-md">
-                        <div class="flex flex-row-reverse justify-between border-b p-4.5">
-                            <h5 class="text-lg font-bold">مشخصات محصول</h5>
-                            <button id="closeProductmodal" class="text-gray-500 hover:text-gray-700 float-right">
-                                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M6 18L18 6M6 6l12 12"></path>
-                                </svg>
-                            </button>
-                        </div>
-                        <div>
-                            <div class="p-4 overflow-y-auto">
-                                <div class="flex flex-col">
-                                    <div class="flex w-full mb-2.5 max-sm:w-full">
-                                        <span
-                                            class="bg-gray-200 py-2.5 mx-1 rounded w-2/4 text-center text-sm font-bold text-black ">شناسه:</span>
-                                        <span
-                                            class="bg-gray-200 py-2.5 mx-1 rounded w-2/4 text-center text-sm text-gray-500">#F1H28</span>
-                                    </div>
-                                    <div class="flex w-full mb-2.5 max-sm:w-full">
-                                        <span
-                                            class="bg-gray-200 py-2.5 mx-1 rounded w-2/4 text-center text-sm font-bold text-black ">عنوان:</span>
-                                        <span
-                                            class="bg-gray-200 py-2.5 mx-1 rounded w-2/4 text-center text-sm text-gray-500">گیربکس گریدر HG180</span>
-                                    </div>
-                                </div>
-
-                                <hr class="my-4">
-                                <div class="flex flex-col">
-                                    <div class="flex w-full mb-2.5 max-sm:w-full">
-                                        <div class="flex flex-col bg-gray-200 py-2.5 mx-1 rounded w-2/4 text-center text-sm font-bold text-black ">
-                                            <span>برند</span>
-                                            <span class="text-xs text-gray-500">دسته</span>
-                                        </div>
-                                        <div class="flex flex-col bg-gray-200 py-2.5 mx-1 rounded w-2/4 text-center text-sm font-bold text-black ">
-                                            <span>Hepco</span>
-                                            <span class="text-xs text-gray-500">گریدر</span>
-                                        </div>
-                                    </div>
-                                    <div class="flex w-full mb-2.5 max-sm:w-full">
-                                        <div class="flex flex-col bg-gray-200 py-2.5 mx-1 rounded w-2/4 text-center text-sm font-bold text-black ">
-                                            <span>دستگاه</span>
-                                            <span class="text-xs text-gray-500">دسته</span>
-                                        </div>
-                                        <div class="flex flex-col bg-gray-200 py-2.5 mx-1 rounded w-2/4 text-center text-sm font-bold text-black ">
-                                            <span>HG180</span>
-                                            <span class="text-xs text-gray-500">لوازم موتوری</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <hr class="my-4">
-                                <div class="flex flex-col">
-                                    <div class="flex w-full mb-2.5 max-sm:w-full">
-                                        <span
-                                            class="bg-gray-200 py-2.5 mx-1 rounded w-2/4 text-center text-sm font-bold text-black ">سازنده :</span>
-                                        <span
-                                            class="bg-gray-200 py-2.5 mx-1 rounded w-2/4 text-center text-sm text-gray-500">چین</span>
-                                    </div>
-                                    <div class="flex w-full mb-2.5 max-sm:w-full">
-                                        <span
-                                            class="bg-gray-200 py-2.5 mx-1 rounded w-2/4 text-center text-sm font-bold text-black ">وزن :</span>
-                                        <span
-                                            class="bg-gray-200 py-2.5 mx-1 rounded w-2/4 text-center text-sm text-gray-500">1.6 کیلوگرم</span>
-                                    </div>
-                                    <div class="flex w-full mb-2.5 max-sm:w-full">
-                                        <span
-                                            class="bg-gray-200 py-2.5 mx-1 rounded w-2/4 text-center text-sm font-bold text-black ">ابعاد  :</span>
-                                        <span
-                                            class="bg-gray-200 py-2.5 mx-1 rounded w-2/4 text-center text-sm text-gray-500">40cm x 75cm</span>
-                                    </div>
-                                    <div class="flex w-full mb-2.5 max-sm:w-full">
-                                        <span
-                                            class="bg-gray-200 py-2.5 mx-1 rounded w-2/4 text-center text-sm font-bold text-black ">جنس  :</span>
-                                        <span
-                                            class="bg-gray-200 py-2.5 mx-1 rounded w-2/4 text-center text-sm text-gray-500">آلیاژ فولاد و آلمینیوم</span>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>

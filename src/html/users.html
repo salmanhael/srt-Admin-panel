@@ -209,9 +209,9 @@
         <div class="relative bottom-6">
             <nav>
                 <ul>
-                    <li class="bg-white border-t whitespace-nowrap ">
+                    <li class="bg-white border-t whitespace-nowrap h-14">
                         <a href="../html/settings.html"
-                            class="flex items-center p-3.5 w-full hover:text-violet-700 h-14 openSettings respnsive-settings"
+                            class="flex items-center p-3.5 w-full hover:text-violet-700 h-full openSettings respnsive-settings "
                             id="setting">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                                 class="bi bi-gear inline" viewBox="0 0 16 16">
@@ -831,7 +831,7 @@
         </div>
 
         <!-- edit user profile modal -->
-        <div id="editprofile-modal" class="fixed inset-0 modal  bg-gray-800 bg-opacity-50 ">
+        <div id="editprofile-modal" class="fixed inset-0 modal bg-gray-800 bg-opacity-50 ">
             <div id="editprofile-out" class="h-full flex items-baseline justify-center mt-7 mb-10 max-sm:m-2">
                 <div class="bg-white rounded shadow-lg  sm:max-w-lg  w-full editprofile-content zoomout">
                     <div class="relative flex flex-col w-full bg-white rounded-md">
@@ -850,24 +850,17 @@
                                 <form>
                                     <div class="flex flex-col">
                                         <div class="flex mb-2">
-                                            <div class="basis-1/3">
-                                                <span class="font-black text-sm text-gray-500">نام و نام
-                                                    خانوادگی:</span>
-                                            </div>
-                                            <div class="basis-2/3">
-                                                <input
-                                                    class="w-full py-2 px-3 border rounded text-gray-500 outline-1 outline-blue-500"
-                                                    type="text" value="روح الله مقیسه">
+                                            <div class="flex w-full mb-2.5 max-sm:w-full">
+                                                <span
+                                                    class="bg-gray-200 py-2.5 mx-1 rounded w-2/4 text-center font-black text-sm text-gray-500">نام و نام خانوادگی:</span>
+                                                <input type="text" class="bg-gray-200 py-2.5 mx-1 rounded w-2/4 text-center text-sm font-bold text-black">
                                             </div>
                                         </div>
                                         <div class="flex mb-2">
-                                            <div class="basis-1/3">
-                                                <span class="font-black text-sm text-gray-500">شماره تماس:</span>
-                                            </div>
-                                            <div class="basis-2/3">
-                                                <input
-                                                    class="w-full py-2 px-3 border rounded text-gray-500 outline-1 outline-blue-500"
-                                                    type="text" value="09384506455">
+                                            <div class="flex w-full mb-2.5 max-sm:w-full">
+                                                <span
+                                                    class="bg-gray-200 py-2.5 mx-1 rounded w-2/4 text-center font-black text-sm text-gray-500">شماره تماس:</span>
+                                                <input type="number" class="bg-gray-200 py-2.5 mx-1 rounded w-2/4 text-center text-sm font-bold text-black">
                                             </div>
                                         </div>
                                     </div>
@@ -1217,7 +1210,7 @@
         </div>
 
         <!-- add address -->
-        <div id="add-address-modal" class="fixed inset-0 modal  bg-gray-800 bg-opacity-50 ">
+        <div id="add-address-modal" class="fixed inset-0 modal bg-gray-800 bg-opacity-50 ">
             <div id="add-address-out" class="h-full flex items-baseline justify-center mt-7 mb-10 max-sm:m-2">
                 <div class="bg-white rounded shadow-lg  sm:max-w-lg  w-full add-address-content zoomout">
                     <div class="relative flex flex-col w-full bg-white rounded-md">
@@ -1236,37 +1229,29 @@
                                 <form>
                                     <div class="flex flex-col">
                                         <div class="flex mb-2">
-                                            <div class="basis-1/3">
-                                                <span class="font-black text-sm text-gray-500">عنوان آدرس:</span>
-                                            </div>
-                                            <div class="basis-2/3">
-                                                <input
-                                                    class="w-full py-2 px-3 border rounded text-gray-500 outline-1 outline-blue-500"
-                                                    type="text">
-
+                                            <div class="flex w-full mb-2.5 max-sm:w-full">
+                                                <span
+                                                    class="bg-gray-200 py-2.5 mx-1 rounded w-2/4 text-center font-black text-sm text-gray-500">عنوان ادرس:</span>
+                                                <input type="text" class="bg-gray-200 py-2.5 mx-1 rounded w-2/4 text-center text-sm font-bold text-black outline-1 outline-blue-500">
                                             </div>
                                         </div>
+
                                         <div class="flex mb-2">
-                                            <div class="basis-1/3">
-                                                <span class="font-black text-sm text-gray-500">استان:</span>
-                                            </div>
-                                            <div class="basis-2/3">
+                                            <div class="flex w-full mb-2.5 max-sm:w-full">
+                                                <span class="bg-gray-200 py-2.5 mx-1 rounded w-2/4 text-center font-black text-sm text-gray-500">استان:</span>
                                                 <select
-                                                    class="w-full py-2 px-3 border rounded text-gray-500 outline-1 outline-blue-500"
-                                                    name="" id="">
+                                                    class="bg-gray-200 py-2.5 mx-1 rounded w-2/4 text-center text-sm font-bold text-black">
                                                     <option value="">تهران</option>
                                                     <option value="">فارس</option>
                                                 </select>
                                             </div>
                                         </div>
+
                                         <div class="flex mb-2">
-                                            <div class="basis-1/3">
-                                                <span class="font-black text-sm text-gray-500">شهرستان:</span>
-                                            </div>
-                                            <div class="basis-2/3">
+                                            <div class="flex w-full mb-2.5 max-sm:w-full">
+                                                <span class="bg-gray-200 py-2.5 mx-1 rounded w-2/4 text-center font-black text-sm text-gray-500">شهرستان:</span>
                                                 <select
-                                                    class="w-full py-2 px-3 border rounded text-gray-500 outline-1 outline-blue-500"
-                                                    name="" id="">
+                                                    class="bg-gray-200 py-2.5 mx-1 rounded w-2/4 text-center text-sm font-bold text-black">
                                                     <option value="">تهران</option>
                                                     <option value="">شیراز</option>
                                                 </select>
@@ -1274,38 +1259,26 @@
                                         </div>
                                         <hr class="my-4">
                                         <div class="flex mb-2">
-                                            <div class="basis-1/3">
-                                                <span class="font-black text-sm text-gray-500">کدپستی:</span>
-                                            </div>
-                                            <div class="basis-2/3">
-                                                <input
-                                                    class="w-full py-2 px-3 border rounded text-gray-500 outline-1 outline-blue-500"
-                                                    type="number">
-
+                                            <div class="flex w-full mb-2.5 max-sm:w-full">
+                                                <span
+                                                    class="bg-gray-200 py-2.5 mx-1 rounded w-2/4 text-center font-black text-sm text-gray-500"> کدپستی:</span>
+                                                <input type="text" class="bg-gray-200 py-2.5 mx-1 rounded w-2/4 text-center text-sm font-bold text-black outline-1 outline-blue-500">
                                             </div>
                                         </div>
-                                        <div class="flex mb-2">
-                                            <div class="basis-1/3">
-                                                <span class="font-black text-sm text-gray-500">تلفن (با کد
-                                                    استان):</span>
-                                            </div>
-                                            <div class="basis-2/3">
-                                                <input
-                                                    class="w-full py-2 px-3 border rounded text-gray-500 outline-1 outline-blue-500"
-                                                    type="number">
 
+                                        <div class="flex mb-2">
+                                            <div class="flex w-full mb-2.5 max-sm:w-full">
+                                                <span
+                                                    class="bg-gray-200 py-2.5 mx-1 rounded w-2/4 text-center font-black text-sm text-gray-500"> تلفن (با کد استان):</span>
+                                                <input type="text" class="bg-gray-200 py-2.5 mx-1 rounded w-2/4 text-center text-sm font-bold text-black outline-1 outline-blue-500">
                                             </div>
                                         </div>
-                                        <div class="flex mb-2">
-                                            <div class="basis-1/3">
-                                                <span class="font-black text-sm text-gray-500">آدرس:</span>
-                                            </div>
-                                            <div class="basis-2/3">
-                                                <textarea
-                                                    class="w-full py-2 px-3 border rounded text-gray-500 outline-1 outline-blue-500"
-                                                    type="text">
-                                                    </textarea>
 
+                                        <div class="flex mb-2">
+                                            <div class="flex w-full mb-2.5 max-sm:w-full">
+                                                <span
+                                                    class="bg-gray-200 py-2.5 mx-1 rounded w-2/4 text-center font-black text-sm text-gray-500">آدرس:</span>
+                                                <textarea  class="bg-gray-200 py-2.5 mx-1 rounded w-2/4 text-center text-sm font-bold text-black outline-1 outline-blue-500"></textarea>
                                             </div>
                                         </div>
                                     </div>

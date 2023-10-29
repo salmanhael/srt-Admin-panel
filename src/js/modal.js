@@ -97,6 +97,21 @@ document.addEventListener('DOMContentLoaded', function () {
     const deletequstionmodal = document.getElementById("deletequstion-modal");
     const closeDeleteQButtons = [document.getElementById('closeDeleteQ'), document.getElementById('closeDeleteQBtn')];
 
+    // add new list modal
+    const openAddlist = document.getElementById("open-addlist");
+    const Addlistmodal = document.getElementById("addlist-modal");
+    const closeAddlistButtons = [document.getElementById('closeAddlistmodal'), document.getElementById('closeAddlistmodalBtn')];
+
+    // edit operator profile modal
+    const OpenEditOperator = document.getElementById("open-EditOperator");
+    const EditOperatormodal = document.getElementById("editoperator-modal");
+    const closeOperatorButtons = [document.getElementById('closeOperatormodal'), document.getElementById('closeOperatormodalBtn')];
+
+    // edit operator profile modal
+    const openAddOperator = document.getElementById("open-addoperator");
+    const Addoperatormodal = document.getElementById("addoperator-modal");
+    const closeAddOperatorButtons = [document.getElementById('closeAddOperatormodal'), document.getElementById('closeAddOperatormodalBtn')];
+
     // Event listeners
     openModalButton?.addEventListener('click', () => openModal(modal));
     openNestedModalBtn?.addEventListener('click', () => openModal(nestedModal));
@@ -115,6 +130,9 @@ document.addEventListener('DOMContentLoaded', function () {
     OpenCommonQuestions?.addEventListener('click', () => openModal(Commonquestionsmodal));
     openaddquestion?.addEventListener('click', () => openModal(addquestionmodal));
     openDeletequstion?.addEventListener('click', () => openModal(deletequstionmodal));
+    openAddlist?.addEventListener('click', () => openModal(Addlistmodal));
+    OpenEditOperator?.addEventListener('click', () => openModal(EditOperatormodal));
+    openAddOperator?.addEventListener('click', () => openModal(Addoperatormodal));
 
     closeModalButtons.forEach((button) => button?.addEventListener('click', () => closeModal(modal)));
     closeNestedModalButtons.forEach((button) => button?.addEventListener('click', () => closeModal(nestedModal)));
@@ -133,6 +151,9 @@ document.addEventListener('DOMContentLoaded', function () {
     closeQuestionsmodal.forEach((button) => button?.addEventListener('click', () => closeModal(Commonquestionsmodal)));
     closeAddquestionButtons.forEach((button) => button?.addEventListener('click', () => closeModal(addquestionmodal)));
     closeDeleteQButtons.forEach((button) => button?.addEventListener('click', () => closeModal(deletequstionmodal)));
+    closeAddlistButtons.forEach((button) => button?.addEventListener('click', () => closeModal(Addlistmodal)));
+    closeOperatorButtons.forEach((button) => button?.addEventListener('click', () => closeModal(EditOperatormodal)));
+    closeAddOperatorButtons.forEach((button) => button?.addEventListener('click', () => closeModal(Addoperatormodal)));
 });
 
 
@@ -167,6 +188,9 @@ document.addEventListener('DOMContentLoaded', function () {
         { triggerId: 'Commonquestions-out', contentClass: 'Commonquestions-content' },
         { triggerId: 'addquestion-out', contentClass: 'addquestion-content' },
         { triggerId: 'deletequstion-out', contentClass: 'deletequstion-content' },
+        { triggerId: 'addlist-out', contentClass: 'addlist-content' },
+        { triggerId: 'editoperator-out', contentClass: 'editoperator-content' },
+        { triggerId: 'addoperator-out', contentClass: 'addoperator-content' },
     ];
 
     modalElements.forEach(element => {
