@@ -1,0 +1,2044 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دسته بندی اختصاصی</title>
+    <link href="../css/main.css" rel="stylesheet">
+
+</head>
+
+<body class="bg-[#f5f6fe] fixed w-full h-full font-iranyekan ">
+    <div class="tv:max-w-2k  mx-auto">
+        <header class="bg-white drop-shadow lg:px-12 py-4 max-xl:py-3 px-4  w-full float-left sticky top-0 md:px-6">
+            <div class="flex flex-row-reverse justify-between">
+                <div class="flex flex-row-reverse">
+                    <button onclick="Dropdown()" class="dropdown-toggle dropbtn  text-gray-600 hover:text-gray-800">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor"
+                            class="inline dropbtn bi bi-person-circle" viewBox="0 0 16 16">
+                            <path class="dropbtn" d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                            <path fill-rule="evenodd"
+                                d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                        </svg>
+                    </button>
+                    <div id="headerDropdown" class="dropdown-content bg-white rounded py-2 xl:top-16">
+                        <a href="#" class="px-4 py-2 text-sm block">مشاهده وبسایت</a>
+                        <a href="#" class="px-4 py-2 text-sm">مشاهده فروشگاه</a>
+                        <hr class="my-2 bg-gray-600">
+                        <a href="#" class="px-4 py-2 text-sm">خروج</a>
+                    </div>
+
+
+                    <div class="ml-4 max-xl:hidden">
+                        <button onclick="closeNav()">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                class="bi bi-arrow-right-circle-fill text-gray-600 inline absolute " viewBox="0 0 16 16"
+                                id="close-navbar-btn" style=" bottom: 18px;left: 111px;">
+                                <path
+                                    d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
+                            </svg>
+                        </button>
+
+                        <button onclick="closeNav()">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                class="bi bi-arrow-left-circle text-gray-600 hidden" viewBox="0 0 16 16"
+                                id="open-navbar-btn">
+                                <path fill-rule="evenodd"
+                                    d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="xl:hidden text-violet-700">
+                    <button onclick="openSidebar()" class="sidebarBtn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" role="img">
+                            <title>Menu</title>
+                            <path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"
+                                d="M4 7h22M4 15h22M4 23h22"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+
+        </header>
+        <!-- side bar -->
+
+        <div class="absolute h-screen openSidbar " id="mainSidebar">
+            <div class="p-4 h-15.5 bg-white block logo" id="banner">
+                <a href="#">
+                    <span class="flex justify-center">
+                        <img src="../img/logo-m.png" alt="logo" class="h-7.5 ">
+                    </span>
+                </a>
+            </div>
+
+            <nav class="inline-block bg-white drop-shadow-lg overflow-y-auto h-[calc(100%-96px)]">
+                <div>
+                    <div>
+                        <ul>
+                            <li class="h-12 flex items-center whitespace-nowrap ">
+                                <a href="../html/index.html" class="p-3.5 w-full hover:text-violet-700 flex">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                        class="bi bi-house-door inline" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146ZM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5Z" />
+                                    </svg>
+                                    <span class="pr-2 text-sm">پیشخوان</span>
+                                </a>
+                            </li>
+
+                            <li class="h-12 flex items-center whitespace-nowrap ">
+                                <a href="../html/order.html" class="p-3.5 w-full hover:text-violet-700 flex">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                        class="bi bi-bag inline" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                                    </svg>
+                                    <span class="pr-2 text-sm">سفارشات</span>
+                                </a>
+                            </li>
+
+                            <li class="h-12 flex items-center whitespace-nowrap">
+                                <a href="../html/users.html" class="p-3.5 w-full hover:text-violet-700 flex">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                        class="bi bi-people inline" viewBox="0 0 16 16">
+                                        <path
+                                            d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8Zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022ZM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816ZM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0Zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z" />
+                                    </svg>
+                                    <span class="pr-2 text-sm">کاربران</span>
+                                </a>
+                            </li>
+
+                            <li id="product" class="h-12 flex items-center whitespace-nowrap">
+                                <button id="SideDropdown" class="p-3.5 w-full hover:text-violet-700 flex">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                        class="bi bi-box-seam inline" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5l2.404.961L10.404 2l-2.218-.887zm3.564 1.426L5.596 5 8 5.961 14.154 3.5l-2.404-.961zm3.25 1.7-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923l6.5 2.6zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464L7.443.184z" />
+                                    </svg>
+                                    <span class="pr-2 text-sm">محصولات</span>
+                                </button>
+                            </li>
+
+                            <ul id="DropdownMenu" class="hidden mr-8 leading-8 text-sm">
+                                <li class="pr-3 hover:text-violet-700 border-r-2 "><a href="../html/product.html">لیست
+                                        محصولات</a></li>
+                                <li class="pr-3 hover:text-violet-700 border-r-2 "><a
+                                        href="../html/addproduct.html">افزودن محصول</a></li>
+                                <li class="pr-3 hover:text-violet-700 border-r-2"><a
+                                        href="../html/newseller.html">فروشنده جدید محصول</a></li>
+                                <li class="pr-3 hover:text-violet-700 border-r-2 "><a
+                                        href="../html/quickeditprice.html">ویرایش سریع قیمت</a></li>
+                            </ul>
+
+                            <li class="h-12 flex items-center whitespace-nowrap">
+                                <a href="../html/EditBasket.html" class="p-3.5 w-full hover:text-violet-700 flex">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                        class="bi bi-bag-plus inline" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />
+                                        <path
+                                            d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                                    </svg>
+                                    <span class="pr-2 text-sm">ویرایش سبد</span>
+                                </a>
+                            </li>
+
+                            <li class="h-12 flex items-center whitespace-nowrap">
+                                <a href="../html/articles.html" class="p-3.5 w-full hover:text-violet-700 flex">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                        class="bi bi-card-text inline" viewBox="0 0 16 16">
+                                        <path
+                                            d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z" />
+                                        <path
+                                            d="M3 5.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 8zm0 2.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5z" />
+                                    </svg>
+                                    <span class="pr-2 text-sm">مقالات</span>
+                                </a>
+                            </li>
+
+                            <li class="h-12 flex items-center whitespace-nowrap">
+                                <a href="../html/groups.html" class="p-3.5 w-full hover:text-violet-700 flex active">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                        class="bi bi-diagram-3 inline" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M6 3.5A1.5 1.5 0 0 1 7.5 2h1A1.5 1.5 0 0 1 10 3.5v1A1.5 1.5 0 0 1 8.5 6v1H14a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0v-1A.5.5 0 0 1 2 7h5.5V6A1.5 1.5 0 0 1 6 4.5v-1zM8.5 5a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1zM0 11.5A1.5 1.5 0 0 1 1.5 10h1A1.5 1.5 0 0 1 4 11.5v1A1.5 1.5 0 0 1 2.5 14h-1A1.5 1.5 0 0 1 0 12.5v-1zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zm4.5.5A1.5 1.5 0 0 1 7.5 10h1a1.5 1.5 0 0 1 1.5 1.5v1A1.5 1.5 0 0 1 8.5 14h-1A1.5 1.5 0 0 1 6 12.5v-1zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zm4.5.5a1.5 1.5 0 0 1 1.5-1.5h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5v-1zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1z" />
+                                    </svg>
+                                    <span class="pr-2 text-sm">دسته ها</span>
+                                </a>
+                            </li>
+
+                            <li class="h-12 flex items-center whitespace-nowrap">
+                                <a href="#" class="p-3.5 w-full hover:text-violet-700 flex">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                        class="bi bi-list-ul inline" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                                    </svg>
+                                    <span class="pr-2 text-sm">لیست های ویژه</span>
+                                </a>
+                            </li>
+
+                            <li class="h-12 flex items-center whitespace-nowrap">
+                                <a href="#" class="p-3.5 w-full hover:text-violet-700 flex">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                        class="bi bi-person-gear inline" viewBox="0 0 16 16">
+                                        <path
+                                            d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm.256 7a4.474 4.474 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4s1 1 1 1h5.256Zm3.63-4.54c.18-.613 1.048-.613 1.229 0l.043.148a.64.64 0 0 0 .921.382l.136-.074c.561-.306 1.175.308.87.869l-.075.136a.64.64 0 0 0 .382.92l.149.045c.612.18.612 1.048 0 1.229l-.15.043a.64.64 0 0 0-.38.921l.074.136c.305.561-.309 1.175-.87.87l-.136-.075a.64.64 0 0 0-.92.382l-.045.149c-.18.612-1.048.612-1.229 0l-.043-.15a.64.64 0 0 0-.921-.38l-.136.074c-.561.305-1.175-.309-.87-.87l.075-.136a.64.64 0 0 0-.382-.92l-.148-.045c-.613-.18-.613-1.048 0-1.229l.148-.043a.64.64 0 0 0 .382-.921l-.074-.136c-.306-.561.308-1.175.869-.87l.136.075a.64.64 0 0 0 .92-.382l.045-.148ZM14 12.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0Z" />
+                                    </svg>
+                                    <span class="pr-2 text-sm">اوپراتور ها</span>
+                                </a>
+                            </li>
+
+                            <li class="h-12 flex items-center mb-4 whitespace-nowrap">
+                                <a href="#" class="p-3.5 w-full hover:text-violet-700 flex">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                        class="bi bi-rocket-takeoff inline" viewBox="0 0 16 16">
+                                        <path
+                                            d="M9.752 6.193c.599.6 1.73.437 2.528-.362.798-.799.96-1.932.362-2.531-.599-.6-1.73-.438-2.528.361-.798.8-.96 1.933-.362 2.532Z" />
+                                        <path
+                                            d="M15.811 3.312c-.363 1.534-1.334 3.626-3.64 6.218l-.24 2.408a2.56 2.56 0 0 1-.732 1.526L8.817 15.85a.51.51 0 0 1-.867-.434l.27-1.899c.04-.28-.013-.593-.131-.956a9.42 9.42 0 0 0-.249-.657l-.082-.202c-.815-.197-1.578-.662-2.191-1.277-.614-.615-1.079-1.379-1.275-2.195l-.203-.083a9.556 9.556 0 0 0-.655-.248c-.363-.119-.675-.172-.955-.132l-1.896.27A.51.51 0 0 1 .15 7.17l2.382-2.386c.41-.41.947-.67 1.524-.734h.006l2.4-.238C9.005 1.55 11.087.582 12.623.208c.89-.217 1.59-.232 2.08-.188.244.023.435.06.57.093.067.017.12.033.16.045.184.06.279.13.351.295l.029.073a3.475 3.475 0 0 1 .157.721c.055.485.051 1.178-.159 2.065Zm-4.828 7.475.04-.04-.107 1.081a1.536 1.536 0 0 1-.44.913l-1.298 1.3.054-.38c.072-.506-.034-.993-.172-1.418a8.548 8.548 0 0 0-.164-.45c.738-.065 1.462-.38 2.087-1.006ZM5.205 5c-.625.626-.94 1.351-1.004 2.09a8.497 8.497 0 0 0-.45-.164c-.424-.138-.91-.244-1.416-.172l-.38.054 1.3-1.3c.245-.246.566-.401.91-.44l1.08-.107-.04.039Zm9.406-3.961c-.38-.034-.967-.027-1.746.163-1.558.38-3.917 1.496-6.937 4.521-.62.62-.799 1.34-.687 2.051.107.676.483 1.362 1.048 1.928.564.565 1.25.941 1.924 1.049.71.112 1.429-.067 2.048-.688 3.079-3.083 4.192-5.444 4.556-6.987.183-.771.18-1.345.138-1.713a2.835 2.835 0 0 0-.045-.283 3.078 3.078 0 0 0-.3-.041Z" />
+                                        <path
+                                            d="M7.009 12.139a7.632 7.632 0 0 1-1.804-1.352A7.568 7.568 0 0 1 3.794 8.86c-1.102.992-1.965 5.054-1.839 5.18.125.126 3.936-.896 5.054-1.902Z" />
+                                    </svg>
+                                    <span class="pr-2 text-sm">ابزار سئو</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="relative bottom-6">
+                <nav>
+                    <ul>
+                        <li class="bg-white border-t whitespace-nowrap h-14">
+                            <a href="../html/settings.html"
+                                class="flex items-center p-3.5 w-full hover:text-violet-700 h-full openSettings respnsive-settings "
+                                id="setting">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                    class="bi bi-gear inline" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z" />
+                                    <path
+                                        d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z" />
+                                </svg>
+                                <span class="pr-3.5 text-sm">تنظیمات</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+
+
+
+        <!-- main content -->
+        <div id="overlay" onclick="closeSidebar()"></div>
+        <div class="w-[calc(100%-250px)] float-left p-12 overflow-y-auto h-screen menu-collapse max-xl:w-full max-lg:p-6 max-md:p-0"
+            id="expand-menu">
+            <div class="flex justify-between mb-2 max-md:pt-2">
+                <h1 class="text-2xl font-semibold">دسته بندی اختصاصی</h1>
+                <select class="py-2 px-2 text-sm rounded focus:ring-4 border-2 outline-0 border-violet-700">
+                    <option selected="" value="option-1">همه فروشندگان</option>
+                    <option value="option-2">سنگین راه تامین</option>
+                    <option value="option-3">yellow part</option>
+                    <option value="option-4">آتا تجارت</option>
+                </select>
+            </div>
+
+            <div class="flex flex-col md:flex-row bg-yellow-100 rounded-lg p-4 mb-4 text-sm text-yellow-700 shadow"
+                role="alert">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-exclamation-triangle w-5 h-5 inline mx-auto md:mr-0 md:ml-3" viewBox="0 0 16 16">
+                    <path
+                        d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z">
+                    </path>
+                    <path
+                        d="M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995z">
+                    </path>
+                </svg>
+                <div class="leading-7 md:leading-5 text-justify">
+                    به منظور تکمیل حساب کاربری میبایست حداقل یک آدرس برای ارسال سفارشات ثبت شده باشد.
+                </div>
+                <a href="/addAddress.html" class="font-medium w-fit mx-auto md:mr-7 border-b-2 border-yellow-700">ثبت
+                    آدرس</a>
+            </div>
+
+            <div class="container mx-auto">
+                <div class="flex flex-col md:flex-row bg-blue-100 rounded p-4 mb-10 text-sm text-blue-700 shadow"
+                    role="alert">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-info-lg w-5 h-5 inline mx-auto md:mr-0 md:ml-3" viewBox="0 0 16 16">
+                        <path
+                            d="m9.708 6.075-3.024.379-.108.502.595.108c.387.093.464.232.38.619l-.975 4.577c-.255 1.183.14 1.74 1.067 1.74.72 0 1.554-.332 1.933-.789l.116-.549c-.263.232-.65.325-.905.325-.363 0-.494-.255-.402-.704l1.323-6.208Zm.091-2.755a1.32 1.32 0 1 1-2.64 0 1.32 1.32 0 0 1 2.64 0Z">
+                        </path>
+                    </svg>
+                    <div class="leading-7 md:leading-5 text-justify">
+                        تغییر کلمه عبور ، بوسیله
+                        <strong class="border-b-2 border-blue-700">تایید رمز یکبار مصرف</strong> مصرف صورت میگیرد.
+                    </div>
+                </div>
+            </div>
+
+            <div class="container mx-auto">
+                <div class="flex flex-col md:flex-row bg-green-100 rounded p-4 mb-10 text-sm text-green-700 shadow"
+                    role="alert">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-info-lg w-5 h-5 inline mx-auto md:mr-0 md:ml-3" viewBox="0 0 16 16">
+                        <path
+                            d="m9.708 6.075-3.024.379-.108.502.595.108c.387.093.464.232.38.619l-.975 4.577c-.255 1.183.14 1.74 1.067 1.74.72 0 1.554-.332 1.933-.789l.116-.549c-.263.232-.65.325-.905.325-.363 0-.494-.255-.402-.704l1.323-6.208Zm.091-2.755a1.32 1.32 0 1 1-2.64 0 1.32 1.32 0 0 1 2.64 0Z">
+                        </path>
+                    </svg>
+                    <div class="leading-7 md:leading-5 text-justify">
+                        تغییر کلمه عبور ، بوسیله
+                        <strong class="border-b-2 border-blue-700">تایید رمز یکبار مصرف</strong> مصرف صورت میگیرد.
+                    </div>
+                </div>
+            </div>
+
+            <div class="container mx-auto">
+                <div class="flex flex-col md:flex-row bg-red-100 rounded p-4 mb-10 text-sm text-red-700 shadow"
+                    role="alert">
+                    <svg height="16" width="16" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 511.999 511.999"
+                        style="enable-background: new 0 0 511.999 511.999" fill="#b91c1c" xml:space="preserve">
+                        <g>
+                            <g>
+                                <g>
+                                    <path d="M506.175,365.576c-4.095-10.258-15.729-15.255-25.987-11.16c-10.258,4.095-15.255,15.729-11.16,25.987
+                      c5.206,13.043,3.499,27.935-4.567,39.839c-8.07,11.91-20.991,18.741-35.449,18.741H83.068c-15.771,0-29.776-8.229-37.465-22.015
+                      c-7.701-13.809-7.339-30.082,0.968-43.533L219.543,93.382c7.876-12.752,21.519-20.365,36.497-20.365
+                      c14.978,0,28.62,7.613,36.497,20.365l127.927,207.124c5.804,9.397,18.128,12.312,27.523,6.505
+                      c9.396-5.803,12.31-18.126,6.505-27.523L326.564,72.364c-15.216-24.636-41.58-39.344-70.525-39.344s-55.309,14.709-70.525,39.344
+                      L12.542,352.418c-16.036,25.966-16.734,57.38-1.869,84.033c14.853,26.63,41.916,42.528,72.395,42.528h345.944
+                      c27.938,0,52.927-13.233,68.56-36.303C513.088,419.778,516.303,390.955,506.175,365.576z"></path>
+                                    <path d="M256.049,399.987c11.045,0,19.998-8.953,19.998-19.998c0-11.045-8.953-19.998-19.998-19.998h-0.01
+                      c-11.045,0-19.993,8.953-19.993,19.998C236.046,391.034,245.004,399.987,256.049,399.987z"></path>
+                                    <path d="M276.038,309.995V163.008c0-11.045-8.953-19.998-19.998-19.998c-11.045,0-19.998,8.953-19.998,19.998v146.987
+                      c0,11.045,8.953,19.998,19.998,19.998C267.085,329.993,276.038,321.04,276.038,309.995z"></path>
+                                </g>
+                            </g>
+                        </g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                    </svg>
+                    <div class="leading-7 md:leading-5 text-justify mr-2">
+                        تغییر کلمه عبور ، بوسیله
+                        <strong class="border-b-2 border-blue-700">تایید رمز یکبار مصرف</strong> مصرف صورت میگیرد.
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-4">
+            <div> <!-- hide category section  -->
+                <div class="flex flex-row max-md:flex-col">
+                    <div class="basis-2/6 mt-3 px-3 max-md:mb-2.5">
+                        <h1 class="text-lg font-semibold">سر دسته ها</h1>
+                        <span class="text-sm">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از
+                            طراحان
+                            گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است <a href="#"
+                                class="text-violet-700">بیشتر بخوانید</a></span>
+                    </div>
+                    <div class="basis-4/6 mt-3 px-3 ">
+                        <div class="flex flex-col bg-white rounded p-6 shadow-md">
+                            <div class="flex max-sm:flex-col gap-2 w-full mb-2">
+                                <button
+                                    class="brand-button deactivate flex flex-col items-center w-2/4 max-sm:w-full sm:p-3 bg-gray-200 max-sm:bg-zinc-100 rounded h-34 ">
+                                    <span
+                                        class="h-full flex items-center mb-0 text-xl text-gray-600 leading-tight">لوازم
+                                        یدکی بیل مکانیکی</span>
+                                    <div class="justify-center w-full gap-1 hidden" dir="ltr">
+                                        <a id="open-edit-item"
+                                            class="flex justify-center max-md:basis-1/2 w-full max-sm:bg-zinc-300 max-sm:py-2.5 rounded-l"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                fill="currentColor" class="bi bi-pencil-fill mx-2" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z">
+                                                </path>
+                                            </svg></a>
+                                        <a onclick="openModal(this)"
+                                            class="deactivateBtn flex justify-center max-md:basis-1/2 w-full max-sm:bg-zinc-300 max-sm:py-2.5">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                fill="currentColor" class="bi bi-toggle-on" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z">
+                                                </path>
+                                            </svg></a><input type="hidden" name="newBlockedStatus" value="false" />
+                                        <input type="hidden" name="oldBlockedStatus" value="true" />
+
+                                        <a id="Open-Category-text"
+                                            class="flex justify-center max-md:basis-1/2  w-full max-sm:bg-zinc-300 max-sm:py-2.5"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                fill="currentColor" class="bi bi-card-text mx-2" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z">
+                                                </path>
+                                                <path
+                                                    d="M3 5.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 8zm0 2.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5z">
+                                                </path>
+                                            </svg></a>
+
+                                        <a id="Open-Meta"
+                                            class="flex justify-center max-md:basis-1/2  w-full max-sm:bg-zinc-300 max-sm:py-2.5">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                fill="currentColor" class="bi bi-4s" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M3 2v4.586l7 7L14.586 9l-7-7H3zM2 2a1 1 0 0 1 1-1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 2 6.586V2z" />
+                                                <path
+                                                    d="M5.5 5a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm0 1a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zM1 7.086a1 1 0 0 0 .293.707L8.75 15.25l-.043.043a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 0 7.586V3a1 1 0 0 1 1-1v5.086z" />
+                                            </svg>
+                                        </a>
+
+                                        <a id="Open-Groups"
+                                            class="flex justify-center max-md:basis-1/2  w-full max-sm:bg-zinc-300 max-sm:py-2.5">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                fill="currentColor" class="bi bi-plus-square" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                                                <path
+                                                    d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                                            </svg>
+                                        </a>
+                                        <a id="Open-Common-Questions"
+                                            class="flex justify-center max-md:basis-1/2  w-full max-sm:bg-zinc-300 max-sm:py-2.5 rounded-r"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                fill="currentColor" class="bi bi-question-circle mx-2"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z">
+                                                </path>
+                                                <path
+                                                    d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z">
+                                                </path>
+                                            </svg></a>
+
+                                        <a id="Open-deletecategory"
+                                            class="flex justify-center max-md:basis-1/2  w-full max-sm:bg-zinc-300 max-sm:py-2.5 rounded-r">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6Z" />
+                                                <path
+                                                    d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1ZM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118ZM2.5 3h11V2h-11v1Z" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </button>
+
+                                <button
+                                    class="brand-button deactivate flex flex-col items-center w-2/4 max-sm:w-full sm:p-3 bg-gray-200 max-sm:bg-zinc-100 rounded h-34 ">
+                                    <span
+                                        class="h-full flex items-center mb-0 text-xl text-gray-600 leading-tight">لوازم
+                                        یدکی بولدوزر </span>
+                                    <div class="justify-center w-full gap-1 hidden" dir="ltr">
+                                        <a href="#"
+                                            class="flex justify-center max-md:basis-1/4 w-full max-sm:bg-zinc-300 max-sm:py-2.5 rounded-l"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                fill="currentColor" class="bi bi-pencil-fill mx-2" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z">
+                                                </path>
+                                            </svg></a>
+
+                                        <a onclick="openModal(this)"
+                                            class="deactivateBtn flex justify-center max-md:basis-1/4  w-full max-sm:bg-zinc-300 max-sm:py-2.5">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                fill="currentColor" class="bi bi-toggle-on" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z">
+                                                </path>
+                                            </svg></a><input type="hidden" name="newBlockedStatus" value="false" />
+                                        <input type="hidden" name="oldBlockedStatus" value="true" />
+                                        <a
+                                            class="flex justify-center max-md:basis-1/4  w-full max-sm:bg-zinc-300 max-sm:py-2.5"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                fill="currentColor" class="bi bi-card-text mx-2" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z">
+                                                </path>
+                                                <path
+                                                    d="M3 5.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 8zm0 2.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5z">
+                                                </path>
+                                            </svg></a>
+                                        <a
+                                            class="flex justify-center max-md:basis-1/4  w-full max-sm:bg-zinc-300 max-sm:py-2.5 rounded-r"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                fill="currentColor" class="bi bi-question-circle mx-2"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z">
+                                                </path>
+                                                <path
+                                                    d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z">
+                                                </path>
+                                            </svg></a>
+                                    </div>
+                                </button>
+                            </div>
+                            <div class="flex max-sm:flex-col gap-2 w-full  mb-2">
+                                <button
+                                    class="brand-button deactivate flex flex-col items-center w-2/4 max-sm:w-full sm:p-3 bg-gray-200 max-sm:bg-zinc-100 rounded h-34 ">
+                                    <span
+                                        class="h-full flex items-center mb-0 text-xl text-gray-600 leading-tight">لوازم
+                                        یدکی غلتک </span>
+                                    <div class="justify-center w-full gap-1 hidden" dir="ltr">
+                                        <a href="#"
+                                            class="flex justify-center max-md:basis-1/4 w-full max-sm:bg-zinc-300 max-sm:py-2.5 rounded-l"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                fill="currentColor" class="bi bi-pencil-fill mx-2" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z">
+                                                </path>
+                                            </svg></a>
+                                        <a onclick="openModal(this)"
+                                            class="deactivateBtn flex justify-center max-md:basis-1/4  w-full max-sm:bg-zinc-300 max-sm:py-2.5">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                fill="currentColor" class="bi bi-toggle-on" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z">
+                                                </path>
+                                            </svg></a><input type="hidden" name="newBlockedStatus" value="false" />
+                                        <input type="hidden" name="oldBlockedStatus" value="true" />
+                                        <a
+                                            class="flex justify-center max-md:basis-1/4  w-full max-sm:bg-zinc-300 max-sm:py-2.5"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                fill="currentColor" class="bi bi-card-text mx-2" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z">
+                                                </path>
+                                                <path
+                                                    d="M3 5.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 8zm0 2.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5z">
+                                                </path>
+                                            </svg></a>
+                                        <a
+                                            class="flex justify-center max-md:basis-1/4  w-full max-sm:bg-zinc-300 max-sm:py-2.5 rounded-r"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                fill="currentColor" class="bi bi-question-circle mx-2"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z">
+                                                </path>
+                                                <path
+                                                    d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z">
+                                                </path>
+                                            </svg></a>
+                                    </div>
+                                </button>
+
+                                <button
+                                    class="brand-button deactivate flex flex-col items-center w-2/4 max-sm:w-full sm:p-3 bg-gray-200 max-sm:bg-zinc-100 rounded h-34 ">
+                                    <span
+                                        class="h-full flex items-center mb-0 text-xl text-gray-600 leading-tight">لوازم
+                                        یدکی گریدر </span>
+                                    <div class="justify-center w-full gap-1 hidden" dir="ltr">
+                                        <a href="#"
+                                            class="flex justify-center max-md:basis-1/4 w-full max-sm:bg-zinc-300 max-sm:py-2.5 rounded-l"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                fill="currentColor" class="bi bi-pencil-fill mx-2" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z">
+                                                </path>
+                                            </svg></a>
+                                        <a onclick="openModal(this)"
+                                            class="deactivateBtn flex justify-center max-md:basis-1/4  w-full max-sm:bg-zinc-300 max-sm:py-2.5">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                fill="currentColor" class="bi bi-toggle-on" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z">
+                                                </path>
+                                            </svg></a><input type="hidden" name="newBlockedStatus" value="false" />
+                                        <input type="hidden" name="oldBlockedStatus" value="true" />
+                                        <a
+                                            class="flex justify-center max-md:basis-1/4  w-full max-sm:bg-zinc-300 max-sm:py-2.5"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                fill="currentColor" class="bi bi-card-text mx-2" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z">
+                                                </path>
+                                                <path
+                                                    d="M3 5.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 8zm0 2.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5z">
+                                                </path>
+                                            </svg></a>
+                                        <a
+                                            class="flex justify-center max-md:basis-1/4  w-full max-sm:bg-zinc-300 max-sm:py-2.5 rounded-r"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                fill="currentColor" class="bi bi-question-circle mx-2"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z">
+                                                </path>
+                                                <path
+                                                    d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z">
+                                                </path>
+                                            </svg></a>
+                                    </div>
+                                </button>
+                            </div>
+                            <div class="flex max-sm:flex-col gap-2 w-full  mb-2">
+                                <button
+                                    class="brand-button deactivate flex flex-col items-center w-2/4 max-sm:w-full sm:p-3 bg-gray-200 max-sm:bg-zinc-100 rounded h-34 ">
+                                    <span
+                                        class="h-full flex items-center mb-0 text-xl text-gray-600 leading-tight">لوازم
+                                        یدکی لودر </span>
+                                    <div class="justify-center w-full gap-1 hidden" dir="ltr">
+                                        <a href="#"
+                                            class="flex justify-center max-md:basis-1/4 w-full max-sm:bg-zinc-300 max-sm:py-2.5 rounded-l"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                fill="currentColor" class="bi bi-pencil-fill mx-2" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z">
+                                                </path>
+                                            </svg></a>
+                                        <a onclick="openModal(this)"
+                                            class="deactivateBtn flex justify-center max-md:basis-1/4  w-full max-sm:bg-zinc-300 max-sm:py-2.5">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                fill="currentColor" class="bi bi-toggle-on" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z">
+                                                </path>
+                                            </svg></a><input type="hidden" name="newBlockedStatus" value="false" />
+                                        <input type="hidden" name="oldBlockedStatus" value="true" />
+                                        <a
+                                            class="flex justify-center max-md:basis-1/4  w-full max-sm:bg-zinc-300 max-sm:py-2.5"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                fill="currentColor" class="bi bi-card-text mx-2" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z">
+                                                </path>
+                                                <path
+                                                    d="M3 5.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 8zm0 2.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5z">
+                                                </path>
+                                            </svg></a>
+                                        <a
+                                            class="flex justify-center max-md:basis-1/4  w-full max-sm:bg-zinc-300 max-sm:py-2.5 rounded-r"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                fill="currentColor" class="bi bi-question-circle mx-2"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z">
+                                                </path>
+                                                <path
+                                                    d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z">
+                                                </path>
+                                            </svg></a>
+                                    </div>
+                                </button>
+
+                                <button
+                                    class="brand-button deactivate flex flex-col items-center w-2/4 max-sm:w-full sm:p-3 bg-gray-200 max-sm:bg-zinc-100 rounded h-34 ">
+                                    <span
+                                        class="h-full flex items-center mb-0 text-xl text-gray-600 leading-tight">لوازم
+                                        یدکی لیفتراک </span>
+                                    <div class="justify-center w-full gap-1 hidden" dir="ltr">
+                                        <a href="#"
+                                            class="flex justify-center max-md:basis-1/4 w-full max-sm:bg-zinc-300 max-sm:py-2.5 rounded-l"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                fill="currentColor" class="bi bi-pencil-fill mx-2" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z">
+                                                </path>
+                                            </svg></a>
+                                        <a onclick="openModal(this)"
+                                            class="deactivateBtn flex justify-center max-md:basis-1/4  w-full max-sm:bg-zinc-300 max-sm:py-2.5">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                fill="currentColor" class="bi bi-toggle-on" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z">
+                                                </path>
+                                            </svg></a><input type="hidden" name="newBlockedStatus" value="false" />
+                                        <input type="hidden" name="oldBlockedStatus" value="true" />
+                                        <a
+                                            class="flex justify-center max-md:basis-1/4  w-full max-sm:bg-zinc-300 max-sm:py-2.5"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                fill="currentColor" class="bi bi-card-text mx-2" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z">
+                                                </path>
+                                                <path
+                                                    d="M3 5.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 8zm0 2.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5z">
+                                                </path>
+                                            </svg></a>
+                                        <a
+                                            class="flex justify-center max-md:basis-1/4  w-full max-sm:bg-zinc-300 max-sm:py-2.5 rounded-r"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                fill="currentColor" class="bi bi-question-circle mx-2"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z">
+                                                </path>
+                                                <path
+                                                    d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z">
+                                                </path>
+                                            </svg></a>
+                                    </div>
+                                </button>
+                            </div>
+                            <div class="flex max-sm:flex-col gap-2 w-full  mb-2">
+                                <button
+                                    class="brand-button deactivate flex flex-col items-center w-2/4 max-sm:w-full sm:p-3 bg-gray-200 max-sm:bg-zinc-100 rounded h-34 ">
+                                    <span
+                                        class="h-full flex items-center mb-0 text-xl text-gray-600 leading-tight">لوازم
+                                        یدکی بیل بهکو </span>
+                                    <div class="justify-center w-full gap-1 hidden" dir="ltr">
+                                        <a href="#"
+                                            class="flex justify-center max-md:basis-1/4 w-full max-sm:bg-zinc-300 max-sm:py-2.5 rounded-l"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                fill="currentColor" class="bi bi-pencil-fill mx-2" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z">
+                                                </path>
+                                            </svg></a>
+                                        <a onclick="openModal(this)"
+                                            class="deactivateBtn flex justify-center max-md:basis-1/4  w-full max-sm:bg-zinc-300 max-sm:py-2.5">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                fill="currentColor" class="bi bi-toggle-on" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z">
+                                                </path>
+                                            </svg></a><input type="hidden" name="newBlockedStatus" value="false" />
+                                        <input type="hidden" name="oldBlockedStatus" value="true" />
+                                        <a
+                                            class="flex justify-center max-md:basis-1/4  w-full max-sm:bg-zinc-300 max-sm:py-2.5"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                fill="currentColor" class="bi bi-card-text mx-2" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z">
+                                                </path>
+                                                <path
+                                                    d="M3 5.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 8zm0 2.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5z">
+                                                </path>
+                                            </svg></a>
+                                        <a
+                                            class="flex justify-center max-md:basis-1/4  w-full max-sm:bg-zinc-300 max-sm:py-2.5 rounded-r"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                fill="currentColor" class="bi bi-question-circle mx-2"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z">
+                                                </path>
+                                                <path
+                                                    d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z">
+                                                </path>
+                                            </svg></a>
+                                    </div>
+                                </button>
+                            </div>
+
+                            <div class="flex gap-2 w-full  mb-2">
+                                <button
+                                    class="flex flex-col items-center w-full p-3 bg-white rounded  border-dashed border-2 border-gray-200 h-24 focus:border-violet-700">
+                                    <span class="h-full flex items-center mb-0 text-xl text-violet-600">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px"
+                                            fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr class="my-6">
+            </div>
+            <div> <!-- hide subset category -->
+                <div class="flex flex-row max-md:flex-col">
+                    <div class="basis-2/6 mt-3 px-3 max-md:mb-2.5">
+                        <h1 class="text-lg font-semibold">زیر دسته ها</h1>
+                        <span class="text-sm">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از
+                            طراحان
+                            گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است <a href="#"
+                                class="text-violet-700">بیشتر بخوانید</a></span>
+                    </div>
+                    <div class="basis-4/6 mt-3 px-3 ">
+                        <div class="flex flex-col bg-white rounded p-6 shadow-md">
+                            <div class="flex max-sm:flex-col gap-2 w-full  mb-2">
+                                <button
+                                    class="category-button deactivate flex flex-col items-center w-2/4 max-sm:w-full sm:p-3 bg-gray-200 max-sm:bg-zinc-100 rounded h-34 ">
+                                    <span
+                                        class="h-full flex items-center mb-0 text-xl text-gray-600 leading-tight">لوازم
+                                        یدکی بیل مکانیکی هپکو</span>
+                                    <div class="justify-center w-full gap-1 hidden" dir="ltr">
+                                        <a href="#"
+                                            class="flex justify-center max-md:basis-1/2 w-full max-sm:bg-zinc-300 max-sm:py-2.5 rounded-l"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                fill="currentColor" class="bi bi-pencil-fill mx-2" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z">
+                                                </path>
+                                            </svg></a>
+                                        <a onclick="openModal(this)"
+                                            class="deactivateBtn flex justify-center max-md:basis-1/2  w-full max-sm:bg-zinc-300 max-sm:py-2.5">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                fill="currentColor" class="bi bi-toggle-on" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z">
+                                                </path>
+                                            </svg></a><input type="hidden" name="newBlockedStatus" value="false" />
+                                        <input type="hidden" name="oldBlockedStatus" value="true" />
+                                    </div>
+                                </button>
+
+                                <button
+                                    class="category-button deactivate flex flex-col items-center w-2/4 max-sm:w-full sm:p-3 bg-gray-200 max-sm:bg-zinc-100 rounded h-34 ">
+                                    <span
+                                        class="h-full flex items-center mb-0 text-xl text-gray-600 leading-tight">لوازم
+                                        یدکی بیل مکانیکی کوماتسو</span>
+                                    <div class="justify-center w-full gap-1 hidden" dir="ltr">
+                                        <a href="#"
+                                            class="flex justify-center max-md:basis-1/2 w-full max-sm:bg-zinc-300 max-sm:py-2.5 rounded-l"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                fill="currentColor" class="bi bi-pencil-fill mx-2" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z">
+                                                </path>
+                                            </svg></a>
+                                        <a onclick="openModal(this)"
+                                            class="deactivateBtn flex justify-center max-md:basis-1/2  w-full max-sm:bg-zinc-300 max-sm:py-2.5">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                fill="currentColor" class="bi bi-toggle-on" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z">
+                                                </path>
+                                            </svg></a><input type="hidden" name="newBlockedStatus" value="false" />
+                                        <input type="hidden" name="oldBlockedStatus" value="true" />
+                                    </div>
+                                </button>
+                            </div>
+                            <div class="flex max-sm:flex-col gap-2 w-full  mb-2">
+                                <button
+                                    class="category-button deactivate flex flex-col items-center w-2/4 max-sm:w-full sm:p-3 bg-gray-200 max-sm:bg-zinc-100 rounded h-34 ">
+                                    <span
+                                        class="h-full flex items-center mb-0 text-xl text-gray-600 leading-tight">لوازم
+                                        یدکی بیل مکانیکی کاترپیلار</span>
+                                    <div class="justify-center w-full gap-1 hidden" dir="ltr">
+                                        <a href="#"
+                                            class="flex justify-center max-md:basis-1/2 w-full max-sm:bg-zinc-300 max-sm:py-2.5 rounded-l"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                fill="currentColor" class="bi bi-pencil-fill mx-2" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z">
+                                                </path>
+                                            </svg></a>
+                                        <a onclick="openModal(this)"
+                                            class="deactivateBtn flex justify-center max-md:basis-1/2  w-full max-sm:bg-zinc-300 max-sm:py-2.5">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                fill="currentColor" class="bi bi-toggle-on" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z">
+                                                </path>
+                                            </svg></a><input type="hidden" name="newBlockedStatus" value="false" />
+                                        <input type="hidden" name="oldBlockedStatus" value="true" />
+                                    </div>
+                                </button>
+
+                                <button
+                                    class="category-button deactivate flex flex-col items-center w-2/4 max-sm:w-full sm:p-3 bg-gray-200 max-sm:bg-zinc-100 rounded h-34 ">
+                                    <span
+                                        class="h-full flex items-center mb-0 text-xl text-gray-600 leading-tight">لوازم
+                                        یدکی بیل مکانیکی ولوو</span>
+                                    <div class="justify-center w-full gap-1 hidden" dir="ltr">
+                                        <a href="#"
+                                            class="flex justify-center max-md:basis-1/2 w-full max-sm:bg-zinc-300 max-sm:py-2.5 rounded-l"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                fill="currentColor" class="bi bi-pencil-fill mx-2" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z">
+                                                </path>
+                                            </svg></a>
+                                        <a onclick="openModal(this)"
+                                            class="deactivateBtn flex justify-center max-md:basis-1/2  w-full max-sm:bg-zinc-300 max-sm:py-2.5">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                fill="currentColor" class="bi bi-toggle-on" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z">
+                                                </path>
+                                            </svg></a><input type="hidden" name="newBlockedStatus" value="false" />
+                                        <input type="hidden" name="oldBlockedStatus" value="true" />
+                                    </div>
+                                </button>
+                            </div>
+
+                            <div class="flex max-sm:flex-col gap-2 w-full  mb-2">
+                                <button
+                                    class="category-button deactivate flex flex-col items-center w-2/4 max-sm:w-full sm:p-3 bg-gray-200 max-sm:bg-zinc-100 rounded h-34 ">
+                                    <span
+                                        class="h-full flex items-center mb-0 text-xl text-gray-600 leading-tight">لوازم
+                                        یدکی بیل مکانیکی هیوندا</span>
+                                    <div class="justify-center w-full gap-1 hidden" dir="ltr">
+                                        <a href="#"
+                                            class="flex justify-center max-md:basis-1/2 w-full max-sm:bg-zinc-300 max-sm:py-2.5 rounded-l"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                fill="currentColor" class="bi bi-pencil-fill mx-2" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z">
+                                                </path>
+                                            </svg></a>
+                                        <a onclick="openModal(this)"
+                                            class="deactivateBtn flex justify-center max-md:basis-1/2  w-full max-sm:bg-zinc-300 max-sm:py-2.5">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                fill="currentColor" class="bi bi-toggle-on" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z">
+                                                </path>
+                                            </svg></a><input type="hidden" name="newBlockedStatus" value="false" />
+                                        <input type="hidden" name="oldBlockedStatus" value="true" />
+                                    </div>
+                                </button>
+
+
+                            </div>
+
+
+                            <div class="flex gap-2 w-full  mb-2">
+                                <button
+                                    class="flex flex-col items-center w-full p-3 bg-white rounded  border-dashed border-2 border-gray-200 h-24 focus:border-violet-700">
+                                    <span class="h-full flex items-center mb-0 text-xl text-violet-600">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px"
+                                            fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr class="my-6">
+            </div>
+            <div> <!-- hide subset category -->
+                <div class="flex flex-row max-md:flex-col">
+                    <div class="basis-2/6 mt-3 px-3 max-md:mb-2.5">
+                        <h1 class="text-lg font-semibold">زیر دسته ها</h1>
+                        <span class="text-sm">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از
+                            طراحان
+                            گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است <a href="#"
+                                class="text-violet-700">بیشتر بخوانید</a></span>
+                    </div>
+                    <div class="basis-4/6 mt-3 px-3 ">
+                        <div class="flex flex-col bg-white rounded p-6 shadow-md">
+                            <div class="flex max-sm:flex-col gap-2 w-full  mb-2">
+                                <button
+                                    class="machine-button deactivate flex flex-col items-center w-2/4 max-sm:w-full sm:p-3 bg-gray-200 max-sm:bg-zinc-100 rounded h-34 ">
+                                    <span
+                                        class="h-full flex items-center mb-0 text-xl text-gray-600 leading-tight">لوازم
+                                        یدکی بیل مکانیکی 912</span>
+                                    <div class="justify-center w-full gap-1 hidden" dir="ltr">
+                                        <a href="#"
+                                            class="flex justify-center max-md:basis-1/2 w-full max-sm:bg-zinc-300 max-sm:py-2.5 rounded-l"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                fill="currentColor" class="bi bi-pencil-fill mx-2" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z">
+                                                </path>
+                                            </svg></a>
+                                        <a onclick="openModal(this)"
+                                            class="deactivateBtn flex justify-center max-md:basis-1/2  w-full max-sm:bg-zinc-300 max-sm:py-2.5">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                fill="currentColor" class="bi bi-toggle-on" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z">
+                                                </path>
+                                            </svg></a><input type="hidden" name="newBlockedStatus" value="false" />
+                                        <input type="hidden" name="oldBlockedStatus" value="true" />
+                                    </div>
+                                </button>
+
+                                <button
+                                    class="machine-button deactivate flex flex-col items-center w-2/4 max-sm:w-full sm:p-3 bg-gray-200 max-sm:bg-zinc-100 rounded h-34 ">
+                                    <span
+                                        class="h-full flex items-center mb-0 text-xl text-gray-600 leading-tight">لوازم
+                                        یدکی بیل مکانیکی HE100</span>
+                                    <div class="justify-center w-full gap-1 hidden" dir="ltr">
+                                        <a href="#"
+                                            class="flex justify-center max-md:basis-1/2 w-full max-sm:bg-zinc-300 max-sm:py-2.5 rounded-l"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                fill="currentColor" class="bi bi-pencil-fill mx-2" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z">
+                                                </path>
+                                            </svg></a>
+                                        <a onclick="openModal(this)"
+                                            class="deactivateBtn flex justify-center max-md:basis-1/2  w-full max-sm:bg-zinc-300 max-sm:py-2.5">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                fill="currentColor" class="bi bi-toggle-on" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z">
+                                                </path>
+                                            </svg></a><input type="hidden" name="newBlockedStatus" value="false" />
+                                        <input type="hidden" name="oldBlockedStatus" value="true" />
+                                    </div>
+                                </button>
+                            </div>
+                            <div class="flex max-sm:flex-col gap-2 w-full  mb-2">
+                                <button
+                                    class="machine-button deactivate flex flex-col items-center w-2/4 max-sm:w-full sm:p-3 bg-gray-200 max-sm:bg-zinc-100 rounded h-34 ">
+                                    <span
+                                        class="h-full flex items-center mb-0 text-xl text-gray-600 leading-tight">لوازم
+                                        یدکی بیل مکانیکی A900</span>
+                                    <div class="justify-center w-full gap-1 hidden" dir="ltr">
+                                        <a href="#"
+                                            class="flex justify-center max-md:basis-1/2 w-full max-sm:bg-zinc-300 max-sm:py-2.5 rounded-l"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                fill="currentColor" class="bi bi-pencil-fill mx-2" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z">
+                                                </path>
+                                            </svg></a>
+                                        <a onclick="openModal(this)"
+                                            class="deactivateBtn flex justify-center max-md:basis-1/2  w-full max-sm:bg-zinc-300 max-sm:py-2.5">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                fill="currentColor" class="bi bi-toggle-on" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z">
+                                                </path>
+                                            </svg></a><input type="hidden" name="newBlockedStatus" value="false" />
+                                        <input type="hidden" name="oldBlockedStatus" value="true" />
+                                    </div>
+                                </button>
+
+                                <button
+                                    class="machine-button deactivate flex flex-col items-center w-2/4 max-sm:w-full sm:p-3 bg-gray-200 max-sm:bg-zinc-100 rounded h-34 ">
+                                    <span
+                                        class="h-full flex items-center mb-0 text-xl text-gray-600 leading-tight">لوازم
+                                        یدکی بیل مکانیکی A316</span>
+                                    <div class="justify-center w-full gap-1 hidden" dir="ltr">
+                                        <a href="#"
+                                            class="flex justify-center max-md:basis-1/2 w-full max-sm:bg-zinc-300 max-sm:py-2.5 rounded-l"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                fill="currentColor" class="bi bi-pencil-fill mx-2" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z">
+                                                </path>
+                                            </svg></a>
+                                        <a onclick="openModal(this)"
+                                            class="deactivateBtn flex justify-center max-md:basis-1/2  w-full max-sm:bg-zinc-300 max-sm:py-2.5">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                fill="currentColor" class="bi bi-toggle-on" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z">
+                                                </path>
+                                            </svg></a><input type="hidden" name="newBlockedStatus" value="false" />
+                                        <input type="hidden" name="oldBlockedStatus" value="true" />
+                                    </div>
+                                </button>
+                            </div>
+
+                            <div class="flex max-sm:flex-col gap-2 w-full  mb-2">
+                                <button
+                                    class="machine-button deactivate flex flex-col items-center w-2/4 max-sm:w-full sm:p-3 bg-gray-200 max-sm:bg-zinc-100 rounded h-34 ">
+                                    <span
+                                        class="h-full flex items-center mb-0 text-xl text-gray-600 leading-tight">لوازم
+                                        یدکی بیل مکانیکی R926</span>
+                                    <div class="justify-center w-full gap-1 hidden" dir="ltr">
+                                        <a href="#"
+                                            class="flex justify-center max-md:basis-1/2 w-full max-sm:bg-zinc-300 max-sm:py-2.5 rounded-l"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                fill="currentColor" class="bi bi-pencil-fill mx-2" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z">
+                                                </path>
+                                            </svg></a>
+                                        <a onclick="openModal(this)"
+                                            class="deactivateBtn flex justify-center max-md:basis-1/2  w-full max-sm:bg-zinc-300 max-sm:py-2.5">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                fill="currentColor" class="bi bi-toggle-on" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z">
+                                                </path>
+                                            </svg></a><input type="hidden" name="newBlockedStatus" value="false" />
+                                        <input type="hidden" name="oldBlockedStatus" value="true" />
+                                    </div>
+                                </button>
+                            </div>
+
+                            <div class="flex gap-2 w-full  mb-2">
+                                <button
+                                    class="flex flex-col items-center w-full p-3 bg-white rounded  border-dashed border-2 border-gray-200 h-24 focus:border-violet-700">
+                                    <span class="h-full flex items-center mb-0 text-xl text-violet-600">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px"
+                                            fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr class="my-6">
+            </div>
+
+            <div> <!-- hide subset category -->
+                <div class="flex flex-row max-md:flex-col">
+                    <div class="basis-2/6 mt-3 px-3 max-md:mb-2.5">
+                        <h1 class="text-lg font-semibold">زیر دسته ها</h1>
+                        <span class="text-sm">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از
+                            طراحان
+                            گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است <a href="#"
+                                class="text-violet-700">بیشتر بخوانید</a></span>
+                    </div>
+                    <div class="basis-4/6 mt-3 px-3 ">
+                        <div class="flex flex-col bg-white rounded p-6 shadow-md">
+                            <div class="flex gap-2 w-full  mb-2">
+                                <button
+                                    class="flex flex-col items-center w-full p-3 bg-white rounded  border-dashed border-2 border-gray-200 h-24 focus:border-violet-700">
+                                    <span class="h-full flex items-center mb-0 text-xl text-violet-600">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px"
+                                            fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr class="my-6">
+            </div>
+
+
+
+
+            <!-- change item status modal -->
+            <div id="deactivate-modal" class="fixed modal inset-0 bg-gray-800 bg-opacity-50 ">
+                <div id="deactivate-out" class="h-full flex items-baseline justify-center mt-7 mb-10  max-sm:m-2">
+                    <div class="bg-white rounded shadow-lg  sm:max-w-lg  w-full">
+                        <div class="relative flex flex-col w-full bg-white rounded-md">
+                            <div class="flex justify-center border-b p-4.5">
+                                <h5 class="text-lg font-bold">تغییر وضعیت دسته</h5>
+                            </div>
+                            <div class="p-4">
+                                <div>
+                                    <div class="w-full text-base text-gray-500 mb-3"><span>وضعیت این ایتم به <span
+                                                class="text-red-600">غیر فعال </span>تغییر کند؟</span></div>
+                                    <div class="bg-[#fcf2d9] text-[#ba701a] p-4 rounded">
+                                        <span>توجه داشته باشید که با غیر فعال کردن این ایتم تمامی زیر مجموعه های ان نیز
+                                            غیر فعال خواهد شد</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="border-t p-3 ">
+                                <div class="flex gap-2 m-1">
+                                    <button id="confirmBtn" onclick="confirmChanges()"
+                                        class="p-1.5 px-3.5 rounded border text-sm font-semibold transition duration-300 ease-in-out border-red-500 bg-red-600 text-white  hover:bg-red-500 ">بله
+                                        تغییر بده</button>
+                                    <button id="cancelBtn" onclick="closeModal()"
+                                        class="p-1.5 px-3.5 rounded border text-sm font-semibold transition duration-300 ease-in-out bg-gray-500 hover:bg-slate-600 text-white">خیر
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- edit item modal -->
+            <div id="edit-item-modal" class="fixed modal inset-0 bg-gray-800 bg-opacity-50 ">
+                <div id="edit-item-out" class="h-full flex items-baseline justify-center mt-7 mb-10 max-sm:m-2">
+                    <div class="bg-white rounded shadow-lg  sm:max-w-lg  w-full edit-item-content zoomout">
+                        <div class="relative flex flex-col w-full bg-white rounded-md">
+                            <div class="flex flex-row-reverse justify-between border-b p-4.5">
+                                <h5 class="text-lg font-bold">ویرایش آیتم</h5>
+                                <button id="close-Edititem" class="text-gray-500 hover:text-gray-700 float-right">
+                                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M6 18L18 6M6 6l12 12"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="p-4">
+                                <div>
+                                    <form>
+                                        <div class="flex flex-col">
+                                            <div class="flex mb-2">
+                                                <div class="flex w-full mb-2.5 max-sm:w-full">
+                                                    <span
+                                                        class="bg-gray-200 py-2.5 mx-1 rounded w-2/4 text-center font-semibold text-black ">عنوان:</span>
+                                                    <input type="text" value="Hepco"
+                                                        class="bg-gray-200 py-2.5 mx-1 rounded w-2/4 text-center text-sm text-gray-500">
+                                                </div>
+                                            </div>
+                                            <div class="flex mb-2">
+                                                <div class="flex w-full mb-2.5 max-sm:w-full">
+                                                    <span
+                                                        class="bg-gray-200 py-2.5 mx-1 rounded w-2/4 text-center font-semibold text-black ">ادرس:
+                                                        <button class="text-gray-500 border border-black px-3 py-1 rounded hover:bg-white">genrate</button>
+                                                    </span>
+                                                    <input type="text" value="Hepco"
+                                                        class="bg-gray-200 py-2.5 mx-1 rounded w-2/4 text-center text-sm text-gray-500">
+                                                </div>
+                                            </div>
+                                            <div class="flex w-full mb-2.5 max-sm:w-full">
+                                                <span class="bg-gray-200 py-2.5 mx-1 rounded w-2/4 text-center font-black text-sm text-gray-500">برند:</span>
+                                                <select
+                                                    class="bg-gray-200 py-2.5 mx-1 rounded w-2/4 text-center text-sm font-bold text-black">
+                                                    <option value="">Hepco</option>
+                                                    <option value="">هیوندا</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                            
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="flex justify-center gap-2 my-4">
+                                    <button id="close-EdititemBtn"
+                                        class="p-1.5 px-3.5 rounded border text-sm font-semibold transition duration-300 ease-in-out bg-gray-500 hover:bg-slate-600 text-white">لغو
+                                    </button>
+                                    <button
+                                        class="p-1.5 px-3.5 rounded border text-sm font-semibold transition duration-300 ease-in-out border-green-500 bg-green-600 text-white  hover:bg-green-500 ">ثبت
+                                        تغییرات
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category text modal -->
+            <div id="Categorytext-modal" class="fixed inset-0 modal overflow-y-auto  bg-gray-800 bg-opacity-50 ">
+                <div id="Categorytext-out" class="flex items-baseline justify-center mt-7 mb-10 max-sm:m-2">
+                    <div
+                        class="bg-white rounded shadow-lg  lg:max-w-3xl sm:max-w-lg Categorytext-content w-full zoomout">
+                        <div class="relative flex flex-col w-full bg-white rounded-md">
+                            <div class="flex flex-row-reverse justify-between border-b p-4.5">
+                                <h5 class="text-lg font-bold">متن صفحه دسته بندی</h5>
+                                <button id="closeCategorytextmodal"
+                                    class="text-gray-500 hover:text-gray-700 float-right">
+                                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M6 18L18 6M6 6l12 12"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="p-4">
+                                <div>
+                                    <div class="flex flex-col max-sm:flex-col">
+                                        <div class="flex w-full mb-2.5 max-sm:w-full">
+                                            <span
+                                                class="bg-gray-200 py-2.5 mx-1 rounded w-full text-center text-sm font-bold text-black">عنوان
+                                                :</span>
+                                            <span
+                                                class="bg-gray-200 py-2.5 mx-1 rounded w-full text-center text-sm  text-gray-500">hepco</span>
+                                        </div>
+                                        <div class="w-full max-sm:w-full">
+                                            <textarea class=" outline-1 outline-blue-500 border w-full rounded"
+                                                rows="10"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="border-t p-3 ">
+                                        <div class="flex justify-center gap-2 m-1">
+                                            <button id="closeCategorytextmodalBtn"
+                                                class="p-1.5 px-3.5 rounded border text-sm font-semibold transition duration-300 ease-in-out bg-gray-500 hover:bg-slate-600 text-white">لغو
+                                            </button>
+                                            <button id=""
+                                                class="p-1.5 px-3.5 rounded border text-sm font-semibold transition duration-300 ease-in-out border-green-500 bg-green-600 text-white  hover:bg-green-500 ">ثبت
+                                                تغییرات</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Meta modal -->
+            <div id="Meta-modal" class="fixed inset-0 modal overflow-y-auto  bg-gray-800 bg-opacity-50 ">
+                <div id="Meta-out" class="flex items-baseline justify-center mt-7 mb-10 max-sm:m-2">
+                    <div class="bg-white rounded shadow-lg  lg:max-w-3xl sm:max-w-lg Meta-content w-full zoomout">
+                        <div class="relative flex flex-col w-full bg-white rounded-md">
+                            <div class="flex flex-row-reverse justify-between border-b p-4.5">
+                                <h5 class="text-lg font-bold">ثبت مقادیر متا</h5>
+                                <button id="closeMetamodal" class="text-gray-500 hover:text-gray-700 float-right">
+                                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M6 18L18 6M6 6l12 12"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="p-4">
+                                <div>
+                                    <div class="flex flex-col max-sm:flex-col">
+                                        <div class="flex w-full mb-2.5 max-sm:w-full">
+                                            <span
+                                                class="bg-gray-200 py-2.5 mx-1 rounded w-1/3 text-center text-sm font-bold text-black">Meta
+                                                Title
+                                                :</span>
+                                            <input
+                                                class="bg-gray-200 py-2.5 mx-1 rounded w-2/3 text-center text-sm  text-gray-500 outline-1 outline-blue-500">
+                                        </div>
+                                        <div class="flex w-full max-sm:w-full mb-2.5">
+                                            <span
+                                                class="flex justify-center items-center bg-gray-200 py-2.5 mx-1 rounded w-1/3 text-center text-sm font-bold text-black">Meta
+                                                Title
+                                                :</span>
+                                            <textarea class=" outline-1 outline-blue-500 border w-2/3 rounded mx-1"
+                                                rows="4"></textarea>
+                                        </div>
+                                        <div class="flex w-full max-sm:w-full mb-2.5">
+                                            <span
+                                                class="flex justify-center items-center bg-gray-200 py-2.5 mx-1 rounded w-1/3 text-center text-sm font-bold text-black">Keywords
+                                                :</span>
+                                            <textarea class=" outline-1 outline-blue-500 border w-2/3 rounded mx-1"
+                                                rows="2"></textarea>
+                                        </div>
+                                        <div class="flex w-full mb-2.5 max-sm:w-full">
+                                            <span
+                                                class="bg-gray-200 py-2.5 mx-1 rounded w-1/3 text-center text-sm font-bold text-black">Canonical
+                                                Link
+                                                :</span>
+                                            <input
+                                                class="bg-gray-200 py-2.5 mx-1 rounded w-2/3 text-center text-sm  text-gray-500 outline-1 outline-blue-500">
+                                        </div>
+                                        <div class="flex w-full mb-2.5 max-sm:w-full">
+                                            <span
+                                                class="bg-gray-200 py-2.5 mx-1 rounded w-1/3 text-center text-sm font-bold text-black">Index
+                                                on Google
+                                                :</span>
+                                            <button id="Googleindex"
+                                                class="bg-gray-200 w-2/3 flex justify-center items-center text-violet-700">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                                    fill="currentColor" class="bi bi-toggle-off" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M11 4a4 4 0 0 1 0 8H8a4.992 4.992 0 0 0 2-4 4.992 4.992 0 0 0-2-4h3zm-6 8a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM0 8a5 5 0 0 0 5 5h6a5 5 0 0 0 0-10H5a5 5 0 0 0-5 5z" />
+                                                </svg>
+                                            </button>
+
+                                        </div>
+                                    </div>
+                                    <div class="border-t p-3 ">
+                                        <div class="flex justify-center gap-2 m-1">
+                                            <button id="closeMetamodalBtn"
+                                                class="p-1.5 px-3.5 rounded border text-sm font-semibold transition duration-300 ease-in-out bg-gray-500 hover:bg-slate-600 text-white">لغو
+                                            </button>
+                                            <button id=""
+                                                class="p-1.5 px-3.5 rounded border text-sm font-semibold transition duration-300 ease-in-out border-green-500 bg-green-600 text-white  hover:bg-green-500 ">ثبت</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- connected groups modal -->
+            <div id="groups-modal" class="fixed inset-0 modal bg-gray-800 bg-opacity-50 ">
+                <div id="groups-out" class="flex items-baseline justify-center mt-7 mb-10 max-sm:m-2">
+                    <div class="bg-white rounded shadow-lg  lg:max-w-3xl sm:max-w-lg groups-content w-full zoomout">
+                        <div class="relative flex flex-col w-full bg-white rounded-md">
+                            <div class="flex flex-row-reverse justify-between border-b p-4.5">
+                                <h5 class="text-lg font-bold">گروه های متصل شده</h5>
+                                <button id="closegroupsmodal" class="text-gray-500 hover:text-gray-700 float-right">
+                                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M6 18L18 6M6 6l12 12"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="h-96">
+                            <div class="p-4 h-full overflow-y-auto">
+                                    <div class="flex flex-col max-sm:flex-col">
+                                        <div class="flex flex-row justify-center max-sm:flex-col max-sm:text-center">
+                                            <div>
+                                                <button id="open-Select-group"
+                                                    class="cursor-pointer mt-5 mb-4 bg-green-500 text-white w-40 max-sm:w-full max-sm:mt-2 text-sm font-semibold h-10 rounded">
+                                                    <a >
+                                                        <span>اتصال جدید</span>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" fill="currentColor"
+                                                        class="bi bi-plus inline mb-1" viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z">
+                                                        </path>
+                                                    </svg>
+                                                    </a>
+                                                </button>
+                                            </div>
+                            
+                                        </div>
+                            
+                            
+                                        <div>
+                                            <div class="max-w-full">
+                                                <div class="flex flex-row text-right bg-gray-300 mb-2 p-2.5 rounded max-md:hidden">
+                                                    <div class="basis-1/12 w-full">#</div>
+                                                    <div class="basis-2/12 w-full">برند</div>
+                                                    <div class="basis-3/12 w-full text-center">دسته</div>
+                                                    <div class="basis-2/12 w-full text-center">دستگاه</div>
+                                                    <div class="basis-3/12 w-full text-center">زیر مجموعه</div>
+                                                    <div class="basis-1/12 w-full"></div>
+                                                </div>
+                                                <div class="deactivate flex flex-row flex-wrap  bg-white p-2.5 mb-1 shadow rounded hover:bg-gray-100">
+                                                    <div class="flex w-1/12 mb-2.5 md:mb-0 max-md:w-full">
+                                                        <div class="flex justify-between items-center max-md:px-2 max-md:bg-zinc-100 max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
+                                                            <span class="md:hidden">#</span>
+                                                            <span >1</span>
+                                                        </div>
+                                                       
+                                                    </div>
+                                                    <div class="flex w-2/12 mb-2.5 md:mb-0 max-md:w-full">
+                                                        <div class="flex justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
+                                                            <span class="md:hidden">برند</span>
+                                                            <span class="md:truncate">Hepco</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex w-3/12 mb-2.5 md:mb-0 max-md:w-full">
+                                                        <div class="flex justify-center max-md:justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
+                                                            <span class="md:hidden">دسته</span>
+                                                            <span class="md:truncate">بیل مکانیکی</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex w-2/12 mb-2.5 md:mb-0 max-md:w-full">
+                                                        <div class="flex justify-center max-md:justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
+                                                            <span class="md:hidden">دستگاه</span>
+                                                            <span class="md:truncate">912</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex w-3/12 mb-2.5 md:mb-0 max-md:w-full">
+                                                        <div class="flex justify-center max-md:justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
+                                                            <span class="md:hidden">زیرمجموعه</span>
+                                                            <span class="md:truncate">موتوری</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex w-1/12 mb-2.5 md:mb-0 max-md:w-full">
+                                                        <div class="flex justify-end max-md:justify-center items-center rounded w-full text-center max-md:mx-1 text-sm gap-3 text-gray-500 max-md:gap-1">
+                                                                <button class="flex justify-center max-md:w-full max-md:bg-zinc-300 max-md:rounded hover:text-violet-700 max-md:py-2.5">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                                                        <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6Z"/>
+                                                                        <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1ZM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118ZM2.5 3h11V2h-11v1Z"/>
+                                                                      </svg>
+                                                                </button>
+                                                        </div>
+                                                    </div>
+                                                   
+                                                </div>
+                                                <div class="deactivate flex flex-row flex-wrap  bg-white p-2.5 mb-1 shadow rounded hover:bg-gray-100">
+                                                    <div class="flex w-1/12 mb-2.5 md:mb-0 max-md:w-full">
+                                                        <div class="flex justify-between items-center max-md:px-2 max-md:bg-zinc-100 max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
+                                                            <span class="md:hidden">#</span>
+                                                            <span >1</span>
+                                                        </div>
+                                                       
+                                                    </div>
+                                                    <div class="flex w-2/12 mb-2.5 md:mb-0 max-md:w-full">
+                                                        <div class="flex justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
+                                                            <span class="md:hidden">برند</span>
+                                                            <span class="md:truncate">Hepco</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex w-3/12 mb-2.5 md:mb-0 max-md:w-full">
+                                                        <div class="flex justify-center max-md:justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
+                                                            <span class="md:hidden">دسته</span>
+                                                            <span class="md:truncate">بیل مکانیکی</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex w-2/12 mb-2.5 md:mb-0 max-md:w-full">
+                                                        <div class="flex justify-center max-md:justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
+                                                            <span class="md:hidden">دستگاه</span>
+                                                            <span class="md:truncate">912</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex w-3/12 mb-2.5 md:mb-0 max-md:w-full">
+                                                        <div class="flex justify-center max-md:justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
+                                                            <span class="md:hidden">زیرمجموعه</span>
+                                                            <span class="md:truncate">موتوری</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex w-1/12 mb-2.5 md:mb-0 max-md:w-full">
+                                                        <div class="flex justify-end max-md:justify-center items-center rounded w-full text-center max-md:mx-1 text-sm gap-3 text-gray-500 max-md:gap-1">
+                                                                <button class="flex justify-center max-md:w-full max-md:bg-zinc-300 max-md:rounded hover:text-violet-700 max-md:py-2.5">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                                                        <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6Z"/>
+                                                                        <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1ZM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118ZM2.5 3h11V2h-11v1Z"/>
+                                                                      </svg>
+                                                                </button>
+                                                        </div>
+                                                    </div>
+                                                   
+                                                </div>
+                                                <div class="deactivate flex flex-row flex-wrap  bg-white p-2.5 mb-1 shadow rounded hover:bg-gray-100">
+                                                    <div class="flex w-1/12 mb-2.5 md:mb-0 max-md:w-full">
+                                                        <div class="flex justify-between items-center max-md:px-2 max-md:bg-zinc-100 max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
+                                                            <span class="md:hidden">#</span>
+                                                            <span >1</span>
+                                                        </div>
+                                                       
+                                                    </div>
+                                                    <div class="flex w-2/12 mb-2.5 md:mb-0 max-md:w-full">
+                                                        <div class="flex justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
+                                                            <span class="md:hidden">برند</span>
+                                                            <span class="md:truncate">Hepco</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex w-3/12 mb-2.5 md:mb-0 max-md:w-full">
+                                                        <div class="flex justify-center max-md:justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
+                                                            <span class="md:hidden">دسته</span>
+                                                            <span class="md:truncate">بیل مکانیکی</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex w-2/12 mb-2.5 md:mb-0 max-md:w-full">
+                                                        <div class="flex justify-center max-md:justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
+                                                            <span class="md:hidden">دستگاه</span>
+                                                            <span class="md:truncate">912</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex w-3/12 mb-2.5 md:mb-0 max-md:w-full">
+                                                        <div class="flex justify-center max-md:justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
+                                                            <span class="md:hidden">زیرمجموعه</span>
+                                                            <span class="md:truncate">موتوری</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex w-1/12 mb-2.5 md:mb-0 max-md:w-full">
+                                                        <div class="flex justify-end max-md:justify-center items-center rounded w-full text-center max-md:mx-1 text-sm gap-3 text-gray-500 max-md:gap-1">
+                                                                <button class="flex justify-center max-md:w-full max-md:bg-zinc-300 max-md:rounded hover:text-violet-700 max-md:py-2.5">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                                                        <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6Z"/>
+                                                                        <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1ZM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118ZM2.5 3h11V2h-11v1Z"/>
+                                                                      </svg>
+                                                                </button>
+                                                        </div>
+                                                    </div>
+                                                   
+                                                </div>
+                                                <div class="deactivate flex flex-row flex-wrap  bg-white p-2.5 mb-1 shadow rounded hover:bg-gray-100">
+                                                    <div class="flex w-1/12 mb-2.5 md:mb-0 max-md:w-full">
+                                                        <div class="flex justify-between items-center max-md:px-2 max-md:bg-zinc-100 max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
+                                                            <span class="md:hidden">#</span>
+                                                            <span >1</span>
+                                                        </div>
+                                                       
+                                                    </div>
+                                                    <div class="flex w-2/12 mb-2.5 md:mb-0 max-md:w-full">
+                                                        <div class="flex justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
+                                                            <span class="md:hidden">برند</span>
+                                                            <span class="md:truncate">Hepco</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex w-3/12 mb-2.5 md:mb-0 max-md:w-full">
+                                                        <div class="flex justify-center max-md:justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
+                                                            <span class="md:hidden">دسته</span>
+                                                            <span class="md:truncate">بیل مکانیکی</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex w-2/12 mb-2.5 md:mb-0 max-md:w-full">
+                                                        <div class="flex justify-center max-md:justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
+                                                            <span class="md:hidden">دستگاه</span>
+                                                            <span class="md:truncate">912</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex w-3/12 mb-2.5 md:mb-0 max-md:w-full">
+                                                        <div class="flex justify-center max-md:justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
+                                                            <span class="md:hidden">زیرمجموعه</span>
+                                                            <span class="md:truncate">موتوری</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex w-1/12 mb-2.5 md:mb-0 max-md:w-full">
+                                                        <div class="flex justify-end max-md:justify-center items-center rounded w-full text-center max-md:mx-1 text-sm gap-3 text-gray-500 max-md:gap-1">
+                                                                <button class="flex justify-center max-md:w-full max-md:bg-zinc-300 max-md:rounded hover:text-violet-700 max-md:py-2.5">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                                                        <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6Z"/>
+                                                                        <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1ZM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118ZM2.5 3h11V2h-11v1Z"/>
+                                                                      </svg>
+                                                                </button>
+                                                        </div>
+                                                    </div>
+                                                   
+                                                </div>
+                                                <div class="deactivate flex flex-row flex-wrap  bg-white p-2.5 mb-1 shadow rounded hover:bg-gray-100">
+                                                    <div class="flex w-1/12 mb-2.5 md:mb-0 max-md:w-full">
+                                                        <div class="flex justify-between items-center max-md:px-2 max-md:bg-zinc-100 max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
+                                                            <span class="md:hidden">#</span>
+                                                            <span >1</span>
+                                                        </div>
+                                                       
+                                                    </div>
+                                                    <div class="flex w-2/12 mb-2.5 md:mb-0 max-md:w-full">
+                                                        <div class="flex justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
+                                                            <span class="md:hidden">برند</span>
+                                                            <span class="md:truncate">Hepco</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex w-3/12 mb-2.5 md:mb-0 max-md:w-full">
+                                                        <div class="flex justify-center max-md:justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
+                                                            <span class="md:hidden">دسته</span>
+                                                            <span class="md:truncate">بیل مکانیکی</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex w-2/12 mb-2.5 md:mb-0 max-md:w-full">
+                                                        <div class="flex justify-center max-md:justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
+                                                            <span class="md:hidden">دستگاه</span>
+                                                            <span class="md:truncate">912</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex w-3/12 mb-2.5 md:mb-0 max-md:w-full">
+                                                        <div class="flex justify-center max-md:justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
+                                                            <span class="md:hidden">زیرمجموعه</span>
+                                                            <span class="md:truncate">موتوری</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex w-1/12 mb-2.5 md:mb-0 max-md:w-full">
+                                                        <div class="flex justify-end max-md:justify-center items-center rounded w-full text-center max-md:mx-1 text-sm gap-3 text-gray-500 max-md:gap-1">
+                                                                <button class="flex justify-center max-md:w-full max-md:bg-zinc-300 max-md:rounded hover:text-violet-700 max-md:py-2.5">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                                                        <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6Z"/>
+                                                                        <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1ZM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118ZM2.5 3h11V2h-11v1Z"/>
+                                                                      </svg>
+                                                                </button>
+                                                        </div>
+                                                    </div>
+                                                   
+                                                </div>
+                                                <div class="deactivate flex flex-row flex-wrap  bg-white p-2.5 mb-1 shadow rounded hover:bg-gray-100">
+                                                    <div class="flex w-1/12 mb-2.5 md:mb-0 max-md:w-full">
+                                                        <div class="flex justify-between items-center max-md:px-2 max-md:bg-zinc-100 max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
+                                                            <span class="md:hidden">#</span>
+                                                            <span >1</span>
+                                                        </div>
+                                                       
+                                                    </div>
+                                                    <div class="flex w-2/12 mb-2.5 md:mb-0 max-md:w-full">
+                                                        <div class="flex justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
+                                                            <span class="md:hidden">برند</span>
+                                                            <span class="md:truncate">Hepco</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex w-3/12 mb-2.5 md:mb-0 max-md:w-full">
+                                                        <div class="flex justify-center max-md:justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
+                                                            <span class="md:hidden">دسته</span>
+                                                            <span class="md:truncate">بیل مکانیکی</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex w-2/12 mb-2.5 md:mb-0 max-md:w-full">
+                                                        <div class="flex justify-center max-md:justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
+                                                            <span class="md:hidden">دستگاه</span>
+                                                            <span class="md:truncate">912</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex w-3/12 mb-2.5 md:mb-0 max-md:w-full">
+                                                        <div class="flex justify-center max-md:justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
+                                                            <span class="md:hidden">زیرمجموعه</span>
+                                                            <span class="md:truncate">موتوری</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex w-1/12 mb-2.5 md:mb-0 max-md:w-full">
+                                                        <div class="flex justify-end max-md:justify-center items-center rounded w-full text-center max-md:mx-1 text-sm gap-3 text-gray-500 max-md:gap-1">
+                                                                <button class="flex justify-center max-md:w-full max-md:bg-zinc-300 max-md:rounded hover:text-violet-700 max-md:py-2.5">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                                                        <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6Z"/>
+                                                                        <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1ZM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118ZM2.5 3h11V2h-11v1Z"/>
+                                                                      </svg>
+                                                                </button>
+                                                        </div>
+                                                    </div>
+                                                   
+                                                </div>
+
+                                            </div>    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <!-- select group for connections -->
+        <div id="select-group-modal" class="fixed inset-0 modal bg-gray-800 bg-opacity-50 ">
+            <div id="select-group-out" class="h-full flex items-baseline justify-center mt-7 mb-10 max-sm:m-2">
+                <div class="bg-white rounded shadow-lg  sm:max-w-lg  w-full select-group-content zoomout">
+                    <div class="relative flex flex-col w-full bg-white rounded-md">
+                        <div class="flex flex-row-reverse justify-between border-b p-4.5">
+                            <h5 class="text-lg font-bold">انتخاب گروه جهت اتصال</h5>
+                            <button id="closeSelect-group" class="text-gray-500 hover:text-gray-700 float-right">
+                                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M6 18L18 6M6 6l12 12"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="p-4">
+                            <div>
+                                <form>
+                                    <div class="flex flex-col">
+                                        <div class="flex mb-2">
+                                            <div class="flex w-full mb-2.5 max-sm:w-full">
+                                                <span class="bg-gray-200 py-2.5 mx-1 rounded w-2/4 text-center font-black text-sm text-gray-500">برند:</span>
+                                                <select
+                                                    class="bg-gray-200 py-2.5 mx-1 rounded w-2/4 text-center text-sm font-bold text-black">
+                                                    <option value="">Hepco</option>
+                                                    <option value="">هیوندا</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="flex mb-2">
+                                            <div class="flex w-full mb-2.5 max-sm:w-full">
+                                                <span class="bg-gray-200 py-2.5 mx-1 rounded w-2/4 text-center font-black text-sm text-gray-500">دسته:</span>
+                                                <select
+                                                    class="bg-gray-200 py-2.5 mx-1 rounded w-2/4 text-center text-sm font-bold text-black">
+                                                    <option value="">Hepco</option>
+                                                    <option value="">هیوندا</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="flex mb-2">
+                                            <div class="flex w-full mb-2.5 max-sm:w-full">
+                                                <span class="bg-gray-200 py-2.5 mx-1 rounded w-2/4 text-center font-black text-sm text-gray-500">دستگاه:</span>
+                                                <select
+                                                    class="bg-gray-200 py-2.5 mx-1 rounded w-2/4 text-center text-sm font-bold text-black">
+                                                    <option value="">Hepco</option>
+                                                    <option value="">هیوندا</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="flex mb-2">
+                                            <div class="flex w-full mb-2.5 max-sm:w-full">
+                                                <span class="bg-gray-200 py-2.5 mx-1 rounded w-2/4 text-center font-black text-sm text-gray-500">زیرمجوعه:</span>
+                                                <select
+                                                    class="bg-gray-200 py-2.5 mx-1 rounded w-2/4 text-center text-sm font-bold text-black">
+                                                    <option value="">Hepco</option>
+                                                    <option value="">هیوندا</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        
+
+                                      
+
+                                        
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="flex justify-center gap-2 mt-4">
+                                <button id="closeSelect-groupBtn"
+                                    class="p-1.5 px-3.5 rounded border text-sm font-semibold transition duration-300 ease-in-out bg-gray-500 hover:bg-slate-600 text-white">لغو
+                                </button>
+                                <button
+                                    class="p-1.5 px-3.5 rounded border text-sm font-semibold transition duration-300 ease-in-out border-green-500 bg-green-600 text-white  hover:bg-green-500 ">افزودن
+                                     
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <!-- common questions modal -->
+            <div id="Commonquestions-modal" class="fixed modal inset-0 overflow-y-auto  bg-gray-800 bg-opacity-50 ">
+                <div id="Commonquestions-out" class="flex items-baseline justify-center mt-7 mb-10 max-sm:m-2">
+                    <div
+                        class="bg-white rounded shadow-lg  lg:max-w-3xl sm:max-w-lg Commonquestions-content w-full zoomout">
+                        <div class="relative flex flex-col w-full bg-white rounded-md">
+                            <div class="flex flex-row-reverse justify-between border-b p-4.5">
+                                <h5 class="text-lg font-bold">سوالات پرتکرار دسته بندی ها</h5>
+                                <button id="closeQuestionsmodal" class="text-gray-500 hover:text-gray-700 float-right">
+                                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M6 18L18 6M6 6l12 12"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="p-4">
+                                <div>
+                                    <div class="flex flex-col">
+                                        <div class="p-4 mb-4 text-gray-500 bg-gray-100 rounded">
+                                            <div>
+                                                <span>چرا شما بهترین گزینه برای این شغل هستید؟</span>
+                                            </div>
+                                            <hr class="my-4">
+                                            <div>
+                                                <p>آیا شما بهترین متقاضی برای این شغل هستید؟ این پرسش یکی دیگر از س
+                                                    والات پرتکرار مصاحبه که همراه با جواب آورده‌ایم، است. کارشناس
+                                                    استخدام م
+                                                    ی‌خواهد بداند آیا شما تمام شرایط لازم را دارید یا خیر. آماده باشید
+                                                    تا تو
+                                                    ضیح دهید چرا کاندیدایی ایدئال هستید. پاسخ خود را به‌صورت یک طرح م
+                                                    طمئن، مختصر و دقیق مثل بازارگرمی برای فروش آماده کنید که توضیح دهد
+                                                    شما چه چیزی
+                                                    برای سازمان دارید و چرا باید آن جایگاه را به دست آورید. این موقعیت،
+                                                    زمان خوبی
+                                                    برای بیان صلاحیت‌ها و مهارت‌های لازم برای آن شغل است تا بتوانید
+                                                    پاسخی مطابق
+                                                    با آنچه مصاحبه‌کننده می‌خواهد ارائه دهید.
+                                                </p>
+                                            </div>
+                                            <div class="flex justify-center w-full gap-1  text-violet-700 mt-4">
+                                                <a href="#"
+                                                    class="flex justify-center w-full basis-1/2 bg-zinc-300 py-2.5 rounded-r">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                        fill="currentColor" class="bi bi-pencil-fill mx-2"
+                                                        viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z">
+                                                        </path>
+                                                    </svg>
+                                                </a>
+                                                <a id="open-deletequstion"
+                                                    class="flex justify-center w-full basis-1/2 bg-zinc-300 py-2.5 rounded-l cursor-pointer">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6Z" />
+                                                        <path
+                                                            d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1ZM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118ZM2.5 3h11V2h-11v1Z" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="p-4 mb-4 text-gray-500 bg-gray-100 rounded">
+                                            <div>
+                                                <span>چرا شما بهترین گزینه برای این شغل هستید؟</span>
+                                            </div>
+                                            <hr class="my-4">
+                                            <div>
+                                                <p>آیا شما بهترین متقاضی برای این شغل هستید؟ این پرسش یکی دیگر از س
+                                                    والات پرتکرار مصاحبه که همراه با جواب آورده‌ایم، است. کارشناس
+                                                    استخدام م
+                                                    ی‌خواهد بداند آیا شما تمام شرایط لازم را دارید یا خیر. آماده باشید
+                                                    تا تو
+                                                    ضیح دهید چرا کاندیدایی ایدئال هستید. پاسخ خود را به‌صورت یک طرح م
+                                                    طمئن، مختصر و دقیق مثل بازارگرمی برای فروش آماده کنید که توضیح دهد
+                                                    شما چه چیزی
+                                                    برای سازمان دارید و چرا باید آن جایگاه را به دست آورید. این موقعیت،
+                                                    زمان خوبی
+                                                    برای بیان صلاحیت‌ها و مهارت‌های لازم برای آن شغل است تا بتوانید
+                                                    پاسخی مطابق
+                                                    با آنچه مصاحبه‌کننده می‌خواهد ارائه دهید.
+                                                </p>
+                                            </div>
+                                            <div class="flex justify-center w-full gap-1  text-violet-700 mt-4">
+                                                <a href="#"
+                                                    class="flex justify-center w-full basis-1/2 bg-zinc-300 py-2.5 rounded-r">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                        fill="currentColor" class="bi bi-pencil-fill mx-2"
+                                                        viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z">
+                                                        </path>
+                                                    </svg>
+                                                </a>
+                                                <a href="#"
+                                                    class="flex justify-center w-full basis-1/2 bg-zinc-300 py-2.5 rounded-l">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6Z" />
+                                                        <path
+                                                            d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1ZM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118ZM2.5 3h11V2h-11v1Z" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="flex gap-2 w-full  mb-2">
+                                            <button id="open-add-question"
+                                                class="flex flex-col items-center w-full p-3 bg-white rounded  border-dashed border-2 border-gray-200 h-24 focus:border-violet-700">
+                                                <span class="h-full flex items-center mb-0 text-xl text-violet-600">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px"
+                                                        fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd"
+                                                            d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z">
+                                                        </path>
+                                                    </svg>
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- add/edit question modal -->
+            <div id="addquestion-modal" class="fixed modal inset-0 overflow-y-auto  bg-gray-800 bg-opacity-50 ">
+                <div id="addquestion-out" class="flex items-baseline justify-center mt-7 mb-10 max-sm:m-2">
+                    <div
+                        class="bg-white rounded shadow-lg  lg:max-w-3xl sm:max-w-lg addquestion-content w-full zoomout">
+                        <div class="relative flex flex-col w-full bg-white rounded-md">
+                            <div class="flex flex-row-reverse justify-between border-b p-4.5">
+                                <h5 class="text-lg font-bold"> افزودن / ویرایش سوال</h5>
+                                <button id="closeAddquestion" class="text-gray-500 hover:text-gray-700 float-right">
+                                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M6 18L18 6M6 6l12 12"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="p-4">
+                                <div>
+                                    <div class="flex flex-col">
+                                        <div class="flex mb-2">
+                                            <div class="flex w-full mb-2.5 max-sm:w-full">
+                                                <input type="text"
+                                                    class="bg-gray-200 py-2.5 mx-1 rounded w-full text-center text-sm font-bold text-black"
+                                                    placeholder="متن سوال را اینجا وارد کنید">
+                                            </div>
+                                        </div>
+                                        <div class="flex mb-2">
+                                            <div class="flex w-full mb-2.5 max-sm:w-full">
+                                                <select
+                                                    class="bg-gray-200 py-2.5 mx-1 rounded w-full text-center text-sm font-bold text-black">
+                                                    <option value="1">جایگاه 1</option>
+                                                    <option value="2">جایگاه 2</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="flex mb-2">
+                                            <div class="flex w-full mb-2.5 max-sm:w-full">
+                                                <textarea
+                                                    class="bg-gray-200 py-2.5 mx-1 rounded w-full text-center text-sm font-bold text-black"> </textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="border-t p-3 ">
+                                        <div class="flex justify-center gap-2 m-1">
+                                            <button id="closecloseAddquestionBtn"
+                                                class="p-1.5 px-3.5 rounded border text-sm font-semibold transition duration-300 ease-in-out bg-gray-500 hover:bg-slate-600 text-white">لغو
+                                            </button>
+                                            <button id=""
+                                                class="p-1.5 px-3.5 rounded border text-sm font-semibold transition duration-300 ease-in-out border-green-500 bg-green-600 text-white  hover:bg-green-500 ">ثبت
+                                                تغییرات</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- delete common question modal -->
+            <div id="deletequstion-modal" class="fixed inset-0 modal bg-gray-800 bg-opacity-50 ">
+                <div id="deletequstion-out" class="h-full flex items-baseline justify-center mt-7 mb-10  max-sm:m-2">
+                    <div class="bg-white rounded shadow-lg  sm:max-w-lg deletequstion-content w-full">
+                        <div class="relative flex flex-col w-full bg-white rounded-md">
+                            <div class="flex flex-row-reverse justify-between border-b p-4.5">
+                                <h5 class="text-lg font-bold">حذف پرسش متداول</h5>
+                                <button id="closeDeleteQ" class="text-gray-500 hover:text-gray-700 float-right">
+                                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M6 18L18 6M6 6l12 12"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="p-4">
+                                <div>
+                                    <div class="w-full text-base text-gray-500 mb-3"><span>از حذف این پرسش مطمعن
+                                            هستید؟</span></div>
+                                    <div class="bg-[#fcf2d9] text-[#ba701a] p-4 rounded">
+                                        <span>
+                                            توجه داشته باشید که فرایند حذف به صورت دائمی بوده و قابل بازگشت نیست
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="border-t p-3 ">
+                                <div class="flex gap-2 m-1">
+                                    <button
+                                        class="p-1.5 px-3.5 rounded border text-sm font-semibold transition duration-300 ease-in-out border-red-500 bg-red-600 text-white  hover:bg-red-500 ">بله
+                                        حذف کن</button>
+                                    <button id="closeDeleteQBtn"
+                                        class="p-1.5 px-3.5 rounded border text-sm font-semibold transition duration-300 ease-in-out bg-gray-500 hover:bg-slate-600 text-white">خیر
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+              <!-- delete category section modal -->
+              <div id="deletecategory-modal" class="fixed inset-0 modal bg-gray-800 bg-opacity-50 ">
+                <div id="deletecategory-out" class="h-full flex items-baseline justify-center mt-7 mb-10  max-sm:m-2">
+                    <div class="bg-white rounded shadow-lg  sm:max-w-lg deletecategory-content w-full">
+                        <div class="relative flex flex-col w-full bg-white rounded-md">
+                            <div class="flex flex-row-reverse justify-between border-b p-4.5">
+                                <h5 class="text-lg font-bold">حذف سر دسته ها</h5>
+                                <button id="closeDeleteCat" class="text-gray-500 hover:text-gray-700 float-right">
+                                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M6 18L18 6M6 6l12 12"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="p-4">
+                                <div>
+                                    <div class="w-full text-base text-gray-500 mb-3"><span>از حذف این دسته مطمعن
+                                            هستید؟</span></div>
+                                    <div class="bg-[#fcf2d9] text-[#ba701a] p-4 rounded">
+                                        <span>
+                                            توجه داشته باشید که فرایند حذف به صورت دائمی بوده و قابل بازگشت نیست
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="border-t p-3 ">
+                                <div class="flex gap-2 m-1">
+                                    <button
+                                        class="p-1.5 px-3.5 rounded border text-sm font-semibold transition duration-300 ease-in-out border-red-500 bg-red-600 text-white  hover:bg-red-500 ">بله
+                                        حذف کن</button>
+                                    <button id="closeDeleteCatBtn"
+                                        class="p-1.5 px-3.5 rounded border text-sm font-semibold transition duration-300 ease-in-out bg-gray-500 hover:bg-slate-600 text-white">خیر
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <script src="../js/main.js"></script>
+    <script src="../js/modal.js"></script>
+
+
+</body>
+
+</html>

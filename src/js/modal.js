@@ -112,6 +112,31 @@ document.addEventListener('DOMContentLoaded', function () {
     const Addoperatormodal = document.getElementById("addoperator-modal");
     const closeAddOperatorButtons = [document.getElementById('closeAddOperatormodal'), document.getElementById('closeAddOperatormodalBtn')];
 
+    // edit operator profile modal
+    const OpenMeta = document.getElementById("Open-Meta");
+    const Metamodal = document.getElementById("Meta-modal");
+    const closeMetaButtons = [document.getElementById('closeMetamodal'), document.getElementById('closeMetamodalBtn')];
+
+    // edit operator profile modal
+    const OpenGroups = document.getElementById("Open-Groups");
+    const Groupsmodal = document.getElementById("groups-modal");
+    const closegroupsButton = [document.getElementById('closegroupsmodal')];
+
+    // select group for connections
+    const openSelectgroup = document.getElementById("open-Select-group");
+    const selectgroupmodal = document.getElementById("select-group-modal");
+    const closeSelectgroupButtons = [document.getElementById('closeSelect-group'), document.getElementById('closeSelect-groupBtn')];
+
+    // select group for connections
+    const Opendeletecategory = document.getElementById("Open-deletecategory");
+    const deletecategorymodal = document.getElementById("deletecategory-modal");
+    const closeDeleteCatButtons = [document.getElementById('closeDeleteCat'), document.getElementById('closeDeleteCatBtn')];
+
+    // select group for connections
+    const openedittag = document.getElementById("open-edit-tag");
+    const editTagmodal = document.getElementById("editTag-modal");
+    const closeeditTagButtons = [document.getElementById('closeeditTagmodal'), document.getElementById('closeEditTagBtn')];
+
     // Event listeners
     openModalButton?.addEventListener('click', () => openModal(modal));
     openNestedModalBtn?.addEventListener('click', () => openModal(nestedModal));
@@ -133,6 +158,11 @@ document.addEventListener('DOMContentLoaded', function () {
     openAddlist?.addEventListener('click', () => openModal(Addlistmodal));
     OpenEditOperator?.addEventListener('click', () => openModal(EditOperatormodal));
     openAddOperator?.addEventListener('click', () => openModal(Addoperatormodal));
+    OpenMeta?.addEventListener('click', () => openModal(Metamodal));
+    OpenGroups?.addEventListener('click', () => openModal(Groupsmodal));
+    openSelectgroup?.addEventListener('click', () => openModal(selectgroupmodal));
+    Opendeletecategory?.addEventListener('click', () => openModal(deletecategorymodal));
+    openedittag?.addEventListener('click', () => openModal(editTagmodal));
 
     closeModalButtons.forEach((button) => button?.addEventListener('click', () => closeModal(modal)));
     closeNestedModalButtons.forEach((button) => button?.addEventListener('click', () => closeModal(nestedModal)));
@@ -154,6 +184,11 @@ document.addEventListener('DOMContentLoaded', function () {
     closeAddlistButtons.forEach((button) => button?.addEventListener('click', () => closeModal(Addlistmodal)));
     closeOperatorButtons.forEach((button) => button?.addEventListener('click', () => closeModal(EditOperatormodal)));
     closeAddOperatorButtons.forEach((button) => button?.addEventListener('click', () => closeModal(Addoperatormodal)));
+    closeMetaButtons.forEach((button) => button?.addEventListener('click', () => closeModal(Metamodal)));
+    closegroupsButton.forEach((button) => button?.addEventListener('click', () => closeModal(Groupsmodal)));
+    closeSelectgroupButtons.forEach((button) => button?.addEventListener('click', () => closeModal(selectgroupmodal)));
+    closeDeleteCatButtons.forEach((button) => button?.addEventListener('click', () => closeModal(deletecategorymodal)));
+    closeeditTagButtons.forEach((button) => button?.addEventListener('click', () => closeModal(editTagmodal)));
 });
 
 
@@ -191,6 +226,11 @@ document.addEventListener('DOMContentLoaded', function () {
         { triggerId: 'addlist-out', contentClass: 'addlist-content' },
         { triggerId: 'editoperator-out', contentClass: 'editoperator-content' },
         { triggerId: 'addoperator-out', contentClass: 'addoperator-content' },
+        { triggerId: 'Meta-out', contentClass: 'Meta-content' },
+        { triggerId: 'groups-out', contentClass: 'groups-content' },
+        { triggerId: 'select-group-out', contentClass: 'select-group-content' },
+        { triggerId: 'deletecategory-out', contentClass: 'deletecategory-content' },
+        { triggerId: 'editTag-out', contentClass: 'editTag-content' },
     ];
 
     modalElements.forEach(element => {
