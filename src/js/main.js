@@ -6,6 +6,8 @@ var searchOrder = document.getElementById("orders-search")
 var searchBAr = document.getElementById("searchBar")
 var dropdown = document.getElementById('DropdownMenu');
 var product = document.getElementById('product');
+var Seodropdown = document.getElementById('SeoDropdownMenu');
+var Seo = document.getElementById('Seo');
 
 
 function Dropdown() {
@@ -17,6 +19,8 @@ function closeNav() {
     setting.classList.toggle("settings");
     product?.classList.toggle("pointer-events-none");
     dropdown?.classList.add("hidden");
+    Seo?.classList.toggle("pointer-events-none");
+    Seodropdown?.classList.add("hidden");
 
     var close = document.getElementById("close-navbar-btn");
     close.classList.toggle("close-nav");
@@ -33,6 +37,7 @@ function closeNav() {
 function openSidebar() {
     mainSidebar.classList.toggle("showSidebar");
     product?.classList.remove("pointer-events-none");
+    Seo?.classList.remove("pointer-events-none");
     setting.classList.remove("respnsive-settings");
     banner.classList.remove("logo");
     mainSidebar.classList.remove("hideSidebar");
@@ -41,6 +46,7 @@ function openSidebar() {
 function closeSidebar() {
     mainSidebar.classList.remove("showSidebar");
     product?.classList.add("pointer-events-none");
+    Seo?.classList.add("pointer-events-none");
     setting.classList.toggle("respnsive-settings");
     banner.classList.toggle("logo");
     mainSidebar.classList.toggle("hideSidebar");
@@ -51,6 +57,8 @@ function handleResize() {
     mainSidebar.classList.remove("showSidebar");
     product?.classList.add("pointer-events-none");
     dropdown?.classList.add("hidden")
+    Seo?.classList.add("pointer-events-none");
+    Seodropdown?.classList.add("hidden")
     setting.classList.toggle("respnsive-settings");
     banner.classList.toggle("logo");
     mainSidebar.classList.toggle("hideSidebar");
@@ -78,11 +86,13 @@ window.addEventListener('resize', function () {
             sidebar.classList.remove('closeSidebar');
             setting.classList.remove('settings');
             product?.classList.remove("pointer-events-none");
+            Seo?.classList.remove("pointer-events-none");
         }
         else {
             setting.classList.add('settings');
             sidebar.classList.add('closeSidebar');
             product?.classList.add("pointer-events-none");
+            Seo?.classList.add("pointer-events-none");
         }
     }
 });
@@ -326,6 +336,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
+// Seo dorpdown
+document.addEventListener("DOMContentLoaded", function () {
+    const button = document.getElementById('SeoDropdown');
+    button.addEventListener('click', () => {
+        Seodropdown.classList.toggle('hidden');
+    });
+
+});
 // add detail for newseller page
 document.addEventListener("DOMContentLoaded", function () {
     const addDetail = document.getElementById("addDetail");
@@ -456,4 +475,4 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     
     // Add a click event listener to the button
-    button.addEventListener("click", toggleState);
+    button?.addEventListener("click", toggleState);

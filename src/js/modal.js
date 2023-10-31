@@ -107,17 +107,17 @@ document.addEventListener('DOMContentLoaded', function () {
     const EditOperatormodal = document.getElementById("editoperator-modal");
     const closeOperatorButtons = [document.getElementById('closeOperatormodal'), document.getElementById('closeOperatormodalBtn')];
 
-    // edit operator profile modal
+    // add operator profile modal
     const openAddOperator = document.getElementById("open-addoperator");
     const Addoperatormodal = document.getElementById("addoperator-modal");
     const closeAddOperatorButtons = [document.getElementById('closeAddOperatormodal'), document.getElementById('closeAddOperatormodalBtn')];
 
-    // edit operator profile modal
+    // Meta modal
     const OpenMeta = document.getElementById("Open-Meta");
     const Metamodal = document.getElementById("Meta-modal");
     const closeMetaButtons = [document.getElementById('closeMetamodal'), document.getElementById('closeMetamodalBtn')];
 
-    // edit operator profile modal
+    // connected groups modal
     const OpenGroups = document.getElementById("Open-Groups");
     const Groupsmodal = document.getElementById("groups-modal");
     const closegroupsButton = [document.getElementById('closegroupsmodal')];
@@ -127,15 +127,30 @@ document.addEventListener('DOMContentLoaded', function () {
     const selectgroupmodal = document.getElementById("select-group-modal");
     const closeSelectgroupButtons = [document.getElementById('closeSelect-group'), document.getElementById('closeSelect-groupBtn')];
 
-    // select group for connections
+    // delete category section modal
     const Opendeletecategory = document.getElementById("Open-deletecategory");
     const deletecategorymodal = document.getElementById("deletecategory-modal");
     const closeDeleteCatButtons = [document.getElementById('closeDeleteCat'), document.getElementById('closeDeleteCatBtn')];
 
-    // select group for connections
+    // edit tag modal
     const openedittag = document.getElementById("open-edit-tag");
     const editTagmodal = document.getElementById("editTag-modal");
     const closeeditTagButtons = [document.getElementById('closeeditTagmodal'), document.getElementById('closeEditTagBtn')];
+
+    // add discount coupon
+    const openDiscountModal = document.getElementById("open-discount-modal");
+    const addDiscountModal = document.getElementById("add-discount-modal");
+    const closeDiscountButtons = [document.getElementById('closeDiscount'), document.getElementById('closeDiscountBtn')];
+
+    // add discount list
+    const openDiscountList = document.getElementById("open-discount-list");
+    const DiscountListModal = document.getElementById("discount-list-modal");
+    const closeDiscountListButtons = [document.getElementById('closeDiscountList'), document.getElementById('closeDiscountListBtn')];
+
+    // edit seller 
+    const OpenEditSeller = document.getElementById("open-edit-seller");
+    const EditSellerModal = document.getElementById("edit-seller-modal");
+    const CloseEditSellerButtons = [document.getElementById('closeEditSellermodal'), document.getElementById('closeEditSellerBtn')];
 
     // Event listeners
     openModalButton?.addEventListener('click', () => openModal(modal));
@@ -163,6 +178,9 @@ document.addEventListener('DOMContentLoaded', function () {
     openSelectgroup?.addEventListener('click', () => openModal(selectgroupmodal));
     Opendeletecategory?.addEventListener('click', () => openModal(deletecategorymodal));
     openedittag?.addEventListener('click', () => openModal(editTagmodal));
+    openDiscountModal?.addEventListener('click', () => openModal(addDiscountModal));
+    openDiscountList?.addEventListener('click', () => openModal(DiscountListModal));
+    OpenEditSeller?.addEventListener('click', () => openModal(EditSellerModal));
 
     closeModalButtons.forEach((button) => button?.addEventListener('click', () => closeModal(modal)));
     closeNestedModalButtons.forEach((button) => button?.addEventListener('click', () => closeModal(nestedModal)));
@@ -189,6 +207,9 @@ document.addEventListener('DOMContentLoaded', function () {
     closeSelectgroupButtons.forEach((button) => button?.addEventListener('click', () => closeModal(selectgroupmodal)));
     closeDeleteCatButtons.forEach((button) => button?.addEventListener('click', () => closeModal(deletecategorymodal)));
     closeeditTagButtons.forEach((button) => button?.addEventListener('click', () => closeModal(editTagmodal)));
+    closeDiscountButtons.forEach((button) => button?.addEventListener('click', () => closeModal(addDiscountModal)));
+    closeDiscountListButtons.forEach((button) => button?.addEventListener('click', () => closeModal(DiscountListModal)));
+    CloseEditSellerButtons.forEach((button) => button?.addEventListener('click', () => closeModal(EditSellerModal)));
 });
 
 
@@ -231,6 +252,9 @@ document.addEventListener('DOMContentLoaded', function () {
         { triggerId: 'select-group-out', contentClass: 'select-group-content' },
         { triggerId: 'deletecategory-out', contentClass: 'deletecategory-content' },
         { triggerId: 'editTag-out', contentClass: 'editTag-content' },
+        { triggerId: 'add-discount-out', contentClass: 'add-discount-content' },
+        { triggerId: 'discount-list-out', contentClass: 'discount-list-content' },
+        { triggerId: 'edit-seller-out', contentClass: 'edit-seller-content' },
     ];
 
     modalElements.forEach(element => {

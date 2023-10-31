@@ -293,7 +293,7 @@
 }
 .activebutton div{
   display: flex;
-  flex-direction: row;
+
 }
 @font-face {
     font-family: iranyekan;
