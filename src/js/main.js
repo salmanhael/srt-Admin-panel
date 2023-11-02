@@ -221,7 +221,7 @@ window.onclick = function (event) {
     // nedted modal 2
     const nestedModal2 = document.getElementById("nestedmodal2");
     const nestedout2 = document.getElementById('nested-out2');
-    // user status
+    // change user status
     const deactivate = document.getElementById('deactivate-modal');
     const deactivateout = document.getElementById('deactivate-out');
     // close modal when click outside
@@ -257,7 +257,7 @@ window.onclick = function (event) {
 // toggle off-on for main pages
 var row, newBlockedStatusInput, btn;
 
-function openModal(button) {
+function openDeactiveModal(button) {
     row = button.closest(".deactivate");
     newBlockedStatusInput = row.querySelector('input[name="newBlockedStatus"]');
     btn = button.closest(".deactivateBtn");
@@ -265,7 +265,7 @@ function openModal(button) {
     modal.classList.add('show');
 }
 
-function closeModal() {
+function closeDeactiveModal() {
     var modal = document.getElementById("deactivate-modal");
     modal.classList.add('hide');
     setTimeout(() => {
@@ -274,7 +274,7 @@ function closeModal() {
 }
 
 function confirmChanges() {
-    closeModal();
+    closeDeactiveModal();
     // یافتن المان‌های مورد نظر در ردیف فعلی
     
 
