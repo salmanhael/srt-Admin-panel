@@ -393,20 +393,20 @@
                                     class="deactivate flex flex-col items-center w-full max-sm:w-full sm:p-3 max-sm:pt-3 bg-gray-200 max-sm:bg-zinc-100 rounded h-24">
                                     <span class="h-full flex items-center mb-0 text-xl text-black font-bold">سنگین راه تامین</span>
                                     <div class="flex text-gray-500 justify-center w-full gap-1" dir="ltr">
-                                        <a id="open-edit-seller" class="flex justify-center max-md:basis-1/2 w-full max-sm:bg-zinc-300 max-sm:py-2.5 rounded-l hover:text-violet-700"><svg
+                                        <button onclick="getEditSellerModal()" class="flex justify-center max-md:basis-1/2 w-full max-sm:bg-zinc-300 max-sm:py-2.5 rounded-l hover:text-violet-700"><svg
                                                 xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                                                 fill="currentColor" class="bi bi-pencil-fill mx-2" viewBox="0 0 16 16">
                                                 <path
                                                     d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z">
                                                 </path>
-                                            </svg></a>
-                                        <a onclick="openModal(this)" class="deactivateBtn flex justify-center max-md:basis-1/2  w-full max-sm:bg-zinc-300 max-sm:py-2.5 hover:text-violet-700">
+                                            </svg></button>
+                                        <button onclick="openDeactiveModal(this)" class="deactivateBtn flex justify-center max-md:basis-1/2  w-full max-sm:bg-zinc-300 max-sm:py-2.5 hover:text-violet-700">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                                 fill="currentColor" class="bi bi-toggle-on" viewBox="0 0 16 16">
                                                 <path
                                                     d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z">
                                                 </path>
-                                            </svg></a><input type="hidden" name="newBlockedStatus" value="false" />
+                                            </svg></button><input type="hidden" name="newBlockedStatus" value="false" />
                                         <input type="hidden" name="oldBlockedStatus" value="true" />
                                     </div>
                                 </div>
@@ -417,20 +417,20 @@
                                     class="deactivate flex flex-col items-center w-full max-sm:w-full sm:p-3 max-sm:pt-3 bg-gray-200 max-sm:bg-zinc-100 rounded h-24">
                                     <span class="h-full flex items-center mb-0 text-xl text-black font-bold">اتا تجارت</span>
                                     <div class="flex text-gray-500 justify-center w-full gap-1" dir="ltr">
-                                        <a href="#" class="flex justify-center max-md:basis-1/2 w-full max-sm:bg-zinc-300 max-sm:py-2.5 rounded-l hover:text-violet-700"><svg
+                                        <button onclick="getEditSellerModal()" class="flex justify-center max-md:basis-1/2 w-full max-sm:bg-zinc-300 max-sm:py-2.5 rounded-l hover:text-violet-700"><svg
                                                 xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                                                 fill="currentColor" class="bi bi-pencil-fill mx-2" viewBox="0 0 16 16">
                                                 <path
                                                     d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z">
                                                 </path>
-                                            </svg></a>
-                                        <a onclick="openModal(this)" class="deactivateBtn flex justify-center max-md:basis-1/2  w-full max-sm:bg-zinc-300 max-sm:py-2.5 hover:text-violet-700">
+                                            </svg></button>
+                                        <button onclick="openDeactiveModal(this)" class="deactivateBtn flex justify-center max-md:basis-1/2  w-full max-sm:bg-zinc-300 max-sm:py-2.5 hover:text-violet-700">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                                 fill="currentColor" class="bi bi-toggle-on" viewBox="0 0 16 16">
                                                 <path
                                                     d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z">
                                                 </path>
-                                            </svg></a><input type="hidden" name="newBlockedStatus" value="false" />
+                                            </svg></button><input type="hidden" name="newBlockedStatus" value="false" />
                                         <input type="hidden" name="oldBlockedStatus" value="true" />
                                     </div>
                                 </div>
@@ -441,20 +441,20 @@
                                     class="deactivate flex flex-col items-center w-full max-sm:w-full sm:p-3 max-sm:pt-3 bg-gray-200 max-sm:bg-zinc-100 rounded h-24">
                                     <span class="h-full flex items-center mb-0 text-xl text-black font-bold">yellow part</span>
                                     <div class="flex text-gray-500 justify-center w-full gap-1" dir="ltr">
-                                        <a href="#" class="flex justify-center max-md:basis-1/2 w-full max-sm:bg-zinc-300 max-sm:py-2.5 rounded-l hover:text-violet-700"><svg
+                                        <button onclick="getEditSellerModal()" class="flex justify-center max-md:basis-1/2 w-full max-sm:bg-zinc-300 max-sm:py-2.5 rounded-l hover:text-violet-700"><svg
                                                 xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                                                 fill="currentColor" class="bi bi-pencil-fill mx-2" viewBox="0 0 16 16">
                                                 <path
                                                     d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z">
                                                 </path>
-                                            </svg></a>
-                                        <a onclick="openModal(this)" class="deactivateBtn flex justify-center max-md:basis-1/2  w-full max-sm:bg-zinc-300 max-sm:py-2.5 hover:text-violet-700">
+                                            </svg></button>
+                                        <button onclick="openDeactiveModal(this)" class="deactivateBtn flex justify-center max-md:basis-1/2  w-full max-sm:bg-zinc-300 max-sm:py-2.5 hover:text-violet-700">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                                 fill="currentColor" class="bi bi-toggle-on" viewBox="0 0 16 16">
                                                 <path
                                                     d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z">
                                                 </path>
-                                            </svg></a><input type="hidden" name="newBlockedStatus" value="false" />
+                                            </svg></button><input type="hidden" name="newBlockedStatus" value="false" />
                                         <input type="hidden" name="oldBlockedStatus" value="true" />
                                     </div>
                                 </div>
@@ -525,49 +525,53 @@
 
 
 
+        <!-- change item status modal -->
+        <div id="deactivate-modal" class="fixed modal inset-0 bg-gray-800 bg-opacity-50 ">
+            <div id="deactivate-out" class="h-full flex items-baseline justify-center mt-7 mb-10  max-sm:m-2">
+                <div class="bg-white rounded shadow-lg  sm:max-w-lg  w-full">
+                    <div class="relative flex flex-col w-full bg-white rounded-md">
+                        <div class="flex justify-between border-b p-4.5">
+                            <h5 class="text-lg font-bold">تغییر وضعیت ایتم</h5>
+                            <button onclick="closeDeactiveModal()"
+                                class="text-gray-500 hover:text-gray-700 float-right">
+                                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M6 18L18 6M6 6l12 12"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="p-4">
+                            <div>
+                                <div class="w-full text-base text-gray-500"><span>وضعیت این ایتم به <span
+                                            class="text-red-600">غیر فعال </span>تغییر کند؟</span></div>
+                            </div>
 
-            <!-- change item status modal -->
-            <div id="deactivate-modal" class="fixed modal inset-0 bg-gray-800 bg-opacity-50 ">
-                <div id="deactivate-out" class="h-full flex items-baseline justify-center mt-7 mb-10  max-sm:m-2">
-                    <div class="bg-white rounded shadow-lg  sm:max-w-lg  w-full">
-                        <div class="relative flex flex-col w-full bg-white rounded-md">
-                            <div class="flex justify-center border-b p-4.5">
-                                <h5 class="text-lg font-bold">تغییر وضعیت دسته</h5>
-                            </div>
-                            <div class="p-4">
-                                <div>
-                                    <div class="w-full text-base text-gray-500 mb-3"><span>وضعیت این ایتم به <span
-                                                class="text-red-600">غیر فعال </span>تغییر کند؟</span></div>
-                                    <div class="bg-[#fcf2d9] text-[#ba701a] p-4 rounded">
-                                        <span>توجه داشته باشید که با غیر فعال کردن این ایتم تمامی زیر مجموعه های ان نیز
-                                            غیر فعال خواهد شد</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="border-t p-3 ">
-                                <div class="flex gap-2 m-1">
-                                    <button id="confirmBtn" onclick="confirmChanges()"
-                                        class="p-1.5 px-3.5 rounded border text-sm font-semibold transition duration-300 ease-in-out border-red-500 bg-red-600 text-white  hover:bg-red-500 ">بله
-                                        تغییر بده</button>
-                                    <button id="cancelBtn" onclick="closeModal()"
-                                        class="p-1.5 px-3.5 rounded border text-sm font-semibold transition duration-300 ease-in-out bg-gray-500 hover:bg-slate-600 text-white">خیر
-                                    </button>
-                                </div>
+                        </div>
+                        <div class="border-t p-3 ">
+                            <div class="flex max-sm:flex-col gap-2 m-1">
+                                <button onclick="confirmChanges()"
+                                    class="p-1.5 px-3.5 rounded border text-sm font-semibold transition duration-300 ease-in-out border-red-500 bg-red-600 text-white  hover:bg-red-500 ">بله
+                                    تغییر بده</button>
+                                <button onclick="closeDeactiveModal()"
+                                    class="p-1.5 px-3.5 rounded border text-sm font-semibold transition duration-300 ease-in-out bg-gray-500 hover:bg-slate-600 text-white">خیر
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
 
 
             <!-- edit seller -->
-            <div id="edit-seller-modal" class="fixed inset-0 modal bg-gray-800 bg-opacity-50 ">
-                <div id="edit-seller-out" class="h-full flex items-baseline justify-center mt-7 mb-10 max-sm:m-2">
-                    <div class="bg-white rounded shadow-lg  sm:max-w-lg  w-full edit-seller-content zoomout">
+            <div id="edit-seller-modal" class="fixed inset-0 modal bg-gray-800 bg-opacity-50 overflow-y-auto">
+                <div onclick="clickOnOut(this,event)" class=" flex items-baseline justify-center mt-7 mb-10 max-sm:m-2">
+                    <div class="bg-white rounded shadow-lg  sm:max-w-lg  w-full modal_content zoomout">
                         <div class="relative flex flex-col w-full bg-white rounded-md">
-                            <div class="flex flex-row-reverse justify-between border-b p-4.5">
+                            <div class="flex flex-row justify-between border-b p-4.5">
                                 <h5 class="text-lg font-bold">ویرایش فروشنده</h5>
-                                <button id="closeEditSellermodal" class="text-gray-500 hover:text-gray-700 float-right">
+                                <button onclick="closeModal(this)" class="text-gray-500 hover:text-gray-700 float-right">
                                     <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -610,13 +614,14 @@
                                         </div>
                                     </form>
                                 </div>
-                                <div class="flex justify-center gap-2 mt-4">
-                                    <button id="closeEditSellerBtn"
-                                        class="p-1.5 px-3.5 rounded border text-sm font-semibold transition duration-300 ease-in-out bg-gray-500 hover:bg-slate-600 text-white">لغو
-                                    </button>
+                                <div class="flex max-sm:flex-col justify-start gap-2 mt-4">
                                     <button
                                         class="p-1.5 px-3.5 rounded border text-sm font-semibold transition duration-300 ease-in-out border-green-500 bg-green-600 text-white  hover:bg-green-500 ">ثبت
                                         تغییرات</button>
+                                    <button onclick="closeModal(this)"
+                                        class="p-1.5 px-3.5 rounded border text-sm font-semibold transition duration-300 ease-in-out bg-gray-500 hover:bg-slate-600 text-white">لغو
+                                    </button>
+                                    
                                 </div>
                             </div>
                         </div>

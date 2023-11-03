@@ -316,41 +316,39 @@
                         <button onclick="searchorder()"
                             class="cursor-pointer mt-5 mb-4 mx-2 bg-white hover:text-violet-700 p-2.5 text-sm font-semibold h-10 text-gray-600 rounded border border-gray-400 hover:border-violet-700 mr-auto max-lg:hidden"
                             id="orders-search">
-                            <span>جست و جو </span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
                                 class="bi bi-search me-1 inline" viewBox="0 0 16 16">
                                 <path
                                     d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z">
                                 </path>
                             </svg>
+                            <span>جست و جو </span>
                         </button>
                     </div>
 
                     <div>
-                        <button id="open-discount-list"
+                        <button onclick="getDiscountListModal()"
                             class="cursor-pointer mt-5 mb-4 mx-2 bg-violet-700 text-white px-3 max-sm:w-full text-sm font-semibold h-10 rounded mr-auto">
-                            <span> افزودن لیست تخفیف</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" fill="currentColor"
                                 class="bi bi-plus inline mb-1" viewBox="0 0 16 16">
                                 <path
                                     d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z">
                                 </path>
                             </svg>
+                            <span> افزودن لیست تخفیف</span>
                         </button>
                     </div>
 
                     <div>
-                        <button id="open-discount-modal"
+                        <button onclick="getAddDiscountModal()"
                             class="cursor-pointer mt-5 mb-4 bg-green-500 text-white px-3 max-sm:w-full max-sm:mt-2 text-sm font-semibold h-10 rounded">
-                            <a>
-                                <span>افزودن کد تخفیف</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" fill="currentColor"
-                                    class="bi bi-plus inline mb-1" viewBox="0 0 16 16">
-                                    <path
-                                        d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z">
-                                    </path>
-                                </svg>
-                            </a>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" fill="currentColor"
+                                class="bi bi-plus inline mb-1" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z">
+                                </path>
+                            </svg>
+                            <span>افزودن کد تخفیف</span>
                         </button>
                     </div>
 
@@ -437,7 +435,6 @@
                                     </span>
                                     <span>
                                         <div>
-                                            <span class="text-gray-600">5%</span>
                                             <div class="flex items-center">
                                                 <span class="text-gray-600 w-16 mr- text-xs text-end">10.000.000</span>
                                                 <div class="">
@@ -477,9 +474,9 @@
                             </div>
                             <div class="flex w-1/12 mb-2.5 md:mb-0 max-md:w-full">
                                 <div
-                                    class="flex justify-end max-md:justify-center items-center rounded w-full text-center max-md:mx-1 text-sm gap-4 text-gray-500 max-md:gap-1">
+                                    class="flex justify-end max-md:justify-center items-center rounded w-full text-center max-md:mx-1 text-sm gap-2 text-gray-500 max-md:gap-1">
                                     <button
-                                        class="flex justify-center max-md:basis-1/2 max-md:bg-zinc-300 hover:text-violet-700 max-md:py-2.5 rounded-r">
+                                        class="flex justify-center max-md:basis-1/2 md:p-1 md:rounded bg-zinc-300 hover:text-violet-700 max-md:py-2.5 rounded-r">
                                         <a>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                                 fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
@@ -489,8 +486,8 @@
                                             </svg>
                                         </a>
                                     </button>
-                                    <button onclick="openModal(this)"
-                                        class="deactivateBtn flex justify-center  max-md:basis-1/2 max-md:bg-zinc-300 max-md:rounded-l hover:text-violet-700 max-md:py-2.5">
+                                    <button onclick="openDeactiveModal(this)"
+                                        class="deactivateBtn flex justify-center md:p-1 md:rounded max-md:basis-1/2 bg-zinc-300 max-md:rounded-l hover:text-violet-700 max-md:py-2.5">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                             fill="currentColor" class="bi bi-toggle-on" viewBox="0 0 16 16">
                                             <path
@@ -589,9 +586,9 @@
                             </div>
                             <div class="flex w-1/12 mb-2.5 md:mb-0 max-md:w-full">
                                 <div
-                                    class="flex justify-end max-md:justify-center items-center rounded w-full text-center max-md:mx-1 text-sm gap-4 text-gray-500 max-md:gap-1">
+                                    class="flex justify-end max-md:justify-center items-center rounded w-full text-center max-md:mx-1 text-sm gap-2 text-gray-500 max-md:gap-1">
                                     <button
-                                        class="flex justify-center max-md:basis-1/2 max-md:bg-zinc-300 hover:text-violet-700 max-md:py-2.5 rounded-r">
+                                        class="flex justify-center max-md:basis-1/2 md:p-1 md:rounded bg-zinc-300 hover:text-violet-700 max-md:py-2.5 rounded-r">
                                         <a>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                                 fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
@@ -601,8 +598,8 @@
                                             </svg>
                                         </a>
                                     </button>
-                                    <button onclick="openModal(this)"
-                                        class="deactivateBtn flex justify-center  max-md:basis-1/2 max-md:bg-zinc-300 max-md:rounded-l hover:text-violet-700 max-md:py-2.5">
+                                    <button onclick="openDeactiveModal(this)"
+                                        class="deactivateBtn flex justify-center md:p-1 md:rounded max-md:basis-1/2 bg-zinc-300 max-md:rounded-l hover:text-violet-700 max-md:py-2.5">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                             fill="currentColor" class="bi bi-toggle-on" viewBox="0 0 16 16">
                                             <path
@@ -700,9 +697,9 @@
                             </div>
                             <div class="flex w-1/12 mb-2.5 md:mb-0 max-md:w-full">
                                 <div
-                                    class="flex justify-end max-md:justify-center items-center rounded w-full text-center max-md:mx-1 text-sm gap-4 text-gray-500 max-md:gap-1 ">
+                                    class="flex justify-end max-md:justify-center items-center rounded w-full text-center max-md:mx-1 text-sm gap-2 text-gray-500 max-md:gap-1">
                                     <button
-                                        class="flex justify-center max-md:basis-1/2 max-md:bg-zinc-300 hover:text-violet-700 max-md:py-2.5 rounded-r">
+                                        class="flex justify-center max-md:basis-1/2 md:p-1 md:rounded bg-zinc-300 hover:text-violet-700 max-md:py-2.5 rounded-r">
                                         <a>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                                 fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
@@ -712,8 +709,8 @@
                                             </svg>
                                         </a>
                                     </button>
-                                    <button onclick="openModal(this)"
-                                        class="deactivateBtn flex justify-center  max-md:basis-1/2 max-md:bg-zinc-300 max-md:rounded-l hover:text-violet-700 max-md:py-2.5">
+                                    <button onclick="openDeactiveModal(this)"
+                                        class="deactivateBtn flex justify-center md:p-1 md:rounded max-md:basis-1/2 bg-zinc-300 max-md:rounded-l hover:text-violet-700 max-md:py-2.5">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                             fill="currentColor" class="bi bi-toggle-on" viewBox="0 0 16 16">
                                             <path
@@ -745,12 +742,20 @@
 
 
             <!-- change discount status modal -->
-            <div id="deactivate-modal" class="fixed inset-0 modal  bg-gray-800 bg-opacity-50 ">
+            <div id="deactivate-modal" class="fixed modal inset-0 bg-gray-800 bg-opacity-50 ">
                 <div id="deactivate-out" class="h-full flex items-baseline justify-center mt-7 mb-10  max-sm:m-2">
                     <div class="bg-white rounded shadow-lg  sm:max-w-lg  w-full">
                         <div class="relative flex flex-col w-full bg-white rounded-md">
-                            <div class="flex justify-center border-b p-4.5">
+                            <div class="flex justify-between border-b p-4.5">
                                 <h5 class="text-lg font-bold">تغییر وضعیت محصول</h5>
+                                <button onclick="closeDeactiveModal()"
+                                    class="text-gray-500 hover:text-gray-700 float-right">
+                                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M6 18L18 6M6 6l12 12"></path>
+                                    </svg>
+                                </button>
                             </div>
                             <div class="p-4">
                                 <div>
@@ -760,11 +765,11 @@
 
                             </div>
                             <div class="border-t p-3 ">
-                                <div class="flex gap-2 m-1">
-                                    <button id="confirmBtn" onclick="confirmChanges()"
+                                <div class="flex max-sm:flex-col gap-2 m-1">
+                                    <button onclick="confirmChanges()"
                                         class="p-1.5 px-3.5 rounded border text-sm font-semibold transition duration-300 ease-in-out border-red-500 bg-red-600 text-white  hover:bg-red-500 ">بله
                                         تغییر بده</button>
-                                    <button id="cancelBtn" onclick="closeModal()"
+                                    <button onclick="closeDeactiveModal()"
                                         class="p-1.5 px-3.5 rounded border text-sm font-semibold transition duration-300 ease-in-out bg-gray-500 hover:bg-slate-600 text-white">خیر
                                     </button>
                                 </div>
@@ -776,12 +781,13 @@
 
             <!-- add discount coupon -->
             <div id="add-discount-modal" class="fixed inset-0 modal bg-gray-800 bg-opacity-50 h-full  overflow-y-auto">
-                <div id="add-discount-out" class="flex items-baseline justify-center mt-7 mb-10 max-sm:m-2">
-                    <div class="bg-white rounded shadow-lg  sm:max-w-lg  w-full add-discount-content zoomout">
+                <div onclick="clickOnOut(this,event)" class="flex items-baseline justify-center mt-7 mb-10 max-sm:m-2">
+                    <div class="bg-white rounded shadow-lg  sm:max-w-lg  w-full modal_content zoomout">
                         <div class="relative flex flex-col w-full bg-white rounded-md">
-                            <div class="flex flex-row-reverse justify-between border-b p-4.5">
+                            <div class="flex flex-row justify-between border-b p-4.5">
                                 <h5 class="text-lg font-bold">افزودن کد تخفیف</h5>
-                                <button id="closeDiscount" class="text-gray-500 hover:text-gray-700 float-right">
+                                <button onclick="closeModal(this)"
+                                    class="text-gray-500 hover:text-gray-700 float-right">
                                     <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -865,14 +871,15 @@
                                         </div>
                                     </form>
                                 </div>
-                                <div class="flex justify-center gap-2 mt-4">
-                                    <button id="closeDiscountBtn"
-                                        class="p-1.5 px-3.5 rounded border text-sm font-semibold transition duration-300 ease-in-out bg-gray-500 hover:bg-slate-600 text-white">لغو
-                                    </button>
+                                <div class="flex max-sm:flex-col justify-start gap-2 mt-4">
                                     <button
                                         class="p-1.5 px-3.5 rounded border text-sm font-semibold transition duration-300 ease-in-out border-green-500 bg-green-600 text-white  hover:bg-green-500 ">ثبت
                                         ادرس جدید
                                     </button>
+                                    <button onclick="closeModal(this)"
+                                        class="p-1.5 px-3.5 rounded border text-sm font-semibold transition duration-300 ease-in-out bg-gray-500 hover:bg-slate-600 text-white">لغو
+                                    </button>
+
                                 </div>
                             </div>
                         </div>
@@ -882,12 +889,13 @@
 
             <!-- add discount list -->
             <div id="discount-list-modal" class="fixed inset-0 modal bg-gray-800 bg-opacity-50 h-full  overflow-y-auto">
-                <div id="discount-list-out" class="flex items-baseline justify-center mt-7 mb-10 max-sm:m-2">
-                    <div class="bg-white rounded shadow-lg  sm:max-w-lg  w-full discount-list-content zoomout">
+                <div onclick="clickOnOut(this,event)" class="flex items-baseline justify-center mt-7 mb-10 max-sm:m-2">
+                    <div class="bg-white rounded shadow-lg  sm:max-w-lg  w-full modal_content zoomout">
                         <div class="relative flex flex-col w-full bg-white rounded-md">
-                            <div class="flex flex-row-reverse justify-between border-b p-4.5">
+                            <div class="flex flex-row justify-between border-b p-4.5">
                                 <h5 class="text-lg font-bold">افزودن لیست تخفیف</h5>
-                                <button id="closeDiscountList" class="text-gray-500 hover:text-gray-700 float-right">
+                                <button onclick="closeModal(this)"
+                                    class="text-gray-500 hover:text-gray-700 float-right">
                                     <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -897,7 +905,7 @@
                             </div>
                             <div class="p-4">
                                 <div>
-                                    <form>
+                                    <div>
                                         <div class="flex flex-col">
                                             <div class="flex mb-2">
                                                 <div class="flex max-sm:flex-col w-full mb-2.5 max-sm:w-full">
@@ -955,9 +963,9 @@
                                                         class="bg-gray-200 py-2.5 mx-1 max-sm:mb-2 rounded sm:w-2/4 text-center font-black text-sm text-gray-500">افزودن
                                                         محصول :</span>
 
-                                                    <div class="relative w-2/4 mx-1 ">
+                                                    <div class="relative sm:w-2/4 mx-1 ">
                                                         <input type="text" placeholder="شناسه محصول"
-                                                            class="bg-gray-200 py-2.5 sm:w-full rounded text-center text-sm font-bold text-black outline-1 outline-blue-500">
+                                                            class="bg-gray-200 py-2.5 w-full rounded text-center text-sm font-bold text-black outline-1 outline-blue-500">
                                                         <button
                                                             class="flex justify-center text-green-600 bg-gray-300 rounded-l absolute left-0 top-0 w-10  border-r border-black py-3">
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="16"
@@ -975,129 +983,144 @@
                                             <div class="bg-yellow-100 rounded p-4">
                                                 <p class="text-center pb-3 text-yellow-700">محصولات موجود در لیست:</p>
 
-                                                <div class="flex flex-col">
-                                                    <div class="flex justify-center gap-2 mb-2">
-                                                        <button
-                                                            class="flex flex-row px-2 h-8 items-center bg-violet-700 border border-violet-700 text-white rounded">
-                                                            <span>#1H317</span>
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                                                height="16" fill="currentColor"
-                                                                class="bi bi-x-circle-fill mr-2" viewBox="0 0 16 16">
-                                                                <path
-                                                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z">
-                                                                </path>
-                                                            </svg>
-                                                        </button>
-                                                        <button
-                                                            class="flex flex-row px-2 h-8 items-center bg-violet-700 border border-violet-700 text-white rounded">
-                                                            <span>#1H317</span>
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                                                height="16" fill="currentColor"
-                                                                class="bi bi-x-circle-fill mr-2" viewBox="0 0 16 16">
-                                                                <path
-                                                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z">
-                                                                </path>
-                                                            </svg>
-                                                        </button>
-                                                        <button
-                                                            class="flex flex-row px-2 h-8 items-center bg-violet-700 border border-violet-700 text-white rounded">
-                                                            <span>#1H317</span>
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                                                height="16" fill="currentColor"
-                                                                class="bi bi-x-circle-fill mr-2" viewBox="0 0 16 16">
-                                                                <path
-                                                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z">
-                                                                </path>
-                                                            </svg>
-                                                        </button>
-                                                    </div>
-
-                                                    <div class="flex justify-center gap-2 mb-2">
-                                                        <button
-                                                            class="flex flex-row px-2 h-8 items-center bg-violet-700 border border-violet-700 text-white rounded">
-                                                            <span>#1H317</span>
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                                                height="16" fill="currentColor"
-                                                                class="bi bi-x-circle-fill mr-2" viewBox="0 0 16 16">
-                                                                <path
-                                                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z">
-                                                                </path>
-                                                            </svg>
-                                                        </button>
-                                                        <button
-                                                            class="flex flex-row px-2 h-8 items-center bg-violet-700 border border-violet-700 text-white rounded">
-                                                            <span>#1H317</span>
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                                                height="16" fill="currentColor"
-                                                                class="bi bi-x-circle-fill mr-2" viewBox="0 0 16 16">
-                                                                <path
-                                                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z">
-                                                                </path>
-                                                            </svg>
-                                                        </button>
-                                                        <button
-                                                            class="flex flex-row px-2 h-8 items-center bg-violet-700 border border-violet-700 text-white rounded">
-                                                            <span>#1H317</span>
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                                                height="16" fill="currentColor"
-                                                                class="bi bi-x-circle-fill mr-2" viewBox="0 0 16 16">
-                                                                <path
-                                                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z">
-                                                                </path>
-                                                            </svg>
-                                                        </button>
-                                                    </div>
-
-                                                    <div class="flex justify-center gap-2 mb-2">
-                                                        <button
-                                                            class="flex flex-row px-2 h-8 items-center bg-violet-700 border border-violet-700 text-white rounded">
-                                                            <span>#1H317</span>
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                                                height="16" fill="currentColor"
-                                                                class="bi bi-x-circle-fill mr-2" viewBox="0 0 16 16">
-                                                                <path
-                                                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z">
-                                                                </path>
-                                                            </svg>
-                                                        </button>
-                                                        <button
-                                                            class="flex flex-row px-2 h-8 items-center bg-violet-700 border border-violet-700 text-white rounded">
-                                                            <span>#1H317</span>
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                                                height="16" fill="currentColor"
-                                                                class="bi bi-x-circle-fill mr-2" viewBox="0 0 16 16">
-                                                                <path
-                                                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z">
-                                                                </path>
-                                                            </svg>
-                                                        </button>
-                                                        <button
-                                                            class="flex flex-row px-2 h-8 items-center bg-violet-700 border border-violet-700 text-white rounded">
-                                                            <span>#1H317</span>
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                                                height="16" fill="currentColor"
-                                                                class="bi bi-x-circle-fill mr-2" viewBox="0 0 16 16">
-                                                                <path
-                                                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z">
-                                                                </path>
-                                                            </svg>
-                                                        </button>
-                                                    </div>
-
+                                                <div class="flex flex-row flex-wrap justify-center gap-2 mb-2">
+                                                    <button
+                                                        class="flex justify-center basis-1/4 px-2 h-8 items-center bg-violet-700 border border-violet-700 text-white rounded">
+                                                        <span>#1H317</span>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                            fill="currentColor" class="bi bi-x-circle-fill mr-2"
+                                                            viewBox="0 0 16 16">
+                                                            <path
+                                                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z">
+                                                            </path>
+                                                        </svg>
+                                                    </button>
+                                                    <button
+                                                        class="flex justify-center basis-1/4 px-2 h-8 items-center bg-violet-700 border border-violet-700 text-white rounded">
+                                                        <span>#1H317</span>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                            fill="currentColor" class="bi bi-x-circle-fill mr-2"
+                                                            viewBox="0 0 16 16">
+                                                            <path
+                                                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z">
+                                                            </path>
+                                                        </svg>
+                                                    </button>
+                                                    <button
+                                                        class="flex justify-center basis-1/4 px-2 h-8 items-center bg-violet-700 border border-violet-700 text-white rounded">
+                                                        <span>#1H317</span>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                            fill="currentColor" class="bi bi-x-circle-fill mr-2"
+                                                            viewBox="0 0 16 16">
+                                                            <path
+                                                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z">
+                                                            </path>
+                                                        </svg>
+                                                    </button>
+                                                    <button
+                                                        class="flex justify-center basis-1/4 px-2 h-8 items-center bg-violet-700 border border-violet-700 text-white rounded">
+                                                        <span>#1H317</span>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                            fill="currentColor" class="bi bi-x-circle-fill mr-2"
+                                                            viewBox="0 0 16 16">
+                                                            <path
+                                                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z">
+                                                            </path>
+                                                        </svg>
+                                                    </button>
+                                                    <button
+                                                        class="flex justify-center basis-1/4 px-2 h-8 items-center bg-violet-700 border border-violet-700 text-white rounded">
+                                                        <span>#1H317</span>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                            fill="currentColor" class="bi bi-x-circle-fill mr-2"
+                                                            viewBox="0 0 16 16">
+                                                            <path
+                                                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z">
+                                                            </path>
+                                                        </svg>
+                                                    </button>
+                                                    <button
+                                                        class="flex justify-center basis-1/4 px-2 h-8 items-center bg-violet-700 border border-violet-700 text-white rounded">
+                                                        <span>#1H317</span>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                            fill="currentColor" class="bi bi-x-circle-fill mr-2"
+                                                            viewBox="0 0 16 16">
+                                                            <path
+                                                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z">
+                                                            </path>
+                                                        </svg>
+                                                    </button>
+                                                    <button
+                                                        class="flex justify-center basis-1/4 px-2 h-8 items-center bg-violet-700 border border-violet-700 text-white rounded">
+                                                        <span>#1H317</span>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                            fill="currentColor" class="bi bi-x-circle-fill mr-2"
+                                                            viewBox="0 0 16 16">
+                                                            <path
+                                                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z">
+                                                            </path>
+                                                        </svg>
+                                                    </button>
+                                                    <button
+                                                        class="flex justify-center basis-1/4 px-2 h-8 items-center bg-violet-700 border border-violet-700 text-white rounded">
+                                                        <span>#1H317</span>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                            fill="currentColor" class="bi bi-x-circle-fill mr-2"
+                                                            viewBox="0 0 16 16">
+                                                            <path
+                                                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z">
+                                                            </path>
+                                                        </svg>
+                                                    </button>
+                                                    <button
+                                                        class="flex justify-center basis-1/4 px-2 h-8 items-center bg-violet-700 border border-violet-700 text-white rounded">
+                                                        <span>#1H317</span>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                            fill="currentColor" class="bi bi-x-circle-fill mr-2"
+                                                            viewBox="0 0 16 16">
+                                                            <path
+                                                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z">
+                                                            </path>
+                                                        </svg>
+                                                    </button>
+                                                    <button
+                                                        class="flex justify-center basis-1/4 px-2 h-8 items-center bg-violet-700 border border-violet-700 text-white rounded">
+                                                        <span>#1H317</span>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                            fill="currentColor" class="bi bi-x-circle-fill mr-2"
+                                                            viewBox="0 0 16 16">
+                                                            <path
+                                                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z">
+                                                            </path>
+                                                        </svg>
+                                                    </button>
+                                                    <button
+                                                    class="flex justify-center basis-1/4 px-2 h-8 items-center bg-violet-700 border border-violet-700 text-white rounded">
+                                                    <span>#1H317</span>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-x-circle-fill mr-2"
+                                                        viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z">
+                                                        </path>
+                                                    </svg>
+                                                </button>
                                                 </div>
+
                                             </div>
 
                                         </div>
-                                    </form>
+                                    </div>
                                 </div>
-                                <div class="flex justify-center gap-2 mt-4">
-                                    <button id="closeDiscountListBtn"
-                                        class="p-1.5 px-3.5 rounded border text-sm font-semibold transition duration-300 ease-in-out bg-gray-500 hover:bg-slate-600 text-white">لغو
-                                    </button>
+                                <div class="flex max-sm:flex-col justify-start gap-2 mt-4">
                                     <button
                                         class="p-1.5 px-3.5 rounded border text-sm font-semibold transition duration-300 ease-in-out border-green-500 bg-green-600 text-white  hover:bg-green-500 ">ثبت
                                         ادرس جدید
                                     </button>
+                                    <button onclick="closeModal(this)"
+                                        class="p-1.5 px-3.5 rounded border text-sm font-semibold transition duration-300 ease-in-out bg-gray-500 hover:bg-slate-600 text-white">لغو
+                                    </button>
+
                                 </div>
                             </div>
                         </div>

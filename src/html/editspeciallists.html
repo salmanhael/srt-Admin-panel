@@ -299,16 +299,14 @@
                 <div class="flex items-center max-md:flex-col justify-center my-3">
                     <div class="max-md:w-full">
                         <button
-                            class="cursor-pointer bg-green-500 text-white w-40 max-md:w-full max-sm:mb-2 text-sm font-semibold h-10 rounded-r max-md:rounded">
-                            <a>
-                                <span>افزودن به لیست</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" fill="currentColor"
-                                    class="bi bi-plus inline mb-1" viewBox="0 0 16 16">
-                                    <path
-                                        d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z">
-                                    </path>
-                                </svg>
-                            </a>
+                            class="cursor-pointer bg-green-500 text-white w-40 max-md:w-full max-md:mb-2 text-sm font-semibold h-10 rounded-r max-md:rounded">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" fill="currentColor"
+                                class="bi bi-plus inline mb-1" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z">
+                                </path>
+                            </svg>
+                            <span>افزودن به لیست</span>
                         </button>
                     </div>
                     <input type="text" class="h-10 w-1/2 max-md:w-full text-center rounded-l outline-1 outline-blue-500"
@@ -329,7 +327,7 @@
 
                         <div
                             class="deactivate flex flex-row flex-wrap  bg-white p-2.5 mb-1 shadow rounded hover:bg-gray-100">
-                            <div class="flex w-1/12 mb-2.5 md:mb-0 max-md:w-full">
+                            <div class="flex w-1/12 mb-2.5 md:mb-0 max-md:w-full max-md:hidden">
                                 <div
                                     class="flex max-md:justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
                                     <button class="text-red-500">
@@ -385,9 +383,9 @@
 
                             <div class="flex w-3/12 mb-2.5 md:mb-0 max-md:w-full">
                                 <div
-                                    class="flex justify-end max-md:justify-center items-center rounded w-full text-center max-md:mx-1 text-sm gap-4 text-gray-500 max-md:gap-1">
+                                    class="flex justify-end max-md:justify-center items-center rounded w-full text-center max-md:mx-1 text-sm gap-2 text-gray-500 max-md:gap-1">
                                     <button
-                                        class="flex justify-center max-md:basis-1/5 max-md:bg-zinc-300 hover:text-violet-700 max-md:py-2.5">
+                                        class="flex justify-center max-md:basis-1/5 md:p-1 md:rounded bg-zinc-300 hover:text-violet-700 max-md:py-2.5 max-md:rounded-r">
                                         <a href="../html/quickeditprice.html">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                                 fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
@@ -399,8 +397,8 @@
                                     </button>
 
 
-                                    <button id="open-sellers"
-                                        class="flex justify-center max-md:basis-1/5 max-md:bg-zinc-300 hover:text-violet-700 max-md:py-2.5">
+                                    <button onclick="getSellersModal()"
+                                        class="flex justify-center max-md:basis-1/5 md:p-1 md:rounded bg-zinc-300 hover:text-violet-700 max-md:py-2.5">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px"
                                             fill="currentColor" class="bi bi-shop-window" viewBox="0 0 16 16">
                                             <path
@@ -409,8 +407,8 @@
                                         </svg>
                                     </button>
 
-                                    <button id="open-partnumber"
-                                        class="flex justify-center max-md:basis-1/5 max-md:bg-zinc-300 hover:text-violet-700 max-md:py-2.5">
+                                    <button onclick="getPartnumberModal()"
+                                        class="flex justify-center max-md:basis-1/5 md:p-1 md:rounded bg-zinc-300 hover:text-violet-700 max-md:py-2.5">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px"
                                             fill="currentColor" class="bi bi-123" viewBox="0 0 16 16">
                                             <path
@@ -420,18 +418,20 @@
                                     </button>
 
                                     <button
-                                        class="flex justify-center max-md:basis-1/5 max-md:bg-zinc-300 max-md:rounded-r hover:text-violet-700 4 max-md:py-2.5">
+                                        class="flex justify-center max-md:basis-1/5 md:p-1 md:rounded bg-zinc-300  hover:text-violet-700 4 max-md:py-2.5">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                            fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+                                            fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
                                             <path
-                                                d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9c-.086 0-.17.01-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z" />
+                                                d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z">
+                                            </path>
                                             <path
-                                                d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4.02 4.02 0 0 1-.82 1H12a3 3 0 1 0 0-6H9z" />
+                                                d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z">
+                                            </path>
                                         </svg>
                                     </button>
 
-                                    <button onclick="openModal(this)"
-                                        class="deactivateBtn flex justify-center  max-md:basis-1/5 max-md:bg-zinc-300 max-md:rounded-l hover:text-violet-700 max-md:py-2.5">
+                                    <button onclick="openDeactiveModal(this)"
+                                        class="deactivateBtn flex justify-center max-md:basis-1/5 md:p-1 md:rounded bg-zinc-300 max-md:rounded-l hover:text-violet-700 max-md:py-2.5">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                             fill="currentColor" class="bi bi-toggle-on" viewBox="0 0 16 16">
                                             <path
@@ -441,11 +441,15 @@
                                     <input type="hidden" name="oldBlockedStatus" value="true" />
 
                                 </div>
+                            </div>
+                            <div class="md:hidden w-full mx-1">
+                                <button
+                                    class="text-red-500 bg-white border border-red-500 hover:bg-red-500 hover:text-white w-full rounded  py-2">حذف</button>
                             </div>
                         </div>
                         <div
                             class="deactivate flex flex-row flex-wrap  bg-white p-2.5 mb-1 shadow rounded hover:bg-gray-100">
-                            <div class="flex w-1/12 mb-2.5 md:mb-0 max-md:w-full">
+                            <div class="flex w-1/12 mb-2.5 md:mb-0 max-md:w-full max-md:hidden">
                                 <div
                                     class="flex max-md:justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
                                     <button class="text-red-500">
@@ -501,9 +505,9 @@
 
                             <div class="flex w-3/12 mb-2.5 md:mb-0 max-md:w-full">
                                 <div
-                                    class="flex justify-end max-md:justify-center items-center rounded w-full text-center max-md:mx-1 text-sm gap-4 text-gray-500 max-md:gap-1">
+                                    class="flex justify-end max-md:justify-center items-center rounded w-full text-center max-md:mx-1 text-sm gap-2 text-gray-500 max-md:gap-1">
                                     <button
-                                        class="flex justify-center max-md:basis-1/5 max-md:bg-zinc-300 hover:text-violet-700 max-md:py-2.5">
+                                        class="flex justify-center max-md:basis-1/5 md:p-1 md:rounded bg-zinc-300 hover:text-violet-700 max-md:py-2.5 max-md:rounded-r">
                                         <a href="../html/quickeditprice.html">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                                 fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
@@ -515,8 +519,8 @@
                                     </button>
 
 
-                                    <button id="open-sellers"
-                                        class="flex justify-center max-md:basis-1/5 max-md:bg-zinc-300 hover:text-violet-700 max-md:py-2.5">
+                                    <button onclick="getSellersModal()"
+                                        class="flex justify-center max-md:basis-1/5 md:p-1 md:rounded bg-zinc-300 hover:text-violet-700 max-md:py-2.5">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px"
                                             fill="currentColor" class="bi bi-shop-window" viewBox="0 0 16 16">
                                             <path
@@ -525,8 +529,8 @@
                                         </svg>
                                     </button>
 
-                                    <button id="open-partnumber"
-                                        class="flex justify-center max-md:basis-1/5 max-md:bg-zinc-300 hover:text-violet-700 max-md:py-2.5">
+                                    <button onclick="getPartnumberModal()"
+                                        class="flex justify-center max-md:basis-1/5 md:p-1 md:rounded bg-zinc-300 hover:text-violet-700 max-md:py-2.5">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px"
                                             fill="currentColor" class="bi bi-123" viewBox="0 0 16 16">
                                             <path
@@ -536,18 +540,20 @@
                                     </button>
 
                                     <button
-                                        class="flex justify-center max-md:basis-1/5 max-md:bg-zinc-300 max-md:rounded-r hover:text-violet-700 4 max-md:py-2.5">
+                                        class="flex justify-center max-md:basis-1/5 md:p-1 md:rounded bg-zinc-300  hover:text-violet-700 4 max-md:py-2.5">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                            fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+                                            fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
                                             <path
-                                                d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9c-.086 0-.17.01-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z" />
+                                                d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z">
+                                            </path>
                                             <path
-                                                d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4.02 4.02 0 0 1-.82 1H12a3 3 0 1 0 0-6H9z" />
+                                                d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z">
+                                            </path>
                                         </svg>
                                     </button>
 
-                                    <button onclick="openModal(this)"
-                                        class="deactivateBtn flex justify-center  max-md:basis-1/5 max-md:bg-zinc-300 max-md:rounded-l hover:text-violet-700 max-md:py-2.5">
+                                    <button onclick="openDeactiveModal(this)"
+                                        class="deactivateBtn flex justify-center max-md:basis-1/5 md:p-1 md:rounded bg-zinc-300 max-md:rounded-l hover:text-violet-700 max-md:py-2.5">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                             fill="currentColor" class="bi bi-toggle-on" viewBox="0 0 16 16">
                                             <path
@@ -557,11 +563,15 @@
                                     <input type="hidden" name="oldBlockedStatus" value="true" />
 
                                 </div>
+                            </div>
+                            <div class="md:hidden w-full mx-1">
+                                <button
+                                    class="text-red-500 bg-white border border-red-500 hover:bg-red-500 hover:text-white w-full rounded  py-2">حذف</button>
                             </div>
                         </div>
                         <div
                             class="deactivate flex flex-row flex-wrap  bg-white p-2.5 mb-1 shadow rounded hover:bg-gray-100">
-                            <div class="flex w-1/12 mb-2.5 md:mb-0 max-md:w-full">
+                            <div class="flex w-1/12 mb-2.5 md:mb-0 max-md:w-full max-md:hidden">
                                 <div
                                     class="flex max-md:justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
                                     <button class="text-red-500">
@@ -617,9 +627,9 @@
 
                             <div class="flex w-3/12 mb-2.5 md:mb-0 max-md:w-full">
                                 <div
-                                    class="flex justify-end max-md:justify-center items-center rounded w-full text-center max-md:mx-1 text-sm gap-4 text-gray-500 max-md:gap-1">
+                                    class="flex justify-end max-md:justify-center items-center rounded w-full text-center max-md:mx-1 text-sm gap-2 text-gray-500 max-md:gap-1">
                                     <button
-                                        class="flex justify-center max-md:basis-1/5 max-md:bg-zinc-300 hover:text-violet-700 max-md:py-2.5">
+                                        class="flex justify-center max-md:basis-1/5 md:p-1 md:rounded bg-zinc-300 hover:text-violet-700 max-md:py-2.5 max-md:rounded-r">
                                         <a href="../html/quickeditprice.html">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                                 fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
@@ -631,8 +641,8 @@
                                     </button>
 
 
-                                    <button id="open-sellers"
-                                        class="flex justify-center max-md:basis-1/5 max-md:bg-zinc-300 hover:text-violet-700 max-md:py-2.5">
+                                    <button onclick="getSellersModal()"
+                                        class="flex justify-center max-md:basis-1/5 md:p-1 md:rounded bg-zinc-300 hover:text-violet-700 max-md:py-2.5">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px"
                                             fill="currentColor" class="bi bi-shop-window" viewBox="0 0 16 16">
                                             <path
@@ -641,8 +651,8 @@
                                         </svg>
                                     </button>
 
-                                    <button id="open-partnumber"
-                                        class="flex justify-center max-md:basis-1/5 max-md:bg-zinc-300 hover:text-violet-700 max-md:py-2.5">
+                                    <button onclick="getPartnumberModal()"
+                                        class="flex justify-center max-md:basis-1/5 md:p-1 md:rounded bg-zinc-300 hover:text-violet-700 max-md:py-2.5">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px"
                                             fill="currentColor" class="bi bi-123" viewBox="0 0 16 16">
                                             <path
@@ -652,18 +662,20 @@
                                     </button>
 
                                     <button
-                                        class="flex justify-center max-md:basis-1/5 max-md:bg-zinc-300 max-md:rounded-r hover:text-violet-700 4 max-md:py-2.5">
+                                        class="flex justify-center max-md:basis-1/5 md:p-1 md:rounded bg-zinc-300  hover:text-violet-700 4 max-md:py-2.5">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                            fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+                                            fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
                                             <path
-                                                d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9c-.086 0-.17.01-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z" />
+                                                d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z">
+                                            </path>
                                             <path
-                                                d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4.02 4.02 0 0 1-.82 1H12a3 3 0 1 0 0-6H9z" />
+                                                d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z">
+                                            </path>
                                         </svg>
                                     </button>
 
-                                    <button onclick="openModal(this)"
-                                        class="deactivateBtn flex justify-center  max-md:basis-1/5 max-md:bg-zinc-300 max-md:rounded-l hover:text-violet-700 max-md:py-2.5">
+                                    <button onclick="openDeactiveModal(this)"
+                                        class="deactivateBtn flex justify-center max-md:basis-1/5 md:p-1 md:rounded bg-zinc-300 max-md:rounded-l hover:text-violet-700 max-md:py-2.5">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                             fill="currentColor" class="bi bi-toggle-on" viewBox="0 0 16 16">
                                             <path
@@ -673,11 +685,15 @@
                                     <input type="hidden" name="oldBlockedStatus" value="true" />
 
                                 </div>
+                            </div>
+                            <div class="md:hidden w-full mx-1">
+                                <button
+                                    class="text-red-500 bg-white border border-red-500 hover:bg-red-500 hover:text-white w-full rounded  py-2">حذف</button>
                             </div>
                         </div>
                         <div
                             class="deactivate flex flex-row flex-wrap  bg-white p-2.5 mb-1 shadow rounded hover:bg-gray-100">
-                            <div class="flex w-1/12 mb-2.5 md:mb-0 max-md:w-full">
+                            <div class="flex w-1/12 mb-2.5 md:mb-0 max-md:w-full max-md:hidden">
                                 <div
                                     class="flex max-md:justify-between items-center max-md:px-2 max-md:bg-zinc-100  max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm ">
                                     <button class="text-red-500">
@@ -733,9 +749,9 @@
 
                             <div class="flex w-3/12 mb-2.5 md:mb-0 max-md:w-full">
                                 <div
-                                    class="flex justify-end max-md:justify-center items-center rounded w-full text-center max-md:mx-1 text-sm gap-4 text-gray-500 max-md:gap-1">
+                                    class="flex justify-end max-md:justify-center items-center rounded w-full text-center max-md:mx-1 text-sm gap-2 text-gray-500 max-md:gap-1">
                                     <button
-                                        class="flex justify-center max-md:basis-1/5 max-md:bg-zinc-300 hover:text-violet-700 max-md:py-2.5">
+                                        class="flex justify-center max-md:basis-1/5 md:p-1 md:rounded bg-zinc-300 hover:text-violet-700 max-md:py-2.5 max-md:rounded-r">
                                         <a href="../html/quickeditprice.html">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                                 fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
@@ -747,8 +763,8 @@
                                     </button>
 
 
-                                    <button id="open-sellers"
-                                        class="flex justify-center max-md:basis-1/5 max-md:bg-zinc-300 hover:text-violet-700 max-md:py-2.5">
+                                    <button onclick="getSellersModal()"
+                                        class="flex justify-center max-md:basis-1/5 md:p-1 md:rounded bg-zinc-300 hover:text-violet-700 max-md:py-2.5">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px"
                                             fill="currentColor" class="bi bi-shop-window" viewBox="0 0 16 16">
                                             <path
@@ -757,8 +773,8 @@
                                         </svg>
                                     </button>
 
-                                    <button id="open-partnumber"
-                                        class="flex justify-center max-md:basis-1/5 max-md:bg-zinc-300 hover:text-violet-700 max-md:py-2.5">
+                                    <button onclick="getPartnumberModal()"
+                                        class="flex justify-center max-md:basis-1/5 md:p-1 md:rounded bg-zinc-300 hover:text-violet-700 max-md:py-2.5">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px"
                                             fill="currentColor" class="bi bi-123" viewBox="0 0 16 16">
                                             <path
@@ -768,18 +784,20 @@
                                     </button>
 
                                     <button
-                                        class="flex justify-center max-md:basis-1/5 max-md:bg-zinc-300 max-md:rounded-r hover:text-violet-700 4 max-md:py-2.5">
+                                        class="flex justify-center max-md:basis-1/5 md:p-1 md:rounded bg-zinc-300  hover:text-violet-700 4 max-md:py-2.5">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                            fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+                                            fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
                                             <path
-                                                d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9c-.086 0-.17.01-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z" />
+                                                d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z">
+                                            </path>
                                             <path
-                                                d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4.02 4.02 0 0 1-.82 1H12a3 3 0 1 0 0-6H9z" />
+                                                d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z">
+                                            </path>
                                         </svg>
                                     </button>
 
-                                    <button onclick="openModal(this)"
-                                        class="deactivateBtn flex justify-center  max-md:basis-1/5 max-md:bg-zinc-300 max-md:rounded-l hover:text-violet-700 max-md:py-2.5">
+                                    <button onclick="openDeactiveModal(this)"
+                                        class="deactivateBtn flex justify-center max-md:basis-1/5 md:p-1 md:rounded bg-zinc-300 max-md:rounded-l hover:text-violet-700 max-md:py-2.5">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                             fill="currentColor" class="bi bi-toggle-on" viewBox="0 0 16 16">
                                             <path
@@ -789,6 +807,10 @@
                                     <input type="hidden" name="oldBlockedStatus" value="true" />
 
                                 </div>
+                            </div>
+                            <div class="md:hidden w-full mx-1">
+                                <button
+                                    class="text-red-500 bg-white border border-red-500 hover:bg-red-500 hover:text-white w-full rounded  py-2">حذف</button>
                             </div>
                         </div>
 
@@ -812,12 +834,13 @@
 
             <!-- part-number info -->
             <div id="part-number-modal" class="fixed modal inset-0 bg-gray-800 bg-opacity-50 overflow-y-auto">
-                <div id="part-number-out" class="flex items-baseline justify-center mt-7 mb-10 max-sm:m-2 ">
-                    <div class="bg-white rounded shadow-lg  sm:max-w-lg part-number-content  w-full">
+                <div onclick="clickOnOut(this,event)" class="flex items-baseline justify-center mt-7 mb-10 max-sm:m-2 ">
+                    <div class="bg-white rounded shadow-lg  sm:max-w-lg modal_content w-full">
                         <div class="relative flex flex-col w-full bg-white rounded-md">
-                            <div class="flex flex-row-reverse justify-between border-b p-4.5">
+                            <div class="flex flex-row justify-between border-b p-4.5">
                                 <h5 class="text-lg font-bold">Part Number</h5>
-                                <button id="closePartmodal" class="text-gray-500 hover:text-gray-700 float-right">
+                                <button onclick="closeModal(this)"
+                                    class="text-gray-500 hover:text-gray-700 float-right">
                                     <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -885,12 +908,14 @@
             </div>
             <!-- sellers modal -->
             <div id="sellers-modal" class="fixed modal inset-0  bg-gray-800 bg-opacity-50 ">
-                <div id="sellers-out" class="h-full flex items-baseline justify-center mt-7 mb-10 max-sm:m-2 ">
-                    <div class="bg-white rounded shadow-lg  sm:max-w-lg sellers-content w-full">
+                <div onclick="clickOnOut(this,event)"
+                    class="h-full flex items-baseline justify-center mt-7 mb-10 max-sm:m-2 ">
+                    <div class="bg-white rounded shadow-lg  sm:max-w-lg modal_content w-full">
                         <div class="relative flex flex-col w-full bg-white rounded-md">
-                            <div class="flex flex-row-reverse justify-between border-b p-4.5">
+                            <div class="flex flex-row justify-between border-b p-4.5">
                                 <h5 class="text-lg font-bold">فروشندگان محصول</h5>
-                                <button id="closeSellermodal" class="text-gray-500 hover:text-gray-700 float-right">
+                                <button onclick="closeModal(this)"
+                                    class="text-gray-500 hover:text-gray-700 float-right">
                                     <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -967,7 +992,7 @@
                                                 </button>
 
 
-                                                <button onclick="openModal(this)"
+                                                <button onclick="openDeactiveModal(this)"
                                                     class="deactivateBtn flex justify-center basis-1/2 bg-gray-200 rounded-l hover:text-violet-700 py-2.5">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                                         fill="currentColor" class="bi bi-toggle-on" viewBox="0 0 16 16">
@@ -1030,7 +1055,7 @@
                                                 </button>
 
 
-                                                <button onclick="openModal(this)"
+                                                <button onclick="openDeactiveModal(this)"
                                                     class="deactivateBtn flex justify-center basis-1/2 bg-gray-200 rounded-l hover:text-violet-700 py-2.5">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                                         fill="currentColor" class="bi bi-toggle-on" viewBox="0 0 16 16">
@@ -1093,7 +1118,7 @@
                                                 </button>
 
 
-                                                <button onclick="openModal(this)"
+                                                <button onclick="openDeactiveModal(this)"
                                                     class="deactivateBtn flex justify-center basis-1/2 bg-gray-200 rounded-l hover:text-violet-700 py-2.5">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                                         fill="currentColor" class="bi bi-toggle-on" viewBox="0 0 16 16">
@@ -1115,26 +1140,34 @@
             </div>
 
             <!-- change product status modal -->
-            <div id="deactivate-modal" class="fixed inset-0 modal  bg-gray-800 bg-opacity-50 ">
+            <div id="deactivate-modal" class="fixed modal inset-0 bg-gray-800 bg-opacity-50 ">
                 <div id="deactivate-out" class="h-full flex items-baseline justify-center mt-7 mb-10  max-sm:m-2">
                     <div class="bg-white rounded shadow-lg  sm:max-w-lg  w-full">
                         <div class="relative flex flex-col w-full bg-white rounded-md">
-                            <div class="flex justify-center border-b p-4.5">
+                            <div class="flex justify-between border-b p-4.5">
                                 <h5 class="text-lg font-bold">تغییر وضعیت محصول</h5>
+                                <button onclick="closeDeactiveModal()"
+                                    class="text-gray-500 hover:text-gray-700 float-right">
+                                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M6 18L18 6M6 6l12 12"></path>
+                                    </svg>
+                                </button>
                             </div>
                             <div class="p-4">
                                 <div>
-                                    <div class="w-full text-base text-gray-500"><span>وضعیت این محصول به <span
+                                    <div class="w-full text-base text-gray-500"><span>وضعیت این فروشنده به <span
                                                 class="text-red-600">غیر فعال </span>تغییر کند؟</span></div>
                                 </div>
 
                             </div>
                             <div class="border-t p-3 ">
-                                <div class="flex gap-2 m-1">
-                                    <button id="confirmBtn" onclick="confirmChanges()"
+                                <div class="flex max-sm:flex-col gap-2 m-1">
+                                    <button onclick="confirmChanges()"
                                         class="p-1.5 px-3.5 rounded border text-sm font-semibold transition duration-300 ease-in-out border-red-500 bg-red-600 text-white  hover:bg-red-500 ">بله
                                         تغییر بده</button>
-                                    <button id="cancelBtn" onclick="closeModal()"
+                                    <button onclick="closeDeactiveModal()"
                                         class="p-1.5 px-3.5 rounded border text-sm font-semibold transition duration-300 ease-in-out bg-gray-500 hover:bg-slate-600 text-white">خیر
                                     </button>
                                 </div>

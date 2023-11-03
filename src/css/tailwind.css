@@ -295,6 +295,12 @@
   display: flex;
 
 }
+
+@media screen and (max-width: 640px){
+  .activebutton span{
+    font-size: 18px;
+  }
+}
 @font-face {
     font-family: iranyekan;
     font-style: normal;

@@ -293,16 +293,14 @@
                 </div>
 
                 <div class="flex justify-end">
-                    <button id="open-addoperator"
+                    <button onclick="getAddoperatorModal()"
                         class="cursor-pointer mt-5 mb-4 bg-green-500 text-white w-40 max-sm:w-full max-sm:mt-2 text-sm font-semibold h-10 rounded">
-                        <a>
-                            <span>افزودن اوپراتور</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
                                 class="bi bi-person-gear inline mb-1" viewBox="0 0 16 16">
                                 <path
                                     d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm.256 7a4.474 4.474 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4s1 1 1 1h5.256Zm3.63-4.54c.18-.613 1.048-.613 1.229 0l.043.148a.64.64 0 0 0 .921.382l.136-.074c.561-.306 1.175.308.87.869l-.075.136a.64.64 0 0 0 .382.92l.149.045c.612.18.612 1.048 0 1.229l-.15.043a.64.64 0 0 0-.38.921l.074.136c.305.561-.309 1.175-.87.87l-.136-.075a.64.64 0 0 0-.92.382l-.045.149c-.18.612-1.048.612-1.229 0l-.043-.15a.64.64 0 0 0-.921-.38l-.136.074c-.561.305-1.175-.309-.87-.87l.075-.136a.64.64 0 0 0-.382-.92l-.148-.045c-.613-.18-.613-1.048 0-1.229l.148-.043a.64.64 0 0 0 .382-.921l-.074-.136c-.306-.561.308-1.175.869-.87l.136.075a.64.64 0 0 0 .92-.382l.045-.148ZM14 12.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0Z" />
                             </svg>
-                        </a>
+                            <span>افزودن اوپراتور</span>
                     </button>
                 </div>
 
@@ -358,10 +356,9 @@
                                 </div>
                             </div>
                             <div class="flex w-2/12 mb-2.5 md:mb-0 max-md:w-full">
-                                <div
-                                    class="flex justify-end max-md:justify-center items-center rounded w-full text-center max-md:mx-1 text-sm gap-3 text-gray-500 max-md:gap-1">
-                                    <button id="open-EditOperator"
-                                        class="flex justify-center max-md:basis-1/4 max-md:bg-zinc-300 hover:text-violet-700 max-md:py-2.5">
+                                <div class="flex justify-end max-md:justify-center items-center rounded w-full text-center max-md:mx-1 text-sm gap-2 text-gray-500 max-md:gap-1">
+                                    <button onclick="getEditOperatorModal()"
+                                        class="flex justify-center max-md:basis-1/2 md:p-1 md:rounded max-md:rounded-r bg-zinc-300 hover:text-violet-700 max-md:py-2.5">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                             fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
                                             <path
@@ -369,8 +366,8 @@
                                             </path>
                                         </svg>
                                     </button>
-                                    <button onclick="openModal(this)"
-                                        class="deactivateBtn flex justify-center  max-md:basis-1/4 max-md:bg-zinc-300 max-md:rounded-l hover:text-violet-700 max-md:py-2.5">
+                                    <button onclick="openDeactiveModal(this)"
+                                        class="deactivateBtn flex justify-center  max-md:basis-1/2 md:p-1 md:rounded bg-zinc-300 max-md:rounded-l hover:text-violet-700 max-md:py-2.5">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                             fill="currentColor" class="bi bi-toggle-on" viewBox="0 0 16 16">
                                             <path
@@ -422,10 +419,9 @@
                                 </div>
                             </div>
                             <div class="flex w-2/12 mb-2.5 md:mb-0 max-md:w-full">
-                                <div
-                                    class="flex justify-end max-md:justify-center items-center rounded w-full text-center max-md:mx-1 text-sm gap-3 text-gray-500 max-md:gap-1">
-                                    <button id="open-EditOperator"
-                                        class="flex justify-center max-md:basis-1/4 max-md:bg-zinc-300 hover:text-violet-700 max-md:py-2.5">
+                                <div class="flex justify-end max-md:justify-center items-center rounded w-full text-center max-md:mx-1 text-sm gap-2 text-gray-500 max-md:gap-1">
+                                    <button onclick="getEditOperatorModal()"
+                                        class="flex justify-center max-md:basis-1/2 md:p-1 md:rounded max-md:rounded-r bg-zinc-300 hover:text-violet-700 max-md:py-2.5">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                             fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
                                             <path
@@ -433,8 +429,8 @@
                                             </path>
                                         </svg>
                                     </button>
-                                    <button onclick="openModal(this)"
-                                        class="deactivateBtn flex justify-center  max-md:basis-1/4 max-md:bg-zinc-300 max-md:rounded-l hover:text-violet-700 max-md:py-2.5">
+                                    <button onclick="openDeactiveModal(this)"
+                                        class="deactivateBtn flex justify-center  max-md:basis-1/2 md:p-1 md:rounded bg-zinc-300 max-md:rounded-l hover:text-violet-700 max-md:py-2.5">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                             fill="currentColor" class="bi bi-toggle-on" viewBox="0 0 16 16">
                                             <path
@@ -486,10 +482,9 @@
                                 </div>
                             </div>
                             <div class="flex w-2/12 mb-2.5 md:mb-0 max-md:w-full">
-                                <div
-                                    class="flex justify-end max-md:justify-center items-center rounded w-full text-center max-md:mx-1 text-sm gap-3 text-gray-500 max-md:gap-1">
-                                    <button id="open-editprofile"
-                                        class="flex justify-center max-md:basis-1/4 max-md:bg-zinc-300 hover:text-violet-700 max-md:py-2.5">
+                                <div class="flex justify-end max-md:justify-center items-center rounded w-full text-center max-md:mx-1 text-sm gap-2 text-gray-500 max-md:gap-1">
+                                    <button onclick="getEditOperatorModal()"
+                                        class="flex justify-center max-md:basis-1/2 md:p-1 md:rounded max-md:rounded-r bg-zinc-300 hover:text-violet-700 max-md:py-2.5">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                             fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
                                             <path
@@ -497,8 +492,8 @@
                                             </path>
                                         </svg>
                                     </button>
-                                    <button onclick="openModal(this)"
-                                        class="deactivateBtn flex justify-center  max-md:basis-1/4 max-md:bg-zinc-300 max-md:rounded-l hover:text-violet-700 max-md:py-2.5">
+                                    <button onclick="openDeactiveModal(this)"
+                                        class="deactivateBtn flex justify-center  max-md:basis-1/2 md:p-1 md:rounded bg-zinc-300 max-md:rounded-l hover:text-violet-700 max-md:py-2.5">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                             fill="currentColor" class="bi bi-toggle-on" viewBox="0 0 16 16">
                                             <path
@@ -551,10 +546,9 @@
                                 </div>
                             </div>
                             <div class="flex w-2/12 mb-2.5 md:mb-0 max-md:w-full">
-                                <div
-                                    class="flex justify-end max-md:justify-center items-center rounded w-full text-center max-md:mx-1 text-sm gap-3 text-gray-500 max-md:gap-1">
-                                    <button id="open-editprofile"
-                                        class="flex justify-center max-md:basis-1/4 max-md:bg-zinc-300 hover:text-violet-700 max-md:py-2.5">
+                                <div class="flex justify-end max-md:justify-center items-center rounded w-full text-center max-md:mx-1 text-sm gap-2 text-gray-500 max-md:gap-1">
+                                    <button onclick="getEditOperatorModal()"
+                                        class="flex justify-center max-md:basis-1/2 md:p-1 md:rounded max-md:rounded-r bg-zinc-300 hover:text-violet-700 max-md:py-2.5">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                             fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
                                             <path
@@ -562,8 +556,8 @@
                                             </path>
                                         </svg>
                                     </button>
-                                    <button onclick="openModal(this)"
-                                        class="deactivateBtn flex justify-center  max-md:basis-1/4 max-md:bg-zinc-300 max-md:rounded-l hover:text-violet-700 max-md:py-2.5">
+                                    <button onclick="openDeactiveModal(this)"
+                                        class="deactivateBtn flex justify-center  max-md:basis-1/2 md:p-1 md:rounded bg-zinc-300 max-md:rounded-l hover:text-violet-700 max-md:py-2.5">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                             fill="currentColor" class="bi bi-toggle-on" viewBox="0 0 16 16">
                                             <path
@@ -615,10 +609,9 @@
                                 </div>
                             </div>
                             <div class="flex w-2/12 mb-2.5 md:mb-0 max-md:w-full">
-                                <div
-                                    class="flex justify-end max-md:justify-center items-center rounded w-full text-center max-md:mx-1 text-sm gap-3 text-gray-500 max-md:gap-1">
-                                    <button id="open-editprofile"
-                                        class="flex justify-center max-md:basis-1/4 max-md:bg-zinc-300 hover:text-violet-700 max-md:py-2.5">
+                                <div class="flex justify-end max-md:justify-center items-center rounded w-full text-center max-md:mx-1 text-sm gap-2 text-gray-500 max-md:gap-1">
+                                    <button onclick="getEditOperatorModal()"
+                                        class="flex justify-center max-md:basis-1/2 md:p-1 md:rounded max-md:rounded-r bg-zinc-300 hover:text-violet-700 max-md:py-2.5">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                             fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
                                             <path
@@ -626,8 +619,8 @@
                                             </path>
                                         </svg>
                                     </button>
-                                    <button onclick="openModal(this)"
-                                        class="deactivateBtn flex justify-center  max-md:basis-1/4 max-md:bg-zinc-300 max-md:rounded-l hover:text-violet-700 max-md:py-2.5">
+                                    <button onclick="openDeactiveModal(this)"
+                                        class="deactivateBtn flex justify-center  max-md:basis-1/2 md:p-1 md:rounded bg-zinc-300 max-md:rounded-l hover:text-violet-700 max-md:py-2.5">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                             fill="currentColor" class="bi bi-toggle-on" viewBox="0 0 16 16">
                                             <path
@@ -656,44 +649,51 @@
                 </div>
             </div>
 
-            <!-- change user status modal -->
-            <div id="deactivate-modal" class="fixed inset-0 modal  bg-gray-800 bg-opacity-50 ">
-                <div id="deactivate-out" class="h-full flex items-baseline justify-center mt-7 mb-10  max-sm:m-2">
-                    <div class="bg-white rounded shadow-lg  sm:max-w-lg  w-full">
-                        <div class="relative flex flex-col w-full bg-white rounded-md">
-                            <div class="flex justify-center border-b p-4.5">
-                                <h5 class="text-lg font-bold">تغییر وضعیت کاربر</h5>
-                            </div>
-                            <div class="p-4">
-                                <div>
-                                    <div class="w-full text-base text-gray-500"><span>وضعیت این کاربر به <span
-                                                class="text-red-600">غیر فعال </span>تغییر کند؟</span></div>
-                                </div>
-
-                            </div>
-                            <div class="border-t p-3 ">
-                                <div class="flex gap-2 m-1">
-                                    <button id="confirmBtn" onclick="confirmChanges()"
-                                        class="p-1.5 px-3.5 rounded border text-sm font-semibold transition duration-300 ease-in-out border-red-500 bg-red-600 text-white  hover:bg-red-500 ">بله
-                                        تغییر بده</button>
-                                    <button id="cancelBtn" onclick="closeModal()"
-                                        class="p-1.5 px-3.5 rounded border text-sm font-semibold transition duration-300 ease-in-out bg-gray-500 hover:bg-slate-600 text-white">خیر
+                 <!-- change user status modal -->
+                 <div id="deactivate-modal" class="fixed modal inset-0 bg-gray-800 bg-opacity-50 ">
+                    <div id="deactivate-out" class="h-full flex items-baseline justify-center mt-7 mb-10  max-sm:m-2">
+                        <div class="bg-white rounded shadow-lg  sm:max-w-lg  w-full">
+                            <div class="relative flex flex-col w-full bg-white rounded-md">
+                                <div class="flex justify-between border-b p-4.5">
+                                    <h5 class="text-lg font-bold">تغییر وضعیت کاربر</h5>
+                                    <button onclick="closeDeactiveModal()" class="text-gray-500 hover:text-gray-700 float-right">
+                                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M6 18L18 6M6 6l12 12"></path>
+                                        </svg>
                                     </button>
+                                </div>
+                                <div class="p-4">
+                                    <div>
+                                        <div class="w-full text-base text-gray-500"><span>وضعیت این کاربر به <span
+                                                    class="text-red-600">غیر فعال </span>تغییر کند؟</span></div>
+                                    </div>
+    
+                                </div>
+                                <div class="border-t p-3 ">
+                                    <div class="flex max-sm:flex-col gap-2 m-1">
+                                        <button onclick="confirmChanges()"
+                                            class="p-1.5 px-3.5 rounded border text-sm font-semibold transition duration-300 ease-in-out border-red-500 bg-red-600 text-white  hover:bg-red-500 ">بله
+                                            تغییر بده</button>
+                                        <button onclick="closeDeactiveModal()"
+                                            class="p-1.5 px-3.5 rounded border text-sm font-semibold transition duration-300 ease-in-out bg-gray-500 hover:bg-slate-600 text-white">خیر
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
             <!-- edit operator profile modal -->
             <div id="editoperator-modal" class="fixed inset-0 modal bg-gray-800 bg-opacity-50 ">
-                <div id="editoperator-out" class="h-full flex items-baseline justify-center mt-7 mb-10 max-sm:m-2">
-                    <div class="bg-white rounded shadow-lg  sm:max-w-lg  w-full editoperator-content zoomout">
+                <div onclick="clickOnOut(this,event)" class="h-full flex items-baseline justify-center mt-7 mb-10 max-sm:m-2">
+                    <div class="bg-white rounded shadow-lg  sm:max-w-lg  w-full modal_content zoomout">
                         <div class="relative flex flex-col w-full bg-white rounded-md">
-                            <div class="flex flex-row-reverse justify-between border-b p-4.5">
+                            <div class="flex flex-row justify-between border-b p-4.5">
                                 <h5 class="text-lg font-bold">ویرایش مشخصات اوپراتور</h5>
-                                <button id="closeOperatormodal" class="text-gray-500 hover:text-gray-700 float-right">
+                                <button onclick="closeModal(this)" class="text-gray-500 hover:text-gray-700 float-right">
                                     <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -738,13 +738,15 @@
                                         </div>
                                     </form>
                                 </div>
-                                <div class="flex justify-center gap-2 mt-4">
-                                    <button id="closeOperatormodalBtn"
+                                <div class="flex max-sm:flex-col justify-start gap-2 mt-4">
+                                    <button
+                                    class="p-1.5 px-3.5 rounded border text-sm font-semibold transition duration-300 ease-in-out border-green-500 bg-green-600 text-white  hover:bg-green-500 ">ثبت
+                                        تغییرات
+                                    </button>
+                                    <button onclick="closeModal(this)"
                                         class="p-1.5 px-3.5 rounded border text-sm font-semibold transition duration-300 ease-in-out bg-gray-500 hover:bg-slate-600 text-white">لغو
                                     </button>
-                                    <button
-                                        class="p-1.5 px-3.5 rounded border text-sm font-semibold transition duration-300 ease-in-out border-green-500 bg-green-600 text-white  hover:bg-green-500 ">ثبت
-                                        تغییرات</button>
+                                   
                                 </div>
                             </div>
                         </div>
@@ -753,13 +755,13 @@
             </div>
 
             <!-- add operator profile modal -->
-            <div id="addoperator-modal" class="fixed inset-0 modal bg-gray-800 bg-opacity-50 ">
-                <div id="addoperator-out" class="h-full flex items-baseline justify-center mt-7 mb-10 max-sm:m-2">
-                    <div class="bg-white rounded shadow-lg  sm:max-w-lg  w-full addoperator-content zoomout">
+            <div id="addoperator-modal" class="fixed inset-0 modal bg-gray-800 bg-opacity-50 overflow-y-auto">
+                <div onclick="clickOnOut(this,event)" class="flex items-baseline justify-center mt-7 mb-10 max-sm:m-2">
+                    <div class="bg-white rounded shadow-lg  sm:max-w-lg  w-full modal_content zoomout">
                         <div class="relative flex flex-col w-full bg-white rounded-md">
-                            <div class="flex flex-row-reverse justify-between border-b p-4.5">
+                            <div class="flex flex-row justify-between border-b p-4.5">
                                 <h5 class="text-lg font-bold">افزودن اوپراتور</h5>
-                                <button id="closeAddOperatormodal"
+                                <button onclick="closeModal(this)"
                                     class="text-gray-500 hover:text-gray-700 float-right">
                                     <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -827,13 +829,15 @@
                                         </div>
                                     </form>
                                 </div>
-                                <div class="flex justify-center gap-2 mt-4">
-                                    <button id="closeAddOperatormodalBtn"
+                                <div class="flex max-sm:flex-col justify-start gap-2 mt-4">
+                                    <button
+                                    class="p-1.5 px-3.5 rounded border text-sm font-semibold transition duration-300 ease-in-out border-green-500 bg-green-600 text-white  hover:bg-green-500 ">ثبت
+                                        تغییرات
+                                    </button>
+                                    <button onclick="closeModal(this)"
                                         class="p-1.5 px-3.5 rounded border text-sm font-semibold transition duration-300 ease-in-out bg-gray-500 hover:bg-slate-600 text-white">لغو
                                     </button>
-                                    <button
-                                        class="p-1.5 px-3.5 rounded border text-sm font-semibold transition duration-300 ease-in-out border-green-500 bg-green-600 text-white  hover:bg-green-500 ">ثبت
-                                        تغییرات</button>
+                                   
                                 </div>
                             </div>
                         </div>

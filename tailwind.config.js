@@ -20,7 +20,9 @@ module.exports = {
         29:'120px'
       },
       width:{
-        63:'250px'
+        63:'250px',
+        '6/5':'120%',
+
       },
       screens:{
         mobilesm:'321px',

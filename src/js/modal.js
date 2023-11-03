@@ -102,3 +102,48 @@ function getAddexistingModal(){
 function getAddCustomizeproductModal(){
     openModal(AddCustomizeproductmodal)
 }
+function getEditItemModal(){
+    openModal(editItemModal)
+}
+function getCategorytextModal(){
+    openModal(Categorytextmodal)
+}
+function getCommonquestionsModal(){
+    openModal(Commonquestionsmodal)
+}
+function getAddquestionModal(){
+    openModal(addquestionmodal)
+}
+function getDeletequstionModal(){
+    openModal(deletequstionmodal)
+}
+function getEditSellerModal(){
+    openModal(EditSellerModal)
+}
+function getAddDiscountModal(){
+    openModal(addDiscountModal)
+}
+function getDiscountListModal(){
+    openModal(DiscountListModal)
+}
+function getAddlistmodal(){
+    openModal(Addlistmodal)
+}
+function getAddoperatorModal(){
+    openModal(Addoperatormodal)
+}
+function getEditOperatorModal(){
+    openModal(EditOperatormodal)
+}
+function getMetaModal(){
+    openModal(Metamodal)
+}
+function getGroupsModal(){
+    openModal(Groupsmodal)
+}
+function getDeletecategoryModal(){
+    openModal(deletecategorymodal)
+}
+function getSelectgroupModal(){
+    openModal(selectgroupmodal)
+}
