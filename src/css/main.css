@@ -636,6 +636,10 @@ video {
   top: 0px;
 }
 
+.left-6 {
+  left: 1.5rem;
+}
+
 .float-right {
   float: right;
 }
@@ -912,12 +916,12 @@ video {
   height: 137.5px;
 }
 
-.h-4 {
-  height: 1rem;
+.h-36 {
+  height: 9rem;
 }
 
-.h-44 {
-  height: 11rem;
+.h-4 {
+  height: 1rem;
 }
 
 .h-5 {
@@ -954,10 +958,6 @@ video {
 
 .h-screen {
   height: 100vh;
-}
-
-.h-36 {
-  height: 9rem;
 }
 
 .w-1\/12 {
@@ -1081,10 +1081,6 @@ video {
   width: 100%;
 }
 
-.w-6\/5 {
-  width: 120%;
-}
-
 .max-w-full {
   max-width: 100%;
 }
@@ -1149,6 +1145,25 @@ video {
   flex-basis: 41.666667%;
 }
 
+.rotate-45 {
+  --tw-rotate: 45deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.rotate-90 {
+  --tw-rotate: 90deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.-rotate-90 {
+  --tw-rotate: -90deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .cursor-pointer {
   cursor: pointer;
 }
@@ -1205,14 +1220,6 @@ video {
 
 .justify-between {
   justify-content: space-between;
-}
-
-.gap-0 {
-  gap: 0px;
-}
-
-.gap-0\.5 {
-  gap: 0.125rem;
 }
 
 .gap-1 {
@@ -2498,6 +2505,10 @@ input[type="number"]::-webkit-inner-spin-button,
     width: 6rem;
   }
 
+  .max-lg\:w-full {
+    width: 100%;
+  }
+
   .max-lg\:flex-col {
     flex-direction: column;
   }
@@ -2736,6 +2747,10 @@ input[type="number"]::-webkit-inner-spin-button,
     margin-top: 1.5rem;
   }
 
+  .max-sm\:w-6\/5 {
+    width: 120%;
+  }
+
   .max-sm\:w-fit {
     width: -moz-fit-content;
     width: fit-content;
@@ -2743,10 +2758,6 @@ input[type="number"]::-webkit-inner-spin-button,
 
   .max-sm\:w-full {
     width: 100%;
-  }
-
-  .max-sm\:w-6\/5 {
-    width: 120%;
   }
 
   .max-sm\:flex-col {
@@ -2968,6 +2979,10 @@ input[type="number"]::-webkit-inner-spin-button,
 
   .md\:rounded {
     border-radius: 0.25rem;
+  }
+
+  .md\:rounded-none {
+    border-radius: 0px;
   }
 
   .md\:bg-zinc-100 {

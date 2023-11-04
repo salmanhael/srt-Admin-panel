@@ -147,3 +147,6 @@ function getDeletecategoryModal(){
 function getSelectgroupModal(){
     openModal(selectgroupmodal)
 }
+function getEditTagModal(){
+    openModal(editTagmodal)
+}

@@ -8,6 +8,8 @@ var dropdown = document.getElementById('DropdownMenu');
 var product = document.getElementById('product');
 var Seodropdown = document.getElementById('SeoDropdownMenu');
 var Seo = document.getElementById('Seo');
+var arrow = document.getElementById('arrow');
+var arrow1 = document.getElementById('arrow1');
 
 
 function Dropdown() {
@@ -20,6 +22,8 @@ function closeNav() {
     product?.classList.toggle("pointer-events-none");
     dropdown?.classList.add("hidden");
     Seo?.classList.toggle("pointer-events-none");
+    arrow?.classList.remove("-rotate-90");
+    arrow1?.classList.remove("-rotate-90");
     Seodropdown?.classList.add("hidden");
 
     var close = document.getElementById("close-navbar-btn");
@@ -59,6 +63,8 @@ function handleResize() {
     dropdown?.classList.add("hidden")
     Seo?.classList.add("pointer-events-none");
     Seodropdown?.classList.add("hidden")
+    arrow?.classList.remove("-rotate-90");
+    arrow1?.classList.remove("-rotate-90");
     setting.classList.toggle("respnsive-settings");
     banner.classList.toggle("logo");
     mainSidebar.classList.toggle("hideSidebar");
@@ -87,6 +93,7 @@ window.addEventListener('resize', function () {
             setting.classList.remove('settings');
             product?.classList.remove("pointer-events-none");
             Seo?.classList.remove("pointer-events-none");
+            
         }
         else {
             setting.classList.add('settings');
@@ -331,7 +338,9 @@ function fitPrice(element) {
 // product dorpdown
 document.addEventListener("DOMContentLoaded", function () {
     const button = document.getElementById('SideDropdown');
+    
     button.addEventListener('click', () => {
+        arrow.classList.toggle('-rotate-90');
         dropdown.classList.toggle('hidden');
     });
 
@@ -340,7 +349,9 @@ document.addEventListener("DOMContentLoaded", function () {
 // Seo dorpdown
 document.addEventListener("DOMContentLoaded", function () {
     const button = document.getElementById('SeoDropdown');
+    
     button.addEventListener('click', () => {
+        arrow1.classList.toggle('-rotate-90');
         Seodropdown.classList.toggle('hidden');
     });
 
