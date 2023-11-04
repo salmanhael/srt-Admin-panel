@@ -154,7 +154,7 @@
 /* show sidebar in responsive mode  */
 .showSidebar{
   display: block !important;
-  z-index: 10;
+  z-index: 30;
   width: 250px;
   transition: width .5s ease;
 
@@ -169,7 +169,7 @@
   right: 0;
   bottom: 0;
   background-color: rgba(0,0,0,0.5);
-  z-index: 2;
+  z-index: 20;
   cursor: pointer;
 }
 

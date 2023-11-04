@@ -22,6 +22,8 @@ function closeNav() {
     product?.classList.toggle("pointer-events-none");
     dropdown?.classList.add("hidden");
     Seo?.classList.toggle("pointer-events-none");
+    arrow?.classList.add("rotate-90");
+    arrow1?.classList.add("rotate-90");
     arrow?.classList.remove("-rotate-90");
     arrow1?.classList.remove("-rotate-90");
     Seodropdown?.classList.add("hidden");
@@ -63,6 +65,8 @@ function handleResize() {
     dropdown?.classList.add("hidden")
     Seo?.classList.add("pointer-events-none");
     Seodropdown?.classList.add("hidden")
+    arrow?.classList.add("rotate-90");
+    arrow1?.classList.add("rotate-90");
     arrow?.classList.remove("-rotate-90");
     arrow1?.classList.remove("-rotate-90");
     setting.classList.toggle("respnsive-settings");
@@ -340,6 +344,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const button = document.getElementById('SideDropdown');
     
     button.addEventListener('click', () => {
+        arrow.classList.toggle('rotate-90');
         arrow.classList.toggle('-rotate-90');
         dropdown.classList.toggle('hidden');
     });
@@ -351,6 +356,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const button = document.getElementById('SeoDropdown');
     
     button.addEventListener('click', () => {
+        arrow1.classList.toggle('rotate-90');
         arrow1.classList.toggle('-rotate-90');
         Seodropdown.classList.toggle('hidden');
     });
