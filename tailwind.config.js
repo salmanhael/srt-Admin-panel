@@ -23,6 +23,7 @@ module.exports = {
                 // 63: "250px",
                 // "6/5": "120%",
             },
+            // -----------------------------------
             screens: {
                 //mobilesm: "321px",
                 //mobile: "576px",
@@ -33,6 +34,7 @@ module.exports = {
                 // "8xl": "1320px",
                 // "2k": "2040px",
             },
+            // -------------------------------------
             fontFamily: {
                 iranyekan: ["iranyekan"],
             },

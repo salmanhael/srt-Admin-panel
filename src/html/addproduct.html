@@ -11,10 +11,10 @@
         <div class="max-w-[2200px] mx-auto">
             <!-- side bar -->
             <div class="absolute h-screen openSidbar" id="mainSidebar">
-                <div class="p-4 h-15.5 bg-white block logo" id="banner">
+                <div class="p-4 h-[59px] bg-white block logo" id="banner">
                     <a href="#">
                         <span class="flex justify-center">
-                            <img src="../img/logo-m.png" alt="logo" class="h-7.5" />
+                            <img src="../img/logo-m.png" alt="logo" class="h-[30px]" />
                         </span>
                     </a>
                 </div>
@@ -334,9 +334,9 @@
                 id="expand-menu"
             >
                 <!-- header -->
-                <div class="bg-[#f7f6f2] flex justify-center py-4 px-3 md:px-12 sticky top-0 z-10">
+                <div class="flex justify-center py-4 px-3 md:px-12 sticky top-0 z-10">
                     <header
-                        class="relative bg-white drop-shadow rounded px-5 max-sm:px-3 py-4 max-xl:py-3 w-full float-left"
+                        class="relative bg-white drop-shadow rounded sm:px-5 px-3 xl:py-4 py-3 w-full float-left"
                     >
                         <div class="flex flex-row-reverse justify-between">
                             <div class="flex flex-row-reverse">
@@ -366,7 +366,7 @@
                                     <a href="#" class="px-4 py-2 text-sm">خروج</a>
                                 </div>
 
-                                <div class="ml-4 max-xl:hidden">
+                                <div class="ml-4 xl:block hidden">
                                     <button onclick="closeNav()">
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -441,8 +441,8 @@
                         </select>
                     </div>
                 <hr class="my-4" />
-                <div class="flex flex-row max-lg:flex-col">
-                    <div class="basis-2/6 mt-3 px-3 max-md:mb-2.5">
+                <div class="flex lg:flex-row flex-col">
+                    <div class="basis-2/6 mt-3 px-3 md:mb-0 mb-2.5">
                         <h1 class="text-lg font-semibold">مقادیر اختصاصی</h1>
                         <span class="text-sm"
                             >لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است
@@ -494,8 +494,8 @@
                     </div>
                 </div>
                 <hr class="my-6" />
-                <div class="flex flex-row max-lg:flex-col">
-                    <div class="basis-2/6 mt-3 px-3 max-md:mb-2.5">
+                <div class="flex lg:flex-row flex-col">
+                    <div class="basis-2/6 mt-3 px-3 md:mb-0 mb-2.5">
                         <h1 class="text-lg font-semibold">دسته بندی</h1>
                         <span class="text-sm"
                             >لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است
@@ -545,8 +545,8 @@
                     </div>
                 </div>
                 <hr class="my-6" />
-                <div class="flex flex-row max-lg:flex-col">
-                    <div class="basis-2/6 mt-3 px-3 max-md:mb-2.5">
+                <div class="flex lg:flex-row flex-col">
+                    <div class="basis-2/6 mt-3 px-3 md:mb-0 mb-2.5">
                         <h1 class="text-lg font-semibold">توضیحات</h1>
                         <span class="text-sm"
                             >لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است
@@ -577,8 +577,8 @@
                 </div>
 
                 <hr class="my-6" />
-                <div class="flex flex-row max-lg:flex-col">
-                    <div class="basis-2/6 mt-3 px-3 max-md:mb-2.5">
+                <div class="flex lg:flex-row flex-col">
+                    <div class="basis-2/6 mt-3 px-3 md:mb-0 mb-2.5">
                         <h1 class="text-lg font-semibold">SEO Keywords</h1>
                         <span class="text-sm"
                             >لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است
@@ -589,11 +589,11 @@
                     <div class="basis-4/6 mt-3 px-3">
                         <div class="flex flex-col bg-white rounded p-6 shadow-md mb-6">
                             <div class="flex flex-col mb-4 w-full">
-                                <div class="flex justify-between mb-2 h-10 max-sm:flex-col max-sm:items-center">
+                                <div class="flex justify-between mb-2 h-10 sm:flex-row flex-col sm:items-stretch items-center">
                                     <label class="font-bold text-gray-600 self-center">برچسب ها</label>
                                     <button
                                         onclick="addTagFromInput()"
-                                        class="cursor-pointer bg-green-500 text-white text-sm font-semibold w-40 rounded max-sm:p-1 mt-2.5 max-sm:w-fit"
+                                        class="cursor-pointer bg-green-500 text-white text-sm font-semibold sm:w-40 rounded sm:p-0 p-1 mt-2.5 w-fit"
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -613,7 +613,7 @@
                                 <input
                                     id="tagInput"
                                     type="text"
-                                    class="border outline-1 outline-blue-500 h-10 py-2 px-3 max-sm:mt-14"
+                                    class="border outline-1 outline-blue-500 h-10 py-2 px-3 sm:mt-0 mt-14"
                                 />
                             </div>
 
@@ -680,8 +680,8 @@
                 </div>
 
                 <hr class="my-6" />
-                <div class="flex flex-row max-lg:flex-col">
-                    <div class="basis-2/6 mt-3 px-3 max-md:mb-2.5">
+                <div class="flex lg:flex-row flex-col">
+                    <div class="basis-2/6 mt-3 px-3 md:mb-0 mb-2.5">
                         <h1 class="text-lg font-semibold">وزن محصول</h1>
                         <span class="text-sm"
                             >لورم ایپسوماز طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که
@@ -699,8 +699,8 @@
                 </div>
 
                 <hr class="my-6" />
-                <div class="flex flex-row max-lg:flex-col">
-                    <div class="basis-2/6 mt-3 px-3 max-md:mb-2.5">
+                <div class="flex lg:flex-row flex-col">
+                    <div class="basis-2/6 mt-3 px-3 md:mb-0 mb-2.5">
                         <h1 class="text-lg font-semibold">اپلود تصاویر</h1>
                         <span class="text-sm"
                             >لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است

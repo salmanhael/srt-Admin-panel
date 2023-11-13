@@ -11,10 +11,10 @@
         <div class="max-w-[2200px] mx-auto">
             <!-- side bar -->
             <div class="absolute h-screen openSidbar" id="mainSidebar">
-                <div class="p-4 h-15.5 bg-white block logo" id="banner">
+                <div class="p-4 h-[59px] bg-white block logo" id="banner">
                     <a href="#">
                         <span class="flex justify-center">
-                            <img src="../img/logo-m.png" alt="logo" class="h-7.5" />
+                            <img src="../img/logo-m.png" alt="logo" class="h-[30px]" />
                         </span>
                     </a>
                 </div>
@@ -23,7 +23,7 @@
                     <div>
                         <div>
                             <ul>
-                                <li class="h-12 flex items-center whitespace-nowrap">
+                                <li class="h-12 flex items-center whitespace-nowrap active">
                                     <a href="../html/index.html" class="p-3.5 w-full hover:text-violet-700 flex">
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -41,7 +41,7 @@
                                     </a>
                                 </li>
 
-                                <li class="h-12 flex items-center whitespace-nowrap active">
+                                <li class="h-12 flex items-center whitespace-nowrap ">
                                     <a href="../html/order.html" class="p-3.5 w-full hover:text-violet-700 flex">
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -334,9 +334,9 @@
                 id="expand-menu"
             >
                 <!-- header -->
-                <div class="bg-[#f7f6f2] flex justify-center py-4 px-3 md:px-12 sticky top-0 z-10">
+                <div class="flex justify-center py-4 px-3 md:px-12 sticky top-0 z-10">
                     <header
-                        class="relative bg-white drop-shadow rounded px-5 max-sm:px-3 py-4 max-xl:py-3 w-full float-left"
+                        class="relative bg-white drop-shadow rounded sm:px-5 px-3 xl:py-4 py-3 w-full float-left"
                     >
                         <div class="flex flex-row-reverse justify-between">
                             <div class="flex flex-row-reverse">
@@ -366,7 +366,7 @@
                                     <a href="#" class="px-4 py-2 text-sm">خروج</a>
                                 </div>
 
-                                <div class="ml-4 max-xl:hidden">
+                                <div class="ml-4 xl:block hidden">
                                     <button onclick="closeNav()">
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -443,43 +443,43 @@
                     <div class="grid grid-cols-4 responsive mb-28">
                         <div class="px-3 mt-6">
                             <div
-                                class="bg-white p-6 h-34 shadow-lg rounded-md max-lg:h-24.5 max-lg:p-4 max-mobile:h-19"
+                                class="bg-white lg:p-6 p-4 lg:h-[137.5px] shadow-lg rounded-md h-[100px] max-[576px]:h-[77px]"
                             >
                                 <div class="text-center">
-                                    <p class="text-sm max-mobile:text-xs text-gray-400 font-medium mb-1">کاربران</p>
-                                    <p class="text-4xl max-mobile:text-lg">24</p>
+                                    <p class="text-sm max-[576px]:text-xs text-gray-400 font-medium mb-1">کاربران</p>
+                                    <p class="text-4xl max-[576px]:text-lg">24</p>
                                 </div>
                             </div>
                         </div>
 
                         <div class="px-3 mt-6">
-                            <div class="bg-white p-6 h-full shadow-lg rounded-md max-lg:p-4 max-mobile:h-19">
+                            <div class="bg-white lg:p-6 h-full shadow-lg rounded-md p-4 max-[576px]:h-[77px]">
                                 <div class="text-center">
-                                    <p class="text-sm max-mobile:text-xs text-gray-400 font-medium mb-1">مقالات</p>
-                                    <p class="text-4xl max-mobile:text-lg">108</p>
+                                    <p class="text-sm max-[576px]:text-xs text-gray-400 font-medium mb-1">مقالات</p>
+                                    <p class="text-4xl max-[576px]:text-lg">108</p>
                                 </div>
                             </div>
                         </div>
 
                         <div class="px-3 mt-6">
                             <div
-                                class="bg-white p-6 h-34 shadow-lg rounded-md max-lg:h-32 max-lg:p-4 max-mobile:h-24 max-mobilesm:h-29"
+                                class="bg-white lg:p-6 lg:h-[137.5px] shadow-lg rounded-md h-32 p-4 max-[576px]:h-24 max-[321px]:h-[119px]"
                             >
                                 <div class="text-center">
-                                    <p class="text-sm max-mobile:text-xs text-gray-400 font-medium mb-1">محصولات</p>
-                                    <p class="text-4xl max-mobile:text-lg">542</p>
-                                    <p class="text-sm max-mobile:text-xs text-gray-400 font-normal">24فروش انلاین</p>
+                                    <p class="text-sm max-[576px]:text-xs text-gray-400 font-medium mb-1">محصولات</p>
+                                    <p class="text-4xl max-[576px]:text-lg">542</p>
+                                    <p class="text-sm max-[576px]:text-xs text-gray-400 font-normal">24فروش انلاین</p>
                                 </div>
                             </div>
                         </div>
                         <div class="px-3 mt-6">
                             <div
-                                class="bg-white p-6 h-34 shadow-lg rounded-md max-lg:h-32 max-lg:p-4 max-mobile:h-24 max-mobilesm:h-29"
+                                class="bg-white lg:p-6 lg:h-[137.5px] shadow-lg rounded-md h-32 p-4 max-[576px]:h-24 max-[321px]:h-[119px]"
                             >
                                 <div class="text-center">
-                                    <p class="text-sm max-mobile:text-xs text-gray-400 font-medium mb-1">سفارش جدید</p>
-                                    <p class="text-4xl max-mobile:text-lg">0</p>
-                                    <p class="text-red-700 text-sm max-mobile:text-xs font-normal">بررسی نشده</p>
+                                    <p class="text-sm max-[576px]:text-xs text-gray-400 font-medium mb-1">سفارش جدید</p>
+                                    <p class="text-4xl max-[576px]:text-lg">0</p>
+                                    <p class="text-red-700 text-sm max-[576px]:text-xs font-normal">بررسی نشده</p>
                                 </div>
                             </div>
                         </div>
