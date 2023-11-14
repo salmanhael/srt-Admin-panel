@@ -444,38 +444,22 @@
                         </select>
                     </div>
 
-                    <div class="flex sm:flex-row justify-end flex-col sm:text-justify text-center">
-                        <form class="h-10 relative hidden mb-4 ml-2 mt-5 w-full" id="searchBar">
+                    <div class="flex sm:flex-row justify-end flex-col sm:text-justify text-center sm:relative">
+                        <form class="h-10 relative hidden mb-4 ml-2 mt-5 sm:w-3/5 sm:absolute sm:right-0 w-full" id="searchBar">
                             <select
-                                class="absolute left-56 w-1/5 h-full text-sm rounded rounded-r-none outline-0 focus:ring-4 border border-r-0"
-                                aria-label=""
-                            >
+                                class="absolute left-0 sm:w-2/6 w-1/2 h-full text-sm rounded rounded-r-none outline-0 focus:ring-4 border border-r-0"
+                                aria-label="">
                                 <option value="1">عنوان</option>
                                 <option value="2">وضعیت</option>
                                 <option value="3">نویسنده</option>
                             </select>
-                            <input
-                                type="text"
-                                placeholder="جست و جو ..."
-                                name="search"
-                                class="w-3/5 p-2.5 pr-12 rounded text-sm text-black outline-0 border h-10"
-                            />
-                            <button
-                                type="submit"
-                                class="absolute right-0 p-3 hover:text-violet-700 rounded"
-                                value="Search"
-                            >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="15"
-                                    height="15"
-                                    fill="currentColor"
-                                    class="bi bi-search"
-                                    viewBox="0 0 16 16"
-                                >
+                            <input type="text" placeholder="جست و جو ..." name="search"
+                                class="w-full p-2.5 pr-12 rounded text-sm text-black outline-0 border h-10">
+                            <button type="submit" class="absolute right-0 p-3 hover:text-violet-700 rounded" value="Search">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor"
+                                    class="bi bi-search" viewBox="0 0 16 16">
                                     <path
-                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
-                                    />
+                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
                                 </svg>
                             </button>
                         </form>
@@ -483,7 +467,7 @@
                         <div class="text-left">
                             <button
                                 onclick="searchorder()"
-                                class="flex items-center cursor-pointer mt-5 mb-4 mx-2 bg-white hover:text-violet-700 p-2.5 text-sm font-semibold h-10 text-gray-600 rounded border border-gray-400 hover:border-violet-700 mr-auto max-md:hidden"
+                                class="flex items-center cursor-pointer sm:w-auto w-full justify-center mt-5 mb-4 mx-2 bg-white hover:text-violet-700 p-2.5 text-sm font-semibold h-10 text-gray-600 rounded border border-gray-400 hover:border-violet-700 mr-auto"
                                 id="orders-search"
                             >
                                 <svg

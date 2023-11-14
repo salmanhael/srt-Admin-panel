@@ -11,10 +11,10 @@
         <div class="max-w-[2200px] mx-auto">
             <!-- side bar -->
             <div class="absolute h-screen openSidbar" id="mainSidebar">
-                <div class="p-4 h-15.5 bg-white block logo" id="banner">
+                <div class="p-4 h-[59px] bg-white block logo" id="banner">
                     <a href="#">
                         <span class="flex justify-center">
-                            <img src="../img/logo-m.png" alt="logo" class="h-7.5" />
+                            <img src="../img/logo-m.png" alt="logo" class="h-[30px]" />
                         </span>
                     </a>
                 </div>
@@ -339,7 +339,7 @@
                 <!-- header -->
                 <div class="bg-[#f7f6f2] flex justify-center py-4 px-3 md:px-12 sticky top-0 z-10">
                     <header
-                        class="relative bg-white drop-shadow rounded px-5 max-sm:px-3 py-4 max-xl:py-3 w-full float-left"
+                        class="relative bg-white drop-shadow rounded sm:px-5 px-3 xl:py-4 py-3 w-full float-left"
                     >
                         <div class="flex flex-row-reverse justify-between">
                             <div class="flex flex-row-reverse">
@@ -369,7 +369,7 @@
                                     <a href="#" class="px-4 py-2 text-sm">خروج</a>
                                 </div>
 
-                                <div class="ml-4 max-xl:hidden">
+                                <div class="ml-4 xl:block hidden">
                                     <button onclick="closeNav()">
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -447,7 +447,7 @@
                     <div class="flex justify-end">
                         <button
                             onclick="getAddoperatorModal()"
-                            class="cursor-pointer mt-5 mb-4 bg-green-500 text-white w-40 max-sm:w-full max-sm:mt-2 text-sm font-semibold h-10 rounded"
+                            class="cursor-pointer sm:mt-5 mb-4 bg-green-500 text-white sm:w-40 w-full mt-2 text-sm font-semibold h-10 rounded"
                         >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -467,7 +467,7 @@
 
                     <div>
                         <div class="max-w-full">
-                            <div class="flex flex-row text-right bg-gray-300 mb-2 p-2.5 rounded max-md:hidden">
+                            <div class="md:flex flex-row text-right bg-gray-300 mb-2 p-2.5 rounded hidden">
                                 <div class="basis-3/12 w-full">نام و نام خانوادگی</div>
                                 <div class="basis-2/12 w-full">شماره موبایل</div>
                                 <div class="basis-3/12 w-full">نقش</div>
@@ -475,44 +475,45 @@
                                 <div class="basis-1/12 w-full text-center">وضعیت</div>
                                 <div class="basis-2/12 w-full"></div>
                             </div>
+
                             <div
                                 class="deactivate flex flex-row flex-wrap bg-white p-2.5 mb-1 shadow rounded hover:bg-gray-100"
                             >
-                                <div class="flex w-3/12 mb-2.5 md:mb-0 max-md:w-full">
+                                <div class="flex md:w-3/12 mb-2.5 md:mb-0 w-full">
                                     <div
-                                        class="flex justify-between items-center max-md:px-2 max-md:bg-zinc-100 max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm"
+                                        class="flex justify-between items-center md:px-0 px-2 md:bg-transparent bg-zinc-100 md:py-0 py-2.5 md:mx-0 mx-1 rounded w-full text-center text-sm"
                                     >
                                         <span class="md:hidden">نام و نام خانوادگی</span>
                                         <span class="md:truncate">مستر - روح الله</span>
                                     </div>
                                 </div>
-                                <div class="flex w-2/12 mb-2.5 md:mb-0 max-md:w-full">
+                                <div class="flex md:w-2/12 mb-2.5 md:mb-0 w-full">
                                     <div
-                                        class="flex justify-between items-center max-md:px-2 max-md:bg-zinc-100 max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm"
+                                        class="flex justify-between items-center md:px-0 px-2 md:bg-transparent bg-zinc-100 md:py-0 py-2.5 md:mx-0 mx-1 rounded w-full text-center text-sm"
                                     >
                                         <span class="md:hidden">شماره موبایل</span>
                                         <span>09124506455</span>
                                     </div>
                                 </div>
-                                <div class="flex w-3/12 mb-2.5 md:mb-0 max-md:w-full">
+                                <div class="flex md:w-3/12 mb-2.5 md:mb-0 w-full">
                                     <div
-                                        class="flex max-md:justify-between items-center max-md:px-2 max-md:bg-zinc-100 max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm"
+                                        class="flex justify-between items-center md:px-0 px-2 md:bg-transparent bg-zinc-100 md:py-0 py-2.5 md:mx-0 mx-1 rounded w-full text-center text-sm"
                                     >
                                         <span class="md:hidden">نقش</span>
                                         <span>مستر ادمین</span>
                                     </div>
                                 </div>
-                                <div class="flex w-1/12 mb-2.5 md:mb-0 max-md:w-full">
+                                <div class="flex md:w-1/12 mb-2.5 md:mb-0 w-full">
                                     <div
-                                        class="flex max-md:justify-between items-center max-md:px-2 max-md:bg-zinc-100 max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm"
+                                        class="flex justify-between items-center md:px-0 px-2 md:bg-transparent bg-zinc-100 md:py-0 py-2.5 md:mx-0 mx-1 rounded w-full text-center text-sm"
                                     >
                                         <span class="md:hidden">فروشگاه</span>
                                         <span>SRT</span>
                                     </div>
                                 </div>
-                                <div class="flex w-1/12 mb-2.5 md:mb-0 max-md:w-full">
+                                <div class="flex md:w-1/12 mb-2.5 md:mb-0 w-full">
                                     <div
-                                        class="flex justify-center max-md:justify-between items-center max-md:px-2 max-md:bg-zinc-100 max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm"
+                                        class="flex md:justify-center justify-between items-center md:px-0 px-2 md:bg-transparent bg-zinc-100 md:py-0 py-2.5 md:mx-0 mx-1 rounded w-full text-center text-sm"
                                     >
                                         <span class="md:hidden">وضعیت</span>
                                         <span
@@ -521,13 +522,13 @@
                                         >
                                     </div>
                                 </div>
-                                <div class="flex w-2/12 mb-2.5 md:mb-0 max-md:w-full">
+                                <div class="flex md:w-2/12 mb-2.5 md:mb-0 w-full">
                                     <div
-                                        class="flex justify-end max-md:justify-center items-center rounded w-full text-center max-md:mx-1 text-sm gap-2 text-gray-500 max-md:gap-1"
+                                        class="flex md:justify-end justify-center items-center rounded w-full text-center md:mx-0 mx-1 text-sm md:gap-2 text-gray-500 gap-1"
                                     >
                                         <button
                                             onclick="getEditOperatorModal()"
-                                            class="flex justify-center max-md:basis-1/2 md:p-1 md:rounded max-md:rounded-r bg-zinc-300 hover:text-violet-700 max-md:py-2.5"
+                                            class="flex justify-center md:basis-auto basis-1/2 md:p-1 md:rounded rounded-r bg-zinc-300 hover:text-violet-700 py-2.5"
                                         >
                                             <svg
                                                 xmlns="http://www.w3.org/2000/svg"
@@ -544,7 +545,7 @@
                                         </button>
                                         <button
                                             onclick="openDeactiveModal(this)"
-                                            class="deactivateBtn flex justify-center max-md:basis-1/2 md:p-1 md:rounded bg-zinc-300 max-md:rounded-l hover:text-violet-700 max-md:py-2.5"
+                                            class="deactivateBtn flex justify-center md:basis-auto basis-1/2 md:p-1 md:rounded bg-zinc-300 rounded-l hover:text-violet-700 py-2.5"
                                         >
                                             <svg
                                                 xmlns="http://www.w3.org/2000/svg"
@@ -563,358 +564,96 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div
-                                class="deactivate flex flex-row flex-wrap bg-white p-2.5 mb-1 shadow rounded hover:bg-gray-100"
-                            >
-                                <div class="flex w-3/12 mb-2.5 md:mb-0 max-md:w-full">
-                                    <div
-                                        class="flex justify-between items-center max-md:px-2 max-md:bg-zinc-100 max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm"
-                                    >
-                                        <span class="md:hidden">نام و نام خانوادگی</span>
-                                        <span class="md:truncate">مستر - روح الله</span>
-                                    </div>
-                                </div>
-                                <div class="flex w-2/12 mb-2.5 md:mb-0 max-md:w-full">
-                                    <div
-                                        class="flex justify-between items-center max-md:px-2 max-md:bg-zinc-100 max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm"
-                                    >
-                                        <span class="md:hidden">شماره موبایل</span>
-                                        <span>09124506455</span>
-                                    </div>
-                                </div>
-                                <div class="flex w-3/12 mb-2.5 md:mb-0 max-md:w-full">
-                                    <div
-                                        class="flex max-md:justify-between items-center max-md:px-2 max-md:bg-zinc-100 max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm"
-                                    >
-                                        <span class="md:hidden">نقش</span>
-                                        <span>مستر ادمین</span>
-                                    </div>
-                                </div>
-                                <div class="flex w-1/12 mb-2.5 md:mb-0 max-md:w-full">
-                                    <div
-                                        class="flex max-md:justify-between items-center max-md:px-2 max-md:bg-zinc-100 max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm"
-                                    >
-                                        <span class="md:hidden">فروشگاه</span>
-                                        <span>SRT</span>
-                                    </div>
-                                </div>
-                                <div class="flex w-1/12 mb-2.5 md:mb-0 max-md:w-full">
-                                    <div
-                                        class="flex justify-center max-md:justify-between items-center max-md:px-2 max-md:bg-zinc-100 max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm"
-                                    >
-                                        <span class="md:hidden">وضعیت</span>
-                                        <span
-                                            class="text-xs bg-green-600 block text-center py-1 px-2.5 text-white rounded-md"
-                                            >فعال</span
-                                        >
-                                    </div>
-                                </div>
-                                <div class="flex w-2/12 mb-2.5 md:mb-0 max-md:w-full">
-                                    <div
-                                        class="flex justify-end max-md:justify-center items-center rounded w-full text-center max-md:mx-1 text-sm gap-2 text-gray-500 max-md:gap-1"
-                                    >
-                                        <button
-                                            onclick="getEditOperatorModal()"
-                                            class="flex justify-center max-md:basis-1/2 md:p-1 md:rounded max-md:rounded-r bg-zinc-300 hover:text-violet-700 max-md:py-2.5"
-                                        >
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                width="20"
-                                                height="20"
-                                                fill="currentColor"
-                                                class="bi bi-pencil-fill"
-                                                viewBox="0 0 16 16"
-                                            >
-                                                <path
-                                                    d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"
-                                                ></path>
-                                            </svg>
-                                        </button>
-                                        <button
-                                            onclick="openDeactiveModal(this)"
-                                            class="deactivateBtn flex justify-center max-md:basis-1/2 md:p-1 md:rounded bg-zinc-300 max-md:rounded-l hover:text-violet-700 max-md:py-2.5"
-                                        >
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                width="20"
-                                                height="20"
-                                                fill="currentColor"
-                                                class="bi bi-toggle-on"
-                                                viewBox="0 0 16 16"
-                                            >
-                                                <path
-                                                    d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"
-                                                ></path>
-                                            </svg></button
-                                        ><input type="hidden" name="newBlockedStatus" value="false" />
-                                        <input type="hidden" name="oldBlockedStatus" value="true" />
-                                    </div>
+                            class="deactivate flex flex-row flex-wrap bg-white p-2.5 mb-1 shadow rounded hover:bg-gray-100"
+                        >
+                            <div class="flex md:w-3/12 mb-2.5 md:mb-0 w-full">
+                                <div
+                                    class="flex justify-between items-center md:px-0 px-2 md:bg-transparent bg-zinc-100 md:py-0 py-2.5 md:mx-0 mx-1 rounded w-full text-center text-sm"
+                                >
+                                    <span class="md:hidden">نام و نام خانوادگی</span>
+                                    <span class="md:truncate">مستر - روح الله</span>
                                 </div>
                             </div>
-                            <div
-                                class="deactivate flex flex-row flex-wrap bg-white p-2.5 mb-1 shadow rounded hover:bg-gray-100"
-                            >
-                                <div class="flex w-3/12 mb-2.5 md:mb-0 max-md:w-full">
-                                    <div
-                                        class="flex justify-between items-center max-md:px-2 max-md:bg-zinc-100 max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm"
-                                    >
-                                        <span class="md:hidden">نام و نام خانوادگی</span>
-                                        <span class="md:truncate">مستر - روح الله</span>
-                                    </div>
-                                </div>
-                                <div class="flex w-2/12 mb-2.5 md:mb-0 max-md:w-full">
-                                    <div
-                                        class="flex justify-between items-center max-md:px-2 max-md:bg-zinc-100 max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm"
-                                    >
-                                        <span class="md:hidden">شماره موبایل</span>
-                                        <span>09124506455</span>
-                                    </div>
-                                </div>
-                                <div class="flex w-3/12 mb-2.5 md:mb-0 max-md:w-full">
-                                    <div
-                                        class="flex max-md:justify-between items-center max-md:px-2 max-md:bg-zinc-100 max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm"
-                                    >
-                                        <span class="md:hidden">نقش</span>
-                                        <span>مستر ادمین</span>
-                                    </div>
-                                </div>
-                                <div class="flex w-1/12 mb-2.5 md:mb-0 max-md:w-full">
-                                    <div
-                                        class="flex max-md:justify-between items-center max-md:px-2 max-md:bg-zinc-100 max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm"
-                                    >
-                                        <span class="md:hidden">فروشگاه</span>
-                                        <span>SRT</span>
-                                    </div>
-                                </div>
-                                <div class="flex w-1/12 mb-2.5 md:mb-0 max-md:w-full">
-                                    <div
-                                        class="flex justify-center max-md:justify-between items-center max-md:px-2 max-md:bg-zinc-100 max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm"
-                                    >
-                                        <span class="md:hidden">وضعیت</span>
-                                        <span
-                                            class="text-xs bg-green-600 block text-center py-1 px-2.5 text-white rounded-md"
-                                            >فعال</span
-                                        >
-                                    </div>
-                                </div>
-                                <div class="flex w-2/12 mb-2.5 md:mb-0 max-md:w-full">
-                                    <div
-                                        class="flex justify-end max-md:justify-center items-center rounded w-full text-center max-md:mx-1 text-sm gap-2 text-gray-500 max-md:gap-1"
-                                    >
-                                        <button
-                                            onclick="getEditOperatorModal()"
-                                            class="flex justify-center max-md:basis-1/2 md:p-1 md:rounded max-md:rounded-r bg-zinc-300 hover:text-violet-700 max-md:py-2.5"
-                                        >
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                width="20"
-                                                height="20"
-                                                fill="currentColor"
-                                                class="bi bi-pencil-fill"
-                                                viewBox="0 0 16 16"
-                                            >
-                                                <path
-                                                    d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"
-                                                ></path>
-                                            </svg>
-                                        </button>
-                                        <button
-                                            onclick="openDeactiveModal(this)"
-                                            class="deactivateBtn flex justify-center max-md:basis-1/2 md:p-1 md:rounded bg-zinc-300 max-md:rounded-l hover:text-violet-700 max-md:py-2.5"
-                                        >
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                width="20"
-                                                height="20"
-                                                fill="currentColor"
-                                                class="bi bi-toggle-on"
-                                                viewBox="0 0 16 16"
-                                            >
-                                                <path
-                                                    d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"
-                                                ></path>
-                                            </svg></button
-                                        ><input type="hidden" name="newBlockedStatus" value="false" />
-                                        <input type="hidden" name="oldBlockedStatus" value="true" />
-                                    </div>
+                            <div class="flex md:w-2/12 mb-2.5 md:mb-0 w-full">
+                                <div
+                                    class="flex justify-between items-center md:px-0 px-2 md:bg-transparent bg-zinc-100 md:py-0 py-2.5 md:mx-0 mx-1 rounded w-full text-center text-sm"
+                                >
+                                    <span class="md:hidden">شماره موبایل</span>
+                                    <span>09124506455</span>
                                 </div>
                             </div>
-                            <div
-                                class="deactivate flex flex-row flex-wrap bg-white p-2.5 mb-1 shadow rounded hover:bg-gray-100"
-                            >
-                                <div class="flex w-3/12 mb-2.5 md:mb-0 max-md:w-full">
-                                    <div
-                                        class="flex justify-between items-center max-md:px-2 max-md:bg-zinc-100 max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm"
-                                    >
-                                        <span class="md:hidden">نام و نام خانوادگی</span>
-                                        <span class="md:truncate">مستر - روح الله</span>
-                                    </div>
-                                </div>
-                                <div class="flex w-2/12 mb-2.5 md:mb-0 max-md:w-full">
-                                    <div
-                                        class="flex justify-between items-center max-md:px-2 max-md:bg-zinc-100 max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm"
-                                    >
-                                        <span class="md:hidden">شماره موبایل</span>
-                                        <span>09124506455</span>
-                                    </div>
-                                </div>
-                                <div class="flex w-3/12 mb-2.5 md:mb-0 max-md:w-full">
-                                    <div
-                                        class="flex max-md:justify-between items-center max-md:px-2 max-md:bg-zinc-100 max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm"
-                                    >
-                                        <span class="md:hidden">نقش</span>
-                                        <span>مستر ادمین</span>
-                                    </div>
-                                </div>
-                                <div class="flex w-1/12 mb-2.5 md:mb-0 max-md:w-full">
-                                    <div
-                                        class="flex max-md:justify-between items-center max-md:px-2 max-md:bg-zinc-100 max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm"
-                                    >
-                                        <span class="md:hidden">فروشگاه</span>
-                                        <span>SRT</span>
-                                    </div>
-                                </div>
-                                <div class="flex w-1/12 mb-2.5 md:mb-0 max-md:w-full">
-                                    <div
-                                        class="flex justify-center max-md:justify-between items-center max-md:px-2 max-md:bg-zinc-100 max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm"
-                                    >
-                                        <span class="md:hidden">وضعیت</span>
-                                        <span
-                                            class="text-xs bg-red-600 block text-center py-1 px-2.5 text-white rounded-md"
-                                            >غیر فعال</span
-                                        >
-                                    </div>
-                                </div>
-                                <div class="flex w-2/12 mb-2.5 md:mb-0 max-md:w-full">
-                                    <div
-                                        class="flex justify-end max-md:justify-center items-center rounded w-full text-center max-md:mx-1 text-sm gap-2 text-gray-500 max-md:gap-1"
-                                    >
-                                        <button
-                                            onclick="getEditOperatorModal()"
-                                            class="flex justify-center max-md:basis-1/2 md:p-1 md:rounded max-md:rounded-r bg-zinc-300 hover:text-violet-700 max-md:py-2.5"
-                                        >
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                width="20"
-                                                height="20"
-                                                fill="currentColor"
-                                                class="bi bi-pencil-fill"
-                                                viewBox="0 0 16 16"
-                                            >
-                                                <path
-                                                    d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"
-                                                ></path>
-                                            </svg>
-                                        </button>
-                                        <button
-                                            onclick="openDeactiveModal(this)"
-                                            class="deactivateBtn flex justify-center max-md:basis-1/2 md:p-1 md:rounded bg-zinc-300 max-md:rounded-l hover:text-violet-700 max-md:py-2.5"
-                                        >
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                width="20"
-                                                height="20"
-                                                fill="currentColor"
-                                                class="bi bi-toggle-on"
-                                                viewBox="0 0 16 16"
-                                            >
-                                                <path
-                                                    d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"
-                                                ></path>
-                                            </svg></button
-                                        ><input type="hidden" name="newBlockedStatus" value="false" />
-                                        <input type="hidden" name="oldBlockedStatus" value="true" />
-                                    </div>
+                            <div class="flex md:w-3/12 mb-2.5 md:mb-0 w-full">
+                                <div
+                                    class="flex justify-between items-center md:px-0 px-2 md:bg-transparent bg-zinc-100 md:py-0 py-2.5 md:mx-0 mx-1 rounded w-full text-center text-sm"
+                                >
+                                    <span class="md:hidden">نقش</span>
+                                    <span>مستر ادمین</span>
                                 </div>
                             </div>
-                            <div
-                                class="deactivate flex flex-row flex-wrap bg-white p-2.5 mb-1 shadow rounded hover:bg-gray-100"
-                            >
-                                <div class="flex w-3/12 mb-2.5 md:mb-0 max-md:w-full">
-                                    <div
-                                        class="flex justify-between items-center max-md:px-2 max-md:bg-zinc-100 max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm"
-                                    >
-                                        <span class="md:hidden">نام و نام خانوادگی</span>
-                                        <span class="md:truncate">مستر - روح الله</span>
-                                    </div>
-                                </div>
-                                <div class="flex w-2/12 mb-2.5 md:mb-0 max-md:w-full">
-                                    <div
-                                        class="flex justify-between items-center max-md:px-2 max-md:bg-zinc-100 max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm"
-                                    >
-                                        <span class="md:hidden">شماره موبایل</span>
-                                        <span>09124506455</span>
-                                    </div>
-                                </div>
-                                <div class="flex w-3/12 mb-2.5 md:mb-0 max-md:w-full">
-                                    <div
-                                        class="flex max-md:justify-between items-center max-md:px-2 max-md:bg-zinc-100 max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm"
-                                    >
-                                        <span class="md:hidden">نقش</span>
-                                        <span>مستر ادمین</span>
-                                    </div>
-                                </div>
-                                <div class="flex w-1/12 mb-2.5 md:mb-0 max-md:w-full">
-                                    <div
-                                        class="flex max-md:justify-between items-center max-md:px-2 max-md:bg-zinc-100 max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm"
-                                    >
-                                        <span class="md:hidden">فروشگاه</span>
-                                        <span>SRT</span>
-                                    </div>
-                                </div>
-                                <div class="flex w-1/12 mb-2.5 md:mb-0 max-md:w-full">
-                                    <div
-                                        class="flex justify-center max-md:justify-between items-center max-md:px-2 max-md:bg-zinc-100 max-md:py-2.5 max-md:mx-1 rounded w-full text-center text-sm"
-                                    >
-                                        <span class="md:hidden">وضعیت</span>
-                                        <span
-                                            class="text-xs bg-green-600 block text-center py-1 px-2.5 text-white rounded-md"
-                                            >فعال</span
-                                        >
-                                    </div>
-                                </div>
-                                <div class="flex w-2/12 mb-2.5 md:mb-0 max-md:w-full">
-                                    <div
-                                        class="flex justify-end max-md:justify-center items-center rounded w-full text-center max-md:mx-1 text-sm gap-2 text-gray-500 max-md:gap-1"
-                                    >
-                                        <button
-                                            onclick="getEditOperatorModal()"
-                                            class="flex justify-center max-md:basis-1/2 md:p-1 md:rounded max-md:rounded-r bg-zinc-300 hover:text-violet-700 max-md:py-2.5"
-                                        >
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                width="20"
-                                                height="20"
-                                                fill="currentColor"
-                                                class="bi bi-pencil-fill"
-                                                viewBox="0 0 16 16"
-                                            >
-                                                <path
-                                                    d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"
-                                                ></path>
-                                            </svg>
-                                        </button>
-                                        <button
-                                            onclick="openDeactiveModal(this)"
-                                            class="deactivateBtn flex justify-center max-md:basis-1/2 md:p-1 md:rounded bg-zinc-300 max-md:rounded-l hover:text-violet-700 max-md:py-2.5"
-                                        >
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                width="20"
-                                                height="20"
-                                                fill="currentColor"
-                                                class="bi bi-toggle-on"
-                                                viewBox="0 0 16 16"
-                                            >
-                                                <path
-                                                    d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"
-                                                ></path>
-                                            </svg></button
-                                        ><input type="hidden" name="newBlockedStatus" value="false" />
-                                        <input type="hidden" name="oldBlockedStatus" value="true" />
-                                    </div>
+                            <div class="flex md:w-1/12 mb-2.5 md:mb-0 w-full">
+                                <div
+                                    class="flex justify-between items-center md:px-0 px-2 md:bg-transparent bg-zinc-100 md:py-0 py-2.5 md:mx-0 mx-1 rounded w-full text-center text-sm"
+                                >
+                                    <span class="md:hidden">فروشگاه</span>
+                                    <span>SRT</span>
                                 </div>
                             </div>
+                            <div class="flex md:w-1/12 mb-2.5 md:mb-0 w-full">
+                                <div
+                                    class="flex md:justify-center justify-between items-center md:px-0 px-2 md:bg-transparent bg-zinc-100 md:py-0 py-2.5 md:mx-0 mx-1 rounded w-full text-center text-sm"
+                                >
+                                    <span class="md:hidden">وضعیت</span>
+                                    <span
+                                        class="text-xs bg-red-600 block text-center py-1 px-2.5 text-white rounded-md"
+                                        >غیر فعال</span
+                                    >
+                                </div>
+                            </div>
+                            <div class="flex md:w-2/12 mb-2.5 md:mb-0 w-full">
+                                <div
+                                    class="flex md:justify-end justify-center items-center rounded w-full text-center md:mx-0 mx-1 text-sm md:gap-2 text-gray-500 gap-1"
+                                >
+                                    <button
+                                        onclick="getEditOperatorModal()"
+                                        class="flex justify-center md:basis-auto basis-1/2 md:p-1 md:rounded rounded-r bg-zinc-300 hover:text-violet-700 py-2.5"
+                                    >
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="20"
+                                            height="20"
+                                            fill="currentColor"
+                                            class="bi bi-pencil-fill"
+                                            viewBox="0 0 16 16"
+                                        >
+                                            <path
+                                                d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"
+                                            ></path>
+                                        </svg>
+                                    </button>
+                                    <button
+                                        onclick="openDeactiveModal(this)"
+                                        class="deactivateBtn flex justify-center md:basis-auto basis-1/2 md:p-1 md:rounded bg-zinc-300 rounded-l hover:text-violet-700 py-2.5"
+                                    >
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="20"
+                                            height="20"
+                                            fill="currentColor"
+                                            class="bi bi-toggle-on"
+                                            viewBox="0 0 16 16"
+                                        >
+                                            <path
+                                                d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"
+                                            ></path>
+                                        </svg></button
+                                    ><input type="hidden" name="newBlockedStatus" value="false" />
+                                    <input type="hidden" name="oldBlockedStatus" value="true" />
+                                </div>
+                            </div>
+                        </div>
+
                         </div>
 
                         <nav class="flex justify-center mt-4">
@@ -935,10 +674,10 @@
 
                 <!-- change user status modal -->
                 <div id="deactivate-modal" class="fixed modal inset-0 bg-gray-800 bg-opacity-50 z-20">
-                    <div id="deactivate-out" class="h-full flex items-baseline justify-center mt-7 mb-10 max-sm:m-2">
+                    <div id="deactivate-out" class="h-full flex items-baseline justify-center mt-7 m-2">
                         <div class="bg-white rounded shadow-lg sm:max-w-lg w-full">
                             <div class="relative flex flex-col w-full bg-white rounded-md">
-                                <div class="flex justify-between border-b p-4.5">
+                                <div class="flex justify-between border-b p-[18px]">
                                     <h5 class="text-lg font-bold">تغییر وضعیت کاربر</h5>
                                     <button
                                         onclick="closeDeactiveModal()"
@@ -971,7 +710,7 @@
                                     </div>
                                 </div>
                                 <div class="border-t p-3">
-                                    <div class="flex max-sm:flex-col gap-2 m-1">
+                                    <div class="flex sm:flex-row flex-col gap-2 m-1">
                                         <button
                                             onclick="confirmChanges()"
                                             class="p-1.5 px-3.5 rounded border text-sm font-semibold transition duration-300 ease-in-out border-red-500 bg-red-600 text-white hover:bg-red-500"
@@ -995,11 +734,11 @@
                 <div id="editoperator-modal" class="fixed inset-0 modal bg-gray-800 bg-opacity-50 z-20">
                     <div
                         onclick="clickOnOut(this,event)"
-                        class="h-full flex items-baseline justify-center mt-7 mb-10 max-sm:m-2"
+                        class="h-full flex items-baseline justify-center mt-7 m-2"
                     >
                         <div class="bg-white rounded shadow-lg sm:max-w-lg w-full modal_content zoomout">
                             <div class="relative flex flex-col w-full bg-white rounded-md">
-                                <div class="flex flex-row justify-between border-b p-4.5">
+                                <div class="flex flex-row justify-between border-b p-[18px]">
                                     <h5 class="text-lg font-bold">ویرایش مشخصات اوپراتور</h5>
                                     <button
                                         onclick="closeModal(this)"
@@ -1026,7 +765,7 @@
                                         <form>
                                             <div class="flex flex-col">
                                                 <div class="flex mb-2">
-                                                    <div class="flex flex-col w-full mb-2.5 max-sm:w-full">
+                                                    <div class="flex flex-col w-full mb-2.5">
                                                         <span
                                                             class="bg-gray-200 py-2.5 mx-1 mb-2 rounded text-center font-black text-sm text-gray-500"
                                                             >نام و نام خانوادگی:</span
@@ -1038,9 +777,9 @@
                                                     </div>
                                                 </div>
                                                 <div class="flex mb-2">
-                                                    <div class="flex max-sm:flex-col w-full mb-2.5 max-sm:w-full">
+                                                    <div class="flex sm:flex-row flex-col w-full mb-2.5">
                                                         <span
-                                                            class="bg-gray-200 py-2.5 mx-1 max-sm:mb-2 rounded sm:w-2/4 text-center font-black text-sm text-gray-500"
+                                                            class="bg-gray-200 py-2.5 mx-1 sm:mb-0 mb-2 rounded sm:w-2/4 text-center font-black text-sm text-gray-500"
                                                             >شماره تماس:</span
                                                         >
                                                         <input
@@ -1050,7 +789,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="flex mb-2">
-                                                    <div class="flex w-full mb-2.5 max-sm:w-full">
+                                                    <div class="flex w-full mb-2.5">
                                                         <span
                                                             class="bg-gray-200 py-2.5 mx-1 rounded w-2/4 text-center font-black text-sm text-gray-500"
                                                             >نقش:</span
@@ -1067,7 +806,7 @@
                                             </div>
                                         </form>
                                     </div>
-                                    <div class="flex max-sm:flex-col justify-start gap-2 mt-4">
+                                    <div class="flex sm:flex-row flex-col justify-start gap-2 mt-4">
                                         <button
                                             class="p-1.5 px-3.5 rounded border text-sm font-semibold transition duration-300 ease-in-out border-green-500 bg-green-600 text-white hover:bg-green-500"
                                         >
@@ -1090,11 +829,11 @@
                 <div id="addoperator-modal" class="fixed inset-0 modal bg-gray-800 bg-opacity-50 overflow-y-auto z-20">
                     <div
                         onclick="clickOnOut(this,event)"
-                        class="flex items-baseline justify-center mt-7 mb-10 max-sm:m-2"
+                        class="flex items-baseline justify-center mt-7 m-2"
                     >
                         <div class="bg-white rounded shadow-lg sm:max-w-lg w-full modal_content zoomout">
                             <div class="relative flex flex-col w-full bg-white rounded-md">
-                                <div class="flex flex-row justify-between border-b p-4.5">
+                                <div class="flex flex-row justify-between border-b p-[18px]">
                                     <h5 class="text-lg font-bold">افزودن اوپراتور</h5>
                                     <button
                                         onclick="closeModal(this)"
@@ -1121,7 +860,7 @@
                                         <form>
                                             <div class="flex flex-col">
                                                 <div class="flex mb-2">
-                                                    <div class="flex flex-col w-full mb-2.5 max-sm:w-full">
+                                                    <div class="flex flex-col w-full mb-2.5">
                                                         <span
                                                             class="bg-gray-200 py-2.5 mx-1 mb-2 rounded text-center font-black text-sm text-gray-500"
                                                             >نام و نام خانوادگی:</span
@@ -1133,9 +872,9 @@
                                                     </div>
                                                 </div>
                                                 <div class="flex mb-2">
-                                                    <div class="flex max-sm:flex-col w-full mb-2.5 max-sm:w-full">
+                                                    <div class="flex sm:flex-row flex-col w-full mb-2.5">
                                                         <span
-                                                            class="bg-gray-200 py-2.5 mx-1 max-sm:mb-2 rounded sm:w-2/4 text-center font-black text-sm text-gray-500"
+                                                            class="bg-gray-200 py-2.5 mx-1 sm:mb-0 mb-2 rounded sm:w-2/4 text-center font-black text-sm text-gray-500"
                                                             >شماره تماس:</span
                                                         >
                                                         <input
@@ -1146,7 +885,7 @@
                                                 </div>
 
                                                 <div class="flex mb-2">
-                                                    <div class="flex w-full mb-2.5 max-sm:w-full">
+                                                    <div class="flex w-full mb-2.5">
                                                         <span
                                                             class="bg-gray-200 py-2.5 mx-1 rounded w-2/4 text-center font-black text-sm text-gray-500"
                                                             >نقش:</span
@@ -1162,7 +901,7 @@
                                                 </div>
 
                                                 <div class="flex mb-2">
-                                                    <div class="flex w-full mb-2.5 max-sm:w-full">
+                                                    <div class="flex w-full mb-2.5">
                                                         <span
                                                             class="bg-gray-200 py-2.5 mx-1 rounded w-2/4 text-center font-black text-sm text-gray-500"
                                                             >فروشگاه:</span
@@ -1177,7 +916,7 @@
                                                 </div>
 
                                                 <div class="flex mb-2">
-                                                    <div class="flex flex-col w-full mb-2.5 max-sm:w-full">
+                                                    <div class="flex flex-col w-full mb-2.5">
                                                         <span
                                                             class="bg-gray-200 py-2.5 mx-1 mb-2 rounded text-center font-black text-sm text-gray-500"
                                                             >ادرس:</span
@@ -1190,7 +929,7 @@
                                             </div>
                                         </form>
                                     </div>
-                                    <div class="flex max-sm:flex-col justify-start gap-2 mt-4">
+                                    <div class="flex sm:flex-row flex-col justify-start gap-2 mt-4">
                                         <button
                                             class="p-1.5 px-3.5 rounded border text-sm font-semibold transition duration-300 ease-in-out border-green-500 bg-green-600 text-white hover:bg-green-500"
                                         >

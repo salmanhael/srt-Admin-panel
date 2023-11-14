@@ -371,13 +371,13 @@ document.addEventListener("DOMContentLoaded", function () {
     addDetail?.addEventListener("click", function () {
         if (detailCount < 4) { 
             const newDiv = document.createElement("div");
-            newDiv.className = "flex flex-row max-sm:flex-col items-center mb-4";
+            newDiv.className = "flex sm:flex-row flex-col items-center mb-4";
             const newInput1 = document.createElement("input");
             newInput1.type = "text";
             newInput1.className = "border w-full bg-gray-200 text-gray-500 h-10 py-2 px-3 text-center rounded focus:bg-white focus:outline-blue-500";
             newInput1.placeholder = "عنوان";
             const Div2 = document.createElement("div");
-            Div2.className = "mx-3 max-sm:my-2";
+            Div2.className = "mx-3 sm:my-0 my-2";
             const newInput2 = document.createElement("input");
             newInput2.type = "text";
             newInput2.className = "border w-full outline-1 outline-blue-500 h-10 py-2 px-3 text-center rounded";
