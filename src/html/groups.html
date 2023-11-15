@@ -822,7 +822,7 @@
                 <div id="Commonquestions-modal"
                     class="fixed modal inset-0 overflow-y-auto bg-gray-800 bg-opacity-50 z-20">
                     <div onclick="clickOnOut(this,event)"
-                        class="flex items-baseline justify-center mt-7 m-2">
+                        class="flex items-baseline justify-center m-2">
                         <div class="bg-white rounded shadow-lg lg:max-w-3xl sm:max-w-lg modal_content w-full zoomout">
                             <div class="relative flex flex-col w-full bg-white rounded-md">
                                 <div class="flex flex-row justify-between border-b p-[18px]">
@@ -947,72 +947,72 @@
 
                 <!-- add/edit question modal -->
                 <div id="addquestion-modal" class="fixed modal inset-0 overflow-y-auto bg-gray-800 bg-opacity-50 z-20">
-                    <div onclick="clickOnOut(this,event)"
-                        class="flex items-baseline justify-center mt-7 m-2">
-                        <div class="bg-white rounded shadow-lg lg:max-w-3xl sm:max-w-lg modal_content w-full zoomout">
-                            <div class="relative flex flex-col w-full bg-white rounded-md">
-                                <div class="flex flex-row justify-between border-b p-[18px]">
-                                    <h5 class="text-lg font-bold">افزودن / ویرایش سوال</h5>
-                                    <button onclick="closeModal(this)"
-                                        class="text-gray-500 hover:text-gray-700 float-right">
-                                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M6 18L18 6M6 6l12 12"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                                <div class="p-4">
-                                    <div>
-                                        <div class="flex flex-col">
-                                            <div class="flex mb-2">
-                                                <div class="flex w-full mb-2.5">
-                                                    <input type="text"
-                                                        class="bg-gray-200 py-2.5 mx-1 rounded w-full text-center text-sm font-bold text-black"
-                                                        placeholder="متن سوال را اینجا وارد کنید" />
+                                    <div onclick="clickOnOut(this,event)"
+                                        class="flex items-baseline justify-center m-2">
+                                        <div class="bg-white rounded shadow-lg lg:max-w-3xl sm:max-w-lg modal_content w-full zoomout ml-1.5">
+                                            <div class="relative flex flex-col w-full bg-white rounded-md">
+                                                <div class="flex flex-row justify-between border-b p-[18px]">
+                                                    <h5 class="text-lg font-bold">افزودن / ویرایش سوال</h5>
+                                                    <button onclick="closeModal(this)"
+                                                        class="text-gray-500 hover:text-gray-700 float-right">
+                                                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                                d="M6 18L18 6M6 6l12 12"></path>
+                                                        </svg>
+                                                    </button>
                                                 </div>
-                                            </div>
-                                            <div class="flex mb-2">
-                                                <div class="flex w-full mb-2.5">
-                                                    <select
-                                                        class="bg-gray-200 py-2.5 mx-1 rounded w-full text-center text-sm font-bold text-black">
-                                                        <option value="1">جایگاه 1</option>
-                                                        <option value="2">جایگاه 2</option>
-                                                    </select>
+                                                <div class="p-4">
+                                                    <div>
+                                                        <div class="flex flex-col">
+                                                            <div class="flex mb-2">
+                                                                <div class="flex w-full mb-2.5">
+                                                                    <input type="text"
+                                                                        class="bg-gray-200 py-2.5 mx-1 rounded w-full text-center text-sm font-bold text-black"
+                                                                        placeholder="متن سوال را اینجا وارد کنید" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="flex mb-2">
+                                                                <div class="flex w-full mb-2.5">
+                                                                    <select
+                                                                        class="bg-gray-200 py-2.5 mx-1 rounded w-full text-center text-sm font-bold text-black">
+                                                                        <option value="1">جایگاه 1</option>
+                                                                        <option value="2">جایگاه 2</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="flex mb-2">
+                                                                <div class="flex w-full mb-2.5">
+                                                                    <textarea
+                                                                        class="bg-gray-200 py-2.5 mx-1 rounded w-full text-center text-sm font-bold text-black">
+                                                                    </textarea>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="border-t p-3">
+                                                            <div class="flex sm:flex-row flex-col justify-start gap-2 m-1">
+                                                                <button
+                                                                    class="p-1.5 px-3.5 rounded border text-sm font-semibold transition duration-300 ease-in-out border-green-500 bg-green-600 text-white hover:bg-green-500">
+                                                                    ثبت تغییرات
+                                                                </button>
+                                                                <button onclick="closeModal(this)"
+                                                                    class="p-1.5 px-3.5 rounded border text-sm font-semibold transition duration-300 ease-in-out bg-gray-500 hover:bg-slate-600 text-white">
+                                                                    لغو
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="flex mb-2">
-                                                <div class="flex w-full mb-2.5">
-                                                    <textarea
-                                                        class="bg-gray-200 py-2.5 mx-1 rounded w-full text-center text-sm font-bold text-black">
-                                                    </textarea>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="border-t p-3">
-                                            <div class="flex sm:flex-row flex-col justify-start gap-2 m-1">
-                                                <button
-                                                    class="p-1.5 px-3.5 rounded border text-sm font-semibold transition duration-300 ease-in-out border-green-500 bg-green-600 text-white hover:bg-green-500">
-                                                    ثبت تغییرات
-                                                </button>
-                                                <button onclick="closeModal(this)"
-                                                    class="p-1.5 px-3.5 rounded border text-sm font-semibold transition duration-300 ease-in-out bg-gray-500 hover:bg-slate-600 text-white">
-                                                    لغو
-                                                </button>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
 
                 <!-- delete common question modal -->
                 <div id="deletequstion-modal" class="fixed inset-0 modal bg-gray-800 bg-opacity-50 z-20">
                     <div onclick="clickOnOut(this,event)"
-                        class="h-full flex items-baseline justify-center mt-7 m-2">
-                        <div class="bg-white rounded shadow-lg sm:max-w-lg modal_content w-full">
+                        class="h-full flex items-baseline justify-center m-2">
+                        <div class="bg-white rounded shadow-lg sm:max-w-lg modal_content w-full ml-1.5">
                             <div class="relative flex flex-col w-full bg-white rounded-md">
                                 <div class="flex flex-row justify-between border-b p-[18px]">
                                     <h5 class="text-lg font-bold">حذف پرسش متداول</h5>
